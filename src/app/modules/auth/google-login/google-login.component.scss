@@ -1,0 +1,67 @@
+.signInGoogle {
+  margin: 0px;
+  // box-sizing: border-box;
+  padding: 0px;
+  display: grid;
+  border: 1px solid #4285f4;
+  grid-template-columns: 15% 85%;
+  img{
+    height: 31px;
+    margin-left: 8px;
+    padding: 10px 0px 10px 0px;
+  }
+
+  p{
+    // width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size:medium;
+    font-weight: 500;
+    margin: -1px;
+    align-items: center;
+    color: white;
+    background-color: #4285f4;
+  }
+
+}
+.official{
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+  // margin-right: 50px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  color:#a3a4a6 !important;
+}
+
+
+@media (max-width:400px){
+  .signInGoogle{
+    width: 67vw;
+    img{
+      width:56%;
+    }
+    p{
+      // width: 30vw;
+    }
+    .official{
+
+    }
+  }
+}
+
+@media (max-width:280px){
+  .signInGoogle{
+    width: 55vw;
+    img{
+      width:56%;
+    }
+    p{
+      // width: 30vw;
+    }
+    .official{
+
+    }
+  }
+}
