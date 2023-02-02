@@ -3,9 +3,19 @@ import { RouterModule, Routes } from '@angular/router';
 import { FeatureComponent } from './feature.component';
 
 const routes: Routes = [
-  {
-    path:'', component:FeatureComponent
-  }
+{
+  path:'',component:FeatureComponent, children:[
+    {
+      path: '', redirectTo: 'home', pathMatch: 'full'
+  },
+    {
+      path:'home',
+      loadChildren:()=>
+      import('../feature/home/home.module').then((m)=>m.HomeModule)
+    }
+  ]
+}
+
 ];
 
 @NgModule({
