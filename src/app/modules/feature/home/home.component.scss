@@ -1,0 +1,243 @@
+@import "src/app/scss/_mixins.scss";
+
+.container {
+  padding: 10px 10px 10px 20px;
+  background-color: #f3f7fd;
+  .welcome {
+    display: flex;
+    .displayPicture {
+      display: flex;
+      img {
+        width: 4rem;
+        height: 6em;
+      }
+    }
+    padding: 40px 0 10px 40px;
+    .name {
+    }
+  }
+  .main-div {
+    padding: 20px;
+    height: 59vh;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 74% 26%;
+    background-color: #fefeff;
+    .main-left {
+      display: grid;
+      grid-template-columns: 46% 50%;
+      .card{
+        border-right: 1px dotted black;
+        padding: 0px;
+        .left {
+          display: flex;
+          justify-content: space-between;
+          width: 20vw;
+          .jobHeading{
+            padding: 5px;
+            h3{
+              word-break: break-word;
+              padding: 10px 0 0 0 ;
+              font-size:20px;
+              font-weight: 700;
+              line-height: 1.5px;
+            }
+          }
+          .viewAll{
+            button{
+              background-color: #1f87f0;
+              color: #fefeff;
+              height: 28px;
+            }
+          }
+
+        }
+        .card1{
+          border: 1px solid transparent;
+          // height:36.2vh;
+          width: 25vw;
+          padding: 10px;
+          margin: 0px;
+          .fullCard{
+            background-color: #f3f7fd;
+            position: relative;
+            padding: 0 0 5px 0;
+
+            .image{
+              border-radius: 5%;
+              border: 1px solid transparent;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 18vh;
+              img{
+                width: 5vw;
+                height: 7vh;
+              }
+            }
+            .location{
+              position: absolute;
+              bottom: 15px;
+              left: 15px;
+              background-color: #ffffff;
+              border-radius: 20px;
+              padding: 8px 12px 8px 30px;
+              font-family: "Lato";
+              font-size: 12px;
+              color: #231E1E;
+              font-weight: 400;
+              line-height: 1.2;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+            .date{
+              position: relative;
+              p{
+                position: absolute;
+                right: 18px;
+                height: 10px;
+                bottom: 15px;
+              }
+            }
+          }
+          .description{
+            .heading{
+              h3{
+                font-weight: 800;
+                font-size: large;
+
+              }
+            }
+          }
+          .openings{
+            display: flex;
+            justify-content: space-between;
+            .noOfOpenings{
+              font-size: small;
+              span{
+                font-weight: bold;
+
+              }
+            }
+            .experience{
+              font-size: small;
+              span{
+                font-weight: bold;
+
+              }
+            }
+          }
+          .cardBottom{
+            display: flex;
+            justify-content: space-between;
+            .viewDetails{
+              button{
+                font-family: "Lato";
+                font-size: 14px;
+                color: #008dfe;
+                font-weight: 500;
+                line-height: 1.32;
+                padding: 12px;
+                border-radius: 5px;
+                border: 1px solid black;
+                width: 12vw;
+
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), #fefefe;
+                background-blend-mode: soft-light, normal;
+                border: 1px solid rgba(150, 165, 184, 0.2);
+                box-sizing: border-box;
+                box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12), inset 0px 2px 0px rgba(255, 255, 255, 0.24);
+                border-radius: 4px;
+                // color: #FFFFFF;
+              }
+            }
+            .referCandidate{
+              button{
+                font-family: "Lato";
+                font-size: 14px;
+                color: #ffffff;
+                font-weight: 500;
+                line-height: 1.32;
+                padding: 12px;
+                border-radius: 5px;
+                background-color: #008dfe;
+                width: 12vw;
+
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), #199CFF;
+                background-blend-mode: soft-light, normal;
+                border: 1px solid rgba(150, 165, 184, 0.2);
+                box-sizing: border-box;
+                box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12), inset 0px 2px 0px rgba(255, 255, 255, 0.24);
+                border-radius: 4px;
+                color: #FFFFFF;
+
+              }
+            }
+          }
+        }
+
+      }
+      .mid {
+        border: 1px solid black;
+        border-left: none;
+        border-top: none;
+        border-bottom: none;
+        border-right: none;
+        .referralBonus{
+          padding: 0 0 0 24px;
+          .referralHeading{
+            h3{
+
+              color: #2bb0fe;
+              font-weight: bold;
+              text-transform: capitalize;
+            }
+
+          }
+          .cards{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            align-items: center;
+            padding: 0 0 0 10px;
+
+           li{
+            margin: 10px;
+            background-color: #F4F9FF;
+            padding: 25px 15px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            h2{
+              font-size: 56px;
+              color: #0091fe;
+            }
+            p{
+              font-size: 12px;
+              // word-break:break-word;
+              text-align: center;
+            }
+
+           }
+          }
+
+        }
+      }
+    }
+    .right {
+      border: 1px solid black;
+      height: 40vh;
+      // width: 20vw;
+    }
+  }
+}

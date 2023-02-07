@@ -1,0 +1,27 @@
+<div class="container ">
+  <div class="header">
+    <mat-toolbar class="example-toolbar">
+      <div class="left">
+        <div class="logo">
+          <img [src]= "isExpanded ? '/assets/applogo.png' : '/assets/DeepinScreenshot_select-area_20230201160316.png'">
+          <button mat-icon-button (click)="clickMenu()"><mat-icon>menu</mat-icon></button>
+        </div>
+      </div>
+      <div class="right">
+        <div class="userName">
+          Rishabh Ghildiyal
+        </div>
+        <div class="help">
+          <button mat-button color="warn">Help</button>
+        </div>
+        <div class="bellIcon">
+          <mat-icon>notification_important</mat-icon>
+        </div>
+      </div>
+    </mat-toolbar>
+  </div>
+  <!-- <div>
+    <app-side-nav></app-side-nav>
+  </div> -->
+
+</div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-feature',
@@ -6,25 +6,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./feature.component.scss']
 })
 export class FeatureComponent implements OnInit {
-  isExpanded = true;
-  showSubmenu: boolean = false;
-  isShowing = false;
-  showSubSubMenu: boolean = false;
+  // @Output() toggleMenu = new EventEmitter()-
 
-  constructor() { }
+  isShowing:boolean = false;
+  showSidenav: boolean = true;
 
-  ngOnInit(): void {
+  constructor() {}
+
+  ngOnInit(): void {}
+  onToggle(e: any) {
+    console.log("aaaa");
+
+    this.showSidenav = e;
+    console.log(e, 'toggleeeeee');
+  
   }
-  mouseenter() {
-    if (!this.isExpanded) {
-      this.isShowing = true;
-    }
+
+  mouseEnter() {
+    this.isShowing = true;
   }
 
-  mouseleave() {
-    if (!this.isExpanded) {
-      this.isShowing = false;
-    }
+  mouseLeave() {
+    this.isShowing = false;
   }
 
 }

@@ -1,35 +1,5 @@
-<mat-card class="login-container">
-  <mat-card class="main-card">
-    <div class="inner1">
+<div class="login-container">
+  <router-outlet></router-outlet>
+</div>
 
-      <div class="logo">
 
-        <img src="https://dashboard.appinventiv.com/skin/hrsale_assets/img/applogo.png" alt="appinventiv logo">
-      </div>
-
-      <div class="loginWithGoogle" *ngIf="loginWithCredential">
-        <app-google-login></app-google-login>
-      </div>
-
-      <div class="loginWithCredential" *ngIf="!loginWithCredential">
-
-        <app-credential-login></app-credential-login>
-      </div>
-
-      <div class="forgetPassword" *ngIf="!show">
-        <p [routerLink]="['/forget-password']">Forgot password?</p>
-      </div>
-      <div class="login-button">
-        <button *ngIf="!show"> <mat-icon>home</mat-icon> <span>LOGIN</span></button>
-      </div>
-    </div>
-    <div class="inner2">
-      <button (click)="CredentialLogin()" *ngIf="loginWithCredential">LOGIN WITH CREDENTIALS</button>
-      <button (click)="googleLogin()" *ngIf="!loginWithCredential">Login with Google</button>
-    </div>
-    <hr style="color:lightgray;background-color:lightgray; margin: 2px; border-style: inset;">
-    <div class="footer-card">
-      <p>2023 <span class="material-icons">copyright</span> Appinventiv HR System</p>
-    </div>
-  </mat-card>
-</mat-card>

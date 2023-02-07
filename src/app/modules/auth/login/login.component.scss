@@ -1,0 +1,145 @@
+.login-container {
+  min-height: 100%;
+  max-width: 100%;
+  background: url("../../../../assets/banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .main-card {
+    // max-width: 18rem;
+    // padding: 5em;
+    // height: 29rem;
+    padding: 0px !important;
+    .inner1 {
+      padding: 3rem;
+      .logo{
+        margin-bottom: 50px;
+        img{
+          position: relative;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .inner2{
+      // border: 1px solid black;
+      margin: 5px;
+      width: 100%;
+      button{
+       width: 97%;
+       box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.07), 0px 4px 5px 0px rgba(0, 0, 0, 0.05), 0px 1px 10px 0px rgba(0, 0, 0, 0.03);
+       background-color:  #26b4ff;
+       color: white;
+       font-size: 0.8125rem;
+       text-transform: uppercase;
+       font-weight: 500;
+       white-space: nowrap;
+       vertical-align: middle;
+       border: 0px solid transparent;
+       padding: 0.5rem 1rem;
+       line-height: 1.47;
+       border-radius: 0.125rem;
+       text-align: center !important;
+      //  padding: 1em;
+      }
+    }
+    .footer-card {
+      // border: 1px 0 0 0 lightgrey;
+      // border-style: outset;
+      margin-top: 10px;
+      padding: .5rem 2rem .5rem 2rem;
+      // line-height: 1.47;
+     p{
+      display: flex;
+      vertical-align: center;
+      align-items: center;
+      justify-content: center;
+      color: #a3a4a6 !important;
+      padding: 0 0 1px 0;
+      span{
+        font-size: small;
+      }
+     }
+    }
+  }
+}
+
+@media  (max-width:400px){
+  .login-container{
+    .main-card{
+      width: 90vw;
+      // height: 45vh;
+      .inner1{
+        .logo{
+          img{
+            width: 60vw;
+          }
+        }
+        .loginWithGoogle{
+          // width: 70vw;
+        }
+        .loginWithCredential{
+
+        }
+        .forgetPassword{
+
+        }
+        .login-button{
+
+        }
+      }
+      .inner2{
+
+      }
+      .footer-card{
+        p{
+          span{
+
+          }
+        }
+      }
+    }
+  }
+}
+
+@media  (max-width:280px){
+  .login-container{
+    .main-card{
+      width: 90vw;
+      .inner1{
+        .logo{
+          img{
+            width: 60vw;
+          }
+        }
+        .loginWithGoogle{
+          // width: 70vw;
+        }
+        .loginWithCredential{
+
+        }
+        .forgetPassword{
+
+        }
+        .login-button{
+
+        }
+      }
+      .inner2{
+
+      }
+      .footer-card{
+        p{
+          display: block;
+          span{
+
+          }
+        }
+      }
+    }
+  }
+}

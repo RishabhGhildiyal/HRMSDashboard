@@ -1,0 +1,9 @@
+<section>
+  <mat-nav-list>
+    <mat-list-item  *ngFor="let item of itemList" [disabled]="!item.isActive">
+      <mat-icon mat-list-icon >{{item.logo}}</mat-icon>
+      <span *ngIf="isExpanded || isShowing">{{item.title}}</span>
+    </mat-list-item>
+  </mat-nav-list>
+
+</section>

@@ -1,0 +1,14 @@
+@import "src/app/scss/global.scss";
+
+section{
+  height: 100%;
+  @include custom-scroller("y");
+  overflow-y: hidden;
+  &:hover{
+    overflow-y: auto;
+  }
+  mat-item-list:disabled{
+      //  background-color: $footerColor;
+
+  }
+}

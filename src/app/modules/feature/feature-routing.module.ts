@@ -12,6 +12,11 @@ const routes: Routes = [
       path:'home',
       loadChildren:()=>
       import('../feature/home/home.module').then((m)=>m.HomeModule)
+    },
+    {
+      path:'my-profile',
+      loadChildren: () =>
+      import('../feature/my-profile/my-profile.module').then((m)=>m.MyProfileModule)
     }
   ]
 }

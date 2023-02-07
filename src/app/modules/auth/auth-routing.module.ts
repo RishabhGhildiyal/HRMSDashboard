@@ -4,7 +4,22 @@ import { AuthComponent } from './auth.component';
 
 const routes: Routes = [
   {
-    path:'',component:AuthComponent
+    path: '', redirectTo: 'login', pathMatch: 'full'
+},
+  {
+    path:'',component: AuthComponent ,children:[
+
+      {
+        path:'login',
+        loadChildren:()=>
+        import('./login/login.module').then((m)=>m.LoginModule)
+      },
+      {
+        path:'forget-password',
+        loadChildren:() =>
+        import('./forget-password/forget-password.module').then((m) => m.ForgetPasswordModule)
+      }
+    ]
   }
 ];
 

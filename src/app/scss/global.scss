@@ -1,0 +1,35 @@
+@mixin custom-scroller($axis, $brodness: 4px) {
+  @if ($axis=="x") {
+      overflow-x: auto;
+      overflow-y: hidden;
+  }
+
+  @if ($axis=="y") {
+      overflow-y: auto;
+      overflow-x: hidden;
+  }
+
+  &::-webkit-scrollbar {
+      width: $brodness;
+      height: $brodness;
+  }
+
+  &::-webkit-scrollbar-track {
+      width: $brodness;
+      height: $brodness;
+      border-radius: 20px 20px;
+      background: white;
+  }
+
+  &::-webkit-scrollbar-thumb {
+      border-radius: 20px 20px;
+      background-color: grey;
+      opacity: 0.5;
+      width: $brodness;
+      height: $brodness;
+
+      &:hover {
+          opacity: 1;
+      }
+  }
+}

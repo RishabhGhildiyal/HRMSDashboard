@@ -1,0 +1,25 @@
+
+@mixin flex($item, $align) {
+  display: flex;
+  align-items: $item;
+  justify-content: $align;
+}
+
+// @mixin grid($grid-type, $args, $row-gap, $column-gap: $row-gap) {
+//   display: grid;
+//   #{$grid-type}: #{$args};
+//   grid-gap: rem($row-gap) rem($column-gap);
+// }
+
+// @mixin position($position,$top,$bottom,$left,$right) {
+//   position: $position;
+//   top : $top;
+//   bottom: $bottom;
+//   left : $left;
+//   right : $right;
+// }
+
+// $primary-blue: #199cff;
+// $primary-white: #fff;
+// $darkbklue : #26B4FF;
+// $pure-white : white

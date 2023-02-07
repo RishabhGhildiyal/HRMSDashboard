@@ -1,147 +1,16 @@
-<div class="container">
-  <div class="header">
-    <mat-toolbar class="example-toolbar">
-      <div class="left">
-        <div class="logo">
-          <img src="../../../assets/applogo.png" alt="">
-        </div>
-        <button mat-icon-button (click)="isExpanded = !isExpanded"><mat-icon>menu</mat-icon></button>
-      </div>
-      <div class="right">
-        <div class="userName">
-          Rishabh Ghildiyal
-        </div>
-        <div class="help">
-          <button mat-raised-button color="warn">Help</button>
-        </div>
-        <div class="bellIcon">
-          <mat-icon>notification_important</mat-icon>
-        </div>
-      </div>
-    </mat-toolbar>
-  </div>
-  <mat-sidenav-container class="example-container" autosize>
-    <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true" (mouseenter)="mouseenter()"
-    (mouseleave)="mouseleave()">
-    <mat-nav-list>
-      <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
-        <span class="full-width" *ngIf="isExpanded || isShowing">Home</span>
-        <mat-icon mat-list-icon>home</mat-icon>
-      </mat-list-item>
 
-      <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
-        <span class="full-width" *ngIf="isExpanded || isShowing">My Profile</span>
-        <mat-icon mat-list-icon>supervisor_account</mat-icon>
-      </mat-list-item>
-
-      <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
-        <span class="full-width" *ngIf="isExpanded || isShowing">Directory</span>
-        <mat-icon mat-list-icon>store_mall_directory</mat-icon>
-      </mat-list-item>
-
-      <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
-        <span class="full-width" *ngIf="isExpanded || isShowing">Entrepreneurship<br> Program</span>
-        <mat-icon mat-list-icon>supervisor_account</mat-icon>
-        <mat-icon>keyboard_arrow_right</mat-icon>
-
-      </mat-list-item>
-
-      <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
-        <span class="full-width" *ngIf="isExpanded || isShowing">My Links</span>
-        <mat-icon mat-list-icon>supervisor_account</mat-icon>
-        <mat-icon>keyboard_arrow_right</mat-icon>
-
-      </mat-list-item>
-      <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
-        <span class="full-width" *ngIf="isExpanded || isShowing">Finance</span>
-        <mat-icon mat-list-icon>supervisor_account</mat-icon>
-        <mat-icon>keyboard_arrow_right</mat-icon>
-
-      </mat-list-item>
-      <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
-        <span class="full-width" *ngIf="isExpanded || isShowing">Reviews</span>
-        <mat-icon mat-list-icon>supervisor_account</mat-icon>
-        <mat-icon>keyboard_arrow_right</mat-icon>
-
-      </mat-list-item>
-      <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
-        <span class="full-width" *ngIf="isExpanded || isShowing">Refer a Friend</span>
-        <mat-icon mat-list-icon>supervisor_account</mat-icon>
-        <mat-icon>keyboard_arrow_right</mat-icon>
-
-      </mat-list-item>
-
-      <!-- </mat-list-item> -->
-      <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
-        <span class="full-width" *ngIf="isExpanded || isShowing">Fresher's Training</span>
-        <mat-icon mat-list-icon>supervisor_account</mat-icon>
-        <mat-icon>keyboard_arrow_right</mat-icon>
-      </mat-list-item>
-
-      <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
-        <span class="full-width" *ngIf="isExpanded || isShowing">Training</span>
-        <mat-icon mat-list-icon>supervisor_account</mat-icon>
-        <mat-icon>keyboard_arrow_right</mat-icon>
-      </mat-list-item>
-
-      <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
-        <span class="full-width" *ngIf="isExpanded || isShowing">Assests Inventory</span>
-        <mat-icon mat-list-icon>supervisor_account</mat-icon>
-        <mat-icon>keyboard_arrow_right</mat-icon>
-      </mat-list-item>
-
-      <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
-        <span class="full-width" *ngIf="isExpanded || isShowing">Attendence</span>
-        <mat-icon mat-list-icon>supervisor_account</mat-icon>
-        <mat-icon>keyboard_arrow_right</mat-icon>
-      </mat-list-item>
-
-      <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
-        <span class="full-width" *ngIf="isExpanded || isShowing">Leave</span>
-        <mat-icon mat-list-icon>supervisor_account</mat-icon>
-        <mat-icon>keyboard_arrow_right</mat-icon>
-      </mat-list-item>
-
-      <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
-        <span class="full-width" *ngIf="isExpanded || isShowing">Tickets</span>
-        <mat-icon mat-list-icon>supervisor_account</mat-icon>
-        <mat-icon>keyboard_arrow_right</mat-icon>
-      </mat-list-item>
-
-      <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
-        <span class="full-width" *ngIf="isExpanded || isShowing">DSR</span>
-        <mat-icon mat-list-icon>supervisor_account</mat-icon>
-        <mat-icon>keyboard_arrow_right</mat-icon>
-      </mat-list-item>
-
-      <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
-        <span class="full-width" *ngIf="isExpanded || isShowing">Projects</span>
-        <mat-icon mat-list-icon>supervisor_account</mat-icon>
-      </mat-list-item>
-
-
-
-      <div class="submenu" [ngClass]="{'expanded' : showSubmenu}" *ngIf="isShowing || isExpanded">
-        <a mat-list-item href="...">Submenu Item 1</a>
-        <a mat-list-item href="...">Submenu Item 2</a>
-        <mat-list-item (click)="showSubSubMenu = !showSubSubMenu" class="parent">
-          <span class="full-width" *ngIf="isExpanded || isShowing">Nested Menu</span>
-          <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubSubMenu}"
-            *ngIf="isExpanded || isShowing">expand_more</mat-icon>
-        </mat-list-item>
-        <div class="submenu" [ngClass]="{'expanded' : showSubSubMenu}" *ngIf="isShowing || isExpanded">
-          <mat-list-item>SubSubmenu Item 1</mat-list-item>
-          <mat-list-item>SubSubmenu Item 2</mat-list-item>
-        </div>
-      </div>
-    </mat-nav-list>
-    <mat-nav-list> </mat-nav-list>
-  </mat-sidenav>
-
-    <div class="home">
+<div class="main_container">
+  <header>
+    <!-- <app-header (IsToggle)="onToggle($event)"></app-header> -->
+    <app-header (isToggle)="onToggle($event)"></app-header>
+  </header>
+  <mat-sidenav-container autosize>
+    <mat-sidenav [opened]="true" mode="side" (mouseenter)="mouseEnter()"
+      (mouseleave)="mouseLeave()">
+      <app-side-nav [isExpanded]="showSidenav" [isShowing]="isShowing"></app-side-nav>
+    </mat-sidenav>
+    <mat-sidenav-content >
       <router-outlet></router-outlet>
-    </div>
-
+    </mat-sidenav-content>
   </mat-sidenav-container>
-
 </div>
