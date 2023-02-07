@@ -19,20 +19,23 @@
   .main-div {
     padding: 20px;
     height: 59vh;
-    border: 1px solid black;
+    // border: 1px solid black;
     display: grid;
     grid-template-columns: 74% 26%;
-    background-color: #fefeff;
+    background-color: #f3f7fd;
     .main-left {
       display: grid;
-      grid-template-columns: 46% 50%;
+      grid-template-columns: 50% 50%;
+      border-radius: 9px;
+      border: 1px solid black;
+      margin-right: 25px;
+      background-color: #fefefe;
       .card{
         border-right: 1px dotted black;
-        padding: 0px;
+        padding: 18px;
         .left {
           display: flex;
           justify-content: space-between;
-          width: 20vw;
           .jobHeading{
             padding: 5px;
             h3{
@@ -53,18 +56,16 @@
 
         }
         .card1{
-          border: 1px solid transparent;
-          // height:36.2vh;
-          width: 25vw;
-          padding: 10px;
+          border: 1px solid grey;
           margin: 0px;
+          padding: 10px;
           .fullCard{
             background-color: #f3f7fd;
             position: relative;
             padding: 0 0 5px 0;
-
+            margin: 10px;
+            border-radius: 5%;
             .image{
-              border-radius: 5%;
               border: 1px solid transparent;
               display: flex;
               justify-content: center;
@@ -187,17 +188,19 @@
         .referralBonus{
           padding: 0 0 0 24px;
           .referralHeading{
+            padding: 20px 10px 0 10px;
             h3{
 
               color: #2bb0fe;
               font-weight: bold;
+              font-size: 200;
               text-transform: capitalize;
             }
 
           }
           .cards{
             display: grid;
-            grid-template-columns: 50% 50%;
+            grid-template-columns: 46% 46%;
             align-items: center;
             padding: 0 0 0 10px;
 
@@ -218,6 +221,7 @@
             -webkit-box-pack: center;
             -ms-flex-pack: center;
             justify-content: center;
+            width: 10vw;
             h2{
               font-size: 56px;
               color: #0091fe;
@@ -236,8 +240,14 @@
     }
     .right {
       border: 1px solid black;
-      height: 40vh;
-      // width: 20vw;
+      padding: 10px 10px 10px 20px;
+      h3{
+        font-size: large;
+        font-weight: bold;
+      }
+      img{
+        height: 49vh;
+      }
     }
   }
 }
