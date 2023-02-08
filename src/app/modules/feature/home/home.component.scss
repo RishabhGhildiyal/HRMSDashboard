@@ -1,5 +1,5 @@
 @import "src/app/scss/_mixins.scss";
-
+@import "src/app/scss/global.scss";
 .container {
   padding: 10px 10px 10px 20px;
   min-height: 100%;
@@ -19,14 +19,12 @@
   }
   .main-div {
     padding: 20px;
-    // height: 59vh;
-    // border: 1px solid black;
-    @include grid ('grid-template-columns', '69% 29%','');
+    @include grid("grid-template-columns", "69% 29%", "");
     background-color: #f3f7fd;
     .main-left {
-      @include grid ('grid-template-columns', '50% 50%','');
+      @include grid("grid-template-columns", "50% 50%", "");
       border-radius: 9px;
-      border: 1px solid black;
+      border: $borderColor;
       margin-right: 25px;
       background-color: #fefefe;
       .card {
@@ -54,7 +52,7 @@
           }
         }
         .card1 {
-          border: 1px solid grey;
+          // border: $borderColor;
           margin: 0px;
           padding: 10px;
           .fullCard {
@@ -65,7 +63,7 @@
             border-radius: 5%;
             .image {
               border: 1px solid transparent;
-              @include flex(center,center);
+              @include flex(center, center);
               height: 18vh;
               img {
                 width: 5vw;
@@ -107,7 +105,7 @@
             }
           }
           .openings {
-            @include flex('',space-between);
+            @include flex("", space-between);
             .noOfOpenings {
               font-size: small;
               span {
@@ -122,55 +120,19 @@
             }
           }
           .cardBottom {
-            @include flex('',space-between);
+            @include flex("", space-between);
 
             .viewDetails {
-              button {
-                font-family: "Lato";
-                font-size: 14px;
-                color: #008dfe;
-                font-weight: 500;
-                line-height: 1.32;
-                padding: 12px;
-                border-radius: 5px;
-                border: 1px solid black;
-                width: 12vw;
-
-                background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), #fefefe;
-                background-blend-mode: soft-light, normal;
-                border: 1px solid rgba(150, 165, 184, 0.2);
-                box-sizing: border-box;
-                box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12), inset 0px 2px 0px rgba(255, 255, 255, 0.24);
-                border-radius: 4px;
-                // color: #FFFFFF;
-              }
+              @include button(#008dfe, #fefefe, 12vw);
             }
             .referCandidate {
-              button {
-                font-family: "Lato";
-                font-size: 14px;
-                color: #ffffff;
-                font-weight: 500;
-                line-height: 1.32;
-                padding: 12px;
-                border-radius: 5px;
-                background-color: #008dfe;
-                width: 12vw;
-
-                background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), #199cff;
-                background-blend-mode: soft-light, normal;
-                border: 1px solid rgba(150, 165, 184, 0.2);
-                box-sizing: border-box;
-                box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12), inset 0px 2px 0px rgba(255, 255, 255, 0.24);
-                border-radius: 4px;
-                color: #ffffff;
-              }
+              @include button(#fefefe, #008dfe, 12vw);
             }
           }
         }
       }
       .mid {
-        border: 1px solid black;
+        border: $borderColor;
         border-left: none;
         border-top: none;
         border-bottom: none;
@@ -187,7 +149,7 @@
             }
           }
           .cards {
-            @include grid ('grid-template-columns', '46% 46%','');
+            @include grid("grid-template-columns", "46% 46%", "");
 
             align-items: center;
             padding: 0 0 0 10px;
@@ -198,7 +160,7 @@
               padding: 25px 15px;
               display: -webkit-box;
               display: -ms-flexbox;
-              @include flex(center,center);
+              @include flex(center, center);
               -webkit-box-orient: vertical;
               -webkit-box-direction: normal;
               -ms-flex-direction: column;
@@ -223,7 +185,7 @@
       }
     }
     .right {
-      border: 1px solid black;
+      border: $borderColor;
       padding: 10px 10px 10px 39px;
       background-color: white;
       border-radius: 2%;
@@ -242,7 +204,7 @@
       background-color: #f3f7fd;
       .celebration {
         border-radius: 9px;
-        border: 1px solid black;
+        border: $borderColor;
         margin-right: 25px;
         background-color: #fefefe;
         .header {
@@ -251,13 +213,14 @@
           border-bottom: 1px solid grey;
         }
         .body {
-          @include grid ('grid-template-columns', '33% 33% 33%','');
+          @include grid("grid-template-columns", "33% 33% 33%", "");
 
           padding: 10px;
           // margin-right: ;
           .latestCard {
-            border: 1px solid black;
+            border: $borderColor;
             padding: 16px 16px 80px 16px;
+            border-radius: 2%;
             .heading {
               display: flex;
               padding-right: 10px;
@@ -282,7 +245,7 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                @include flex(center,'');
+                @include flex(center, "");
                 flex-direction: row;
                 padding-left: 10px;
               }
@@ -297,12 +260,18 @@
                 p {
                 }
               }
+              .footer {
+                @include button(#fefefe, #008dfe, 5vw);
+                position: relative;
+                top: 91px;
+              }
             }
           }
           .award {
-            padding: 16px 16px 80px 16px;
-            border: 1px solid black;
+            padding: 16px 16px 8px 16px;
+            border: $borderColor;
             margin-left: 10px;
+            border-radius: 2%;
             .awardBody {
               .latestCardAward {
                 .headingAward {
@@ -329,7 +298,7 @@
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
-                    @include flex(center,'');
+                    @include flex(center, "");
 
                     flex-direction: row;
                     padding-left: 10px;
@@ -342,7 +311,7 @@
                   }
 
                   .image {
-                    @include grid ('grid-template-columns', 'auto auto','');
+                    @include grid("grid-template-columns", "auto auto", "");
 
                     .image1 {
                       img {
@@ -374,8 +343,9 @@
           }
           .birthday {
             padding: 16px 16px 80px 16px;
-            border: 1px solid black;
+            border: $borderColor;
             margin-left: 10px;
+            border-radius: 2%;
             .birthdayBody {
               .birthdayCelebration {
                 .headingCelebration {
@@ -402,7 +372,7 @@
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
-                    @include flex(center,'');
+                    @include flex(center, "");
                     flex-direction: row;
                     padding-left: 10px;
                   }
@@ -425,18 +395,128 @@
       }
     }
   }
+
+  .appinventivGallery {
+    padding: 20px;
+    .fullContent {
+      background-color: #f3f7fd;
+      .celebration {
+        border-radius: 9px;
+        border: $borderColor;
+        margin-right: 25px;
+        background-color: #fefefe;
+        .header {
+          padding: 10px 10px 0px 10px;
+
+          border-bottom: 1px solid grey;
+        }
+        .body {
+          @include grid("grid-template-columns", "33% 33% 33%", "");
+
+          padding: 10px;
+          // margin-right: ;
+          .latestCard {
+            // border: $borderColor;
+            padding: 16px 16px 80px 16px;
+
+            .content {
+              // padding: 10px;
+              position: relative;
+              top: 70px;
+              .subject {
+                h3 {
+                }
+              }
+              .image {
+                img {
+                  width: 23vw;
+                }
+              }
+            }
+          }
+          .award {
+            padding: 16px 16px 80px 16px;
+            // border: $borderColor;
+            .awardBody {
+              .latestCardAward {
+                .headingAward {
+                  display: flex;
+                  padding-right: 5px;
+                  .dot {
+                    background-color: #c136cd;
+                    height: 8px;
+                    width: 8px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    position: relative;
+                    top: 8px;
+                  }
+                  h3 {
+                    top: 5px;
+                    font-family: "Lato";
+                    font-size: 16px;
+                    color: #000000;
+                    font-weight: 500;
+                    line-height: 1.9;
+                    width: 90%;
+                    height: 20px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    @include flex(center, "");
+
+                    flex-direction: row;
+                    padding-left: 10px;
+                  }
+                }
+                .content {
+                  position: relative;
+                  top: 70px;
+                  .image {
+                    .image1 {
+                      img {
+                        width: 23vw;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .birthday {
+            padding: 16px 16px 80px 16px;
+            // border: $borderColor;
+            margin-left: 10px;
+            .birthdayBody {
+              .birthdayCelebration {
+                .content {
+                  position: relative;
+                  top: 70px;
+                  .image {
+                    img {
+                      width: 23vw;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
-.footer{
+.footer {
   padding: 50px 0 50px 0px;
   background-color: white;
-  p{
-    @include flex(center,'');
+  p {
+    @include flex(center, "");
     position: relative;
     // justify-content: center;
     bottom: 18px;
     margin-left: 10px;
     // display: block;
-    span{
+    span {
       font-size: small;
     }
   }
