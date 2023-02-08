@@ -2,6 +2,7 @@
 
 .container {
   padding: 10px 10px 10px 20px;
+  min-height: 100%;
   background-color: #f3f7fd;
   .welcome {
     display: flex;
@@ -18,65 +19,60 @@
   }
   .main-div {
     padding: 20px;
-    height: 59vh;
+    // height: 59vh;
     // border: 1px solid black;
-    display: grid;
-    grid-template-columns: 74% 26%;
+    @include grid ('grid-template-columns', '69% 29%','');
     background-color: #f3f7fd;
     .main-left {
-      display: grid;
-      grid-template-columns: 50% 50%;
+      @include grid ('grid-template-columns', '50% 50%','');
       border-radius: 9px;
       border: 1px solid black;
       margin-right: 25px;
       background-color: #fefefe;
-      .card{
+      .card {
         border-right: 1px dotted black;
         padding: 18px;
         .left {
           display: flex;
           justify-content: space-between;
-          .jobHeading{
+          .jobHeading {
             padding: 5px;
-            h3{
+            h3 {
               word-break: break-word;
-              padding: 10px 0 0 0 ;
-              font-size:20px;
+              padding: 10px 0 0 0;
+              font-size: 20px;
               font-weight: 700;
               line-height: 1.5px;
             }
           }
-          .viewAll{
-            button{
+          .viewAll {
+            button {
               background-color: #1f87f0;
               color: #fefeff;
               height: 28px;
             }
           }
-
         }
-        .card1{
+        .card1 {
           border: 1px solid grey;
           margin: 0px;
           padding: 10px;
-          .fullCard{
+          .fullCard {
             background-color: #f3f7fd;
             position: relative;
             padding: 0 0 5px 0;
             margin: 10px;
             border-radius: 5%;
-            .image{
+            .image {
               border: 1px solid transparent;
-              display: flex;
-              justify-content: center;
-              align-items: center;
+              @include flex(center,center);
               height: 18vh;
-              img{
+              img {
                 width: 5vw;
                 height: 7vh;
               }
             }
-            .location{
+            .location {
               position: absolute;
               bottom: 15px;
               left: 15px;
@@ -85,16 +81,16 @@
               padding: 8px 12px 8px 30px;
               font-family: "Lato";
               font-size: 12px;
-              color: #231E1E;
+              color: #231e1e;
               font-weight: 400;
               line-height: 1.2;
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
             }
-            .date{
+            .date {
               position: relative;
-              p{
+              p {
                 position: absolute;
                 right: 18px;
                 height: 10px;
@@ -102,38 +98,34 @@
               }
             }
           }
-          .description{
-            .heading{
-              h3{
+          .description {
+            .heading {
+              h3 {
                 font-weight: 800;
                 font-size: large;
-
               }
             }
           }
-          .openings{
-            display: flex;
-            justify-content: space-between;
-            .noOfOpenings{
+          .openings {
+            @include flex('',space-between);
+            .noOfOpenings {
               font-size: small;
-              span{
+              span {
                 font-weight: bold;
-
               }
             }
-            .experience{
+            .experience {
               font-size: small;
-              span{
+              span {
                 font-weight: bold;
-
               }
             }
           }
-          .cardBottom{
-            display: flex;
-            justify-content: space-between;
-            .viewDetails{
-              button{
+          .cardBottom {
+            @include flex('',space-between);
+
+            .viewDetails {
+              button {
                 font-family: "Lato";
                 font-size: 14px;
                 color: #008dfe;
@@ -153,8 +145,8 @@
                 // color: #FFFFFF;
               }
             }
-            .referCandidate{
-              button{
+            .referCandidate {
+              button {
                 font-family: "Lato";
                 font-size: 14px;
                 color: #ffffff;
@@ -165,19 +157,17 @@
                 background-color: #008dfe;
                 width: 12vw;
 
-                background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), #199CFF;
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), #199cff;
                 background-blend-mode: soft-light, normal;
                 border: 1px solid rgba(150, 165, 184, 0.2);
                 box-sizing: border-box;
                 box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12), inset 0px 2px 0px rgba(255, 255, 255, 0.24);
                 border-radius: 4px;
-                color: #FFFFFF;
-
+                color: #ffffff;
               }
             }
           }
         }
-
       }
       .mid {
         border: 1px solid black;
@@ -185,69 +175,269 @@
         border-top: none;
         border-bottom: none;
         border-right: none;
-        .referralBonus{
+        .referralBonus {
           padding: 0 0 0 24px;
-          .referralHeading{
+          .referralHeading {
             padding: 20px 10px 0 10px;
-            h3{
-
+            h3 {
               color: #2bb0fe;
               font-weight: bold;
               font-size: 200;
               text-transform: capitalize;
             }
-
           }
-          .cards{
-            display: grid;
-            grid-template-columns: 46% 46%;
+          .cards {
+            @include grid ('grid-template-columns', '46% 46%','');
+
             align-items: center;
             padding: 0 0 0 10px;
 
-           li{
-            margin: 10px;
-            background-color: #F4F9FF;
-            padding: 25px 15px;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            width: 10vw;
-            h2{
-              font-size: 56px;
-              color: #0091fe;
+            li {
+              margin: 10px;
+              background-color: #f4f9ff;
+              padding: 25px 15px;
+              display: -webkit-box;
+              display: -ms-flexbox;
+              @include flex(center,center);
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+              flex-direction: column;
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+              -webkit-box-pack: center;
+              -ms-flex-pack: center;
+              width: 10vw;
+              h2 {
+                font-size: 56px;
+                color: #0091fe;
+              }
+              p {
+                font-size: 12px;
+                // word-break:break-word;
+                text-align: center;
+              }
             }
-            p{
-              font-size: 12px;
-              // word-break:break-word;
-              text-align: center;
-            }
-
-           }
           }
-
         }
       }
     }
     .right {
       border: 1px solid black;
-      padding: 10px 10px 10px 20px;
-      h3{
+      padding: 10px 10px 10px 39px;
+      background-color: white;
+      border-radius: 2%;
+      h3 {
         font-size: large;
         font-weight: bold;
       }
-      img{
+      img {
         height: 49vh;
       }
+    }
+  }
+  .latestAppinventiv {
+    padding: 20px;
+    .fullContent {
+      background-color: #f3f7fd;
+      .celebration {
+        border-radius: 9px;
+        border: 1px solid black;
+        margin-right: 25px;
+        background-color: #fefefe;
+        .header {
+          padding: 10px 10px 0px 10px;
+
+          border-bottom: 1px solid grey;
+        }
+        .body {
+          @include grid ('grid-template-columns', '33% 33% 33%','');
+
+          padding: 10px;
+          // margin-right: ;
+          .latestCard {
+            border: 1px solid black;
+            padding: 16px 16px 80px 16px;
+            .heading {
+              display: flex;
+              padding-right: 10px;
+              .dot {
+                background-color: #c136cd;
+                height: 8px;
+                width: 8px;
+                border-radius: 50%;
+                display: inline-block;
+                position: relative;
+                top: 5px;
+              }
+              h3 {
+                top: 5px;
+                font-family: "Lato";
+                font-size: 16px;
+                color: #000000;
+                font-weight: 500;
+                line-height: 1.9;
+                width: 90%;
+                height: 20px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                @include flex(center,'');
+                flex-direction: row;
+                padding-left: 10px;
+              }
+            }
+            .content {
+              padding: 10px;
+              .subject {
+                h3 {
+                }
+              }
+              .paragraph {
+                p {
+                }
+              }
+            }
+          }
+          .award {
+            padding: 16px 16px 80px 16px;
+            border: 1px solid black;
+            margin-left: 10px;
+            .awardBody {
+              .latestCardAward {
+                .headingAward {
+                  display: flex;
+                  padding-right: 5px;
+                  .dot {
+                    background-color: #c136cd;
+                    height: 8px;
+                    width: 8px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    position: relative;
+                    top: 8px;
+                  }
+                  h3 {
+                    top: 5px;
+                    font-family: "Lato";
+                    font-size: 16px;
+                    color: #000000;
+                    font-weight: 500;
+                    line-height: 1.9;
+                    width: 90%;
+                    height: 20px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    @include flex(center,'');
+
+                    flex-direction: row;
+                    padding-left: 10px;
+                  }
+                }
+                .content {
+                  .subject {
+                    h4 {
+                    }
+                  }
+
+                  .image {
+                    @include grid ('grid-template-columns', 'auto auto','');
+
+                    .image1 {
+                      img {
+                      }
+                    }
+                    .image2 {
+                      img {
+                      }
+                    }
+                  }
+                  .description {
+                    p {
+                      font-size: small;
+                    }
+                  }
+                  .footer {
+                    position: relative;
+                    top: 10px;
+                    p {
+                      font-size: small;
+                    }
+                    span {
+                      color: blue;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .birthday {
+            padding: 16px 16px 80px 16px;
+            border: 1px solid black;
+            margin-left: 10px;
+            .birthdayBody {
+              .birthdayCelebration {
+                .headingCelebration {
+                  display: flex;
+                  padding-right: 5px;
+                  .dot {
+                    background-color: greenyellow;
+                    height: 8px;
+                    width: 8px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    position: relative;
+                    top: 8px;
+                  }
+                  h3 {
+                    top: 5px;
+                    font-family: "Lato";
+                    font-size: 16px;
+                    color: #000000;
+                    font-weight: 500;
+                    line-height: 1.9;
+                    width: 90%;
+                    height: 20px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    @include flex(center,'');
+                    flex-direction: row;
+                    padding-left: 10px;
+                  }
+                }
+                .content {
+                  .subject {
+                    h4 {
+                      padding-left: 10px;
+                    }
+                  }
+                  .image {
+                    img {
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.footer{
+  padding: 50px 0 50px 0px;
+  background-color: white;
+  p{
+    @include flex(center,'');
+    position: relative;
+    // justify-content: center;
+    bottom: 18px;
+    margin-left: 10px;
+    // display: block;
+    span{
+      font-size: small;
     }
   }
 }

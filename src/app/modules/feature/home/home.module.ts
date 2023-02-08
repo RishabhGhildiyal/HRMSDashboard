@@ -13,7 +13,9 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    MatButtonModule
+    MatButtonModule,
+    // BrowserAnimationsModule,
+    // CarouselModule
   ]
 })
 export class HomeModule { }

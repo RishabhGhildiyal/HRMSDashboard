@@ -1,6 +1,5 @@
 @import 'src/app/scss/global.scss';
 .main_container {
-  height: 100%;
   @include custom-scroller("y");
   mat-sidenav {
     position: fixed;
@@ -12,8 +11,9 @@
     background-color: #e3eef4;
 
 
-  mat-sidenav-content{
-    top: 85px;
+    mat-sidenav-content{
+      top: 65px;
+      min-height: 100%;
 
 
   }
