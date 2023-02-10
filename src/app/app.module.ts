@@ -7,12 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageNotFoundComponent } from './modules/page-not-found/page-not-found.component';
 import {MatCardModule} from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
+import { ShowErrorPipe } from './pipes/showErrorPipe/show-error.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
+    ShowErrorPipe,
   ],
   imports: [
     BrowserModule,

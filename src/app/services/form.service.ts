@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Validators } from '@angular/forms';
+import { Regex } from '../constants/regex';
 
 @Injectable({
   providedIn: 'root'
@@ -6,4 +8,28 @@ import { Injectable } from '@angular/core';
 export class FormService {
 
   constructor() { }
+
+  VALIDATION = {
+    email: [
+      Validators.pattern(Regex.email),
+      Validators.email,
+      // Validators.maxLength(LIMIT.MAX_EMAIL_LENGTH),
+    ],
+    password: [Validators.pattern(Regex.password)],
+  };
+
+  getControl(name: string, required = true) {
+    //@ts-ignore: unreachable code error
+
+    let compose = [...this.VALIDATION[name]];
+    if (required) {
+      if (name === 'checkbox') {
+        compose.splice(0, 0, Validators.requiredTrue);
+      } else {
+        compose.splice(0, 0, Validators.required);
+      }
+    }
+    return [null, compose];
+
+}
 }

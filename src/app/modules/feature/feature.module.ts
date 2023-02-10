@@ -13,11 +13,12 @@ import { SideNavComponent } from './feature-parts/side-nav/side-nav.component';
 import { HeaderComponent } from './feature-parts/header/header.component';
 
 
+
 @NgModule({
   declarations: [
     FeatureComponent,
     SideNavComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     CommonModule,

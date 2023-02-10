@@ -1,7 +1,5 @@
-interface Iroute{
-  path:string
-  fullurl:string
-}
+import { Iroute } from "../interfaces/interface";
+
 
 export const AUTH : Iroute = {
   path:'auth',
@@ -26,6 +24,13 @@ export const FORGET_PASSWORD : Iroute = {
 
 export const DASHBOARD : Iroute = {
   path:'dashboard',
+  get fullurl(): string {
+    return `/${this.path}`;
+  },
+}
+
+export const HOME : Iroute = {
+  path:'home',
   get fullurl(): string {
     return `/${this.path}`;
   },
@@ -69,6 +74,13 @@ export const SHIFT: Iroute={
 
 export const APPRAISAL: Iroute={
   path:'appraisal',
+  get fullurl(){
+    return `/${this.path}`
+  }
+}
+
+export const CHANGEPASSWORD: Iroute={
+  path:'change-password',
   get fullurl(){
     return `/${this.path}`
   }
@@ -196,4 +208,4 @@ get fullUrl(){
 */
 
 
-/*
+

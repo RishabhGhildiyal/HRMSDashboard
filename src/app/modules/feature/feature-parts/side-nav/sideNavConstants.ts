@@ -1,6 +1,9 @@
+import {HOME, MY_PROFILE } from "../../../../constants/routes"
+
+
 export const sideNavList = [
-  { title: 'Home', logo: 'home', isActive: true, routerLink:'/home'},
-  { title: 'My Profile', logo: 'person', isActive: true, },
+  { title: 'Home', logo: 'home', isActive: true, routerLink:HOME.path},
+  { title: 'My Profile', logo: 'person', isActive: true, routerLink:MY_PROFILE.path},
   { title: 'Directory', logo: 'description', isActive: true, },
   { title: 'Enterpreneurship Program', logo: 'person', options: [{ subTitle: 'Explore', subLogo: 'horizontal_rule' }], isActive: true, },
   { title: 'My Links', logo: 'grid_view', options: [{ subTitle: 'Insurance Verification Details', subLogo: 'checklist' }], isActive: true, },

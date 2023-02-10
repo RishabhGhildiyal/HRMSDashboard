@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormService } from 'src/app/services/form.service';
 import { COMMON_EMAIL, COMMON_VALIDATION, PATTERN_EMAIL, PATTERN_SPACE } from 'src/app/validations/validations';
 
 @Component({
@@ -12,17 +13,14 @@ export class CredentialLoginComponent implements OnInit {
   show = true;
   hide=true;
   loginForm!: FormGroup;
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder, private service:FormService) { }
   ngOnInit(): void {
    this.createForm();
   }
   createForm(){
     this.loginForm = this.fb.group({
-      email: ['', [PATTERN_EMAIL, COMMON_EMAIL, COMMON_VALIDATION]],
-      password: [
-        '',
-        [COMMON_VALIDATION, Validators.minLength(6),PATTERN_SPACE],
-      ],
+      email: this.service.getControl('email'),
+      password: this.service.getControl('password')
     });
   }
   login(){

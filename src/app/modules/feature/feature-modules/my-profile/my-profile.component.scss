@@ -33,13 +33,6 @@
           font-weight: 500 !important;
           margin-bottom: 10px;
         }
-        // .login-details-1{
-        // strong{
-        //   font-size: 15px;
-        //   font-weight: 600;
-        //   font-family: 'Segoe UI';
-        //  }
-        // }
       }
     }
   }
@@ -59,52 +52,7 @@
     }
   }
 }
-::ng-deep .mat-tab-label-active{
-  background-color: $primary-blue !important;
-  color: $primary-white !important;
-  ::ng-deep .mat-icon{
-    color: $primary-white !important;
-  }
 
-}
-
-// ::ng-deep .mat-expansion-panel-content{
-//   visibility: hidden;
-//   height: 0px;
-//   background-color: greenyellow;
-//   display: none !important;
-// }
-// ::ng-deep .mat-ink-bar{
-//   display: hide !important;
-//   visibility: hidden !important;
-// }
-
-// ::ng-deep .mat-elevation-z4{
-//   box-shadow: 0px 0px 0px 0px !important;
-// }
-
-// ::ng-deep .mat-tab-header-pagination{
-//   display: hide !important;
-//   visibility: hidden !important;
-// }
-
-
-// ::ng-deep .mat-tab-labels{
-//   display: block !important;
-// }
-
-// ::ng-deep .mat-tab-label{
-//   width: 100%;
-// }
-// ::ng-deep .mat-tab-group{
-//   flex-direction: row !important;
-// }
-// ::ng-deep .mat-tab-header{
-//   width: 26% !important;
-// }
-// ::ng-deep .mat-tab-body-wrapper{
-//   width: 70% !important;
-// }
 
 
 .cards{
@@ -160,42 +108,43 @@
 }
 
 
-
+:host {
+	::ng-deep {
+		.mat-tab-group {
+			flex-direction: row;
+		}
+		.mat-tab-header {
+			border-bottom: none;
+		}
+		.mat-tab-header-pagination {
+			display: none !important;
+		}
+		.mat-tab-labels {
+			flex-direction: column;
+		}
+		.mat-ink-bar {
+			height: 100%;
+			left: 98% !important;
+		}
+		.mat-tab-body-wrapper {
+			flex: 1 1 auto;
+		}
+	}
+}
 ::ng-deep .mat-tab-labels{
   display: block !important;
-  background-color: white;
 }
 
 ::ng-deep .mat-tab-label{
-  background-color: white;
   width: 100%;
 }
 ::ng-deep .mat-tab-group{
   flex-direction: row !important;
-  @include flex(auto,space-between);
-  @media screen and (max-width: 950px) {
-    margin: 20px;
-  }
-
 }
 ::ng-deep .mat-tab-header{
-  width: 24% !important;
-  border: 0px !important;
-  border-radius: 5px;
-  @media screen and (max-width: 950px) {
-    margin-bottom: 24px !important;
-  }
+  width: 26% !important;
 }
 ::ng-deep .mat-tab-body-wrapper{
-  width: 72% !important;
-  @media screen and (max-width: 950px) {
-    width: 100% !important;
+  width: 70% !important;
+}
 
-  }
-}
-::ng-deep .mat-ripple{
-  justify-content: start !important;
-  mat-icon{
-    margin-right: 10px !important;
-  }
-}
