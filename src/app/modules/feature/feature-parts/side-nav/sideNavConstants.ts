@@ -1,5 +1,5 @@
 export const sideNavList = [
-  { title: 'Home', logo: 'home', isActive: true, },
+  { title: 'Home', logo: 'home', isActive: true, routerLink:'/home'},
   { title: 'My Profile', logo: 'person', isActive: true, },
   { title: 'Directory', logo: 'description', isActive: true, },
   { title: 'Enterpreneurship Program', logo: 'person', options: [{ subTitle: 'Explore', subLogo: 'horizontal_rule' }], isActive: true, },

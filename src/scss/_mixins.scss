@@ -1,4 +1,6 @@
 
+
+
 @mixin flex($item, $align) {
   display: flex;
   align-items: $item;
@@ -56,7 +58,3 @@
 //   right : $right;
 // }
 
-// $primary-blue: #199cff;
-// $primary-white: #fff;
-// $darkbklue : #26B4FF;
-// $pure-white : white

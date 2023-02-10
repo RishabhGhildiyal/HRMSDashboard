@@ -1,0 +1,201 @@
+@import "../../../../../scss/mixins";
+@import "../../../../../scss/global.scss";
+
+
+.container{
+  padding: 7px 10px 10px 20px;
+  min-height: 100%;
+  background-color: #f3f7fd;
+  .main{
+    padding: 10px;
+    @include grid("grid-template-columns", "69% 29%", "");
+    background-color: #f3f7fd;
+    .card{
+      border-radius: 1%;
+      background-color: white;
+      border: $borderColor;
+      height: 20vh;
+      width: 78vw;
+      @include flex(space-between,'');
+      .image{
+        img{
+          height: 16vh;
+          padding: 30px;
+          border-radius: 50%;
+        }
+      }
+      .content {
+        padding-left: 40px;
+        margin-top: 28px;
+        h1 {
+          font-family: "Segoe UI";
+          font-size: 30px;
+          font-weight: 500 !important;
+          margin-bottom: 10px;
+        }
+        // .login-details-1{
+        // strong{
+        //   font-size: 15px;
+        //   font-weight: 600;
+        //   font-family: 'Segoe UI';
+        //  }
+        // }
+      }
+    }
+  }
+  .tab{
+    padding: 20px;
+    @media screen and (max-width: 950px) {
+      width: 100%;
+      padding: 0px;
+      margin-bottom: 24px !important;
+      ::ng-deep .mat-tab-group{
+        display: block !important;
+      }
+      ::ng-deep .mat-tab-header{
+        width: 100% !important;
+      }
+
+    }
+  }
+}
+::ng-deep .mat-tab-label-active{
+  background-color: $primary-blue !important;
+  color: $primary-white !important;
+  ::ng-deep .mat-icon{
+    color: $primary-white !important;
+  }
+
+}
+
+// ::ng-deep .mat-expansion-panel-content{
+//   visibility: hidden;
+//   height: 0px;
+//   background-color: greenyellow;
+//   display: none !important;
+// }
+// ::ng-deep .mat-ink-bar{
+//   display: hide !important;
+//   visibility: hidden !important;
+// }
+
+// ::ng-deep .mat-elevation-z4{
+//   box-shadow: 0px 0px 0px 0px !important;
+// }
+
+// ::ng-deep .mat-tab-header-pagination{
+//   display: hide !important;
+//   visibility: hidden !important;
+// }
+
+
+// ::ng-deep .mat-tab-labels{
+//   display: block !important;
+// }
+
+// ::ng-deep .mat-tab-label{
+//   width: 100%;
+// }
+// ::ng-deep .mat-tab-group{
+//   flex-direction: row !important;
+// }
+// ::ng-deep .mat-tab-header{
+//   width: 26% !important;
+// }
+// ::ng-deep .mat-tab-body-wrapper{
+//   width: 70% !important;
+// }
+
+
+.cards{
+  width: 26%;
+  background-clip: content-box;
+  background-color: $primary-blue;
+  border-radius: 5px 5px 0 0 ;
+  padding: 0 20px;
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    margin-bottom: 20px;
+
+  }
+
+  div.basic-info-header{
+    border-radius: 5px 5px 0 0 ;
+    background-color: $primary-blue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a{
+      border-radius: 5px 5px 0 0;
+      color: white;
+    }
+  }
+  div{
+    padding: 12px 28px;
+    background-color: white;
+    border: 1px solid $primary-blue ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 1500px) {
+      padding: 0 5px;
+        min-height: 66px;
+
+    }
+
+    a{
+      display: flex;
+      // justify-content: space-evenly;
+      align-items: center;
+      font-size: 16px;
+      text-decoration: none;
+      color: #8c8e90;
+      mat-icon{
+        margin: 0px 10px;
+      }
+    }
+
+  }
+}
+
+
+
+::ng-deep .mat-tab-labels{
+  display: block !important;
+  background-color: white;
+}
+
+::ng-deep .mat-tab-label{
+  background-color: white;
+  width: 100%;
+}
+::ng-deep .mat-tab-group{
+  flex-direction: row !important;
+  @include flex(auto,space-between);
+  @media screen and (max-width: 950px) {
+    margin: 20px;
+  }
+
+}
+::ng-deep .mat-tab-header{
+  width: 24% !important;
+  border: 0px !important;
+  border-radius: 5px;
+  @media screen and (max-width: 950px) {
+    margin-bottom: 24px !important;
+  }
+}
+::ng-deep .mat-tab-body-wrapper{
+  width: 72% !important;
+  @media screen and (max-width: 950px) {
+    width: 100% !important;
+
+  }
+}
+::ng-deep .mat-ripple{
+  justify-content: start !important;
+  mat-icon{
+    margin-right: 10px !important;
+  }
+}

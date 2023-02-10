@@ -1,0 +1,27 @@
+export enum RouteIdentifiers {
+  LOGIN = 'login',
+  AUTH = 'auth',
+  FORGET_PASSWORD = 'forget-password',
+  DASHBOARD = 'home',
+  HOME = 'home',
+  PROFILE = 'my-profile',
+  BASICINFO = 'basic-info',
+  CHANGE_PASSWORD = 'change-password',
+  SHIFT = 'shift',
+  APPRAISAL = 'appraisal',
+  QUALIFICATION = 'qualification',
+  PROFILEPICTURE = 'profile-picture',
+
+  // USERS = 'users',
+  // LIST = 'list',
+  // DETAIL = 'detail',
+  // NOT_FOUND = "**",
+  // CONTENT_MANAGEMENT = 'content-management',
+  // MANAGE_EXERCISE = 'manage-exercise',
+  // ADD = "add",
+  // ADD_SESSIONS = "add-sessions",
+  // HYPERLINK = "hyperlink-management",
+  // QUOTATION = "quotation-management",
+  // COHORT = "cohort-management",
+  // COHORT_EXERCISE = "cohort-exercise"
+}
