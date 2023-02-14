@@ -19,489 +19,80 @@
   }
   .main-div {
     padding: 20px;
-    @include grid("grid-template-columns", "69% 29%", "");
+    @include grid("grid-template-columns", "auto 30%", "");
     background-color: #f3f7fd;
-    .main-left {
-      @include grid("grid-template-columns", "50% 50%", "");
-      border-radius: 9px;
-      border: $borderColor;
-      margin-right: 25px;
-      background-color: #fefefe;
+
+  }
+ 
+}
+
+@media all and (max-width: 1550px) {
+  .container {
+    .main-div {
+      grid-template-columns: auto;
       .card {
-        border-right: 1px dotted black;
-        padding: 18px;
         .left {
-          display: flex;
-          justify-content: space-between;
-          .jobHeading {
-            padding: 5px;
-            h3 {
-              word-break: break-word;
-              padding: 10px 0 0 0;
-              font-size: 20px;
-              font-weight: 700;
-              line-height: 1.5px;
-            }
-          }
-          .viewAll {
-            button {
-              background-color: #1f87f0;
-              color: #fefeff;
-              height: 28px;
-            }
-          }
         }
         .card1 {
-          // border: $borderColor;
-          margin: 0px;
-          padding: 10px;
-          .fullCard {
-            background-color: #f3f7fd;
-            position: relative;
-            padding: 0 0 5px 0;
-            margin: 10px;
-            border-radius: 5%;
-            .image {
-              border: 1px solid transparent;
-              @include flex(center, center);
-              height: 18vh;
-              img {
-                width: 5vw;
-                height: 7vh;
-              }
-            }
-            .location {
-              position: absolute;
-              bottom: 15px;
-              left: 15px;
-              background-color: #ffffff;
-              border-radius: 20px;
-              padding: 8px 12px 8px 30px;
-              font-family: "Lato";
-              font-size: 12px;
-              color: #231e1e;
-              font-weight: 400;
-              line-height: 1.2;
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis;
-            }
-            .date {
-              position: relative;
-              p {
-                position: absolute;
-                right: 18px;
-                height: 10px;
-                bottom: 15px;
-              }
-            }
-          }
-          .description {
-            .heading {
-              h3 {
-                font-weight: 800;
-                font-size: large;
-              }
-            }
-          }
-          .openings {
-            @include flex("", space-between);
-            .noOfOpenings {
-              font-size: small;
-              span {
-                font-weight: bold;
-              }
-            }
-            .experience {
-              font-size: small;
-              span {
-                font-weight: bold;
-              }
-            }
-          }
-          .cardBottom {
-            @include flex("", space-between);
-
-            .viewDetails {
-              @include button(#008dfe, #fefefe, 12vw);
-            }
-            .referCandidate {
-              @include button(#fefefe, #008dfe, 12vw);
-            }
-          }
         }
       }
       .mid {
-        border: $borderColor;
-        border-left: none;
-        border-top: none;
-        border-bottom: none;
-        border-right: none;
-        .referralBonus {
-          padding: 0 0 0 24px;
-          .referralHeading {
-            padding: 20px 10px 0 10px;
-            h3 {
-              color: #2bb0fe;
-              font-weight: bold;
-              font-size: 200;
-              text-transform: capitalize;
-            }
-          }
-          .cards {
-            @include grid("grid-template-columns", "46% 46%", "");
-
-            align-items: center;
-            padding: 0 0 0 10px;
-
-            li {
-              margin: 10px;
-              background-color: #f4f9ff;
-              padding: 25px 15px;
-              display: -webkit-box;
-              display: -ms-flexbox;
-              @include flex(center, center);
-              -webkit-box-orient: vertical;
-              -webkit-box-direction: normal;
-              -ms-flex-direction: column;
-              flex-direction: column;
-              -webkit-box-align: center;
-              -ms-flex-align: center;
-              -webkit-box-pack: center;
-              -ms-flex-pack: center;
-              width: 10vw;
-              h2 {
-                font-size: 56px;
-                color: #0091fe;
-              }
-              p {
-                font-size: 12px;
-                // word-break:break-word;
-                text-align: center;
-              }
-            }
-          }
-        }
+      }
+      .right {
+        width: 96%;
       }
     }
-    .right {
-      border: $borderColor;
-      padding: 10px 10px 10px 39px;
-      background-color: white;
-      border-radius: 2%;
-      h3 {
-        font-size: large;
-        font-weight: bold;
-      }
-      img {
-        height: 49vh;
-      }
-    }
-  }
-  .latestAppinventiv {
-    padding: 20px;
-    .fullContent {
-      background-color: #f3f7fd;
-      .celebration {
-        border-radius: 9px;
-        border: $borderColor;
-        margin-right: 25px;
-        background-color: #fefefe;
-        .header {
-          padding: 10px 10px 0px 10px;
-
-          border-bottom: 1px solid grey;
-        }
-        .body {
-          @include grid("grid-template-columns", "33% 33% 33%", "");
-
-          padding: 10px;
-          // margin-right: ;
-          .latestCard {
-            border: $borderColor;
-            padding: 16px 16px 80px 16px;
-            border-radius: 2%;
-            .heading {
-              display: flex;
-              padding-right: 10px;
-              .dot {
-                background-color: #c136cd;
-                height: 8px;
-                width: 8px;
-                border-radius: 50%;
-                display: inline-block;
-                position: relative;
-                top: 5px;
-              }
-              h3 {
-                top: 5px;
-                font-family: "Lato";
-                font-size: 16px;
-                color: #000000;
-                font-weight: 500;
-                line-height: 1.9;
-                width: 90%;
-                height: 20px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                @include flex(center, "");
-                flex-direction: row;
-                padding-left: 10px;
-              }
-            }
-            .content {
-              padding: 10px;
-              .subject {
-                h3 {
-                }
-              }
-              .paragraph {
-                p {
-                }
-              }
-              .footer {
-                @include button(#fefefe, #008dfe, 5vw);
-                position: relative;
-                top: 91px;
-              }
-            }
-          }
-          .award {
-            padding: 16px 16px 8px 16px;
-            border: $borderColor;
-            margin-left: 10px;
-            border-radius: 2%;
-            .awardBody {
-              .latestCardAward {
-                .headingAward {
-                  display: flex;
-                  padding-right: 5px;
-                  .dot {
-                    background-color: #c136cd;
-                    height: 8px;
-                    width: 8px;
-                    border-radius: 50%;
-                    display: inline-block;
-                    position: relative;
-                    top: 8px;
-                  }
-                  h3 {
-                    top: 5px;
-                    font-family: "Lato";
-                    font-size: 16px;
-                    color: #000000;
-                    font-weight: 500;
-                    line-height: 1.9;
-                    width: 90%;
-                    height: 20px;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    @include flex(center, "");
-
-                    flex-direction: row;
-                    padding-left: 10px;
-                  }
-                }
-                .content {
-                  .subject {
-                    h4 {
-                    }
-                  }
-
-                  .image {
-                    @include grid("grid-template-columns", "auto auto", "");
-
-                    .image1 {
-                      img {
-                      }
-                    }
-                    .image2 {
-                      img {
-                      }
-                    }
-                  }
-                  .description {
-                    p {
-                      font-size: small;
-                    }
-                  }
-                  .footer {
-                    position: relative;
-                    top: 10px;
-                    p {
-                      font-size: small;
-                    }
-                    span {
-                      color: blue;
-                    }
-                  }
-                }
-              }
-            }
-          }
-          .birthday {
-            padding: 16px 16px 80px 16px;
-            border: $borderColor;
-            margin-left: 10px;
-            border-radius: 2%;
-            .birthdayBody {
-              .birthdayCelebration {
-                .headingCelebration {
-                  display: flex;
-                  padding-right: 5px;
-                  .dot {
-                    background-color: greenyellow;
-                    height: 8px;
-                    width: 8px;
-                    border-radius: 50%;
-                    display: inline-block;
-                    position: relative;
-                    top: 8px;
-                  }
-                  h3 {
-                    top: 5px;
-                    font-family: "Lato";
-                    font-size: 16px;
-                    color: #000000;
-                    font-weight: 500;
-                    line-height: 1.9;
-                    width: 90%;
-                    height: 20px;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    @include flex(center, "");
-                    flex-direction: row;
-                    padding-left: 10px;
-                  }
-                }
-                .content {
-                  .subject {
-                    h4 {
-                      padding-left: 10px;
-                    }
-                  }
-                  .image {
-                    img {
-                    }
-                  }
-                }
-              }
+    .latestAppinventiv {
+      .fullContent {
+        .celebration {
+          .body {
+            grid-template-columns: 50% 50%;
+            .latestCard {
+              width: 100%;
             }
           }
         }
       }
     }
   }
+}
 
-  .appinventivGallery {
-    padding: 20px;
-    .fullContent {
-      background-color: #f3f7fd;
-      .celebration {
-        border-radius: 9px;
-        border: $borderColor;
-        margin-right: 25px;
-        background-color: #fefefe;
-        .header {
-          padding: 10px 10px 0px 10px;
-
-          border-bottom: 1px solid grey;
+@media all and (max-width: 900px) {
+  .container {
+    .main-div {
+      grid-template-columns: auto;
+      .card {
+        .left {
         }
-        .body {
-          @include grid("grid-template-columns", "33% 33% 33%", "");
-
-          padding: 10px;
-          // margin-right: ;
-          .latestCard {
-            // border: $borderColor;
-            padding: 16px 16px 80px 16px;
-
-            .content {
-              // padding: 10px;
-              position: relative;
-              top: 70px;
-              .subject {
-                h3 {
-                }
-              }
-              .image {
-                img {
-                  width: 23vw;
-                }
-              }
-            }
-          }
-          .award {
-            padding: 16px 16px 80px 16px;
-            // border: $borderColor;
-            .awardBody {
-              .latestCardAward {
-                .headingAward {
-                  display: flex;
-                  padding-right: 5px;
-                  .dot {
-                    background-color: #c136cd;
-                    height: 8px;
-                    width: 8px;
-                    border-radius: 50%;
-                    display: inline-block;
-                    position: relative;
-                    top: 8px;
-                  }
-                  h3 {
-                    top: 5px;
-                    font-family: "Lato";
-                    font-size: 16px;
-                    color: #000000;
-                    font-weight: 500;
-                    line-height: 1.9;
-                    width: 90%;
-                    height: 20px;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    @include flex(center, "");
-
-                    flex-direction: row;
-                    padding-left: 10px;
-                  }
-                }
-                .content {
-                  position: relative;
-                  top: 70px;
-                  .image {
-                    .image1 {
-                      img {
-                        width: 23vw;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-          .birthday {
-            padding: 16px 16px 80px 16px;
-            // border: $borderColor;
-            margin-left: 10px;
-            .birthdayBody {
-              .birthdayCelebration {
-                .content {
-                  position: relative;
-                  top: 70px;
-                  .image {
-                    img {
-                      width: 23vw;
-                    }
-                  }
-                }
-              }
+        .card1 {
+        }
+      }
+      .mid {
+      }
+      .right {
+        width: 96%;
+      }
+    }
+    .latestAppinventiv {
+      .fullContent {
+        .celebration {
+          .body {
+            grid-template-columns: 100%;
+            .latestCard {
+              width: 100%;
             }
           }
         }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1050px) {
+  .container {
+    .main-div {
+      .main-left {
+        grid-template-columns: auto;
       }
     }
   }

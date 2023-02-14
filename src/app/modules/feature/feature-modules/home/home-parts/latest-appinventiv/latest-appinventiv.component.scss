@@ -1,0 +1,13 @@
+.wraper {
+  margin: 20px;
+}
+.appinventiv {
+  mat-card {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  gap: 0.5em;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}

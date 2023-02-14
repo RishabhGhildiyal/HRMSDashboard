@@ -7,21 +7,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageNotFoundComponent } from './modules/page-not-found/page-not-found.component';
 import {MatCardModule} from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
-import { ShowErrorPipe } from './pipes/showErrorPipe/show-error.pipe';
+// import { CarouselComponent } from './carousel/carousel/carousel.component';
+import { NguCarouselModule } from '@ngu/carousel';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    ShowErrorPipe,
+    // CarouselComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    NguCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

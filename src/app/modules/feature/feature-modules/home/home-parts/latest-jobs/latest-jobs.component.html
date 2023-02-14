@@ -1,0 +1,101 @@
+<div class="main-div">
+  <div class="main-left">
+    <div class="card">
+      <div class="left">
+        <div class="jobHeading">
+          <h3>Latest Job Headings</h3>
+        </div>
+        <div class="viewAll">
+          <button>View All</button>
+        </div>
+      </div>
+      <div class="card1">
+        <div class="fullCard">
+          <div class="image">
+            <img src="../../../../assets/DeepinScreenshot_select-area_20230201160316.png" alt="" />
+          </div>
+          <div class="location">dxvvdsvsdv</div>
+          <div class="date">
+            <p>03/02/2023</p>
+          </div>
+        </div>
+        <div class="description">
+          <div class="heading">
+            <h3>Tech Lead- Angular</h3>
+            <div class="content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dolores, saepe?
+              </p>
+            </div>
+          </div>
+          <hr />
+        </div>
+        <div class="openings">
+          <div class="noOfOpenings">
+            <p>No of Openings</p>
+            <span>3</span>
+          </div>
+          <div class="experience">
+            <p>Experience</p>
+            <span>5 to 7 years</span>
+          </div>
+        </div>
+        <hr />
+        <div class="cardBottom">
+          <div class="viewDetails">
+            <button mat-raised-button>View Details</button>
+          </div>
+          <div class="referCandidate">
+            <button>Refer a Candidate</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mid">
+      <div class="referralBonus">
+        <div class="referralHeading">
+          <h3>OUR REFERRAL BONUS PROGRAM</h3>
+        </div>
+        <ul class="cards">
+          <li>
+            <h2>11K</h2>
+            <h3>Referral Bonus</h3>
+            <p>for 1 to 3 years of experience</p>
+          </li>
+          <li>
+            <h2>11K</h2>
+            <h3>Referral Bonus</h3>
+            <p>for 1 to 3 years of experience</p>
+          </li>
+          <li>
+            <h2>11K</h2>
+            <h3>Referral Bonus</h3>
+            <p>for 1 to 3 years of experience</p>
+          </li>
+          <li>
+            <h2>11K</h2>
+            <h3>Referral Bonus</h3>
+            <p>for 1 to 3 years of experience</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <h3>New Family Members</h3>
+
+    <app-carousel [buttonShow]="true" [listToShow]="dataSource"></app-carousel>
+    <ng-container *ngFor="let member of listOfNewFamilyMembers">
+        <ng-template #listofDivs>
+          <div class="item" style="width: 146px !important">
+            <figure>
+                <img src="../../../../../../../assets/DeepinScreenshot_select-area_20230202121545.png" >
+            </figure>
+        </div>
+        </ng-template>
+    </ng-container>
+
+  </div>
+</div>

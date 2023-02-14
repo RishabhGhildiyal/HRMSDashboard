@@ -1,0 +1,183 @@
+@import "../../../../../../../scss/global.scss";
+@import "../../../../../../../scss/mixins";
+
+.main-div {
+  padding: 20px;
+  @include grid("grid-template-columns", "auto 30%", "");
+  background-color: #f3f7fd;
+  .main-left {
+    @include grid("grid-template-columns", "50% 50%", "");
+    border-radius: 9px;
+    border: $borderColor;
+    margin-right: 25px;
+    background-color: #fefefe;
+    .card {
+      border-right: 1px dotted black;
+      padding: 18px;
+      .left {
+        display: flex;
+        justify-content: space-between;
+        .jobHeading {
+          padding: 5px;
+          h3 {
+            word-break: break-word;
+            padding: 10px 0 0 0;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1.5px;
+          }
+        }
+        .viewAll {
+          button {
+            background-color: #1f87f0;
+            color: #fefeff;
+            height: 28px;
+          }
+        }
+      }
+      .card1 {
+        // border: $borderColor;
+        margin: 0px;
+        padding: 10px;
+        .fullCard {
+          background-color: #f3f7fd;
+          position: relative;
+          padding: 0 0 5px 0;
+          margin: 10px;
+          border-radius: 5%;
+          .image {
+            border: 1px solid transparent;
+            @include flex(center, center);
+            height: 18vh;
+            img {
+              // width: 5vw;
+              // height: 7vh;
+            }
+          }
+          .location {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 8px 12px 8px 30px;
+            font-family: "Lato";
+            font-size: 12px;
+            color: #231e1e;
+            font-weight: 400;
+            line-height: 1.2;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          .date {
+            position: relative;
+            p {
+              position: absolute;
+              right: 18px;
+              height: 10px;
+              bottom: 15px;
+            }
+          }
+        }
+        .description {
+          .heading {
+            h3 {
+              font-weight: 800;
+              font-size: large;
+            }
+          }
+        }
+        .openings {
+          @include flex("", space-between);
+          .noOfOpenings {
+            font-size: small;
+            span {
+              font-weight: bold;
+            }
+          }
+          .experience {
+            font-size: small;
+            span {
+              font-weight: bold;
+            }
+          }
+        }
+        .cardBottom {
+          @include flex("", space-between);
+
+          .viewDetails {
+            @include button(#008dfe, #fefefe, 12vw);
+          }
+          .referCandidate {
+            @include button(#fefefe, #008dfe, 12vw);
+          }
+        }
+      }
+    }
+    .mid {
+      border: $borderColor;
+      border-left: none;
+      border-top: none;
+      border-bottom: none;
+      border-right: none;
+      .referralBonus {
+        padding: 0 0 0 24px;
+        .referralHeading {
+          padding: 20px 10px 0 10px;
+          h3 {
+            color: #2bb0fe;
+            font-weight: bold;
+            font-size: 200;
+            text-transform: capitalize;
+          }
+        }
+        .cards {
+          @include grid("grid-template-columns", "46% 46%", "");
+
+          align-items: center;
+          padding: 0 0 0 10px;
+
+          li {
+            margin: 10px;
+            background-color: #f4f9ff;
+            padding: 25px 15px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            @include flex(center, center);
+            flex-direction: column;
+
+            width: 10vw;
+            h2 {
+              font-size: 56px;
+              color: #0091fe;
+            }
+            p {
+              font-size: 12px;
+              // word-break:break-word;
+              text-align: center;
+            }
+          }
+        } // height: 49vh;
+      }
+    }
+  }
+  .right {
+    border: $borderColor;
+    padding: 10px 10px 10px 10px;
+    background-color: white;
+    border-radius: 2%;
+    // min-width: 409px;
+    h3 {
+      font-size: large;
+      font-weight: bold;
+    }
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+      }
+    }
+  }
+}

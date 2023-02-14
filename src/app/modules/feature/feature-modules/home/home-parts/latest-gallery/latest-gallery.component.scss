@@ -1,0 +1,113 @@
+@import "../../../../../../../scss/global.scss";
+@import "../../../../../../../scss/mixins";
+
+
+.appinventivGallery {
+  padding: 20px;
+  .fullContent {
+    background-color: #f3f7fd;
+    .celebration {
+      border-radius: 9px;
+      border: $borderColor;
+      margin-right: 2px;
+      background-color: #fefefe;
+      .header {
+        padding: 10px 10px 0px 10px;
+
+        border-bottom: 1px solid grey;
+      }
+      .body {
+        @include grid("grid-template-columns", "33% 33% 33%", "");
+
+        padding: 10px;
+        // margin-right: ;
+        .latestCard {
+          // border: $borderColor;
+          padding: 16px 16px 80px 16px;
+
+          .content {
+            // padding: 10px;
+            position: relative;
+            top: 70px;
+            .subject {
+              h3 {
+              }
+            }
+            .image {
+              img {
+                width: 23vw;
+              }
+            }
+          }
+        }
+        .award {
+          padding: 16px 16px 80px 16px;
+          // border: $borderColor;
+          .awardBody {
+            .latestCardAward {
+              .headingAward {
+                display: flex;
+                padding-right: 5px;
+                .dot {
+                  background-color: #c136cd;
+                  height: 8px;
+                  width: 8px;
+                  border-radius: 50%;
+                  display: inline-block;
+                  position: relative;
+                  top: 8px;
+                }
+                h3 {
+                  top: 5px;
+                  font-family: "Lato";
+                  font-size: 16px;
+                  color: #000000;
+                  font-weight: 500;
+                  line-height: 1.9;
+                  width: 90%;
+                  height: 20px;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  @include flex(center, "");
+
+                  flex-direction: row;
+                  padding-left: 10px;
+                }
+              }
+              .content {
+                position: relative;
+                top: 70px;
+                .image {
+                  .image1 {
+                    img {
+                      width: 23vw;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .birthday {
+          padding: 16px 16px 80px 16px;
+          // border: $borderColor;
+          margin-left: 10px;
+          .birthdayBody {
+            .birthdayCelebration {
+              .content {
+                position: relative;
+                top: 70px;
+                .image {
+                  img {
+                    width: 23vw;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
