@@ -1,0 +1,123 @@
+@import "../../../../../../scss/_mixins.scss";
+@import "../../../../../../scss/global.scss";
+
+.container {
+  width: 100%;
+  .main {
+    .heading {
+      padding: 10px;
+      border: 0px 0px $borderColor  0px;
+      background-color: $pure-white;
+      h2 {
+        padding: 0px;
+        margin: 0px;
+        color: $darkbklue;
+      }
+    }
+    .info {
+      background-color: $pure-white;
+      padding: 20px;
+      .fields {
+        display: grid;
+        grid-template-columns: 32% 32% 32%;
+        grid-column-gap: 2%;
+        column-gap: 1%;
+        .firstName {
+          mat-form-field {
+            width: 100%;
+          }
+        }
+        .lastName {
+          mat-form-field {
+            width: 100%;
+          }
+        }
+        .dob {
+          mat-form-field {
+            width: 100%;
+          }
+        }
+        .gender {
+          mat-form-field {
+            width: 100%;
+          }
+        }
+        .married {
+          mat-form-field {
+            width: 100%;
+          }
+        }
+        .contactNumber {
+          mat-form-field {
+            width: 100%;
+          }
+        }
+      }
+      .experience {
+        display: grid;
+        grid-template-columns: 48% 48%;
+        gap: 1%;
+        .totalExperience {
+          .input {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            gap: 1%;
+
+            .input-box {
+              mat-form-field {
+                width: 100% !important;
+              }
+            }
+          }
+        }
+        .relevantExperience {
+          .input {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            gap: 1%;
+            mat-form-field {
+              width: 100% !important;
+            }
+          }
+        }
+      }
+      .address {
+        width: 99%;
+        margin-bottom:5px ;
+        textarea {
+          height: 70px;
+          width: 99%;
+          resize: none;
+        }
+      }
+      .button {
+        @include button(#fefefe, #008dfe, 3vw);
+      }
+    }
+  }
+}
+
+
+@media (max-width: 766px) {
+  .container {
+    .main {
+      h2{
+
+      }
+      .info{
+        .fields{
+          display: block;
+          .firstName{
+            p{
+
+            }
+          }
+        }
+        .experience{
+          display: block;
+        }
+      }
+    }
+
+  }
+}

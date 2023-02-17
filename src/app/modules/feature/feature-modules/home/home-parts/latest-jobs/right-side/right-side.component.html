@@ -1,0 +1,15 @@
+<div class="right">
+  <h3>New Family Members</h3>
+
+  <app-carousel [buttonShow]="true" [listToShow]="dataSource"></app-carousel>
+  <ng-container *ngFor="let member of listOfNewFamilyMembers" class="content">
+      <ng-template #listofDivs>
+        <div class="item" style="width: 146px !important">
+          <figure>
+              <img src="../../../../../../../assets/DeepinScreenshot_select-area_20230202121545.png" >
+          </figure>
+      </div>
+      </ng-template>
+  </ng-container>
+
+</div>

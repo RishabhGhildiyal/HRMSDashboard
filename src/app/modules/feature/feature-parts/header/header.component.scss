@@ -1,5 +1,4 @@
 .container {
-  // padding: 10px;
   .header {
     display: flex;
     justify-content: space-between;
@@ -21,8 +20,6 @@
         .logo{
           display: flex;
           img{
-            // padding: 10px;
-            // width: 11vw;
             height: 40px;
           }
         }
@@ -42,14 +39,11 @@
         .help {
           margin: 0;
           padding: 0;
-          // width: 80%;
           background-color: red;
           button{
             color: white;
             padding: 0px;
-            // width: 30px;
             font-weight: bold;
-
           }
         }
         .bellIcon {
@@ -57,7 +51,28 @@
       }
     }
   }
+}
 
 
+@media (max-width:800px){
+  .container{
+    .header{
+      .example-toolbar{
+        display: flex;
+        justify-content: space-between;
+        .left{
+          width: 100%;
+          .logo{
+          }
+          .button{
+
+          }
+        }
+       .right{
+        display: none;
+       }
+      }
+    }
+  }
 
 }

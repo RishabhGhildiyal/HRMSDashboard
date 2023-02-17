@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 // import { FooterModule } from '../../feature-parts/footer/footer.module';
 import { MatCardModule } from '@angular/material/card';
 import { LatestAppinventivComponent } from './latest-appinventiv.component';
+import { CarouselModule } from 'src/app/carousel/carousel/carousel.module';
 
 
 const MATERIAL  = [MatCardModule]
@@ -18,7 +19,9 @@ const MATERIAL  = [MatCardModule]
   ],
   imports: [
     CommonModule,
-    MatCardModule
+    MatCardModule,
+    CarouselModule,
+    MatButtonModule
 
   ],
   exports: [

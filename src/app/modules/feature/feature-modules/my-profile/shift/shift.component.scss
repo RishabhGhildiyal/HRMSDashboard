@@ -1,0 +1,22 @@
+@import "../../../../../../scss/_mixins.scss";
+@import "../../../../../../scss/global.scss";
+
+.container {
+  width: 100%;
+  .main {
+    .heading {
+      padding: 10px;
+      border: 0px 0px $borderColor  0px;
+      background-color: $pure-white;
+      h2 {
+        padding: 0px;
+        margin: 0px;
+        color: $darkbklue;
+      }
+    }
+    table {
+      width: 100%;
+      box-shadow: none;
+    }
+  }
+}

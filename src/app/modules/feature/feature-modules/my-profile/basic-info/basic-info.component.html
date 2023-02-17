@@ -4,7 +4,175 @@
       <h2>Basic Information</h2>
     </div>
     <div class="info">
-      
+      <form [formGroup]="infoForm" class="form-tag">
+        <div class="fields">
+          <div class="firstName">
+            <p>First Name</p>
+            <mat-form-field class="firstName_input" appearance="outline">
+              <input
+                matInput
+                formControlName="firstName"
+                placeholder="First Name"
+                required
+                (keydown.space)="$event.preventDefault()"
+              />
+              <!-- <mat-error>
+                {{loginForm | showError :'email':'Email'}}
+            </mat-error> -->
+            </mat-form-field>
+          </div>
+
+          <div class="lastName">
+            <p>Last Name</p>
+
+            <mat-form-field class="lastName_input" appearance="outline">
+              <input
+                matInput
+                formControlName="lastName"
+                placeholder="Last Name"
+                required
+                (keydown.space)="$event.preventDefault()"
+              />
+              <!-- <mat-error>
+                {{loginForm | showError :'email':'Email'}}
+            </mat-error> -->
+            </mat-form-field>
+          </div>
+
+          <div class="dob">
+            <p>Date of Birth</p>
+
+            <mat-form-field class="dob_input" appearance="outline">
+              <input
+                matInput
+                formControlName="dob"
+                placeholder="DOB"
+                required
+                (keydown.space)="$event.preventDefault()"
+              />
+              <!-- <mat-error>
+                {{loginForm | showError :'email':'Email'}}
+            </mat-error> -->
+            </mat-form-field>
+          </div>
+
+          <div class="gender">
+            <p>Gender</p>
+
+            <mat-form-field class="gender" appearance="outline">
+              <mat-label>Gender</mat-label>
+              <mat-select>
+                <mat-option>None</mat-option>
+                <mat-option *ngFor="let gender of gender" [value]="gender">{{
+                  gender
+                }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div class="married">
+            <p>Marital Status</p>
+
+            <mat-form-field class="maritalStatus" appearance="outline">
+              <mat-label>Single</mat-label>
+              <mat-select>
+                <mat-option>None</mat-option>
+                <mat-option *ngFor="let marital of marital" [value]="marital">{{
+                  marital
+                }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="contactNumber">
+            <p>Contact Number</p>
+
+            <mat-form-field class="ContactNumber" appearance="outline">
+              <input
+                matInput
+                formControlName="contactNumber"
+                placeholder="Contact Number"
+                required
+                (keydown.space)="$event.preventDefault()"
+              />
+              <!-- <mat-error>
+                {{loginForm | showError :'email':'Email'}}
+            </mat-error> -->
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="experience">
+          <div class="totalExperience">
+            <div>
+              <p>Total Working Experience</p>
+              <div class="input">
+                <div class="input-box">
+                  <p>Years</p>
+                  <mat-form-field appearance="outline">
+                    <input
+                      matInput
+                      formControlName="years"
+                      placeholder="years"
+                      required
+                      (keydown.space)="$event.preventDefault()"
+                    />
+                  </mat-form-field>
+                </div>
+                <div class="input-box">
+                  <p>Months</p>
+                  <mat-form-field class="months" appearance="outline">
+                    <input
+                      matInput
+                      formControlName="months"
+                      placeholder="months"
+                      required
+                      (keydown.space)="$event.preventDefault()"
+                    />
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relevantExperience">
+            <div>
+              <p>Relevant Experience</p>
+              <div class="input">
+                <div>
+                  <p>Years</p>
+                  <mat-form-field  appearance="outline">
+                    <input
+                      matInput
+                      formControlName="years"
+                      placeholder="years"
+                      required
+                      (keydown.space)="$event.preventDefault()"
+                    />
+                  </mat-form-field>
+                </div>
+                <div>
+                  <p>Months</p>
+                  <mat-form-field class="months" appearance="outline">
+                    <input
+                      matInput
+                      formControlName="months"
+                      placeholder="months"
+                      required
+                      (keydown.space)="$event.preventDefault()"
+                    />
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="address">
+          <p>Address</p>
+          <textarea name="address" id="address" cols="30" rows="10"></textarea>
+        </div>
+        <div class="button">
+          <button mat-raised-button> Save</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>

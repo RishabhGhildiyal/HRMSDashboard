@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, QueryList, TemplateRef, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-latest-appinventiv',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LatestAppinventivComponent implements OnInit {
 
-  constructor() { }
+  slide:boolean[]=[];
+  listOfNewFamilyMembers=[1,2,3]
+  @ViewChildren("listofDivs", { read: TemplateRef }) listToShow!: QueryList<ElementRef<HTMLDivElement>>;
+  dataSource:any=[]
+    constructor() { }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
+    ngAfterViewInit(): void {
+      this.listToShow.forEach((item:any)=>{
+        this.dataSource.push(item);
+      })
+    }
 
 }

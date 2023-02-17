@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { sideNavList } from './sideNavConstants';
 
 @Component({
@@ -7,14 +7,26 @@ import { sideNavList } from './sideNavConstants';
   styleUrls: ['./side-nav.component.scss']
 })
 export class SideNavComponent implements OnInit {
-  @Input() isExpanded = true;
-  @Input() isShowing = true;
-  itemList = sideNavList;
+  @Input() showList = true
+  @Input() showItem = true
+
+  itemList = sideNavList
+
+  @Input() isExpanded!: boolean;
+  // @Input()  sidenav!: MatSidenav;
+
+  @Output() stateChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Input() isShowing!: boolean;
   showSubmenu: boolean = false;
   showSubSubMenu: boolean = false;
+  sideNavList = sideNavList;
+  constructor() { }
 
-  constructor(){
+  ngOnInit(): void {
   }
-  ngOnInit(): void {}
+
+  expand() {
+    this.stateChange.emit(this.isExpanded);
+  }
 
 }

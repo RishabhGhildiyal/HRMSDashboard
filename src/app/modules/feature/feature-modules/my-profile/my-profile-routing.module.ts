@@ -7,11 +7,11 @@ const routes: Routes = [
   {
     path:'', component:MyProfileComponent,
     children: [
-      // {
-      //   path:'',
-      //   redirectTo: 'basic-info',
-      //   pathMatch:'full'
-      // },
+      {
+        path:'',
+        redirectTo: 'basic-info',
+        pathMatch:'full'
+      },
       {
         path: BASICINFO.path,
         loadChildren:() => import('./basic-info/basic-info.module').then((m)=> m.BasicInfoModule)

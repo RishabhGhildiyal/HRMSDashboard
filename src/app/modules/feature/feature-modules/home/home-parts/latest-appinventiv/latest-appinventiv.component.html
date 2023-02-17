@@ -1,54 +1,53 @@
-
-
-
 <mat-card class="wraper">
   <mat-card-title>Latest at Appinventiv</mat-card-title>
-  <div class="appinventiv">
-    <mat-card>
-      <p>Appreciation for charity</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-        ipsa magni exercitationem perferendis aspernatur nisi dolor repellat
-        necessitatibus quia corrupti blanditiis quibusdam culpa harum,
-        distinctio accusantium nulla tempora impedit aliquid ipsam. Ab ducimus
-        impedit doloremque nobis quas vero! Rem, recusandae!
-      </p>
-      <button>View More</button>
-    </mat-card>
-    <mat-card>
-      <p>Awards</p>
-      <img
+  <app-carousel [buttonShow]="true" [listToShow]="dataSource"></app-carousel>
+  <div class="appinventivData">
+    <ng-container *ngFor="let member of listOfNewFamilyMembers">
+      <ng-template #listofDivs>
 
-        src="../../../../../assets/small photo1.png"
-        alt=""
-      />
-      <img
-        src="../../../../../assets/small photo 2.png"
-        alt=""
-      />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-        enim sequi quas nisi aspernatur voluptate exercitationem, illum cum
-        non deleniti, perferendis nostrum consequatur voluptates cupiditate
-        culpa alias corrupti ab accusantium!
-      </p>
-    </mat-card>
-    <mat-card>
-      <p>Birthday</p>
-      <img
-        src="../../../../../assets/small photo1.png"
-        alt=""
-      />
-      <img
-        src="../../../../../assets/small photo1.png"
-        alt=""
-      />
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis
-        sapiente, non saepe quod odio laboriosam dignissimos aut nesciunt iure
-        vitae autem, doloremque eum hic! Officiis possimus optio odit
-        molestiae voluptate.
-      </p>
-    </mat-card>
+
+
+    <div class="appinventiv">
+          <mat-card>
+            <p>Appreciation for charity</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+              ipsa magni exercitationem perferendis aspernatur nisi dolor repellat
+              necessitatibus quia corrupti blanditiis quibusdam culpa harum,
+              distinctio accusantium nulla tempora impedit aliquid ipsam. Ab
+              ducimus impedit doloremque nobis quas vero! Rem, recusandae!
+            </p>
+            <button mat-raised-button>View More</button>
+
+          </mat-card>
+          <mat-card>
+            <p>Awards</p>
+
+            <div class="item">
+              <img src="../../../../../assets/small photo1.png" alt="" />
+              <img src="../../../../../assets/small photo 2.png" alt="" />
+            </div>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+              enim sequi quas nisi aspernatur voluptate exercitationem, illum cum
+              non deleniti, perferendis nostrum consequatur voluptates cupiditate
+              culpa alias corrupti ab accusantium!
+            </p>
+          </mat-card>
+          <mat-card>
+            <p>Birthday</p>
+            <img src="../../../../../assets/small photo1.png" alt="" />
+            <img src="../../../../../assets/small photo1.png" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis
+              sapiente, non saepe quod odio laboriosam dignissimos aut nesciunt
+              iure vitae autem, doloremque eum hic! Officiis possimus optio odit
+              molestiae voluptate.
+            </p>
+          </mat-card>
+        </div>
+      </ng-template>
+    </ng-container>
   </div>
 </mat-card>

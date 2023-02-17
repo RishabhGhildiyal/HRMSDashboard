@@ -7,29 +7,34 @@
   .welcome {
     display: flex;
     .displayPicture {
+
       display: flex;
       img {
         width: 4rem;
         height: 6em;
       }
     }
-    padding: 40px 0 10px 40px;
-    .name {
+    .hello{
+      margin-left: 15px;
     }
+    padding: 17px 0 10px 23px;
+
   }
   .main-div {
+    // margin-left: 20px;
     padding: 20px;
     @include grid("grid-template-columns", "auto 30%", "");
     background-color: #f3f7fd;
 
   }
- 
+
 }
 
-@media all and (max-width: 1550px) {
+@media all and (max-width: 1620px) {
   .container {
-    .main-div {
-      grid-template-columns: auto;
+    .welcome {
+     display: block;
+
       .card {
         .left {
         }

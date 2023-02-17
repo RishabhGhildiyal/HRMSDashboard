@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ListItems } from './my-profile-constant-lists';
 
 @Component({
   selector: 'app-my-profile',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-profile.component.scss']
 })
 export class MyProfileComponent implements OnInit {
-
+  myProfileList=ListItems;
   constructor() { }
 
   ngOnInit(): void {

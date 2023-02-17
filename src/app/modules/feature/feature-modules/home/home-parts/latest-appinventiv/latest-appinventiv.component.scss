@@ -6,6 +6,17 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    button {
+      display: flex;
+      background-color: #1f87f0;
+      color: #fefeff;
+      height: 30px;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      top: 80px;
+    }
   }
   gap: 0.5em;
   display: grid;

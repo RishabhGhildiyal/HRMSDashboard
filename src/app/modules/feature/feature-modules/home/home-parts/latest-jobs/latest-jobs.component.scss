@@ -36,7 +36,7 @@
         }
       }
       .card1 {
-        // border: $borderColor;
+        border: $borderColor;
         margin: 0px;
         padding: 10px;
         .fullCard {
@@ -162,22 +162,5 @@
       }
     }
   }
-  .right {
-    border: $borderColor;
-    padding: 10px 10px 10px 10px;
-    background-color: white;
-    border-radius: 2%;
-    // min-width: 409px;
-    h3 {
-      font-size: large;
-      font-weight: bold;
-    }
-    .image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      img {
-      }
-    }
-  }
+
 }

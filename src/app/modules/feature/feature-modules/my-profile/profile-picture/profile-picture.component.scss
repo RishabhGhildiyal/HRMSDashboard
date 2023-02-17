@@ -1,0 +1,85 @@
+@import "../../../../../../scss/_mixins.scss";
+@import "../../../../../../scss/global.scss";
+
+.container {
+  .main {
+    background-color: $pure-white;
+    .heading {
+      padding: 10px;
+      border: 0px 0px $borderColor 0px;
+      background-color: $pure-white;
+      h2 {
+        padding: 0px;
+        margin: 0px;
+        color: $darkbklue;
+      }
+    }
+    .browse {
+      padding: 20px 0px 5px 20px;
+      color: $black;
+    }
+    .file {
+      padding: 20px;
+    }
+    p {
+      margin-top: 0px;
+      padding: 0px 0px 5px 20px;
+      font-size: small;
+    }
+    .image {
+      padding: 5px 0px 5px 20px;
+
+      img {
+        height: 70px;
+        width: 100px;
+        border: 1px solid #e3e3e3;
+        padding: 2px;
+        border-radius: 5px;
+      }
+    }
+    .button {
+      button{
+        display: flex;
+        padding: 5px;
+        color: white;
+        background-color: $primary-blue;
+        border: 0px;
+        height: 37px;
+        width: 64px;
+        font-weight: 13px;
+        font-weight: 500;
+        border-radius: 6px;
+        justify-content: center;
+        align-items: center;
+      }
+      padding: 5px 10px 25px 20px;
+    }
+  }
+}
+
+@media (max-width:700px){
+  .container{
+    .main{
+      p{
+        margin: 0px;
+        padding: 0px;
+      }
+      .heading{
+        h2{
+
+        }
+      }
+      .browse{
+        label{
+
+        }
+      }
+      .file{
+        padding: 2px;
+        input{
+          padding: 2px;
+        }
+      }
+    }
+  }
+}

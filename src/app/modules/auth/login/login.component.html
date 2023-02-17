@@ -1,5 +1,5 @@
-<mat-card class="login-container">
-  <mat-card class="main-card">
+<mat-card class="login-container" [@routeAnimations]>
+  <mat-card class="main-card" >
     <div class="inner1">
 
       <div class="logo">
@@ -15,7 +15,7 @@
 
         <app-credential-login></app-credential-login>
       </div>
-     
+
     </div>
     <div class="inner2">
       <button (click)="CredentialLogin()" *ngIf="loginWithCredential">LOGIN WITH CREDENTIALS</button>

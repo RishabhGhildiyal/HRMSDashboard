@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,9 +6,10 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  @Output() isToggle = new EventEmitter();
+  @Output() stateChange = new EventEmitter();
   isExpanded = true;
   showSubmenu: boolean = false;
+  @Input() smallWindow!:boolean;
   constructor() { }
 
   ngOnInit(): void {
@@ -18,7 +19,7 @@ export class HeaderComponent implements OnInit {
     console.log("dncjszdcjac");
 
     this.isExpanded = !this.isExpanded
-    this.isToggle.emit(this.isExpanded)
+    this.stateChange.emit(this.isExpanded)
     }
 
 }

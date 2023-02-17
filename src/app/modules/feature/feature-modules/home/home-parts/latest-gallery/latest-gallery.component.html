@@ -3,45 +3,47 @@
     <div class="celebration">
       <div class="header">
         <h2>Appinventiv Gallery</h2>
+        <app-carousel [buttonShow]="true" [listToShow]="dataSource"></app-carousel>
       </div>
+      <ng-container *ngFor="let member of listOfNewFamilyMembers">
+        <ng-template #listofDivs>
       <div class="body">
-        <div class="latestCard">
-          <div class="content">
-            <div class="image">
-              <img src="../../../../assets/Republic Day.png" alt="" />
-            </div>
-          </div>
-        </div>
-
-        <div class="award">
-          <div class="awardBody">
-            <div class="latestCardAward">
+            <div class="latestCard">
               <div class="content">
                 <div class="image">
-                  <div class="image1">
-                    <img
-                      src="../../../../assets/Best Place to work.png"
-                      alt=""
-                    />
+                  <img src="../../../../assets/Republic Day.png" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <div class="award">
+              <div class="awardBody">
+                <div class="latestCardAward">
+                  <div class="content">
+                    <div class="image">
+                      <div class="image1">
+                        <img src="../../../../assets/Best Place to work.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="birthday">
+              <div class="birthdayBody">
+                <div class="birthdayCelebration">
+                  <div class="content">
+                    <div class="image">
+                      <img src="../../../../assets/Christmas.png" alt="" />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="birthday">
-          <div class="birthdayBody">
-            <div class="birthdayCelebration">
-              <div class="content">
-                <div class="image">
-                  <img src="../../../../assets/Christmas.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        </ng-template>
+      </ng-container>
     </div>
   </div>
 </div>

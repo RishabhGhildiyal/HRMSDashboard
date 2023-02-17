@@ -11,6 +11,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import { SideNavComponent } from './feature-parts/side-nav/side-nav.component';
 import { HeaderComponent } from './feature-parts/header/header.component';
+import { NavListItemComponent } from './feature-parts/nav-list-item/nav-list-item.component';
+import { FooterModule } from './feature-parts/footer/footer.module';
 
 
 
@@ -19,6 +21,7 @@ import { HeaderComponent } from './feature-parts/header/header.component';
     FeatureComponent,
     SideNavComponent,
     HeaderComponent,
+    NavListItemComponent,
   ],
   imports: [
     CommonModule,
@@ -28,7 +31,8 @@ import { HeaderComponent } from './feature-parts/header/header.component';
     MatIconModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    FooterModule
   ]
 })
 export class FeatureModule { }

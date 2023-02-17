@@ -16,6 +16,7 @@
 
 @mixin button($color, $background-color, $width){
   button{
+    cursor: pointer;
     font-family: "Lato";
     font-size: 14px;
     color: $color;

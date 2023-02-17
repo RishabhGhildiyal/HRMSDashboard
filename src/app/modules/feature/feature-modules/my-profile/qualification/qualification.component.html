@@ -1,1 +1,189 @@
-<p>qualification works!</p>
+<div class="container">
+  <div class="main">
+    <div class="heading">
+      <h2>Add New Qualification</h2>
+    </div>
+    <div class="info">
+      <form [formGroup]="infoForm" class="form-tag">
+        <div class="fields">
+          <div class="schoolUni">
+            <p>School/University</p>
+            <mat-form-field class="firstName_input" appearance="outline">
+              <input
+                matInput
+                formControlName="schoolUni"
+                placeholder="School/University"
+                required
+                (keydown.space)="$event.preventDefault()"
+              />
+              <!-- <mat-error>
+                {{loginForm | showError :'email':'Email'}}
+            </mat-error> -->
+            </mat-form-field>
+          </div>
+
+          <div class="educationLevel">
+            <p>Education Level</p>
+
+            <mat-form-field class="educationLevel" appearance="outline">
+              <mat-label>Education Level</mat-label>
+              <mat-select>
+                <mat-option>None</mat-option>
+                <mat-option
+                  *ngFor="let education of education"
+                  [value]="education"
+                  >{{ education }}</mat-option
+                >
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div class="timePeriod">
+            <p>Time Period</p>
+
+            <mat-form-field class="time_input" appearance="outline">
+              <input
+                matInput
+                formControlName="time"
+                placeholder="Time Period"
+                required
+                (keydown.space)="$event.preventDefault()"
+              />
+              <!-- <mat-error>
+                {{loginForm | showError :'email':'Email'}}
+            </mat-error> -->
+            </mat-form-field>
+          </div>
+
+          <div class="to">
+            <mat-form-field class="to_input" appearance="outline">
+              <input
+                matInput
+                formControlName="toInput"
+                placeholder="to"
+                required
+                (keydown.space)="$event.preventDefault()"
+              />
+              <!-- <mat-error>
+                {{loginForm | showError :'email':'Email'}}
+            </mat-error> -->
+            </mat-form-field>
+          </div>
+
+          <div class="language">
+            <p>Language</p>
+
+            <mat-form-field class="language" appearance="outline">
+              <mat-label>Language</mat-label>
+              <mat-select>
+                <mat-option>None</mat-option>
+                <mat-option
+                  *ngFor="let language of language"
+                  [value]="language"
+                  >{{ language }}</mat-option
+                >
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div class="professionalCourse">
+            <p>Professional Courses (if any)</p>
+
+            <mat-form-field class="professionalCourse" appearance="outline">
+              <input
+                matInput
+                formControlName="professionalCourse"
+                placeholder="Professional Course"
+                required
+                (keydown.space)="$event.preventDefault()"
+              />
+              <!-- <mat-error>
+                {{loginForm | showError :'email':'Email'}}
+            </mat-error> -->
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="description">
+          <p>Description</p>
+          <textarea
+            name="description"
+            id="description"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </div>
+        <div class="button">
+          <button mat-raised-button>Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="allQualification">
+    <div class="mainContent">
+      <div class="heading">
+        <h2>List All Qualification</h2>
+      </div>
+      <!-- <hr /> -->
+      <div class="subHeading">
+        <div class="showSelect">
+          <div class="show">
+            <p>Show</p>
+          </div>
+          <div class="input">
+            <mat-form-field appearance="fill">
+              <mat-label>Show</mat-label>
+              <mat-select [formControl]="numbers">
+                <mat-option
+                  *ngFor="let number of numberList"
+                  [value]="number.valueOf"
+                  >{{ number }}</mat-option
+                >
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="entry">
+            <p>entries</p>
+          </div>
+        </div>
+        <div class="search">
+          <span>Search:</span>
+
+          <input type="text" />
+        </div>
+      </div>
+      <div class="table">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef>Action</th>
+            <td mat-cell *matCellDef="let element">
+              <button class="edit" mat-button>Edit</button>
+              <button class="delete" mat-button>Delete</button>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="schoolUniversity">
+            <th mat-header-cell *matHeaderCellDef>School/University</th>
+            <td mat-cell *matCellDef="let element">
+              {{ element.schoolUniversity }}
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="timePeriod">
+            <th mat-header-cell *matHeaderCellDef>Time Period</th>
+            <td mat-cell *matCellDef="let element">{{ element.timePeriod }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="educationalLevel">
+            <th mat-header-cell *matHeaderCellDef>Educational Level</th>
+            <td mat-cell *matCellDef="let element">
+              {{ element.educationalLevel }}
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

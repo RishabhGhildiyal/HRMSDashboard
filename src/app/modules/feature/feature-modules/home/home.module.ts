@@ -9,6 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import { LatestGalleryComponent } from './home-parts/latest-gallery/latest-gallery.component';
 import { latestAppinventivModule } from './home-parts/latest-appinventiv/latest-appinventiv.module';
 import { latestJobsModule } from './home-parts/latest-jobs/latest-jobs.module';
+import { latestGalleryModule } from './home-parts/latest-gallery/latest-gallery.module';
 
 
 const MATERIAL  = [MatCardModule]
@@ -16,9 +17,6 @@ const MATERIAL  = [MatCardModule]
 @NgModule({
   declarations: [
     HomeComponent,
-
-
-    LatestGalleryComponent,
 
   ],
   imports: [
@@ -28,7 +26,8 @@ const MATERIAL  = [MatCardModule]
     FooterModule,
     ...MATERIAL,
    latestAppinventivModule,
-   latestJobsModule
+   latestJobsModule,
+   latestGalleryModule
   ]
 })
 export class HomeModule { }

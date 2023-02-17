@@ -1,0 +1,242 @@
+@import "../../../../../../scss/_mixins.scss";
+@import "../../../../../../scss/global.scss";
+
+.container {
+  .main {
+    background-color: $pure-white;
+    .heading {
+
+      padding: 10px;
+      border: 0px 0px $borderColor 0px;
+      background-color: $pure-white;
+      h2{
+        color: $darkbklue;
+      }
+    }
+    .info {
+      background-color: $pure-white;
+      padding: 20px;
+      .fields {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        column-gap: 3%;
+        .schoolUni {
+          mat-form-field {
+            width: 100%;
+          }
+        }
+        .educationLevel {
+          mat-form-field {
+            width: 95%;
+          }
+        }
+        .timePeriod {
+          mat-form-field {
+            width: 100%;
+          }
+        }
+        .to {
+          mat-form-field {
+            margin-top: 31px;
+            width: 95%;
+          }
+        }
+        .language {
+          mat-form-field {
+            width: 100%;
+          }
+        }
+        .professionalCourse {
+          mat-form-field {
+            width: 95%;
+          }
+        }
+      }
+      .description {
+        width: 99%;
+        margin-bottom:5px ;
+        textarea {
+          height: 70px;
+          width: 99%;
+          resize: none;
+        }
+      }
+      .button {
+        @include button(#fefefe, #008dfe, 3vw);
+      }
+    }
+  }
+
+  .allQualification{
+    padding: 30px 0px 0px 0px;
+    margin-bottom: 10px;
+    .mainContent{
+      background-color: $pure-white;
+    margin-bottom: 10px;
+      .heading{
+        padding: 10px 0px 2px 10px;
+        border-bottom: $borderColor;
+        h2{
+          margin: 0px;
+          color: $darkbklue;
+        }
+      }
+      .subHeading{
+        display: flex;
+        justify-content: space-between;
+        .showSelect{
+          padding: 10px;
+          display: flex;
+          .show{
+            margin-left: 10px;
+            p{
+
+              position: relative;
+              top: 14px;
+            }
+          }
+          .input{
+            margin-left: 10px;
+            .example-additional-selection {
+              opacity: 0.75;
+              font-size: 0.75em;
+              width: 20px;
+              background-color: $pure-white;
+            }
+          }
+          .entry{
+            p{
+              position: relative;
+              top: 14px;
+            }
+
+          }
+        }
+        .search{
+          position: relative;
+          top: 14px;
+          span{
+            margin-right: 5px;
+          }
+          input{
+            height: 40px;
+            margin-right: 20px;
+            width: 14vw;
+          }
+        }
+
+      }
+      .table{
+        padding: 20px;
+        .action{
+          td{
+            button{
+
+
+            }
+          }
+        }
+        table {
+
+          border: $borderColor;
+          width: 100%;
+          box-shadow: none;
+          th{
+            word-break: break-word;
+            border: 1px solid #f1f1f2;
+          }
+          td{
+            border: 1px solid #f1f1f2;
+            padding-left: 10px;
+            .edit{
+              color: $pure-white;
+              background-color: grey;
+              margin-bottom: 7px;
+              width: 10px;
+            }
+            .delete{
+              color: $pure-white;
+              background-color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-infix {
+  padding: 0.25em 0 0.75em 0;
+  width: 56px;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  border-radius: 4px 4px 0 0;
+  // padding: 0.75em 0.75em 0 0.75em;
+  background-color: white;
+  border: $borderColor;
+  height: 40px;
+}
+
+
+@media (max-width:690px){
+  .container{
+    .main{
+      .info{
+        display: block;
+        .fields{
+        display: block;
+
+        }
+      }
+    }
+    .allQualification{
+      display: block;
+      .mainContent{
+        .subHeading{
+          display: block;
+
+        }
+        .table{
+          display: block;
+        }
+      }
+
+    }
+  }
+}
+@media (max-width:444px){
+  .container{
+    .main{
+      .info{
+        display: block;
+        .fields{
+        display: block;
+
+        }
+      }
+    }
+    .allQualification{
+      display: block;
+      .mainContent{
+        overflow-x: auto;
+        width: 100%;
+        display: block;
+        .heading{
+          position: sticky;
+        }
+        .subHeading{
+
+        }
+        .table{
+
+          table{
+
+          }
+        }
+      }
+
+    }
+  }
+}

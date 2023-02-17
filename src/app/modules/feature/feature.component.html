@@ -2,12 +2,11 @@
 <div class="main_container">
   <header>
 
-    <app-header (isToggle)="onToggle($event)"></app-header>
+    <app-header [smallWindow]="smallWindow" (stateChange)="updateIsExpanded($event)"></app-header>
   </header>
   <mat-sidenav-container autosize>
-    <mat-sidenav [opened]="true" mode="side" (mouseenter)="mouseEnter()"
-      (mouseleave)="mouseLeave()">
-      <app-side-nav [isExpanded]="showSidenav" [isShowing]="isShowing"></app-side-nav>
+    <mat-sidenav #sidenav="matSidenav" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
+      <app-side-nav [isShowing]="isShowing" [isExpanded]="isExpanded"></app-side-nav>
     </mat-sidenav>
     <mat-sidenav-content >
       <router-outlet></router-outlet>
