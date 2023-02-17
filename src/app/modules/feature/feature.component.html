@@ -5,8 +5,8 @@
     <app-header [smallWindow]="smallWindow" (stateChange)="updateIsExpanded($event)"></app-header>
   </header>
   <mat-sidenav-container autosize>
-    <mat-sidenav #sidenav="matSidenav" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
-      <app-side-nav [isShowing]="isShowing" [isExpanded]="isExpanded"></app-side-nav>
+    <mat-sidenav #sidenav="matSidenav" [opened]="true" mode="side" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
+      <app-side-nav [isShowing]="isShowing" [showItem]="showItem" [isExpanded]="isExpanded"></app-side-nav>
     </mat-sidenav>
     <mat-sidenav-content >
       <router-outlet></router-outlet>

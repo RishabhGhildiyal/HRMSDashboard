@@ -162,5 +162,269 @@
       }
     }
   }
+}
 
+@media (max-width: 1620px) {
+  .main-div {
+    display: block;
+    // margin-top: 20px;
+    .main-left {
+      margin-bottom: 10px;
+      .card {
+        .card1 {
+          .fullCard {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1230px) {
+  .main-div {
+    display: block;
+    // margin-top: 20px;
+    .main-left {
+      margin-bottom: 10px;
+      display: block;
+      .card {
+        .left {
+          .jobHeading {
+            h3 {
+              word-break: break-word;
+            }
+          }
+        }
+        .card1 {
+          .fullCard {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .main-div {
+    display: block;
+    // margin-top: 20px;
+    .main-left {
+      margin-bottom: 10px;
+      display: block;
+      .card {
+        .left {
+          .jobHeading {
+            h3 {
+              word-break: break-word;
+              font-size: 10px;
+              line-height: 0px;
+            }
+          }
+        }
+        .card1 {
+          .fullCard {
+            display: block;
+          }
+          margin-bottom: 10px;
+        }
+      }
+      .mid{
+        margin-top: 10px;
+        .referralBonus{
+          .cards{
+            display: block;
+            li{
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .main-div {
+    display: block;
+    // margin-top: 20px;
+    .main-left {
+      margin-bottom: 10px;
+      display: block;
+      .card {
+        .left {
+          .jobHeading {
+            h3 {
+              word-break: break-word;
+              font-size: 10px;
+              line-height: 0px;
+            }
+          }
+        }
+        .card1 {
+          // display: block;
+          .fullCard {
+            display: block;
+
+            .image {
+              display: block;
+              img {
+                height: 50%;
+              }
+            }
+            .location {
+              display: block;
+            }
+          }
+          .cardBottom{
+            display: block;
+            .viewDetails{
+              button{
+                width: 100%;
+
+              }
+            }
+            .referCandidate{
+              margin-top: 5px;
+              button{
+                width: 100%;
+
+              }
+            }
+          }
+        }
+      }
+      .mid{
+        margin-top: 10px;
+        .referralBonus{
+          padding: 0px !important;
+          .cards{
+            display: block;
+            li{
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .main-div {
+    display: block;
+    // margin-top: 20px;
+    .main-left {
+      margin-bottom: 10px;
+      display: block;
+      .card {
+        height: 100%;
+        // display: none;
+        .left {
+          display: block;
+          margin-bottom: 10px;
+          .jobHeading {
+            h3 {
+              word-break: break-word;
+              font-size: 10px;
+              line-height: 0px;
+            }
+          }
+        }
+        .card1 {
+          // display: block;
+          .fullCard {
+            display: block;
+
+            .image {
+              display: block;
+              img {
+                height: 50%;
+              }
+            }
+            .location {
+              display: block;
+              position: absolute;
+              bottom: 33px;
+              left: 53px;
+            }
+            .date {
+              position: absolute;
+              left: 100px;
+              bottom: -2px;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@media (max-width: 330px) {
+  .main-div {
+    display: block;
+    // margin-top: 20px;
+    .main-left {
+      margin-bottom: 10px;
+      display: block;
+      .card {
+        height: 100%;
+        // display: none;
+        .left {
+          display: block;
+          margin-bottom: 10px;
+          .jobHeading {
+            h3 {
+              word-break: break-word;
+              font-size: 10px;
+              line-height: 0px;
+            }
+          }
+        }
+        .card1 {
+          // display: block;
+          .fullCard {
+            display: block;
+
+            .image {
+              display: block;
+              img {
+                margin-top: 10px;
+                position: relative;
+                right: -15px;
+                height: 50%;
+              }
+            }
+            .location {
+              display: block;
+              position: absolute;
+              bottom: 33px;
+              left: 30px;
+              padding: 5px;
+            }
+            .date {
+              position: absolute;
+              left: 105px;
+              bottom: -2px;
+            }
+          }
+        }
+      }
+      .mid{
+        margin-top: 10px;
+        .referralBonus{
+          padding: 0px !important;
+          .cards{
+            display: block;
+            li{
+              // width: 80%;
+              padding: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
 }

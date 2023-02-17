@@ -1,7 +1,7 @@
 <section>
   <mat-nav-list class="mat_side_list">
       <ng-container *ngFor="let item of itemList">
-          <app-nav-list-item [item]="item"  [isShowing]="showList"></app-nav-list-item>
+          <app-nav-list-item [item]="item"  [isShowing]="isExpanded"></app-nav-list-item>
       </ng-container>
   </mat-nav-list>
 </section>

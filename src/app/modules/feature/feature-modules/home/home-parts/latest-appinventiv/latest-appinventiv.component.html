@@ -1,6 +1,8 @@
 <mat-card class="wraper">
-  <mat-card-title>Latest at Appinventiv</mat-card-title>
-  <app-carousel [buttonShow]="true" [listToShow]="dataSource"></app-carousel>
+  <div class="header">
+    <mat-card-title>Latest at Appinventiv</mat-card-title>
+    <app-carousel [buttonShow]="true" [listToShow]="dataSource"></app-carousel>
+  </div>
   <div class="appinventivData">
     <ng-container *ngFor="let member of listOfNewFamilyMembers">
       <ng-template #listofDivs>

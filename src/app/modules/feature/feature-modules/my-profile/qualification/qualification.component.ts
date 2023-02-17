@@ -1,3 +1,4 @@
+import { trigger, transition, style, animate } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -17,7 +18,26 @@ const ELEMENT_DATA: PeriodicElement[] = [
 @Component({
   selector: 'app-qualification',
   templateUrl: './qualification.component.html',
-  styleUrls: ['./qualification.component.scss']
+  styleUrls: ['./qualification.component.scss'],
+  animations: [
+    trigger('enterLeaveAnimation',
+    [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateX(100%)' }), //apply default styles before animation starts
+        animate(
+          '750ms ease-in-out',
+          style({ opacity: 1, transform: 'translateX(0)' })
+        ),
+      ]),
+      transition(':leave', [
+        style({ opacity: 1, transform: 'translateX(0)' }), //apply default styles before animation starts
+        animate(
+          '600ms ease-in-out',
+          style({ opacity: 0, transform: 'translateX(100%)' })
+        ),
+      ]),
+    ],
+)],
 })
 export class QualificationComponent implements OnInit {
 

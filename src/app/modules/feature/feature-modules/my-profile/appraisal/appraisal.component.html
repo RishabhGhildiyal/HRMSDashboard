@@ -1,20 +1,28 @@
 <div class="container">
-  <div class="main">
+  <div class="main" [@enterLeaveAnimation]>
     <div class="heading">
       <h2>Appraisal Detail</h2>
     </div>
     <div class="info" >
-      <mat-form-field class="appraisalCycle" appearance="outline">
-        <mat-label>Appraisal Cycle</mat-label>
-        <mat-select>
+      <div class="field1">
+        <p>Appraisal Cycle</p>
+        <mat-form-field class="appraisalCycle" appearance="outline">
+          <mat-label>-</mat-label>
+          <mat-select>
 
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field class="not-allowed" appearance="outline">
-        <mat-label>Appraisal Month</mat-label>
-        <mat-select>
-        </mat-select>
-      </mat-form-field>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+      <div class="field2">
+        <p>Appraisal Month</p>
+        <mat-form-field class="not-allowed" appearance="outline">
+          <mat-label>-</mat-label>
+          <mat-select>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
     </div>
   </div>
 </div>

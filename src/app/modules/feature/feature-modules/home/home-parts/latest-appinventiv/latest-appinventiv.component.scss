@@ -22,3 +22,12 @@
   display: grid;
   grid-template-columns: auto auto auto;
 }
+
+@media (max-width:375px){
+  .wraper{
+    // display: block;
+    .header{
+      
+    }
+  }
+}

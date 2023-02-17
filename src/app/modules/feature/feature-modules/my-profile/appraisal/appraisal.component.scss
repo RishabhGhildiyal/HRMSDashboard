@@ -15,11 +15,36 @@
     }
     .info{
       padding-left: 20px;
-
+      display: flex;
+      .field1{
+        p{
+          font-weight: 500;
+          margin: 0px;
+          padding: 0px;
+        }
+        margin-right: 20px;
+      }
+      .field2{
+        p{
+          font-weight: 500;
+          margin: 0px;
+          padding: 0px;
+        }
+      }
 
     }
 
   }
+}
+
+::ng-deep .mat-select-arrow{
+  width: 0;
+  height: 5;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid;
+  margin: 0 4px;
+  color: blue;
 }
 
 @media (max-width:320px){
