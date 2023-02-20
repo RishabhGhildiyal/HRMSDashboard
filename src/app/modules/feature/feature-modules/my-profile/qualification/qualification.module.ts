@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FooterModule } from '../../../feature-parts/footer/footer.module';
 import {MatTableModule} from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
+import { ShowErrorModule } from 'src/app/pipes/showErrorPipe/show-error.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatInputModule,
     FooterModule,
     MatTableModule,
-    MatButtonModule
+    MatButtonModule,
+    ShowErrorModule
 
   ]
 })

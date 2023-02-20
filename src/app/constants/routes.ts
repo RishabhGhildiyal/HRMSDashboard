@@ -86,6 +86,12 @@ export const CHANGEPASSWORD: Iroute={
   }
 }
 
+export const EXPLORE: Iroute={
+  path:'explore',
+  get fullurl(){
+    return `/${this.path}`
+  }
+}
 
 
 

@@ -10,13 +10,20 @@ import { LatestGalleryComponent } from './home-parts/latest-gallery/latest-galle
 import { latestAppinventivModule } from './home-parts/latest-appinventiv/latest-appinventiv.module';
 import { latestJobsModule } from './home-parts/latest-jobs/latest-jobs.module';
 import { latestGalleryModule } from './home-parts/latest-gallery/latest-gallery.module';
-
+import { DialogueComponentComponent } from './home-parts/dialogue-component/dialogue-component.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import { ShowErrorModule } from 'src/app/pipes/showErrorPipe/show-error.module';
 
 const MATERIAL  = [MatCardModule]
 
 @NgModule({
   declarations: [
     HomeComponent,
+    DialogueComponentComponent,
 
   ],
   imports: [
@@ -27,7 +34,14 @@ const MATERIAL  = [MatCardModule]
     ...MATERIAL,
    latestAppinventivModule,
    latestJobsModule,
-   latestGalleryModule
+   latestGalleryModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatIconModule,
+    ShowErrorModule
   ]
 })
 export class HomeModule { }

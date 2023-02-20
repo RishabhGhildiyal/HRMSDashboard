@@ -1,7 +1,6 @@
 @import "../../../../../../../scss/global.scss";
 @import "../../../../../../../scss/mixins";
 
-
 .appinventivGallery {
   padding: 20px;
   .fullContent {
@@ -113,3 +112,133 @@
     }
   }
 }
+
+@media (max-width: 580px) {
+  .appinventivGallery {
+    .fullContent {
+      .celebration {
+        .body {
+          display: block;
+          .latestCard {
+            // width: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 16px 30px 16px;
+            .content {
+              .image {
+                img {
+                  width: 100%;
+                }
+              }
+            }
+          }
+          .award {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 16px 30px 16px;
+            .awardBody {
+              .latestCardAward {
+                .content {
+                  .image {
+                    .image1 {
+                      img {
+                        width: 100%;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .birthday{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 16px 30px 16px;
+            .birthdayBody{
+              .birthdayCelebration{
+                .content{
+                  .image{
+                    img{
+                      width: 100%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 446px) {
+  .appinventivGallery {
+    .fullContent {
+      .celebration {
+        .body {
+          display: block;
+          .latestCard {
+            // width: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 16px 10px 16px;
+            height: 80px;
+            .content {
+              .image {
+                img {
+                  width: 100%;
+                }
+              }
+            }
+          }
+          .award {
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 16px 10px 16px;
+            .awardBody {
+              .latestCardAward {
+                .content {
+                  .image {
+                    .image1 {
+                      img {
+                        width: 100%;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .birthday{
+            // height: 120px;
+            margin-left: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 16px 10px 16px;
+            .birthdayBody{
+              .birthdayCelebration{
+                .content{
+                  .image{
+                    img{
+                      width: 100%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

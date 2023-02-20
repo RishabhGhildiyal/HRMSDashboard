@@ -75,9 +75,10 @@ export class QualificationComponent implements OnInit {
     });
   }
 
-  info(){
-    if(this.infoForm.valid){
-
+  info() {
+    if (this.infoForm.valid) {
+    } else {
+      this.infoForm.markAllAsTouched();
     }
   }
   numbers = new FormControl('');

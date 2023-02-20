@@ -46,9 +46,10 @@ export class ChangePasswordComponent implements OnInit {
       confirmPassword: this.service.getControl('toInput'),
     });
   }
-  info(){
-    if(this.infoForm.valid){
-
+  info() {
+    if (this.infoForm.valid) {
+    } else {
+      this.infoForm.markAllAsTouched();
     }
   }
 }

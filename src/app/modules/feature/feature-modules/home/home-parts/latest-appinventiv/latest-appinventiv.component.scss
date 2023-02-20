@@ -1,33 +1,92 @@
-.wraper {
-  margin: 20px;
-}
-.appinventiv {
-  mat-card {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+@import "src/scss/_mixins.scss";
+@import "src/scss/global.scss";
+.content_wrapper{
 
-    button {
-      display: flex;
-      background-color: #1f87f0;
-      color: #fefeff;
-      height: 30px;
-      justify-content: center;
-      text-align: center;
-      align-items: center;
-      top: 80px;
-    }
+  margin: 1.5%;
+  border-radius: 1%;
+  padding: 2%;
+  background-color: $pure-white;
+  border:$borderColor;
+  h1{
+    border-bottom: $borderColor;
   }
-  gap: 0.5em;
-  display: grid;
-  grid-template-columns: auto auto auto;
-}
-
-@media (max-width:375px){
-  .wraper{
-    // display: block;
-    .header{
-      
+  .main_container{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    column-gap: 3%;
+    @media(max-width:1300px){
+      display: block;
     }
+    .content_container_left{
+      border-radius: 1%;
+      border: $borderColor;
+      padding: 2%;
+      h3{
+        font-weight: bold;
+      }
+      .app{
+        color: #26B4FF;
+      }
+      .more{
+        color: white;
+        background-color: #26B4FF;
+      }
+      .pictures{
+        // display: grid;
+        // grid-template-columns: 20% 20%;
+        // column-gap: 3%;
+        img{
+          width: 5%;
+        }
+
+      }
+    }
+    .content_container_mid{
+      border-radius: 1%;
+
+      border: $borderColor;
+      padding: 2%;
+      h3{
+        font-weight: bold;
+      }
+      .app{
+        color: #26B4FF;
+      }
+      .pictures{
+        display: grid;
+        grid-template-columns: 40% 40%;
+
+        column-gap: 10%;
+        img{
+          width: 100%;
+        }
+
+      }
+
+    }
+    .content_container_right{
+      border-radius: 1%;
+
+      border: $borderColor;
+      padding: 2%;
+      h3{
+        font-weight: bold;
+      }
+      .app{
+        color: #26B4FF;
+      }
+      .pictures{
+        display: grid;
+        grid-template-columns: 40% 40%;
+
+        column-gap: 10%;
+        img{
+          width: 100%;
+        }
+
+      }
+
+    }
+
   }
 }

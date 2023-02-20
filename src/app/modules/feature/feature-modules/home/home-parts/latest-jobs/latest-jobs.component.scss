@@ -311,6 +311,15 @@
   }
 }
 
+@media (max-width: 1230px) {
+  .main-div {
+
+    .rightSide{
+      width: 97%;
+    }
+  }
+}
+
 @media (max-width: 360px) {
   .main-div {
     display: block;
@@ -361,6 +370,7 @@
     }
   }
 }
+
 
 @media (max-width: 330px) {
   .main-div {
@@ -426,5 +436,11 @@
         }
       }
     }
+    .rightSide{
+      width: 90%;
+    }
   }
 }
+
+
+

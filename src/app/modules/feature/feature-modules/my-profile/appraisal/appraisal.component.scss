@@ -47,7 +47,7 @@
   color: blue;
 }
 
-@media (max-width:320px){
+@media (max-width:480px){
   .container{
     .main{
       .info{
@@ -55,6 +55,15 @@
 
       }
     }
+  }
+}
+::ng-deep .mat-form-field{
+  cursor: not-allowed;
+}
+::ng-deep .mat-form-field-infix{
+  cursor: not-allowed;
+  span{
+    cursor: not-allowed;
   }
 }
 

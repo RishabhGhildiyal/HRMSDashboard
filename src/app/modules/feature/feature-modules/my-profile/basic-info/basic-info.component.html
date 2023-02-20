@@ -3,7 +3,7 @@
     <div class="heading">
       <h2>Basic Information</h2>
     </div>
-    <div class="info" >
+    <div class="info">
       <form [formGroup]="infoForm" class="form-tag">
         <div class="fields">
           <div class="firstName">
@@ -16,9 +16,9 @@
                 required
                 (keydown.space)="$event.preventDefault()"
               />
-              <!-- <mat-error>
-                {{loginForm | showError :'email':'Email'}}
-            </mat-error> -->
+              <mat-error>
+                {{ infoForm | showError : "firstName" : "FirstName" }}
+              </mat-error>
             </mat-form-field>
           </div>
 
@@ -33,27 +33,24 @@
                 required
                 (keydown.space)="$event.preventDefault()"
               />
-              <!-- <mat-error>
-                {{loginForm | showError :'email':'Email'}}
-            </mat-error> -->
+              <mat-error>
+                {{ infoForm | showError : "lastName" : "LastName" }}
+              </mat-error>
             </mat-form-field>
           </div>
 
           <div class="dob">
             <p>Date of Birth</p>
 
-            <mat-form-field class="dob_input" appearance="outline">
-              <input
-                matInput
-                formControlName="dob"
-                placeholder="DOB"
-                required
-                (keydown.space)="$event.preventDefault()"
-              />
-              <!-- <mat-error>
-                {{loginForm | showError :'email':'Email'}}
-            </mat-error> -->
+            <mat-form-field appearance="outline">
+              <input matInput [matDatepicker]="picker1"  [max]="today"/>
+              <mat-datepicker-toggle matSuffix [for]="picker1" ></mat-datepicker-toggle>
+              <mat-datepicker #picker1 ></mat-datepicker>
+              <mat-error>
+                {{ infoForm | showError : "dob" : "Dob" }}
+              </mat-error>
             </mat-form-field>
+
           </div>
 
           <div class="gender">
@@ -94,9 +91,9 @@
                 required
                 (keydown.space)="$event.preventDefault()"
               />
-              <!-- <mat-error>
-                {{loginForm | showError :'email':'Email'}}
-            </mat-error> -->
+              <mat-error>
+                {{ infoForm | showError : "contactNumber" : "ContactNumber" }}
+              </mat-error>
             </mat-form-field>
           </div>
         </div>
@@ -115,6 +112,9 @@
                       required
                       (keydown.space)="$event.preventDefault()"
                     />
+                    <mat-error>
+                      {{ infoForm | showError : "years" : "Years" }}
+                    </mat-error>
                   </mat-form-field>
                 </div>
                 <div class="input-box">
@@ -127,6 +127,9 @@
                       required
                       (keydown.space)="$event.preventDefault()"
                     />
+                    <mat-error>
+                      {{ infoForm | showError : "months" : "Months" }}
+                    </mat-error>
                   </mat-form-field>
                 </div>
               </div>
@@ -139,7 +142,7 @@
               <div class="input">
                 <div>
                   <p>Years</p>
-                  <mat-form-field  appearance="outline">
+                  <mat-form-field appearance="outline">
                     <input
                       matInput
                       formControlName="years"
@@ -147,6 +150,9 @@
                       required
                       (keydown.space)="$event.preventDefault()"
                     />
+                    <mat-error>
+                      {{ infoForm | showError : "years" : "Years" }}
+                    </mat-error>
                   </mat-form-field>
                 </div>
                 <div>
@@ -159,6 +165,9 @@
                       required
                       (keydown.space)="$event.preventDefault()"
                     />
+                    <mat-error>
+                      {{ infoForm | showError : "months" : "Months" }}
+                    </mat-error>
                   </mat-form-field>
                 </div>
               </div>
@@ -170,7 +179,7 @@
           <textarea name="address" id="address" cols="30" rows="10"></textarea>
         </div>
         <div class="button">
-          <button mat-raised-button> Save</button>
+          <button (click)="info()" mat-raised-button>Save</button>
         </div>
       </form>
     </div>

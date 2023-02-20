@@ -2,6 +2,7 @@ import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ShowErrorPipe } from 'src/app/pipes/showErrorPipe/show-error.pipe';
 import { FormService } from 'src/app/services/form.service';
 
 @Component({
@@ -9,8 +10,7 @@ import { FormService } from 'src/app/services/form.service';
   templateUrl: './basic-info.component.html',
   styleUrls: ['./basic-info.component.scss'],
   animations: [
-    trigger('enterLeaveAnimation',
-    [
+    trigger('enterLeaveAnimation', [
       transition(':enter', [
         style({ opacity: 0, transform: 'translateX(100%)' }), //apply default styles before animation starts
         animate(
@@ -25,18 +25,15 @@ import { FormService } from 'src/app/services/form.service';
           style({ opacity: 0, transform: 'translateX(100%)' })
         ),
       ]),
-    ],
-)],
+    ]),
+  ],
 })
 export class BasicInfoComponent implements OnInit {
   infoForm: FormGroup;
   gender: string[] = ['Male', 'Female'];
   marital: string[] = ['Single', 'Married', 'Widowed', 'Divorced or Separated'];
-  constructor(
-    private fb: FormBuilder,
-    private service: FormService,
-    private router: Router
-  ) {
+  today = new Date();
+  constructor(private fb: FormBuilder, private service: FormService) {
     this.infoForm = this.createForm();
   }
 
@@ -57,6 +54,8 @@ export class BasicInfoComponent implements OnInit {
 
   info() {
     if (this.infoForm.valid) {
+    } else {
+      this.infoForm.markAllAsTouched();
     }
   }
 }

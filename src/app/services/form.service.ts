@@ -28,7 +28,12 @@ export class FormService {
     schoolUni:[Validators.pattern],
     oldPassword:[Validators.pattern],
     newPassword:[Validators.pattern],
-    confirmPassword:[Validators.pattern]
+    confirmPassword:[Validators.pattern],
+    job_location:[Validators.pattern],
+    candidate_name:[Validators.pattern(Regex.name)],
+    position:[Validators.pattern],
+    experience:[Validators.pattern],
+    number:[Validators.pattern(Regex.phone)],
   };
 
   getControl(name: string, required = true) {

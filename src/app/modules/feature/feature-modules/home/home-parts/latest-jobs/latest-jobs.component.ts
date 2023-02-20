@@ -8,6 +8,8 @@ import {
   ViewChild,
   ViewChildren,
 } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogueComponentComponent } from '../dialogue-component/dialogue-component.component';
 
 @Component({
   selector: 'app-latest-jobs',
@@ -19,7 +21,7 @@ export class LatestJobsComponent implements OnInit, AfterViewInit {
   listOfNewFamilyMembers=[1,2,3]
   @ViewChildren("listofDivs", { read: TemplateRef }) listToShow!: QueryList<ElementRef<HTMLDivElement>>;
   dataSource:any=[]
-    constructor() { }
+    constructor(public dialog:MatDialog) { }
 
     ngOnInit(): void {
     }
@@ -27,5 +29,9 @@ export class LatestJobsComponent implements OnInit, AfterViewInit {
       this.listToShow.forEach((item:any)=>{
         this.dataSource.push(item);
       })
+    }
+
+    openDialog(){
+      this.dialog.open(DialogueComponentComponent)
     }
 }

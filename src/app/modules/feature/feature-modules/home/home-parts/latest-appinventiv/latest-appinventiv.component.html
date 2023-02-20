@@ -1,55 +1,48 @@
-<mat-card class="wraper">
-  <div class="header">
-    <mat-card-title>Latest at Appinventiv</mat-card-title>
-    <app-carousel [buttonShow]="true" [listToShow]="dataSource"></app-carousel>
+<div class="content_wrapper">
+  <h1>Latest At Appinventiv</h1>
+  <app-carousel [carouselConfigFinal]="carouselConfigAppinventiv" [buttonShow]="true" [listToShow]="dataSource"></app-carousel>
+  <ng-container *ngFor="let member of listOfNewFamilyMembers">
+    <ng-template #listofDivs>
+<div class="main_container">
+  <div class="content_container_left">
+     <h3>Appriciation for charity</h3>
+     <p>Dear</p>
+     <div class="pictures">
+     <p>Hello Team</p>
+     <p>We would like to really appriciate the hard work of each individual
+      We would like to congratulate you all on making ABP live. We are aware of
+      the hard work put in by each team member because of which the client is very
+      satisfied, and we are working on future phases of the application and even other projects too. The client is committed to make this application a big success, and it gives me great joy to see that we share the same passion.
+     </p>
+     </div>
+     <p>Thank you for all the hard work and commitment. Keep up the excellent work.</p>
+     <h4>Cheers</h4>
+     <!-- <h4 class="app">Appinventiv!</h4> -->
+     <button mat-button class="more">view more</button>
   </div>
-  <div class="appinventivData">
-    <ng-container *ngFor="let member of listOfNewFamilyMembers">
-      <ng-template #listofDivs>
-
-
-
-    <div class="appinventiv">
-          <mat-card>
-            <p>Appreciation for charity</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-              ipsa magni exercitationem perferendis aspernatur nisi dolor repellat
-              necessitatibus quia corrupti blanditiis quibusdam culpa harum,
-              distinctio accusantium nulla tempora impedit aliquid ipsam. Ab
-              ducimus impedit doloremque nobis quas vero! Rem, recusandae!
-            </p>
-            <button mat-raised-button>View More</button>
-
-          </mat-card>
-          <mat-card>
-            <p>Awards</p>
-
-            <div class="item">
-              <img src="../../../../../assets/small photo1.png" alt="" />
-              <img src="../../../../../assets/small photo 2.png" alt="" />
-            </div>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-              enim sequi quas nisi aspernatur voluptate exercitationem, illum cum
-              non deleniti, perferendis nostrum consequatur voluptates cupiditate
-              culpa alias corrupti ab accusantium!
-            </p>
-          </mat-card>
-          <mat-card>
-            <p>Birthday</p>
-            <img src="../../../../../assets/small photo1.png" alt="" />
-            <img src="../../../../../assets/small photo1.png" alt="" />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis
-              sapiente, non saepe quod odio laboriosam dignissimos aut nesciunt
-              iure vitae autem, doloremque eum hic! Officiis possimus optio odit
-              molestiae voluptate.
-            </p>
-          </mat-card>
-        </div>
-      </ng-template>
+  <div class="content_container_mid">
+    <h3>Birthday Celebration</h3>
+    <p>Dear</p>
+    <div class="pictures">
+      <img src="../../../../../../../assets/small photo1.png">
+      <img src="../../../../../../../assets/small photo 2.png">
+     </div>
+     <p>keep Spreading awesomeness congratulations !</p>
+     <h4>Cheers</h4>
+     <h4 class="app">Appinventiv!</h4>
+  </div>
+  <div class="content_container_right">
+    <h3>Work Anniversary</h3>
+    <p>Dear</p>
+    <div class="pictures">
+      <img src="../../../../../../../assets/small photo1.png">
+      <img src="../../../../../../../assets/small photo 2.png">
+     </div>
+     <p>keep Spreading awesomeness congratulations !</p>
+     <h4>Cheers</h4>
+     <h4 class="app">Appinventiv!</h4>
+  </div>
+</div>
+    </ng-template>
     </ng-container>
-  </div>
-</mat-card>
+</div>

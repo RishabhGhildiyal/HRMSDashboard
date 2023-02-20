@@ -3,11 +3,15 @@
     <div class="celebration">
       <div class="header">
         <h2>Appinventiv Gallery</h2>
-        <app-carousel [buttonShow]="true" [listToShow]="dataSource"></app-carousel>
+        <app-carousel
+        [carouselConfigFinal]="carouselConfigGallery"
+          [buttonShow]="true"
+          [listToShow]="dataSource"
+        ></app-carousel>
       </div>
       <ng-container *ngFor="let member of listOfNewFamilyMembers">
         <ng-template #listofDivs>
-      <div class="body">
+          <div class="body">
             <div class="latestCard">
               <div class="content">
                 <div class="image">
@@ -22,7 +26,10 @@
                   <div class="content">
                     <div class="image">
                       <div class="image1">
-                        <img src="../../../../assets/Best Place to work.png" alt="" />
+                        <img
+                          src="../../../../assets/Best Place to work.png"
+                          alt=""
+                        />
                       </div>
                     </div>
                   </div>

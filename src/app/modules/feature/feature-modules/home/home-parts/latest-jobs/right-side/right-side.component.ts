@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, QueryList, TemplateRef, ViewChildren } from '@angular/core';
+import { NguCarouselConfig } from '@ngu/carousel';
 
 @Component({
   selector: 'app-right-side',
@@ -20,5 +21,14 @@ export class RightSideComponent implements OnInit {
         this.dataSource.push(item);
       })
     }
+    carouselConfigJobs: NguCarouselConfig = {
+      grid: { xs: 1, sm: 2, md: 2, lg: 1, all: 0 },
+       gridBreakpoints:{sm: 750, md: 992, lg: 1200, xl: 1200},
+      load: 1,
+      interval: { timing: 4000, initialDelay: 1000 },
+      loop: true,
+      touch: true,
+      velocity: 0.2,
+    };
 
 }

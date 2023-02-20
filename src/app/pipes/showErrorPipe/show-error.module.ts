@@ -5,7 +5,7 @@ import { ShowErrorPipe } from './show-error.pipe';
 
 
 @NgModule({
-  declarations: [ ShowErrorPipe],
+  declarations: [ShowErrorPipe],
   imports: [
     CommonModule
   ],

@@ -13,15 +13,26 @@
     }
   }
 }
-.covid-help {
-  z-index: 4;
-  height: 60px;
-  font-size: 18px;
-  position: fixed;
-  background-color: white;
-  color: red;
-  bottom: 5%;
-  right: 0;
-  border-radius: 20px 0 0 20px;
-  border: none;
-}
+  .covidButton{
+
+    .covid-help {
+      z-index: 18;
+      height: 60px;
+      font-size: 18px;
+      position: fixed;
+      background-color: white;
+      color: red;
+      bottom: 5%;
+      right: 0;
+      border-radius: 20px 0 0 20px;
+      border: none;
+    }
+  }
+
+  @media (max-width:446px){
+    .covidButton{
+      .covid-help{
+        height: 20px;
+      }
+    }
+  }

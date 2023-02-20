@@ -8,7 +8,7 @@
         <div class="fields">
           <div class="schoolUni">
             <p>School/University</p>
-            <mat-form-field class="firstName_input" appearance="outline">
+            <mat-form-field class="schoolUni_input" appearance="outline">
               <input
                 matInput
                 formControlName="schoolUni"
@@ -16,9 +16,9 @@
                 required
                 (keydown.space)="$event.preventDefault()"
               />
-              <!-- <mat-error>
-                {{loginForm | showError :'email':'Email'}}
-            </mat-error> -->
+              <mat-error>
+                {{ infoForm | showError : "schoolUni" : "SchoolUni" }}
+              </mat-error>
             </mat-form-field>
           </div>
 
@@ -34,6 +34,9 @@
                   [value]="education"
                   >{{ education }}</mat-option
                 >
+                <!-- <mat-error>
+                  {{infoForm | showError :'schoolUni':'SchoolUni'}}
+              </mat-error> -->
               </mat-select>
             </mat-form-field>
           </div>
@@ -49,9 +52,9 @@
                 required
                 (keydown.space)="$event.preventDefault()"
               />
-              <!-- <mat-error>
-                {{loginForm | showError :'email':'Email'}}
-            </mat-error> -->
+              <mat-error>
+                {{ infoForm | showError : "time" : "Time" }}
+              </mat-error>
             </mat-form-field>
           </div>
 
@@ -64,9 +67,9 @@
                 required
                 (keydown.space)="$event.preventDefault()"
               />
-              <!-- <mat-error>
-                {{loginForm | showError :'email':'Email'}}
-            </mat-error> -->
+              <mat-error>
+                {{ infoForm | showError : "toInput" : "ToInput" }}
+              </mat-error>
             </mat-form-field>
           </div>
 
@@ -97,9 +100,12 @@
                 required
                 (keydown.space)="$event.preventDefault()"
               />
-              <!-- <mat-error>
-                {{loginForm | showError :'email':'Email'}}
-            </mat-error> -->
+              <mat-error>
+                {{
+                  infoForm
+                    | showError : "professionalCourse" : "ProfessionalCourse"
+                }}
+              </mat-error>
             </mat-form-field>
           </div>
         </div>
@@ -113,7 +119,7 @@
           ></textarea>
         </div>
         <div class="button">
-          <button mat-raised-button>Save</button>
+          <button (click)="info()" mat-raised-button>Save</button>
         </div>
       </form>
     </div>

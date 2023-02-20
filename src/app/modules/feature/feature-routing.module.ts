@@ -26,6 +26,13 @@ const routes: Routes = [
             (m) => m.MyProfileModule
           ),
       },
+      {
+        path: 'explore',
+        loadChildren: () =>
+          import(
+            './feature-modules/entrepreneurship/explore/explore.module'
+          ).then((m) => m.ExploreModule),
+      },
     ],
   },
 ];
