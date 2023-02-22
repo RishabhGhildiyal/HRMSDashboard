@@ -11,6 +11,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { ShowErrorModule } from 'src/app/pipes/showErrorPipe/show-error.module';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { SnackbarService } from 'src/app/services/snackbar.service';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatButtonModule,
     ShowErrorModule,
     MatDatepickerModule,
-    MatNativeDateModule
-  ]
+    MatNativeDateModule,
+    MatSnackBarModule
+  ],
 })
 export class BasicInfoModule { }

@@ -1,0 +1,19 @@
+@import "src/scss/_mixins.scss";
+@import "src/scss/global.scss";
+
+.container {
+  .main {
+    .heading {
+      h2 {
+        color: $darkbklue;
+      }
+    }
+    .fields{
+      display: flex;
+      
+      .name{
+
+      }
+    }
+  }
+}

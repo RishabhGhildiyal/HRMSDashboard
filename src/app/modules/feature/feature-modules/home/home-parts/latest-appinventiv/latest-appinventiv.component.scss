@@ -17,7 +17,7 @@
     @media(max-width:1300px){
       display: block;
     }
-    .content_container_left{
+    .content_container_one{
       border-radius: 1%;
       border: $borderColor;
       padding: 2%;
@@ -41,7 +41,7 @@
 
       }
     }
-    .content_container_mid{
+    .content_container_two{
       border-radius: 1%;
 
       border: $borderColor;
@@ -64,6 +64,30 @@
       }
 
     }
+    .content_container_three{
+      border-radius: 1%;
+
+      border: $borderColor;
+      padding: 2%;
+      h3{
+        font-weight: bold;
+      }
+      .app{
+        color: #26B4FF;
+      }
+      .pictures{
+        display: grid;
+        grid-template-columns: 40% 40%;
+
+        column-gap: 10%;
+        img{
+          width: 100%;
+        }
+
+      }
+
+    }
+
     .content_container_right{
       border-radius: 1%;
 

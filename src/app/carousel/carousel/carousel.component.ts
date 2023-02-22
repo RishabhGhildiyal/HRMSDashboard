@@ -17,15 +17,7 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   @Input() listToShow: any;
   @Input() buttonShow: boolean = false;
   @Input() carouselConfigFinal!: NguCarouselConfig;
-  // = {
-  // grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },
-  // gridBreakpoints: { sm: 750, md: 992, lg: 1200, xl: 1200 },
-  // load: 1,
-  // interval: { timing: 4000, initialDelay: 1000 },
-  // loop: true,
-  // touch: true,
-  // velocity: 0.2,
-  // };
+  @Input() showList:boolean = false;
 
   @ViewChild('myCarousel') carousel!: NguCarousel<any>;
 

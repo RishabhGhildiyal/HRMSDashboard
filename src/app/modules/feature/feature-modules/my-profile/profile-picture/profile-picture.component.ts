@@ -29,8 +29,19 @@ import { Component, OnInit } from '@angular/core';
 export class ProfilePictureComponent implements OnInit {
 
   constructor() { }
+  url:any;
 
   ngOnInit(): void {
   }
-
+  selectFile(event: any) {
+    if (!event.target.files[0] || event.target.files[0].length == 0) {
+      return;
+    }
+    var mimeType = event.target.files[0].type;
+    var reader = new FileReader();
+    reader.readAsDataURL(event.target.files[0]);
+    reader.onload = (_event) => {
+      this.url = reader.result;
+    };
+  }
 }

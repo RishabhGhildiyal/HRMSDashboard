@@ -1,7 +1,6 @@
 <div class="main-div">
   <div class="main-left">
     <div class="card">
-      <!-- <app-carousel [buttonShow]="true" [listToShow]="dataSource"></app-carousel> -->
       <div class="left">
         <div class="jobHeading">
           <h3>Latest Job Headings</h3>
@@ -11,9 +10,10 @@
           <button>View All</button>
         </div>
       </div>
-      <div class="card1">
-        <!-- <ng-container *ngFor="let member of listOfNewFamilyMembers">
-          <ng-template #listofDivs> -->
+      <app-carousel [carouselConfigFinal]="carouselConfigJobs" [buttonShow]="false" [listToShow]="dataSource"></app-carousel>
+      <ng-container *ngFor="let member of listOfNewFamilyMembers">
+        <ng-template #listofDivs>
+            <div class="card1">
             <div class="fullCard">
               <div class="image">
                 <img src="../../../../assets/DeepinScreenshot_select-area_20230201160316.png" alt="" />
@@ -61,9 +61,9 @@
                 <button (click)="openDialog()">Refer a Candidate</button>
               </div>
             </div>
-          <!-- </ng-template>
-        </ng-container> -->
-      </div>
+          </div>
+          </ng-template>
+        </ng-container>
     </div>
 
     <div class="mid">

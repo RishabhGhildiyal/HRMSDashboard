@@ -1,48 +1,78 @@
 <div class="content_wrapper">
   <h1>Latest At Appinventiv</h1>
-  <app-carousel [carouselConfigFinal]="carouselConfigAppinventiv" [buttonShow]="true" [listToShow]="dataSource"></app-carousel>
-  <ng-container *ngFor="let member of listOfNewFamilyMembers">
+  <app-carousel
+    [carouselConfigFinal]="carouselConfigAppinventiv"
+    [listToShow]="dataSource"
+    [showList]="true"
+  ></app-carousel>
+  <!-- <ng-container *ngFor="let member of listOfNewFamilyMembers"> -->
+  <div class="main_container">
     <ng-template #listofDivs>
-<div class="main_container">
-  <div class="content_container_left">
-     <h3>Appriciation for charity</h3>
-     <p>Dear</p>
-     <div class="pictures">
-     <p>Hello Team</p>
-     <p>We would like to really appriciate the hard work of each individual
-      We would like to congratulate you all on making ABP live. We are aware of
-      the hard work put in by each team member because of which the client is very
-      satisfied, and we are working on future phases of the application and even other projects too. The client is committed to make this application a big success, and it gives me great joy to see that we share the same passion.
-     </p>
-     </div>
-     <p>Thank you for all the hard work and commitment. Keep up the excellent work.</p>
-     <h4>Cheers</h4>
-     <!-- <h4 class="app">Appinventiv!</h4> -->
-     <button mat-button class="more">view more</button>
-  </div>
-  <div class="content_container_mid">
-    <h3>Birthday Celebration</h3>
-    <p>Dear</p>
-    <div class="pictures">
-      <img src="../../../../../../../assets/small photo1.png">
-      <img src="../../../../../../../assets/small photo 2.png">
-     </div>
-     <p>keep Spreading awesomeness congratulations !</p>
-     <h4>Cheers</h4>
-     <h4 class="app">Appinventiv!</h4>
-  </div>
-  <div class="content_container_right">
-    <h3>Work Anniversary</h3>
-    <p>Dear</p>
-    <div class="pictures">
-      <img src="../../../../../../../assets/small photo1.png">
-      <img src="../../../../../../../assets/small photo 2.png">
-     </div>
-     <p>keep Spreading awesomeness congratulations !</p>
-     <h4>Cheers</h4>
-     <h4 class="app">Appinventiv!</h4>
-  </div>
-</div>
+      <div class="content_container_one">
+        <h3>Appriciation for charity</h3>
+        <p>Dear</p>
+        <div class="pictures">
+          <p>Hello Team</p>
+          <p>
+            We would like to really appriciate the hard work of each individual
+            We would like to congratulate you all on making ABP live. We are
+            aware of the hard work put in by each team member because of which
+            the client is very satisfied, and we are working on future phases of
+            the application and even other projects too. The client is committed
+            to make this application a big success, and it gives me great joy to
+            see that we share the same passion.
+          </p>
+        </div>
+        <p>
+          Thank you for all the hard work and commitment. Keep up the excellent
+          work.
+        </p>
+        <h4>Cheers</h4>
+        <!-- <h4 class="app">Appinventiv!</h4> -->
+        <button mat-button class="more">view more</button>
+      </div>
     </ng-template>
-    </ng-container>
+    <ng-template #listofDivs>
+      <div class="content_container_two">
+        <h3>Birthday Celebration</h3>
+        <p>Dear</p>
+        <div class="pictures">
+          <img src="../../../../../../../assets/small photo1.png" />
+          <img src="../../../../../../../assets/small photo 2.png" />
+        </div>
+        <p>keep Spreading awesomeness congratulations !</p>
+        <h4>Cheers</h4>
+        <h4 class="app">Appinventiv!</h4>
+      </div>
+    </ng-template>
+    <ng-template #listofDivs>
+      <div class="content_container_three">
+        <h3>Birthday Celebration</h3>
+
+        <p>Dear</p>
+        <div class="pictures">
+          <img src="../../../../../../../assets/small photo1.png" />
+          <img src="../../../../../../../assets/small photo 2.png" />
+        </div>
+        <p>keep Spreading awesomeness congratulations !</p>
+        <h4>Cheers</h4>
+        <h4 class="app">Appinventiv!</h4>
+      </div>
+    </ng-template>
+    <ng-template #listofDivs>
+      <div class="content_container_right">
+        <h3>Work Anniversary</h3>
+        <p>Dear</p>
+        <div class="pictures">
+          <img src="../../../../../../../assets/small photo1.png" />
+          <img src="../../../../../../../assets/small photo 2.png" />
+        </div>
+        <p>keep Spreading awesomeness congratulations !</p>
+        <h4>Cheers</h4>
+        <h4 class="app">Appinventiv!</h4>
+      </div>
+    </ng-template>
+  </div>
+  <!-- </ng-template> -->
+  <!-- </ng-container> -->
 </div>
