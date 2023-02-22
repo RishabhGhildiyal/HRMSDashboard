@@ -1,6 +1,9 @@
 import { Iroute } from "../interfaces/interface";
 
 
+//  *  @description account routes
+
+
 export const AUTH : Iroute = {
   path:'auth',
   get fullurl(): string {
@@ -21,6 +24,11 @@ export const FORGET_PASSWORD : Iroute = {
     return `/${this.path}`;
   },
 }
+
+
+// /**
+//  * @description Layout routes
+// */
 
 export const DASHBOARD : Iroute = {
   path:'dashboard',
@@ -43,6 +51,9 @@ export const MY_PROFILE : Iroute = {
     return `/${this.path}`;
   },
 }
+
+// /**@description My profile parts routes */
+
 
 export const BASICINFO: Iroute={
   path:'basic-info',
@@ -86,10 +97,19 @@ export const CHANGEPASSWORD: Iroute={
   }
 }
 
+//  * @description Layout routes
+
+export const ENTREPRENEURSHIP: Iroute={
+  path:'entrepreneurship',
+  get fullurl(): string{
+    return `${DASHBOARD.fullurl}/${this.path}`
+  }
+}
+
 export const EXPLORE: Iroute={
   path:'explore',
   get fullurl(): string{
-    return `/${this.path}`
+    return `${ENTREPRENEURSHIP.fullurl}/${this.path}`
   }
 }
 
@@ -100,52 +120,78 @@ export const DIRECTORY: Iroute={
   }
 }
 
-export const ATTENDANCE_CALENDER: Iroute={
-  path:'attendance/attendance-calender',
+// /**@description Attendance parts routes */
+
+export const ATTENDANCE: Iroute={
+  path:'attendance',
   get fullurl():string{
     return `/${this.path}`
+  }
+}
+
+export const ATTENDANCE_CALENDER: Iroute={
+  path:'attendance-calender',
+  get fullurl():string{
+    return `/${DASHBOARD.fullurl}/${ATTENDANCE.fullurl}/${this.path}`
   }
 }
 
 export const MANUAL_PUNCH: Iroute={
   path:'attendance/manual-punch',
   get fullurl():string{
-    return `/${this.path}`
+    return `/${DASHBOARD.fullurl}/${ATTENDANCE.fullurl}/${this.path}`
   }
 }
 
 export const PUNCH_LOG: Iroute={
   path:'attendance/punch-log',
   get fullurl():string{
+    return `/${DASHBOARD.fullurl}/${ATTENDANCE.fullurl}/${this.path}`
+  }
+}
+
+// /**@description Assets Inventory parts routes */
+
+export const ASSETS_INVENTORY: Iroute={
+  path:'assets-inventory',
+  get fullurl():string{
     return `/${this.path}`
   }
 }
 
 export const ASSET_DECLARATION: Iroute={
-  path:'assets-inventory/asset-declaration',
+  path:'asset-declaration',
   get fullurl():string{
-    return `/${this.path}`
+    return `/${DASHBOARD.fullurl}/${ASSETS_INVENTORY.fullurl}/${this.path}`
   }
 }
 
 export const MY_ASSETS_INVENTORY: Iroute={
   path:'assets-inventory/my-assets-inventory',
   get fullurl():string{
-    return `/${this.path}`
+    return `/${DASHBOARD.fullurl}/${ASSETS_INVENTORY.fullurl}/${this.path}`
   }
 }
 
 export const REQUEST_ASSET: Iroute={
   path:'assets-inventory/request-asset',
   get fullurl():string{
-    return `/${this.path}`
+    return `/${DASHBOARD.fullurl}/${ASSETS_INVENTORY.fullurl}/${this.path}`
   }
 }
 
+
+
 export const DSR: Iroute={
-  path:'dsr/my-dsr',
+  path:'dsr',
   get fullurl():string{
     return `/${this.path}`
+  }
+}
+export const MY_DSR: Iroute={
+  path:'my-dsr',
+  get fullurl():string{
+    return `/${DASHBOARD.fullurl}/${DSR.fullurl}/${this.path}`
   }
 }
 
@@ -156,46 +202,98 @@ export const SALARY_SLIP: Iroute={
   }
 }
 
-export const MY_TRAININGS: Iroute={
-  path:'freshers-trainings/my-trainings',
+// /**@description Training routes */
+
+
+export const TRAINING: Iroute={
+  path:'training',
   get fullurl():string{
     return `/${this.path}`
   }
 }
+
+export const MY_TRAINING: Iroute={
+  path:'my-training',
+  get fullurl():string{
+    return `/${DASHBOARD.fullurl}/${TRAINING.fullurl}/${this.path}`
+  }
+}
+
+export const ONGOING_TRAININGS : Iroute={
+  path:'ongoing-trainings',
+  get fullurl():string{
+    return `/${DASHBOARD.fullurl}/${TRAINING.fullurl}/${this.path}`
+  }
+}
+
+export const REQUESTED_TRAININGS : Iroute={
+  path:'training/requested-training',
+  get fullurl():string{
+    return `/${DASHBOARD.fullurl}/${TRAINING.fullurl}/${this.path}`
+  }
+}
+export const UPCOMING_TRAININGS : Iroute={
+  path:'training/upcoming-trainings',
+  get fullurl():string{
+    return `/${DASHBOARD.fullurl}/${TRAINING.fullurl}/${this.path}`
+  }
+}
+
+// /**@description Leave parts routes */
+
+export const LEAVE : Iroute={
+  path:'leave',
+  get fullurl():string{
+    return `/${this.path}`
+  }
+}
+
 export const FLOATING_LEAVE: Iroute={
   path:'leave/floating-leave',
   get fullurl():string{
-    return `/${this.path}`
+    return `/${DASHBOARD.fullurl}/${LEAVE.fullurl}/${this.path}`
   }
 }
 
 export const MY_LEAVE : Iroute={
   path:'leave/my-leave',
   get fullurl():string{
+    return `/${DASHBOARD.fullurl}/${LEAVE.fullurl}/${this.path}`
+  }
+}
+
+// /**@description My Links parts routes */
+
+export const MY_LINKS : Iroute={
+  path:'my-links',
+  get fullurl():string{
     return `/${this.path}`
   }
 }
 
+
 export const HOLIDAY_CALENDER : Iroute={
-  path:'my-links/holiday-calender',
+  path:'holiday-calender',
   get fullurl():string{
-    return `/${this.path}`
+    return `/${DASHBOARD.fullurl}/${MY_LINKS.fullurl}/${this.path}`
   }
 }
 
 export const INSURANCE_VERIFICATION_DETAILS : Iroute={
-  path:'my-links/insurance-verification-details',
+  path:'insurance-verification-details',
   get fullurl():string{
-    return `/${this.path}`
+    return `/${DASHBOARD.fullurl}/${MY_LINKS.fullurl}/${this.path}`
   }
 }
 
 export const POLICY_DOCUMENTS : Iroute={
-  path:'my-links/policy-documents',
+  path:'policy-documents',
   get fullurl():string{
-    return `/${this.path}`
+    return `/${DASHBOARD.fullurl}/${MY_LINKS.fullurl}/${this.path}`
   }
 }
+
+
 
 export const PROJECTS : Iroute={
   path:'projects',
@@ -211,61 +309,241 @@ export const RECRUITMENT : Iroute={
   }
 }
 
+// /**@description Refer a friend parts routes */
 export const REFER_A_FRIEND : Iroute={
-  path:'refer-a-friend/job-openings',
-  get fullurl():string{
-    return `/${this.path}`
-  }
-}
-export const REFERRAL_LIST : Iroute={
-  path:'refer-a-friend/referral-list',
+  path:'refer-a-friend',
   get fullurl():string{
     return `/${this.path}`
   }
 }
 
-export const MYPERFORMANCE : Iroute={
-  path:'reviews/my-performance',
+
+export const JOB_OPENINGS : Iroute={
+  path:'job-openings',
+  get fullurl():string{
+    return `/${DASHBOARD.fullurl}/${REFER_A_FRIEND.fullurl}/${this.path}`
+  }
+}
+export const REFERRAL_LIST : Iroute={
+  path:'referral-list',
+  get fullurl():string{
+    return `/${DASHBOARD.fullurl}/${REFER_A_FRIEND.fullurl}/${this.path}`
+  }
+}
+
+
+
+export const REVIEWS : Iroute={
+  path:'reviews',
+  get fullurl():string{
+    return `/${this.path}`
+  }
+}
+
+export const MY_PERFORMANCE : Iroute={
+  path:'my-performance',
+  get fullurl():string{
+    return `/${DASHBOARD.fullurl}/${REVIEWS.fullurl}/${this.path}`
+  }
+}
+
+export const TICKET : Iroute={
+  path:'tickets',
   get fullurl():string{
     return `/${this.path}`
   }
 }
 
 export const TICKETS : Iroute={
-  path:'user/tickets',
+  path:'tickets',
   get fullurl():string{
-    return `/${this.path}`
+    return `/${DASHBOARD.fullurl}/${TICKET.fullurl}/${this.path}`
   }
 }
-export const MY_TRAINING : Iroute={
-  path:'training/my-trainings',
-  get fullurl():string{
-    return `/${this.path}`
-  }
-}
-export const ONGOING_TRAININGS : Iroute={
-  path:'training/ongoing-trainings',
+
+// /**@description Freshers Training parts routes */
+
+export const FRESHERS_TRAINING : Iroute={
+  path:'freshers-training',
   get fullurl():string{
     return `/${this.path}`
   }
 }
 
-export const REQUESTED_TRAININGS : Iroute={
-  path:'training/requested-training',
+export const MY_TRAININGS : Iroute={
+  path:'my-trainings',
   get fullurl():string{
-    return `/${this.path}`
-  }
-}
-export const UPCOMING_TRAININGS : Iroute={
-  path:'training/upcoming-trainings',
-  get fullurl():string{
-    return `/${this.path}`
+    return `/${DASHBOARD.fullurl}/${FRESHERS_TRAINING.fullurl}/${this.path}`
   }
 }
 
 
 
 
+
+
+
+
+
+
+/*
+
+/**
+ *  @description account routes
+ */
+
+// interface Iroutes{
+//   path:string
+//   fullUrl:string
+// }
+// export const ACCOUNT:Iroutes  = {
+//   path: 'account',
+//   get fullUrl(){
+//     return `/${this.path}`;
+//   },
+// };
+// export const LOGIN:Iroutes= {
+//   path: 'login',
+//   get fullUrl(){
+//     return `${ACCOUNT.fullUrl}/${this.path}`;
+//   },
+
+
+
+// };
+// export const FORGETPASSWORD: Iroutes = {
+//   path: 'reset',
+//   get fullUrl(){
+//     return `${ACCOUNT.fullUrl}/${this.path}`;
+//   },
+
+// };
+
+// /**
+//  * @description Layout routes
+// */
+// export const LAYOUT: Iroutes = {
+//   path: 'layout',
+//   get fullUrl(){
+//     return `/${this.path}`;
+//   },
+// };
+
+// export const HOME: Iroutes = {
+//   path: 'home',
+//   get fullUrl(){
+//     return `${LAYOUT.fullUrl}/${this.path}`;
+//   },
+
+// };
+
+// export const DIRECTORY: Iroutes = {
+//   path: 'directory',
+//   get fullUrl(){
+//     return `${LAYOUT.fullUrl}/${this.path}`;
+//   },
+
+// };
+// export const EXPLORE: Iroutes = {
+//   path: 'explore',
+//   get fullUrl(){
+//     return `${LAYOUT.fullUrl}/${this.path}`;
+//   },
+// };
+// export const MYPERFORMANCE: Iroutes = {
+//   path: 'my-performance',
+//   get fullUrl(){
+//     return `${LAYOUT.fullUrl}/${this.path}`;
+//   },
+
+// };
+
+// /**@description My Links parts routes */
+
+
+
+
+// export const INSURANCE: Iroutes = {
+//   path: 'insurance',
+//   get fullUrl(){
+//     return `${LAYOUT.fullUrl}/${this.path}`;
+//   },
+
+// };
+// export const CALENDER: Iroutes = {
+//   path: 'calender',
+//   get fullUrl(){
+//     return `${LAYOUT.fullUrl}/${this.path}`;
+//   },
+
+// };
+// export const POLICYDOC: Iroutes = {
+//   path: 'policy-doc',
+//   get fullUrl(){
+//     return `${LAYOUT.fullUrl}/${this.path}`;
+//   },
+
+// };
+
+
+// /**@description Myprofile  routes */
+
+// export const MYPROFILE: Iroutes = {
+//   path: 'my-profile',
+//   get fullUrl(){
+//     return `${LAYOUT.fullUrl}/${this.path}`;
+//   },
+
+// };
+
+// /**@description My profile parts routes */
+
+// export const BASICINFO: Iroutes = {
+//   path: 'basic-info',
+//   get fullUrl(){
+//     return `${MYPROFILE.fullUrl}/${this.path}`;
+//   },
+
+// };
+
+// export const PROFILEPICTURE: Iroutes = {
+//   path: 'profile-picture',
+//   get fullUrl(){
+//     return `${MYPROFILE.fullUrl}/${this.path}`;
+//   },
+
+// };
+
+// export const SHIFT: Iroutes = {
+//   path: 'shift',
+//   get fullUrl(){
+//     return `/${MYPROFILE.fullUrl}/${this.path}`;
+//   },
+
+// };
+
+// export const QUALIFICATION: Iroutes = {
+//   path: 'qualification',
+//   get fullUrl(){
+//     return `/${MYPROFILE.fullUrl}/${this.path}`;
+//   },
+
+// };
+// export const CHANGEPASSWORD: Iroutes = {
+//   path: 'change-password',
+//   get fullUrl(){
+//     return `/${MYPROFILE.fullUrl}/${this.path}`;
+//   },
+
+// };
+
+// export const APPRAISAL: Iroutes = {
+//   path: 'appraisal',
+//   get fullUrl(){
+//     return `/${MYPROFILE.fullUrl}/${this.path}`;
+//   },
+
+// };
 
 
 
