@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { PolicyDocumentsRoutingModule } from './policy-documents-routing.module';
 import { PolicyDocumentsComponent } from './policy-documents.component';
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { PolicyDocumentsComponent } from './policy-documents.component';
   ],
   imports: [
     CommonModule,
-    PolicyDocumentsRoutingModule
+    PolicyDocumentsRoutingModule,
+    MatTableModule
   ]
 })
 export class PolicyDocumentsModule { }

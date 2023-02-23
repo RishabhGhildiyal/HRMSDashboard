@@ -11,5 +11,7 @@ export class ExploreComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  shareIdea(){
+    
+  }
 }

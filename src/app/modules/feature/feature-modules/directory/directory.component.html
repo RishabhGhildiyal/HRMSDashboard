@@ -1,45 +1,69 @@
-<div class="container">
-  <div class="main">
-    <div class="heading">
-      <h2>Employee Directory</h2>
-    </div>
-    <div class="fields" [formGroup]="infoForm">
-      <div class="name">
-        <p>First Name</p>
-        <mat-form-field class="name_input" appearance="outline">
-          <input
-            matInput
-            formControlName="firstName"
-            placeholder="Search by name"
-            required
-            (keydown.space)="$event.preventDefault()"
-          />
-        </mat-form-field>
+<div class="directory-wrapper">
+  <div class="directory-header">
+    <h1>Employee Directory</h1>
+    <div class="directory-header-main Row">
+      <div class="column-3">
+        <div class="input-group">
+          <label for="">Name</label><br>
+          <mat-form-field class="firstName_input" appearance="outline">
+            <input
+              matInput
+              placeholder="First Name"
+              required
+              (keydown.space)="$event.preventDefault()"
+            />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="column-3">
+        <div class="input-group">
+          <label for="">Department</label>
+          <mat-form-field class="firstName_input" appearance="outline">
+            <input
+              matInput
 
+              placeholder="Department Name"
+              required
+              (keydown.space)="$event.preventDefault()"
+            />
+          </mat-form-field>
+        </div>
       </div>
-      <div class="departmentName">
-        <p>Department</p>
-
-        <mat-form-field class="department" appearance="outline">
-          <mat-label>Department</mat-label>
-          <mat-select>
-            <mat-option>None</mat-option>
-            <mat-option
-              *ngFor="let department of department"
-              [value]="department"
-              >{{ department }}</mat-option
-            >
-          </mat-select>
-        </mat-form-field>
-      </div>
-    </div>
-    <div class="buttons">
-      <div class="button-1">
-        <button mat-raised-button>Reset</button>
-      </div>
-      <div class="button-2">
-        <button mat-raised-button>Reset</button>
+      <div class="column-3 button-wrapper">
+        <div class="input-group ">
+          <button (click)="clickReset()">Reset</button>
+          <button (click)=" clickSearch()"> <mat-icon>search</mat-icon> <span>Search</span></button>
+        </div>
       </div>
     </div>
   </div>
+  <hr>
+  <div class="directory-body flex-wrap">
+    <div class="card" *ngFor="let person of showList">
+      <div class="directory-card-top">
+        <div class="top-animation-div"></div>
+        <div class="img-wrapper">
+          <!-- <img src="../../../../../../src/assets/DeepinScreenshot_select-area_20230202121545.png" alt=""> -->
+          <img src="https://dashboard.appinventiv.com/uploads/profile/default_male.jpg">
+        </div>
+      </div>
+      <div class="directory-card-mid">
+        <h3 class="name">{{person.name}}</h3>
+        <h4 class="title">{{person.position}}</h4>
+
+        <ul>
+          <li>{{person.email}}</li>
+          <li>{{person.DOB}}</li>
+        </ul>
+        <div class="bottom-animation-div-wrapper">
+          <div class="bottom-animation-div"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>
+<div class="footer">
+  <app-footer></app-footer>
+</div>
+

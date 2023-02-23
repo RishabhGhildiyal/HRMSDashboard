@@ -17,9 +17,7 @@
       background-color: $pure-white;
       padding: 20px;
       .fields {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        column-gap: 3%;
+        @include grid("grid-template-columns", "50% 50%" , 3%);
         .schoolUni {
           mat-form-field {
             width: 100%;
@@ -82,8 +80,7 @@
         }
       }
       .subHeading{
-        display: flex;
-        justify-content: space-between;
+        @include flex("flex","space-between");
         .showSelect{
           padding: 10px;
           display: flex;

@@ -24,9 +24,11 @@ export class LatestAppinventivComponent implements OnInit {
 
   ngOnInit(): void {}
   ngAfterViewInit(): void {
-    this.listToShow.forEach((item: any) => {
-      this.dataSource.push(item);
-    });
+    setTimeout(()=>{
+      this.listToShow.forEach((item: any) => {
+        this.dataSource.push(item);
+      });
+    },500)
   }
   carouselConfigAppinventiv: NguCarouselConfig = {
     grid: { xs: 1, sm: 1, md: 1, lg: 3, all: 0 },
@@ -36,5 +38,9 @@ export class LatestAppinventivComponent implements OnInit {
     loop: true,
     touch: true,
     velocity: 0.2,
+    point:{
+      visible:true,
+      hideOnSingleSlide:true
+    }
   };
 }

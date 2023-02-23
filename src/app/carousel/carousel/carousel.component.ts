@@ -38,6 +38,7 @@ export class CarouselComponent implements OnInit, AfterViewInit {
     }, 500);
   }
 
+
   slideNo = 0;
   withAnim = true;
   resetAnim = true;
@@ -53,8 +54,10 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   velocity: 0.2,
   };
   ngAfterViewInit() {
-    this.cdr.detectChanges();
-    console.log(this.listToShow);
+    setTimeout(()=>{
+      this.cdr.detectChanges();
+      this.wait = true;
+    },500)
   }
 
   reset() {

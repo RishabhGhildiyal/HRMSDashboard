@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { HolidayCalenderRoutingModule } from './holiday-calender-routing.module';
 import { HolidayCalenderComponent } from './holiday-calender.component';
+import { FooterModule } from '../../../feature-parts/footer/footer.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { HolidayCalenderComponent } from './holiday-calender.component';
   ],
   imports: [
     CommonModule,
-    HolidayCalenderRoutingModule
+    HolidayCalenderRoutingModule,
+    FooterModule
   ]
 })
 export class HolidayCalenderModule { }

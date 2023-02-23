@@ -7,6 +7,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { FooterModule } from '../../feature-parts/footer/footer.module';
 
 
 @NgModule({
@@ -20,7 +23,10 @@ import { MatSelectModule } from '@angular/material/select';
     FormsModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatButtonModule,
+    MatIconModule,
+    FooterModule
   ]
 })
 export class DirectoryModule { }

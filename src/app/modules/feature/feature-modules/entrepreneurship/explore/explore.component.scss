@@ -1,0 +1,40 @@
+ section{
+  display: flex;
+  background-color: #f2f7fc;
+  .left_content{
+
+    padding-left:12% ;
+    padding-right: 5%;
+    padding-top:8%;
+    margin-bottom: 30px;
+    p{
+      font-size: medium;
+    }
+    li{
+      font-size: medium;
+     margin-bottom: 20px;
+    }
+    button{
+      background: #199cff;
+          color: white;
+          border: 0px;
+          height: 40px;
+    }
+  }
+  .right_content{
+     .backimg{
+       position: relative;
+     }
+     .front{
+      position: absolute;
+      top: 95px;
+     img{
+      width: 70%;
+      transform: perspective(1000px) rotateY(16deg) rotateX(2deg) rotateZ(-7deg) scaleY(0.95) translatex(2%)
+     }
+     }
+    }
+  }
+  .footer{
+    height: 30px;
+  }
