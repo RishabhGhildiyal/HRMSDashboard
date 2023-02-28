@@ -1,5 +1,6 @@
 import { trigger, transition, style, animate } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { SHIFT_TABLE } from 'src/app/interfaces/interface';
 export interface PeriodicElement {
   dateOfJoining: string;
   officeShift: string;
@@ -34,12 +35,31 @@ const ELEMENT_DATA: PeriodicElement[] = [
 )],
 })
 export class ShiftComponent implements OnInit {
-
-  displayedColumns: string[] = ['dateOfJoining', 'OfficeShift'];
-  dataSource = ELEMENT_DATA;
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  tableColumns: Array<any> = [
+    {
+      columnDef: 'DOJ',
+      header:'Date of Joining	',
+      cell: (element: Record<string, any>) => `${element['DOJ']}`,
+    },
+    {
+      columnDef: 'office_shift',
+      header: 'Office Shift',
+      cell: (element: Record<string, any>) => `${element['office_shift']}`,
+    },
+
+  ];
+
+  tableData: Array<SHIFT_TABLE> = [
+    {
+
+      DOJ: 'Feb-07-2022	',
+      office_shift: 'Morning Shift',
+    },
+  ];
 
 }

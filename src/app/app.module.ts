@@ -9,6 +9,7 @@ import {MatCardModule} from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 // import { CarouselComponent } from './carousel/carousel/carousel.component';
 import { NguCarouselModule } from '@ngu/carousel';
+import { CommonTableComponent } from './modules/common/common-table/common-table.component';
 
 
 @NgModule({

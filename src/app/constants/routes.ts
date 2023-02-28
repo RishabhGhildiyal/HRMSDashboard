@@ -113,6 +113,16 @@ export const EXPLORE: Iroute={
   }
 }
 
+export const ADD_PITCH: Iroute={
+  path:'add-pitch',
+  get fullurl(): string{
+    return `${ENTREPRENEURSHIP.fullurl}/${EXPLORE.fullurl}/${this.path}`
+  }
+}
+
+
+
+
 export const DIRECTORY: Iroute={
   path:'directory',
   get fullurl():string{

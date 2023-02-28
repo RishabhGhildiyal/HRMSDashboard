@@ -1,0 +1,205 @@
+@import "../../../../../../scss/_mixins.scss";
+@import "../../../../../../scss/global.scss";
+
+* {
+  border-radius: 5px;
+}
+
+.container {
+  padding: 40px;
+  h2 {
+    color: $darkbklue;
+  }
+  .main {
+    @include grid("grid-template-columns", "50% 50%", "");
+    padding: 20px;
+    border: $borderColor;
+    background-color: $pure-white;
+    .leftBody {
+      padding: 20px;
+      .header {
+        display: flex;
+        .displayPicture {
+          display: flex;
+          img {
+            width: 4rem;
+            height: 6em;
+            border-radius: 50%;
+          }
+        }
+        .name {
+          margin-left: 15px;
+          h3 {
+            color: #3a3a3a;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 5px 0;
+          }
+          p {
+          }
+          span {
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            width: 40%;
+            font-size: small;
+            margin: 0px;
+          }
+        }
+      }
+      .downBody {
+        margin-top: 10px;
+        display: flex;
+        .awards {
+          width: 65%;
+          background-color: #fff6ca;
+          h3 {
+            margin-left: 30px;
+            margin-top: 10px;
+            font-weight: bold;
+          }
+          p {
+            margin-left: 30px;
+          }
+        }
+        .honours{
+          width: 20%;
+          background-color: #c4e7ff;
+          margin-left: 7px;
+          .data{
+            margin-left: 30px;
+            h3{
+              font-weight: bold;
+              margin-top: 10px;
+            }
+            p{
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+    }
+    .rightBody {
+      padding: 20px;
+      background-color: #dfffb0;
+      .heading {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        padding-bottom: 30px;
+        .number {
+          h2 {
+            padding: 0;
+            font-size: 50px;
+            font-weight: bolder;
+            color: black;
+          }
+        }
+        .duration {
+          width: 40%;
+          p {
+            background-color: $pure-white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            font-weight: bold;
+            font-size: 14px;
+          }
+        }
+      }
+      .skills {
+        @include grid("grid-template-columns", "20% 20% 20% 20% ", "");
+        gap: 35px;
+        .box1 {
+          border: $borderColor;
+          padding: 14px;
+          width: 100%;
+          margin: 0px;
+          background-color: #edffd2;
+          span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: small;
+          }
+          p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: large;
+            padding-top: 10px;
+            font-weight: bold;
+          }
+        }
+        .box2 {
+          border: $borderColor;
+          padding: 14px;
+          width: 100%;
+          margin: 0px;
+          background-color: #edffd2;
+
+          span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: small;
+          }
+          p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: large;
+            padding-top: 10px;
+            font-weight: bold;
+          }
+        }
+        .box3 {
+          border: $borderColor;
+          padding: 14px;
+          width: 100%;
+          margin: 0px;
+          background-color: #edffd2;
+
+          span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: small;
+          }
+          p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: large;
+            padding-top: 10px;
+            font-weight: bold;
+          }
+        }
+        .box4 {
+          border: $borderColor;
+          padding: 14px;
+          width: 100%;
+          margin: 0px;
+          background-color: #edffd2;
+          span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: small;
+          }
+          p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: large;
+            padding-top: 10px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
