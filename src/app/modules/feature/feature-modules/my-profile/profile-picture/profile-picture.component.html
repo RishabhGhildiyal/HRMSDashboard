@@ -7,13 +7,14 @@
       <label>Browse</label>
     </div>
     <div class="file">
-      <input type="file"  (change)="selectFile($event)">
+      <input #logo type="file" (change)="preview(logo.files)" accept="image/png, image/gif, image/jpeg">
     </div>
     <hr>
 
     <p>upload files only: gif,png,jpg,jpeg</p>
     <div class="image">
-      <img [src]="url" *ngIf="url" src="../../../../../../assets/default_male (1).jpg" alt="">
+      <img src="../../../../../../assets/default_male (1).jpg" alt="" *ngIf="!imgURL">
+      <img [src]="imgURL" *ngIf="imgURL">
     </div>
     <div class="button">
       <button mat-raised-button>Save</button>

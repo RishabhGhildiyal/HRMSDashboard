@@ -11,6 +11,7 @@ import { FooterModule } from '../../../feature-parts/footer/footer.module';
 import {MatTableModule} from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { ShowErrorModule } from 'src/app/pipes/showErrorPipe/show-error.module';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ShowErrorModule } from 'src/app/pipes/showErrorPipe/show-error.module';
     FooterModule,
     MatTableModule,
     MatButtonModule,
+    MatSnackBarModule,
     ShowErrorModule
 
   ]

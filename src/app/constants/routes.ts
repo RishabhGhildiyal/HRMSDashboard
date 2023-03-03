@@ -116,7 +116,7 @@ export const EXPLORE: Iroute={
 export const ADD_PITCH: Iroute={
   path:'add-pitch',
   get fullurl(): string{
-    return `${ENTREPRENEURSHIP.fullurl}/${EXPLORE.fullurl}/${this.path}`
+    return `${EXPLORE.fullurl}/${this.path}`
   }
 }
 

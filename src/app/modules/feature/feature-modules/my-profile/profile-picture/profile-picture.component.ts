@@ -1,13 +1,13 @@
 import { trigger, transition, style, animate } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-profile-picture',
   templateUrl: './profile-picture.component.html',
   styleUrls: ['./profile-picture.component.scss'],
   animations: [
-    trigger('enterLeaveAnimation',
-    [
+    trigger('enterLeaveAnimation', [
       transition(':enter', [
         style({ opacity: 0, transform: 'translateX(100%)' }), //apply default styles before animation starts
         animate(
@@ -22,26 +22,34 @@ import { Component, OnInit } from '@angular/core';
           style({ opacity: 0, transform: 'translateX(100%)' })
         ),
       ]),
-    ],
-)],
-
+    ]),
+  ],
 })
 export class ProfilePictureComponent implements OnInit {
+  imagePath: any;
+  imgURL: any;
+  size!: number;
 
-  constructor() { }
-  url:any;
+  constructor(private snack: MatSnackBar) {}
+  url: any;
 
-  ngOnInit(): void {
-  }
-  selectFile(event: any) {
-    if (!event.target.files[0] || event.target.files[0].length == 0) {
-      return;
+  ngOnInit(): void {}
+  preview(files: any) {
+    this.size = files[0]?.size;
+    if (this.size <= 1000000) {
+      if (files.length === 0) return;
+      var reader = new FileReader();
+      this.imagePath = files;
+      reader.readAsDataURL(files[0]);
+      reader.onload = (_event) => {
+        this.imgURL = reader.result;
+      };
+    } else {
+      this.snack.open('File limit is 1Mb', '', {
+        duration: 2000,
+        verticalPosition: 'top',
+        panelClass: ['red-snackbar', 'login-snackbar'],
+      });
     }
-    var mimeType = event.target.files[0].type;
-    var reader = new FileReader();
-    reader.readAsDataURL(event.target.files[0]);
-    reader.onload = (_event) => {
-      this.url = reader.result;
-    };
   }
 }

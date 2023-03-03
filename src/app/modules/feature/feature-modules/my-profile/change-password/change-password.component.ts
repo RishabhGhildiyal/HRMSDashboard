@@ -1,6 +1,7 @@
 import { trigger, transition, style, animate } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { FormService } from 'src/app/services/form.service';
 
@@ -33,7 +34,8 @@ export class ChangePasswordComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private service: FormService,
-    private router: Router
+    private router: Router,
+    private snack:MatSnackBar
   ) {}
 
   ngOnInit(): void {
@@ -50,6 +52,11 @@ export class ChangePasswordComponent implements OnInit {
     if (this.infoForm.valid) {
     } else {
       this.infoForm.markAllAsTouched();
+      this.snack.open("Fill the required fields",'',{
+        duration:2000,
+        verticalPosition:'top',
+        panelClass:['red-snackbar','login-snackbar']
+      })
     }
   }
 }

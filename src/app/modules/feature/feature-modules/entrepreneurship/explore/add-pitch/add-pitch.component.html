@@ -1,1 +1,83 @@
-<p>add-pitch works!</p>
+<div class="main-container" [formGroup]="infoForm">
+  <div class="main-heading">
+      <div class="heading1">
+          <h1>Add Pitch</h1>
+      </div>
+      <div class="buttons">
+          <button class="cancel">Cancel</button>
+          <button class="submit" (click)="valid()" >Submit</button>
+      </div>
+  </div>
+  <div class="container">
+      <div class="mydetailsheading">
+          <h1>My Details</h1>
+      </div>
+      <div class="input-box">
+          <label>Name</label>
+          <mat-form-field appearance="outline">
+            <input matInput formControlName="pitchName">
+            <mat-error>{{infoForm | showError : 'pitchName':'Name'}}</mat-error>
+          </mat-form-field>
+      </div>
+      <div class="details">
+          <div class="id">
+              <div class="input-box">
+                  <label>Employee Id</label>
+                  <mat-form-field appearance="outline">
+                    <input matInput formControlName="empId">
+                    <mat-error>{{infoForm | showError : 'empId':'Employee Id'}}</mat-error>
+                  </mat-form-field>
+              </div>
+          </div>
+          <div class="dob">
+              <div class="input-box">
+                  <label>Date of birth</label>
+                  <mat-form-field appearance="outline" >
+                    <input matInput [matDatepicker]="picker1" [max]="today" readonly="true" formControlName="dateOfBirth">
+                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                    <mat-error>{{infoForm | showError : 'dateOfBirth':'Date of birth'}}</mat-error>
+                  </mat-form-field>
+              </div>
+          </div>
+      </div>
+      <div class="heading2">
+          <h1>Pitch Details</h1>
+      </div>
+      <div class="input-box">
+          <label>Pitch Title</label>
+          <mat-form-field appearance="outline">
+            <input matInput formControlName="empTitle">
+            <mat-error>{{infoForm | showError : 'empTitle':'Pitch Title'}}</mat-error>
+           </mat-form-field>
+      </div>
+      <div class="input-box">
+          <label>Industry</label>
+          <mat-form-field appearance="outline">
+              <mat-select matInput placeholder="Select Industry "  formControlName="industry">
+                  <mat-option value="option1">Option 1</mat-option>
+                  <mat-option value="option2">Option 2</mat-option>
+                  <mat-option value="option3">Option 3</mat-option>
+              </mat-select>
+              <mat-error>{{infoForm | showError : 'industry':'Industry'}}</mat-error>
+          </mat-form-field>
+      </div>
+      <div class="input-box">
+          <label>Type</label>
+          <mat-form-field appearance="outline">
+              <mat-select matInput placeholder="Technical" formControlName="type">
+                  <mat-option value="option1">Option 1</mat-option>
+                  <mat-option value="option2">Option 2</mat-option>
+                </mat-select>
+                <mat-error>{{infoForm | showError :'type':'Type'}}</mat-error>
+          </mat-form-field>
+      </div>
+      <div class="no-file-chosen">
+          <label></label>Presentation - (Share your detailed presentaion on the idea) (ppt , pdf)
+          <div class="file">
+              <input type="file" (change)="selectFile($event)">
+              <img [src]="url" *ngIf="url" style="width:5%; height: 5%;">
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,69 +1,73 @@
 <div class="directory-wrapper">
   <div class="directory-header">
     <h1>Employee Directory</h1>
-    <div class="directory-header-main Row">
+    <div class="directory-header-main-Row">
       <div class="column-3">
         <div class="input-group">
-          <label for="">Name</label><br>
+          <label for="">Name</label><br />
           <mat-form-field class="firstName_input" appearance="outline">
             <input
               matInput
               placeholder="First Name"
               required
-              (keydown.space)="$event.preventDefault()"
+              [formControl]="searchValue"
             />
           </mat-form-field>
         </div>
       </div>
-      <div class="column-3">
-        <div class="input-group">
-          <label for="">Department</label>
-          <mat-form-field class="firstName_input" appearance="outline">
-            <input
-              matInput
+      <div class="department">
+        <p>Department</p>
 
-              placeholder="Department Name"
-              required
-              (keydown.space)="$event.preventDefault()"
-            />
-          </mat-form-field>
-        </div>
+        <mat-form-field class="department" appearance="outline">
+          <mat-select
+            [(value)]="departmentSearch"
+            (selectionChange)="departmentSelect($event)"
+          >
+            <mat-option
+              *ngFor="let department of departments"
+              [value]="department.department"
+              >{{ department.department }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
       </div>
       <div class="column-3 button-wrapper">
-        <div class="input-group ">
+        <div class="input-group">
           <button (click)="clickReset()">Reset</button>
-          <button (click)=" clickSearch()"> <mat-icon>search</mat-icon> <span>Search</span></button>
+          <button (click)="search()">
+            <mat-icon>search</mat-icon> <span>Search</span>
+          </button>
         </div>
       </div>
     </div>
   </div>
-  <hr>
+  <hr />
   <div class="directory-body flex-wrap">
-    <div class="card" *ngFor="let person of showList">
+    <div class="card" *ngFor="let person of filteredData">
       <div class="directory-card-top">
         <div class="top-animation-div"></div>
         <div class="img-wrapper">
           <!-- <img src="../../../../../../src/assets/DeepinScreenshot_select-area_20230202121545.png" alt=""> -->
-          <img src="https://dashboard.appinventiv.com/uploads/profile/default_male.jpg">
+          <img
+            src="https://dashboard.appinventiv.com/uploads/profile/default_male.jpg"
+          />
         </div>
       </div>
       <div class="directory-card-mid">
-        <h3 class="name">{{person.name}}</h3>
-        <h4 class="title">{{person.position}}</h4>
+        <h3 class="name">{{ person.name }}</h3>
+        <h4 class="title">{{ person.position }}</h4>
 
         <ul>
-          <li>{{person.email}}</li>
-          <li>{{person.DOB}}</li>
+          <li>{{ person.email }}</li>
+          <li>{{ person.DOB }}</li>
         </ul>
         <div class="bottom-animation-div-wrapper">
           <div class="bottom-animation-div"></div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
 <div class="footer">
   <app-footer></app-footer>
 </div>
-

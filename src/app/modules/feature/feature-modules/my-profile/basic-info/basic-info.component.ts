@@ -59,10 +59,10 @@ export class BasicInfoComponent implements OnInit {
 
     } else {
       this.infoForm.markAllAsTouched();
-      this.snack.open("fill the required fields",'',{
+      this.snack.open("Fill the required fields",'',{
         duration:2000,
         verticalPosition:'top',
-        panelClass:['green-snackbar','login-snackbar']
+        panelClass:['red-snackbar','login-snackbar']
       })
     }
   }

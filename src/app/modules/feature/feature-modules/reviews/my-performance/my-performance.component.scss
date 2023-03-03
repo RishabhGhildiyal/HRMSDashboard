@@ -7,6 +7,7 @@
 
 .container {
   padding: 40px;
+  background-color: #f3f7fd;
   h2 {
     color: $darkbklue;
   }
@@ -64,17 +65,17 @@
             margin-left: 30px;
           }
         }
-        .honours{
+        .honours {
           width: 20%;
           background-color: #c4e7ff;
           margin-left: 7px;
-          .data{
+          .data {
             margin-left: 30px;
-            h3{
+            h3 {
               font-weight: bold;
               margin-top: 10px;
             }
-            p{
+            p {
               margin-left: 5px;
             }
           }
@@ -93,7 +94,7 @@
           h2 {
             padding: 0;
             font-size: 50px;
-            font-weight: bolder;
+            font-weight: 500;
             color: black;
           }
         }
@@ -197,6 +198,80 @@
             font-size: large;
             padding-top: 10px;
             font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  .smallContainer {
+    margin-top: 40px;
+    background-color: $pure-white;
+    padding: 40px;
+    .button {
+      button {
+        background-color: #01b1ff;
+      }
+    }
+    .heading {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      h1 {
+        color: black;
+        font-weight: bold;
+      }
+      p {
+        margin: 0px;
+      }
+    }
+    .calender {
+      @include grid("grid-template-columns", "24% 24% 24% 24%", "");
+      gap: 20px;
+      .container1 {
+        border: $borderColor;
+        padding: 20px;
+        height: 145px;
+        border-radius: 10px;
+        .head {
+          display: flex;
+          justify-content: space-between;
+          span {
+            background-color: #dfffb0;
+            height: 30px;
+            width: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        .award {
+          position: relative;
+          top: 60px;
+          padding: 0px;
+          margin: 0px;
+          color: #f7c417;
+          font-size: 16px;
+          font-weight: 500;
+          span {
+          }
+        }
+
+        .honourArrow {
+          position: relative;
+          top: 70px;
+          display: flex;
+          justify-content: space-between;
+          .honours {
+            // position: relative;
+            // top: 20px;
+            margin-bottom: 0px;
+            span {
+              font-size: 16px;
+              font-weight: 500;
+              color: $primary-blue;
+            }
+          }
+          .arrow {
           }
         }
       }

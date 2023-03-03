@@ -34,6 +34,12 @@ export class FormService {
     position:[Validators.pattern],
     experience:[Validators.pattern],
     number:[Validators.pattern(Regex.phone)],
+    pitchName:[Validators.pattern],
+    empId:[Validators.pattern],
+    empTitle:[Validators.pattern],
+    industry:[Validators.pattern],
+    dateOfBirth:[Validators.pattern],
+    type:[Validators.pattern],
   };
 
   getControl(name: string, required = true) {

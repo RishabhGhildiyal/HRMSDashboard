@@ -1,4 +1,5 @@
 <div class="container">
+  <p>Home > Reviews > Performance</p>
   <h2>Performance</h2>
   <div class="main">
     <div class="leftBody">
@@ -24,7 +25,6 @@
           <div class="data">
             <h3>Honours</h3>
             <p>N/A</p>
-
           </div>
         </div>
       </div>
@@ -58,4 +58,56 @@
       </div>
     </div>
   </div>
+  <div class="smallContainer">
+    <div class="button">
+      <button mat-raised-button>Monthly Rating</button>
+    </div>
+    <div class="heading">
+      <h1>Monthly Performance Calender</h1>
+      <div class="search">
+        <p>Select Year:</p>
+        <mat-form-field class="year" appearance="outline">
+          <mat-select [(value)]="yearSelect" (selectionChange)="toggleYear($event)">
+            <mat-option *ngFor="let year of year" [value]="year">{{
+              year
+            }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="calender">
+      <ng-container *ngIf="yearToggle">
+
+        <div  class="container1" *ngFor="let item of calenderYear">
+          <span>{{item.title}}</span>
+        </div>
+      </ng-container>
+      <ng-container *ngFor="let item of calenderYear">
+        <div class="container1" *ngIf="!yearToggle">
+          <div class="head">
+            <p>{{ item.title }}</p>
+            <span>3.9</span>
+          </div>
+          <ng-container *ngIf="item.data">
+            <div *ngFor="let data of item.data">
+              <div class="award">
+                <span>AWARDS:{{ data.awards }}</span>
+              </div>
+              <div class="honourArrow">
+                <div class="honours">
+                  <span>HONOURS: {{ data.honours }}</span>
+                </div>
+                <div class="arrow">
+                  <mat-icon>keyboard_arrow_right</mat-icon>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
 </div>

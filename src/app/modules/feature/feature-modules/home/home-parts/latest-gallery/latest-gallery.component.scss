@@ -11,9 +11,7 @@
       margin-right: 2px;
       background-color: #fefefe;
       .header {
-        padding: 10px 10px 0px 10px;
-
-        border-bottom: 1px solid grey;
+        padding: 20px 10px 0px 20px;
       }
       .body {
         @include grid("grid-template-columns", "33% 33% 33%", "");
@@ -22,19 +20,14 @@
         // margin-right: ;
         .latestCard {
           height: 220px;
-          // border: $borderColor;
           padding: 16px 16px 80px 16px;
 
           .content {
             // padding: 10px;
             position: relative;
-            // top: 70px;
-            .subject {
-              h3 {
-              }
-            }
             .image {
               img {
+                // padding: 30px;
                 width: 23vw;
               }
             }
@@ -42,7 +35,6 @@
         }
         .award {
           padding: 16px 16px 80px 16px;
-          // border: $borderColor;
           height: 220px;
           .awardBody {
             .latestCardAward {

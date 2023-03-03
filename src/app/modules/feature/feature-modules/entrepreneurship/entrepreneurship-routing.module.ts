@@ -13,13 +13,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./explore/explore.module').then((m) => m.ExploreModule),
   },
-  {
-    path: ADD_PITCH.path,
-    loadChildren: () =>
-      import('./explore/add-pitch/add-pitch.module').then(
-        (m) => m.AddPitchModule
-      ),
-  },
+ 
 ];
 
 @NgModule({

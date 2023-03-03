@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ProfilePictureRoutingModule } from './profile-picture-routing.module';
 import { ProfilePictureComponent } from './profile-picture.component';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     CommonModule,
     ProfilePictureRoutingModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule
   ]
 })
 export class ProfilePictureModule { }

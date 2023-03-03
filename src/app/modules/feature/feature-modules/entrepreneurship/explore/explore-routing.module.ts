@@ -9,7 +9,8 @@ const routes: Routes = [
   },
   {
     path:ADD_PITCH.path,
-    loadChildren:() => import('./add-pitch/add-pitch.module').then((m)=>m.AddPitchModule)
+    loadChildren:() =>
+    import('./add-pitch/add-pitch.module').then((m)=>m.AddPitchModule)
   }
 ];
 

@@ -1,25 +1,26 @@
 @import "src/scss/_mixins.scss";
 @import "src/scss/global.scss";
 
-
 .directory-wrapper {
-background-color: #f3f7fd;
+  background-color: #f3f7fd;
   padding: 24px 32px;
   .directory-header {
     h1 {
       color: blue;
     }
-    .directory-header-main {
-        // margin-left: 60px;
+    .directory-header-main-Row {
+      // margin-left: 60px;
+      display: flex;
 
       .input-group {
-        padding: 20px;
-        display: block;
-        width: 99%;
+        // padding: 20px;
+        // display: block;
+        // width: 99%;
         // margin-left: 60px;
         mat-form-field {
-          gap: 50px;
+          gap: 90px;
           width: 100%;
+          // margin-left: 60px;
         }
         button {
           height: 40px;
@@ -44,10 +45,26 @@ background-color: #f3f7fd;
         }
       }
       .button-wrapper {
-        margin-left: 60px;
+        // margin-left: 60px;
 
         @include flex(center, center);
         flex-direction: column;
+      }
+      .column-3{
+
+      }
+      .department{
+        margin-left: 25px;
+        position: relative;
+        bottom: 6px;
+        // width: 70%;
+        p{
+          // margin: 0px;
+          margin-left: 29px;
+        }
+        // position: relative;
+        // top: 10px;
+        // margin-left: 30px;
       }
     }
   }
@@ -108,26 +125,31 @@ background-color: #f3f7fd;
   }
 }
 
-.Row{
+.Row {
   display: flex;
 }
-.column-3{
+.column-3 {
   width: 33.33%;
 }
 
-.column-2{
+.column-2 {
   width: 50%;
 }
 
-.column-1{
+.column-1 {
   width: 100%;
 }
 
-hr{
+hr {
   margin: 15px 0px;
   border: 0px;
 }
 
-.flex-wrap{
-@include grid("grid-template-columns","auto auto auto","");
+.flex-wrap {
+  @include grid("grid-template-columns", "auto auto auto", "");
+}
+
+::ng-deep .mat-form-field-type-mat-select:not(.mat-form-field-disabled) .mat-form-field-flex {
+  cursor: pointer;
+  width: 30rem;
 }

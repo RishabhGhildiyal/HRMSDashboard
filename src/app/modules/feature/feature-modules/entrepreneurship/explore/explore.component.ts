@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ADD_PITCH } from 'src/app/constants/routes';
 
 @Component({
   selector: 'app-explore',
@@ -13,6 +14,6 @@ export class ExploreComponent implements OnInit {
   ngOnInit(): void {
   }
   shareIdea(){
-    this.router.navigate(['/add-pitch']);
+    this.router.navigate([ADD_PITCH.fullurl]);
   }
 }

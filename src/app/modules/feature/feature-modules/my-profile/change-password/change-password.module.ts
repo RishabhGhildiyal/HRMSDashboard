@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { ShowErrorModule } from 'src/app/pipes/showErrorPipe/show-error.module';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ShowErrorModule } from 'src/app/pipes/showErrorPipe/show-error.module';
     ReactiveFormsModule,
     MatInputModule,
     MatButtonModule,
-    ShowErrorModule
+    ShowErrorModule,
+    MatSnackBarModule
   ]
 })
 export class ChangePasswordModule { }

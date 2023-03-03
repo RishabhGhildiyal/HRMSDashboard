@@ -81,32 +81,22 @@ body {
   display: none;
 }
 
-/*
-
-.appinventivGallery{
-  .fullContent{
-    .celebration{
-      .body{
-        .latestCard{
-          .content{
-            .subject{
-
-            }
-            image{
-
-            }
-          }
-        }
-        .award{
-          .awardBody{
-            .latestCardAward{
-              
-            }
-          }
-        }
-      }
-    }
-  }
+.green-snackbar {
+  background: rgb(65, 252, 134);
+  color: black;
+  text-align: center;
 }
-
-*/
+.green-snackbar button {
+  background-color: rgb(65, 252, 134);
+  color: black;
+  border: none;
+}
+.red-snackbar {
+  background: #F44336;
+  color: black;
+}
+.red-snackbar button {
+  background-color: #F44336;
+  color: white !important;
+  border: none;
+}
