@@ -12,10 +12,13 @@ import {MatTableModule} from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { ShowErrorModule } from 'src/app/pipes/showErrorPipe/show-error.module';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { DialogComponentComponent } from './dialog-component/dialog-component.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     QualificationComponent,
+    DialogComponentComponent,
 
   ],
   imports: [
@@ -30,7 +33,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatTableModule,
     MatButtonModule,
     MatSnackBarModule,
-    ShowErrorModule
+    ShowErrorModule,
+    MatDialogModule
+
 
   ]
 })

@@ -1,9 +1,11 @@
 import { trigger, transition, style, animate } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { FormService } from 'src/app/services/form.service';
+import { DialogComponentComponent } from './dialog-component/dialog-component.component';
 
 export interface PeriodicElement {
   action: string;
@@ -59,7 +61,7 @@ export class QualificationComponent implements OnInit {
     'MCA',
     'BBA',
     'Msc'];
-  constructor(private fb: FormBuilder, private service:FormService,private router:Router,private snack:MatSnackBar) { }
+  constructor(private fb: FormBuilder, private service:FormService,private router:Router,private snack:MatSnackBar, public dialog:MatDialog) { }
 
   ngOnInit(): void {
     this.infoForm = this.createForm();
@@ -90,6 +92,10 @@ export class QualificationComponent implements OnInit {
   numbers = new FormControl('');
 
   numberList: number[] = [10,20,30,40];
+
+  openDialog(){
+    this.dialog.open(DialogComponentComponent)
+  }
 
 }
 

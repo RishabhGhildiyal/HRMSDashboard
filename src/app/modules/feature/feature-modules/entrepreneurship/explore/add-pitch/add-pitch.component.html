@@ -72,6 +72,8 @@
                 <mat-error>{{infoForm | showError :'type':'Type'}}</mat-error>
           </mat-form-field>
       </div>
+      <angular-editor [placeholder]="'Enter text here...'" ></angular-editor>
+
       <div class="no-file-chosen">
           <label></label>Presentation - (Share your detailed presentaion on the idea) (ppt , pdf)
           <div class="file">
@@ -80,4 +82,8 @@
           </div>
       </div>
   </div>
+</div>
+
+<div class="footer">
+  <app-footer></app-footer>
 </div>

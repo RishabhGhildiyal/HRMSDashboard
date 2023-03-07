@@ -10,6 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 
 import { CarouselModule } from 'src/app/carousel/carousel/carousel.module';
 import { LatestGalleryComponent } from './latest-gallery.component';
+import { AppendImagePathModule } from 'src/app/pipes/image-pipe/append-image-path.module';
 
 
 const MATERIAL  = [MatCardModule]
@@ -22,7 +23,8 @@ const MATERIAL  = [MatCardModule]
   imports: [
     CommonModule,
     MatCardModule,
-    CarouselModule
+    CarouselModule,
+    AppendImagePathModule
 
   ],
   exports: [

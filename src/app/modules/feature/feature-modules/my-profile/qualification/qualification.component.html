@@ -162,7 +162,7 @@
           <ng-container matColumnDef="action">
             <th mat-header-cell *matHeaderCellDef>Action</th>
             <td mat-cell *matCellDef="let element">
-              <button class="edit" mat-button>Edit</button>
+              <button (click)="openDialog()" class="edit" mat-button>Edit</button>
               <button class="delete" mat-button>Delete</button>
             </td>
           </ng-container>

@@ -10,6 +10,9 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { ShowErrorModule } from 'src/app/pipes/showErrorPipe/show-error.module';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import { HttpClientModule } from '@angular/common/http';
+import { FooterModule } from 'src/app/modules/feature/feature-parts/footer/footer.module';
 
 
 @NgModule({
@@ -28,7 +31,10 @@ import { MatSelectModule } from '@angular/material/select';
     ShowErrorModule,
     MatInputModule,
     MatSelectModule,
-    MatOptionModule
+    MatOptionModule,
+    AngularEditorModule,
+    HttpClientModule,
+    FooterModule
   ]
 })
 export class AddPitchModule { }

@@ -15,7 +15,22 @@ import { NguCarouselConfig } from '@ngu/carousel';
 })
 export class LatestGalleryComponent implements OnInit {
   slide: boolean[] = [];
-  listOfNewFamilyMembers = [1, 2, 3,4];
+  image: any[] = [
+    {
+      url: '../../../../../../../assets/award_1660310382113.jpg',
+    },
+    {
+      url: '../../../../../../../assets/award_1665553979253.jpg',
+    },
+    {
+      url: '../../../../../../../assets/award_1669014343495.png',
+    },
+    {
+      url: '../../../../../../../assets/award_1672292016846.jpg',
+    },
+  ];
+
+  listOfNewFamilyMembers = [1, 2, 3, 4];
   @ViewChildren('listofDivs', { read: TemplateRef }) listToShow!: QueryList<
     ElementRef<HTMLDivElement>
   >;
@@ -24,11 +39,11 @@ export class LatestGalleryComponent implements OnInit {
 
   ngOnInit(): void {}
   ngAfterViewInit(): void {
-    setTimeout(()=>{
+    setTimeout(() => {
       this.listToShow.forEach((item: any) => {
         this.dataSource.push(item);
       });
-    },500)
+    }, 500);
   }
   carouselConfigGallery: NguCarouselConfig = {
     grid: { xs: 1, sm: 1, md: 2, lg: 3, all: 0 },
@@ -43,4 +58,7 @@ export class LatestGalleryComponent implements OnInit {
       hideOnSingleSlide: true,
     },
   };
+  openDialog(){
+    
+  }
 }
