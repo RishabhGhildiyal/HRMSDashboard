@@ -11,13 +11,15 @@ import { MatCardModule } from '@angular/material/card';
 import { CarouselModule } from 'src/app/carousel/carousel/carousel.module';
 import { LatestGalleryComponent } from './latest-gallery.component';
 import { AppendImagePathModule } from 'src/app/pipes/image-pipe/append-image-path.module';
+import { GalleryPhotosComponent } from './gallery-photos/gallery-photos.component';
 
 
 const MATERIAL  = [MatCardModule]
 
 @NgModule({
   declarations: [
-   LatestGalleryComponent
+   LatestGalleryComponent,
+   GalleryPhotosComponent
 
   ],
   imports: [

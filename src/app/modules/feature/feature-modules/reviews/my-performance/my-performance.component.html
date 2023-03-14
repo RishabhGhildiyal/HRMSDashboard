@@ -67,7 +67,10 @@
       <div class="search">
         <p>Select Year:</p>
         <mat-form-field class="year" appearance="outline">
-          <mat-select [(value)]="yearSelect" (selectionChange)="toggleYear($event)">
+          <mat-select
+            [(value)]="yearSelect"
+            (selectionChange)="toggleYear($event)"
+          >
             <mat-option *ngFor="let year of year" [value]="year">{{
               year
             }}</mat-option>
@@ -77,9 +80,8 @@
     </div>
     <div class="calender">
       <ng-container *ngIf="yearToggle">
-
-        <div  class="container1" *ngFor="let item of calenderYear">
-          <span>{{item.title}}</span>
+        <div class="container1" *ngFor="let item of calenderYear">
+          <span>{{ item.title }}</span>
         </div>
       </ng-container>
       <ng-container *ngFor="let item of calenderYear">

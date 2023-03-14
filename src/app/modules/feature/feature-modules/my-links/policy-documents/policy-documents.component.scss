@@ -23,13 +23,17 @@
         border: $borderColor;
         width: 100%;
         box-shadow: none;
+        overflow-x: scroll;
         th{
           word-break: break-word;
           border: 1px solid #f1f1f2;
+          overflow-x:scroll ;
         }
         td{
           border: 1px solid #f1f1f2;
           padding-left: 10px;
+          overflow-x: scroll;
+          // word-wrap: break-word;
           .edit{
             color: $pure-white;
             background-color: grey;

@@ -113,13 +113,16 @@
       }
       .skills {
         @include grid("grid-template-columns", "20% 20% 20% 20% ", "");
-        gap: 35px;
+        gap: 25px;
         .box1 {
-          border: $borderColor;
-          padding: 14px;
-          width: 100%;
-          margin: 0px;
           background-color: #edffd2;
+          margin: 0 5px;
+          padding: 20px 5px;
+          border-radius: 10px;
+          width: 100%;
+          min-height: 100px;
+          border: $borderColor;
+
           span {
             display: flex;
             justify-content: center;
@@ -136,11 +139,13 @@
           }
         }
         .box2 {
-          border: $borderColor;
-          padding: 14px;
-          width: 100%;
-          margin: 0px;
           background-color: #edffd2;
+          margin: 0 5px;
+          padding: 20px 5px;
+          border-radius: 10px;
+          width: 100%;
+          min-height: 100px;
+          border: $borderColor;
 
           span {
             display: flex;
@@ -158,11 +163,13 @@
           }
         }
         .box3 {
-          border: $borderColor;
-          padding: 14px;
-          width: 100%;
-          margin: 0px;
           background-color: #edffd2;
+          margin: 0 5px;
+          padding: 20px 5px;
+          border-radius: 10px;
+          width: 100%;
+          min-height: 100px;
+          border: $borderColor;
 
           span {
             display: flex;
@@ -180,11 +187,13 @@
           }
         }
         .box4 {
-          border: $borderColor;
-          padding: 14px;
-          width: 100%;
-          margin: 0px;
           background-color: #edffd2;
+          margin: 0 5px;
+          padding: 20px 5px;
+          border-radius: 10px;
+          width: 100%;
+          min-height: 100px;
+          border: $borderColor;
           span {
             display: flex;
             justify-content: center;
@@ -273,6 +282,443 @@
           }
           .arrow {
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:1650px){
+  .container{
+    h2{
+
+    }
+    .main{
+      .leftBody{
+        .header{
+          .displayPicture{
+
+          }
+          .name{
+            h3{
+
+            }
+            p{
+
+            }
+          }
+        }
+        .downBody{
+          .awards{
+            h3{
+
+            }
+            p{
+
+            }
+          }
+          .honours{
+            .data{
+              h3{}
+              p{}
+            }
+          }
+        }
+      }
+      .rightBody{
+        .heading{
+          .number{
+            h2{
+
+            }
+          }
+          .duration{
+            p{
+
+            }
+          }
+        }
+        .skills{
+          word-break: break-word;
+          .box1{
+            span{
+
+            }
+            p{}
+          }
+          .box2{
+            span{
+
+            }
+            p{}
+          }
+          .box3{
+            span{
+
+            }
+            p{}
+          }
+          .box4{
+            span{
+
+            }
+            p{}
+          }
+        }
+      }
+    }
+    .smallContainer{
+      .button{
+        button{
+
+        }
+      }
+      .heading{
+        display: block;
+        h1{}
+        .search{
+          p{
+
+          }
+        }
+      }
+      .calender{
+        display: block;
+        // margin-top: 10px;
+        .container1{
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width:1400px){
+  .container{
+    h2{
+
+    }
+    .main{
+      .leftBody{
+        .header{
+          .displayPicture{
+
+          }
+          .name{
+            h3{
+
+            }
+            p{
+
+            }
+          }
+        }
+        .downBody{
+          .awards{
+            // width: 50%;
+            h3{
+
+            }
+            p{
+
+            }
+          }
+          .honours{
+            width: 30%;
+            .data{
+              h3{}
+              p{}
+            }
+          }
+        }
+      }
+      .rightBody{
+        .heading{
+          .number{
+            h2{
+
+            }
+          }
+          .duration{
+            p{
+
+            }
+          }
+        }
+        .skills{
+          word-break: break-word;
+          .box1{
+            span{
+
+            }
+            p{}
+          }
+          .box2{
+            span{
+
+            }
+            p{}
+          }
+          .box3{
+            span{
+
+            }
+            p{}
+          }
+          .box4{
+            span{
+
+            }
+            p{}
+          }
+        }
+      }
+    }
+    .smallContainer{
+      .button{
+        button{
+
+        }
+      }
+      .heading{
+        display: block;
+        h1{}
+        .search{
+          p{
+
+          }
+        }
+      }
+      .calender{
+        display: block;
+        // margin-top: 10px;
+        .container1{
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:1230px){
+  .container{
+    h2{
+
+    }
+    .main{
+      .leftBody{
+        .header{
+          .displayPicture{
+
+          }
+          .name{
+            h3{
+
+            }
+            p{
+
+            }
+          }
+        }
+        .downBody{
+          .awards{
+            // width: 30%;
+            h3{
+
+            }
+            p{
+
+            }
+          }
+          .honours{
+            .data{
+              h3{}
+              p{}
+            }
+          }
+        }
+      }
+      .rightBody{
+        .heading{
+          .number{
+            h2{
+
+            }
+          }
+          .duration{
+            p{
+
+            }
+          }
+        }
+        .skills{
+          word-break: break-word;
+          gap: 20px;
+          .box1{
+            span{
+
+            }
+            p{}
+          }
+          .box2{
+            span{
+
+            }
+            p{}
+          }
+          .box3{
+            span{
+
+            }
+            p{}
+          }
+          .box4{
+            span{
+
+            }
+            p{}
+          }
+        }
+      }
+    }
+    .smallContainer{
+      .button{
+        button{
+
+        }
+      }
+      .heading{
+        display: block;
+        h1{}
+        .search{
+          p{
+
+          }
+        }
+      }
+      .calender{
+        display: block;
+        // margin-top: 10px;
+        .container1{
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:1060px){
+  .container{
+    h2{
+
+    }
+    .main{
+      display: block;
+      .leftBody{
+        .header{
+          .displayPicture{
+
+          }
+          .name{
+            h3{
+
+            }
+            p{
+
+            }
+          }
+        }
+        .downBody{
+          .awards{
+            width: 30%;
+            h3{
+
+            }
+            p{
+
+            }
+          }
+          .honours{
+            .data{
+              h3{}
+              p{}
+            }
+          }
+        }
+      }
+      .rightBody{
+        .heading{
+          .number{
+            h2{
+
+            }
+          }
+          .duration{
+            p{
+
+            }
+          }
+        }
+        .skills{
+          word-break: break-word;
+          gap: 20px;
+          display: block;
+          .box1{
+            padding: 0px;
+            span{
+
+            }
+            p{}
+          }
+          .box2{
+            padding: 0px;
+            margin-top: 10px;
+            span{
+
+            }
+            p{}
+          }
+          .box3{
+            padding: 0px;
+            margin-top: 10px;
+            span{
+
+            }
+            p{}
+          }
+          .box4{
+            padding: 0px;
+            margin-top: 10px;
+
+            span{
+
+            }
+            p{}
+          }
+        }
+      }
+    }
+    .smallContainer{
+      .button{
+        button{
+
+        }
+      }
+      .heading{
+        display: block;
+        h1{}
+        .search{
+          p{
+
+          }
+        }
+      }
+      .calender{
+        display: block;
+        // margin-top: 10px;
+        .container1{
+          margin-top: 10px;
         }
       }
     }

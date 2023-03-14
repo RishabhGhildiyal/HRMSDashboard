@@ -1,0 +1,23 @@
+@import "../../../../../../scss/mixins";
+@import "../../../../../../scss/global.scss";
+
+.container{
+  padding: 20px;
+.header{
+  padding: 10px;
+  border: 0px 0px $borderColor 0px;
+  // background-color: $pure-white;
+  h1 {
+    font-family: "Lato";
+    font-size: 24px;
+    color: #199CFF;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0;
+  }
+}
+  .card1{
+    @include grid("grid-template-columns","32% 32% 32%", "");
+    gap: 20px;
+  }
+}

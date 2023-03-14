@@ -1,0 +1,46 @@
+@import "../../../../../../../scss/mixins";
+@import "../../../../../../../scss/global.scss";
+
+
+.container{
+  .header{
+    display: flex;
+    justify-content: space-between;
+    .title{
+      h3{
+        color: $primary-blue;
+        font-size: large;
+        font-weight: bold;
+      }
+    }
+  }
+  button{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main{
+    .row1{
+      display: flex;
+      p{
+        min-width: 110px;
+      }
+    }
+    .row2{
+      display: flex;
+      p{
+        min-width: 110px;
+      }
+    }
+    .row3{
+      display:flex;
+      justify-content: space-between;
+      .start{
+
+      }
+    }
+  }
+}

@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 // import { CarouselComponent } from './carousel/carousel/carousel.component';
 import { NguCarouselModule } from '@ngu/carousel';
 import { CommonTableComponent } from './modules/common/common-table/common-table.component';
+// import { JobCardComponent } from './components/job-card/job-card.component';
 // import { AppendImagePathPipe } from './pipes/image-pipe/append-image-path.pipe';
 
 
@@ -17,6 +18,7 @@ import { CommonTableComponent } from './modules/common/common-table/common-table
   declarations: [
     AppComponent,
     PageNotFoundComponent,
+    // JobCardComponent,
     // AppendImagePathPipe,
     // CarouselComponent,
 

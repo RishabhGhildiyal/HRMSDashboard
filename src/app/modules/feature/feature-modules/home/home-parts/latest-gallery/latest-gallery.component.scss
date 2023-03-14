@@ -28,78 +28,80 @@
             .image {
               img {
                 // padding: 30px;
-                width: 23vw;
+                // width: 23vw;
+                height: 100px;
+                width: 100px;
               }
             }
           }
         }
-        .award {
-          padding: 16px 16px 80px 16px;
-          height: 220px;
-          .awardBody {
-            .latestCardAward {
-              .headingAward {
-                display: flex;
-                padding-right: 5px;
-                .dot {
-                  background-color: #c136cd;
-                  height: 8px;
-                  width: 8px;
-                  border-radius: 50%;
-                  display: inline-block;
-                  position: relative;
-                  top: 8px;
-                }
-                h3 {
-                  top: 5px;
-                  font-family: "Lato";
-                  font-size: 16px;
-                  color: #000000;
-                  font-weight: 500;
-                  line-height: 1.9;
-                  width: 90%;
-                  height: 20px;
-                  overflow: hidden;
-                  text-overflow: ellipsis;
-                  white-space: nowrap;
-                  @include flex(center, "");
+        // .award {
+        //   padding: 16px 16px 80px 16px;
+        //   height: 220px;
+        //   .awardBody {
+        //     .latestCardAward {
+        //       .headingAward {
+        //         display: flex;
+        //         padding-right: 5px;
+        //         .dot {
+        //           background-color: #c136cd;
+        //           height: 8px;
+        //           width: 8px;
+        //           border-radius: 50%;
+        //           display: inline-block;
+        //           position: relative;
+        //           top: 8px;
+        //         }
+        //         h3 {
+        //           top: 5px;
+        //           font-family: "Lato";
+        //           font-size: 16px;
+        //           color: #000000;
+        //           font-weight: 500;
+        //           line-height: 1.9;
+        //           width: 90%;
+        //           height: 20px;
+        //           overflow: hidden;
+        //           text-overflow: ellipsis;
+        //           white-space: nowrap;
+        //           @include flex(center, "");
 
-                  flex-direction: row;
-                  padding-left: 10px;
-                }
-              }
-              .content {
-                position: relative;
-                // top: 70px;
-                .image {
-                  .image1 {
-                    img {
-                      width: 23vw;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-        .birthday {
-          padding: 16px 16px 80px 16px;
-          // border: $borderColor;
-          margin-left: 10px;
-          .birthdayBody {
-            .birthdayCelebration {
-              .content {
-                position: relative;
-                // top: 70px;
-                .image {
-                  img {
-                    width: 23vw;
-                  }
-                }
-              }
-            }
-          }
-        }
+        //           flex-direction: row;
+        //           padding-left: 10px;
+        //         }
+        //       }
+        //       .content {
+        //         position: relative;
+        //         // top: 70px;
+        //         .image {
+        //           .image1 {
+        //             img {
+        //               width: 23vw;
+        //             }
+        //           }
+        //         }
+        //       }
+        //     }
+        //   }
+        // }
+        // .birthday {
+        //   padding: 16px 16px 80px 16px;
+        //   // border: $borderColor;
+        //   margin-left: 10px;
+        //   .birthdayBody {
+        //     .birthdayCelebration {
+        //       .content {
+        //         position: relative;
+        //         // top: 70px;
+        //         .image {
+        //           img {
+        //             width: 23vw;
+        //           }
+        //         }
+        //       }
+        //     }
+        //   }
+        // }
       }
     }
   }

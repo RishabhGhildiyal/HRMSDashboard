@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { FreshersTrainingRoutingModule } from './freshers-training-routing.module';
 import { FreshersTrainingComponent } from './freshers-training.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -11,7 +12,9 @@ import { FreshersTrainingComponent } from './freshers-training.component';
   ],
   imports: [
     CommonModule,
-    FreshersTrainingRoutingModule
+    FreshersTrainingRoutingModule,
+    MatDialogModule,
+    
   ]
 })
 export class FreshersTrainingModule { }

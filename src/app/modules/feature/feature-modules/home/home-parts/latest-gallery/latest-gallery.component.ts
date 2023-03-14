@@ -6,7 +6,9 @@ import {
   TemplateRef,
   ViewChildren,
 } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { NguCarouselConfig } from '@ngu/carousel';
+import { GalleryPhotosComponent } from './gallery-photos/gallery-photos.component';
 
 @Component({
   selector: 'app-latest-gallery',
@@ -18,24 +20,41 @@ export class LatestGalleryComponent implements OnInit {
   image: any[] = [
     {
       url: '../../../../../../../assets/award_1660310382113.jpg',
+      subImages: [
+        '../../../../../../../assets/award_1672292016846.jpg',
+        '../../../../../../../assets/Best Place to work.png'
+      ]
     },
     {
       url: '../../../../../../../assets/award_1665553979253.jpg',
+      subImages: [
+        '../../../../../../../assets/award_1669014343495.png',
+        '../../../../../../../assets/Christmas.png'
+
+      ]
     },
     {
       url: '../../../../../../../assets/award_1669014343495.png',
+      subImages:[
+        '../../../../../../../assets/award_1672292016846.jpg',
+        '../../../../../../../assets/Republic Day.png'
+      ]
     },
     {
       url: '../../../../../../../assets/award_1672292016846.jpg',
+      subImages:[
+        '../../../../../../../assets/award_1660310382113.jpg',
+        '../../../../../../../assets/award_1669014343495.png'
+      ]
     },
   ];
 
-  listOfNewFamilyMembers = [1, 2, 3, 4];
+  listOfNewFamilyMembers = [1, 2];
   @ViewChildren('listofDivs', { read: TemplateRef }) listToShow!: QueryList<
     ElementRef<HTMLDivElement>
   >;
   dataSource: any = [];
-  constructor() {}
+  constructor(public dialog:MatDialog) {}
 
   ngOnInit(): void {}
   ngAfterViewInit(): void {
@@ -58,7 +77,13 @@ export class LatestGalleryComponent implements OnInit {
       hideOnSingleSlide: true,
     },
   };
-  openDialog(){
-    
+  openDialog(item:any){
+    const data =  this.dialog.open(GalleryPhotosComponent, {
+      width: '350px',
+      data: item
+    }
+    );
+    // this.dialog.open(GalleryPhotosComponent);
+
   }
 }

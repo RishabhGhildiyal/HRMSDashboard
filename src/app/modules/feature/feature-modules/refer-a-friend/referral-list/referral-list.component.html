@@ -1,1 +1,9 @@
-<p>referral-list works!</p>
+<div class="container">
+  <h1>Referral List</h1>
+  <div class="main">
+    <div class="table">
+      <!-- <app-common-table ></app-common-table> -->
+      <app-common-table [tableColumns]="tableColumns" [tableData]="tableData" [isPageable]="false" [defaultPageSize]="3" ></app-common-table>
+    </div>
+  </div>
+</div>

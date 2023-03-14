@@ -2,7 +2,7 @@
   <div class="directory-header">
     <h1>Employee Directory</h1>
     <div class="directory-header-main-Row">
-      <div class="column-3">
+      <div class="column-2">
         <div class="input-group">
           <label for="">Name</label><br />
           <mat-form-field class="firstName_input" appearance="outline">
@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="department">
-        <p>Department</p>
+        <label>Department</label>
 
         <mat-form-field class="department" appearance="outline">
           <mat-select
@@ -31,7 +31,7 @@
           </mat-select>
         </mat-form-field>
       </div>
-      <div class="column-3 button-wrapper">
+      <div class="buttons">
         <div class="input-group">
           <button (click)="clickReset()">Reset</button>
           <button (click)="search()">

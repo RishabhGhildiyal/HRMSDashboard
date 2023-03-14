@@ -10,6 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { LatestJobsComponent } from './latest-jobs.component';
 import { CarouselModule } from 'src/app/carousel/carousel/carousel.module';
 import { RightSideModule } from './right-side/right-side.module';
+import { JobCardModule } from 'src/app/components/job-card/job-card.module';
 // import { RightSideComponent } from './right-side/right-side.component';
 
 
@@ -25,7 +26,8 @@ const MATERIAL  = [MatCardModule]
     CommonModule,
     MatCardModule,
     CarouselModule,
-    RightSideModule
+    RightSideModule,
+    JobCardModule
 
   ],
   exports: [
