@@ -42,8 +42,11 @@
       </div>
       <hr />
       <div class="cardBottom">
-        <div class="viewDetails">
-          <button mat-raised-button>View Details</button>
+        <div class="viewDetails" >
+          <a [routerLink]="['DETAILS' | absolutePath]" target="_blank">
+
+            <button mat-raised-button>View Details</button>
+          </a>
         </div>
         <div class="referCandidate">
           <button (click)="openDialog()">Feedback</button>
@@ -89,8 +92,11 @@
       </div>
       <hr />
       <div class="cardBottom">
-        <div class="viewDetails">
-          <button mat-raised-button>View Details</button>
+        <div class="viewDetails" >
+          <a [routerLink]="['DETAILS' | absolutePath]" target="_blank">
+
+            <button mat-raised-button>View Details</button>
+          </a>
         </div>
         <div class="referCandidate">
           <button (click)="openDialog()">Feedback</button>

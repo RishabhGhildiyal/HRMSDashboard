@@ -1,0 +1,52 @@
+@import "../../../../../../../scss/mixins";
+@import "../../../../../../../scss/global.scss";
+
+.container{
+  padding: 20px;
+  min-height: 100%;
+  // background-color: ;
+.header{
+  padding: 10px;
+  border: 0px 0px $borderColor 0px;
+  // background-color: $pure-white;
+  h1 {
+    font-family: "Lato";
+    font-size: 24px;
+    // color: #199CFF;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0;
+    padding: 20px 25px 11px 0px;
+    color: #606167;
+  }
+}
+.cardUpper{
+  padding: 10px;
+  border: $borderColor;
+  background-color: $pure-white;
+  border-radius: 5px;
+
+  ::ng-deep.mat-button-toggle-appearance-standard {
+    .mat-button-toggle-label-content {
+      padding: 0 20px;
+    }
+  }
+  ::ng-deep.mat-tab-labels{
+    background-color: rgba(227, 236, 243, 0.46);
+    width: 29rem;
+    padding: 5px;;
+  }
+  ::ng-deep.mat-tab-list{
+    padding: 20px;
+  }
+  ::ng-deep.mat-tab-label.mat-tab-label-active{
+    background-color: #26B4FF;
+    color: $primary-white;
+    border-radius: 10px;
+  }
+  ::ng-deep.mat-tab-group.mat-primary .mat-ink-bar{
+    background-color: $primary-white;
+  }
+}
+
+}

@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="heading">
+    <h4>Training Details</h4>
+  </div>
+  <hr />
+  <div class="row1">
+    <p>Title:</p>
+    <span>Angular Training Feb-2022</span>
+  </div>
+  <div class="row2">
+    <div class="starting">
+      <div class="start">
+        <p>Start Date:</p>
+      </div>
+      <div class="startDate">
+        <span>FEB-28-2022</span>
+      </div>
+    </div>
+    <div class="ending">
+      <div class="end">
+        <p>End Date:</p>
+      </div>
+      <div class="endDate">
+        <span>APRIL-02-2022</span>
+      </div>
+    </div>
+  </div>
+  <div class="row3">
+    <div class="mode">
+      <div class="trainingMode">
+        <p>Training Mode:</p>
+      </div>
+      <div class="offline">
+        <span>Offline</span>
+      </div>
+    </div>
+    <div class="batch">
+      <div class="batchMonth">
+        <p>Batch:</p>
+      </div>
+      <div class="month">
+        <span>FEB-2022</span>
+      </div>
+    </div>
+  </div>
+  <div class="description">
+    <h3>Description</h3>
+  </div>
+  <hr />
+  <div class="descriptionTitle">
+    <div class="title">
+      <span>HTML/CSS/UI - Uploaded from sheet</span>
+    </div>
+  </div>
+  <div class="topics">
+    <h3>Topics</h3>
+  </div>
+  <hr>
+  <div class="table">
+    <!-- <app-common-table ></app-common-table> -->
+    <app-common-table [tableColumns]="tableColumns" [tableData]="tableData" [isPageable]="false" [defaultPageSize]="3" ></app-common-table>
+  </div>
+</div>

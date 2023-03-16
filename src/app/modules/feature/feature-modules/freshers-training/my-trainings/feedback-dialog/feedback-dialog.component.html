@@ -3,7 +3,9 @@
     <div class="title">
       <h3>Training Feedback Form</h3>
     </div>
-    <button mat-dialog-close><mat-icon>close</mat-icon></button>
+    <div class="cross">
+      <button mat-dialog-close><mat-icon>close</mat-icon></button>
+    </div>
   </div>
   <hr />
   <div class="main">
@@ -29,12 +31,109 @@
         <span>APRIL-02-2022</span>
       </div>
     </div>
-    <hr>
+    <hr />
     <div class="lower">
-      <label class="text-dark">Do you feel that the objective/goal of the training has been fulfilled? *</label>
+      <label class="text-dark"
+        >Do you feel that the objective/goal of the training has been fulfilled?
+        *</label
+      >
     </div>
     <div class="radioButton1">
-      
+      <input type="radio" id="yes" name="fav_language" value="Yes" />
+      <label for="yes">Yes</label><br />
+      <input type="radio" id="no" name="fav_language" value="No" />
+      <label for="no">No</label><br />
+    </div>
+    <hr />
+    <div class="ratings">
+      <div class="rating1">
+        <label class="text-dark"
+          >How Relevant and and helpful do you think it was for your job?
+          *</label
+        >
+        <div class="radioRating">
+          <div class="notVery">
+            <span>Not very</span>
+          </div>
+          <div class="radioList">
+            <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="1">1</mat-radio-button>
+              <mat-radio-button value="2">2</mat-radio-button>
+              <mat-radio-button value="3">3</mat-radio-button>
+              <mat-radio-button value="4">4</mat-radio-button>
+              <mat-radio-button value="5">5</mat-radio-button>
+            </mat-radio-group>
+          </div>
+          <div class="veryMuch">
+            <span>Very Much</span>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="rating2">
+        <label class="text-dark"
+          >How Would you rate the overall training? *</label
+        >
+        <div class="radioRating">
+          <div class="notGood">
+            <span>Not Good</span>
+          </div>
+          <div class="radioList">
+            <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="1">1</mat-radio-button>
+              <mat-radio-button value="2">2</mat-radio-button>
+              <mat-radio-button value="3">3</mat-radio-button>
+              <mat-radio-button value="4">4</mat-radio-button>
+              <mat-radio-button value="5">5</mat-radio-button>
+            </mat-radio-group>
+          </div>
+          <div class="excellent">
+            <span>Excellent</span>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="rating3">
+        <label class="text-dark" for="satisfied_rate"
+          >How satisfied were you with the session content? * <br />(Both
+          presented and pre-read material)
+        </label>
+        <div class="radioRating">
+          <div class="poor">
+            <span>Poor</span>
+          </div>
+          <div class="radioList">
+            <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="1">1</mat-radio-button>
+              <mat-radio-button value="2">2</mat-radio-button>
+              <mat-radio-button value="3">3</mat-radio-button>
+              <mat-radio-button value="4">4</mat-radio-button>
+              <mat-radio-button value="5">5</mat-radio-button>
+            </mat-radio-group>
+          </div>
+          <div class="excellent">
+            <span>Excellent</span>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="description">
+        <label for="">Any Overall Feedback for the Training?*</label><br />
+        <textarea
+          name="description"
+          id="description"
+          cols="20"
+          rows="10"
+        ></textarea>
+      </div>
+      <div class="buttons">
+        <div class="cancel">
+          <button mat-raised-button>Cancel</button>
+        </div>
+        <div class="save">
+          <button mat-raised-button>Submit</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

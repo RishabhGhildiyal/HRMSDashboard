@@ -36,7 +36,7 @@ export class CredentialLoginComponent implements OnInit {
   login() {
     console.log('AJDWUJB');
     if (this.loginForm.valid) {
-      sessionStorage.setItem('login','12345');
+      localStorage.setItem('login','12345');
       this.router.navigate([DASHBOARD.path]);
       this._snackbar.open("Login Successful",'',{
         duration:2000,

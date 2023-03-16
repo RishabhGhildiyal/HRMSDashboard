@@ -9,7 +9,7 @@ import { AUTH } from '../constants/routes';
 export class AuthGuard implements CanActivate {
   constructor(private route: Router) {}
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): any {
-    if (sessionStorage.getItem('login') === '12345') {
+    if (localStorage.getItem('login') === '12345') {
       return true;
     } else {
       this.route.navigate([AUTH.fullurl]);

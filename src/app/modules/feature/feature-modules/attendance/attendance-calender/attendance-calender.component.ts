@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CalendarOptions } from '@fullcalendar/core';
+import dayGridPlugin from '@fullcalendar/daygrid';
 
 @Component({
   selector: 'app-attendance-calender',
@@ -11,5 +13,13 @@ export class AttendanceCalenderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  calendarOptions: CalendarOptions = {
+    plugins: [dayGridPlugin],
+    initialView: 'dayGridMonth',
+    weekends: false,
+    events: [
+      { title: 'Meeting', start: new Date() }
+    ]
+  };
 
 }

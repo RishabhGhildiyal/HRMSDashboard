@@ -34,3 +34,31 @@ export interface REFERRAL_LIST {
   resume:string;
 
 }
+
+export interface TRAINING_DETAILS {
+  s_no: any;
+  topic: string;
+  topic_trainer:string;
+  trainer_email:string;
+  startDate:string;
+  endDate:string;
+  resource_url:any;
+}
+
+export interface SUB_TOPICS {
+  s_no: any;
+  subTopic: string;
+  topic:string;
+  topic_trainer:string;
+  trainer_email:string;
+  startDate:string;
+  endDate:string;
+  resource_url:any;
+}
+
+export interface ATTENDANCE {
+  s_no: any;
+  topic:string;
+  date:string;
+  attendance:string;  
+}

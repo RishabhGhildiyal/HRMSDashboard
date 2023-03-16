@@ -387,7 +387,12 @@ export const MY_TRAININGS : Iroute={
   }
 }
 
-
+export const DETAILS: Iroute={
+  path:'details',
+  get fullurl(): string{
+    return `/${MY_TRAININGS.fullurl}/${this.path}`
+  }
+}
 
 
 

@@ -1,14 +1,19 @@
-@import "../../../../../../scss/_mixins.scss";
-@import "../../../../../../scss/global.scss";
+@import "../../../../../../../../scss/mixins";
+@import "../../../../../../../../scss/global.scss";
 
 .container {
-  padding: 40px;
-  h1 {
-    color: $darkbklue;
+  padding: 1.5rem;
+  .header {
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid rgba(150, 165, 184, 0.5);
+    h3 {
+    }
   }
-  .main {
+
+  :host ::ng-deep .container {
     .table {
-      padding: 20px;
+      padding: 20px 0 0 0;
+      overflow-x: auto;
       .action {
         td {
           button {
@@ -19,16 +24,17 @@
         border: $borderColor;
         width: 100%;
         box-shadow: none;
-        overflow-x: scroll;
+        overflow-x: auto;
         th {
-          word-break: break-word;
+          // word-break: break-word;
           border: 1px solid #f1f1f2;
-          overflow-x: scroll;
+          overflow-x: auto;
         }
         td {
           border: 1px solid #f1f1f2;
           padding-left: 10px;
-          overflow-x: scroll;
+          overflow-x: auto;
+          padding: 9px;
           // word-wrap: break-word;
           .edit {
             color: $pure-white;

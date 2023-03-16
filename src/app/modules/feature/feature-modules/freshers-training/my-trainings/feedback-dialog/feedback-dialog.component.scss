@@ -1,45 +1,158 @@
 @import "../../../../../../../scss/mixins";
 @import "../../../../../../../scss/global.scss";
 
-
-.container{
-  .header{
+.container {
+  .header {
     display: flex;
     justify-content: space-between;
-    .title{
-      h3{
+    .title {
+      h3 {
         color: $primary-blue;
         font-size: large;
         font-weight: bold;
       }
     }
   }
-  button{
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .cross {
+    button {
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
-  .main{
-    .row1{
+  .main {
+    .row1 {
       display: flex;
-      p{
+      p {
         min-width: 110px;
       }
     }
-    .row2{
+    .row2 {
       display: flex;
-      p{
+      p {
         min-width: 110px;
       }
     }
-    .row3{
-      display:flex;
+    .row3 {
+      display: flex;
       justify-content: space-between;
-      .start{
-
+      .start {
+      }
+    }
+    .lower {
+    }
+    .radioButton1 {
+    }
+    .ratings {
+      .rating1 {
+        .radioRating {
+          margin-top: 10px;
+          display: flex;
+          justify-content: space-between;
+          .notVery {
+            color: red;
+          }
+          .radioList {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            mat-radio-group {
+              mat-radio-button {
+                margin-left: 16px;
+              }
+            }
+          }
+          .veryMuch {
+            color: green;
+          }
+        }
+      }
+      .rating2 {
+        .radioRating {
+          margin-top: 10px;
+          display: flex;
+          justify-content: space-between;
+          .notGood {
+            color: red;
+          }
+          .radioList {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            mat-radio-group {
+              mat-radio-button {
+                margin-left: 12px;
+              }
+            }
+          }
+          .excellent {
+            color: green;
+          }
+        }
+      }
+      .rating3 {
+        .radioRating {
+          margin-top: 10px;
+          display: flex;
+          justify-content: space-between;
+          .poor {
+            color: red;
+          }
+          .radioList {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            mat-radio-group {
+              mat-radio-button {
+                margin-left: 16px;
+              }
+            }
+          }
+          .excellent {
+            color: green;
+          }
+        }
+      }
+      .description {
+        textarea {
+          resize: none;
+          width: 98%;
+        }
+      }
+      .buttons {
+        display: flex;
+        justify-content: flex-end;
+        .cancel {
+          button {
+            border: 1.5px solid rgba(150, 165, 184, 0.5);
+            background-color: #ffffff;
+            font-family: "Lato";
+            font-size: 14px;
+            color: #96A5B8;
+            font-weight: 500;
+            // line-height: 1.4;
+            border-radius: 4px;
+            box-sizing: border-box;
+          }
+        }
+        .save {
+          margin-left: 5px;
+          button {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), #199CFF;
+            background-blend-mode: soft-light, normal;
+            border: 1px solid rgba(150, 165, 184, 0.2);
+            box-sizing: border-box;
+            box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12), inset 0px 2px 0px rgba(255, 255, 255, 0.24);
+            border-radius: 4px;
+            color: #FFFFFF;
+          }
+        }
       }
     }
   }

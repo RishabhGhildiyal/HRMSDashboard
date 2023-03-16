@@ -22,30 +22,29 @@ export class LatestGalleryComponent implements OnInit {
       url: '../../../../../../../assets/award_1660310382113.jpg',
       subImages: [
         '../../../../../../../assets/award_1672292016846.jpg',
-        '../../../../../../../assets/Best Place to work.png'
-      ]
+        '../../../../../../../assets/Best Place to work.png',
+      ],
     },
     {
       url: '../../../../../../../assets/award_1665553979253.jpg',
       subImages: [
         '../../../../../../../assets/award_1669014343495.png',
-        '../../../../../../../assets/Christmas.png'
-
-      ]
+        '../../../../../../../assets/Christmas.png',
+      ],
     },
     {
       url: '../../../../../../../assets/award_1669014343495.png',
-      subImages:[
+      subImages: [
         '../../../../../../../assets/award_1672292016846.jpg',
-        '../../../../../../../assets/Republic Day.png'
-      ]
+        '../../../../../../../assets/Republic Day.png',
+      ],
     },
     {
       url: '../../../../../../../assets/award_1672292016846.jpg',
-      subImages:[
+      subImages: [
         '../../../../../../../assets/award_1660310382113.jpg',
-        '../../../../../../../assets/award_1669014343495.png'
-      ]
+        '../../../../../../../assets/award_1669014343495.png',
+      ],
     },
   ];
 
@@ -54,7 +53,7 @@ export class LatestGalleryComponent implements OnInit {
     ElementRef<HTMLDivElement>
   >;
   dataSource: any = [];
-  constructor(public dialog:MatDialog) {}
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {}
   ngAfterViewInit(): void {
@@ -77,13 +76,13 @@ export class LatestGalleryComponent implements OnInit {
       hideOnSingleSlide: true,
     },
   };
-  openDialog(item:any){
-    const data =  this.dialog.open(GalleryPhotosComponent, {
-      width: '350px',
-      data: item
-    }
-    );
-    // this.dialog.open(GalleryPhotosComponent);
+  openDialog(item: any) {
+    console.log(item);
 
+    const data = this.dialog.open(GalleryPhotosComponent, {
+      width: '350px',
+      data: item,
+    });
+    // this.dialog.open(GalleryPhotosComponent);
   }
 }

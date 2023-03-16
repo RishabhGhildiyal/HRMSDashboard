@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { Router } from '@angular/router';
+import { DETAILS } from 'src/app/constants/routes';
 import { DialogueComponentComponent } from '../../home/home-parts/dialogue-component/dialogue-component.component';
 import { FeedbackDialogComponent } from './feedback-dialog/feedback-dialog.component';
 
@@ -10,7 +12,7 @@ import { FeedbackDialogComponent } from './feedback-dialog/feedback-dialog.compo
 })
 export class MyTrainingsComponent implements OnInit {
   divs: any = [1, 2];
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, private router:Router) {}
 
   ngOnInit(): void {}
   openDialog() {
@@ -19,5 +21,8 @@ export class MyTrainingsComponent implements OnInit {
     };
 
     this.dialog.open(FeedbackDialogComponent, config);
+  }
+  details(){
+    this.router.navigate([DETAILS.fullurl])
   }
 }
