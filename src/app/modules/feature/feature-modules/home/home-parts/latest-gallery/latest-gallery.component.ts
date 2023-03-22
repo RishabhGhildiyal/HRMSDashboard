@@ -65,7 +65,7 @@ export class LatestGalleryComponent implements OnInit {
   }
   carouselConfigGallery: NguCarouselConfig = {
     grid: { xs: 1, sm: 1, md: 2, lg: 3, all: 0 },
-    gridBreakpoints: { sm: 750, md: 992, lg: 1200, xl: 1200 },
+    // gridBreakpoints: { sm: 750, md: 992, lg: 1200, xl: 1200 },
     load: 1,
     interval: { timing: 4000, initialDelay: 1000 },
     loop: true,

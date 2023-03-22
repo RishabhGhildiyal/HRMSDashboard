@@ -9,9 +9,19 @@ import { UpcomingTrainingCardComponent } from './upcoming-training-card/upcoming
 })
 export class UpcomingTrainingsComponent implements OnInit {
   // divs:any = [1];
-  constructor() { }
+  constructor(public dialog:MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  openDialog(){
+
+   const dialogRef= this.dialog.open(UpcomingTrainingCardComponent,{
+    width:'550px'
+   })
+   dialogRef.afterClosed().subscribe(result => {
+    console.log(`Dialog result: ${result}`);
+  });
   }
 
 }

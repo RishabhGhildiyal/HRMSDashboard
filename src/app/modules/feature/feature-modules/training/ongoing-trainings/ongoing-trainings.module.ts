@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { OngoingTrainingsRoutingModule } from './ongoing-trainings-routing.module';
 import { OngoingTrainingsComponent } from './ongoing-trainings.component';
+import { FooterModule } from '../../../feature-parts/footer/footer.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { OngoingTrainingsComponent } from './ongoing-trainings.component';
   ],
   imports: [
     CommonModule,
-    OngoingTrainingsRoutingModule
+    OngoingTrainingsRoutingModule,
+    FooterModule
   ]
 })
 export class OngoingTrainingsModule { }

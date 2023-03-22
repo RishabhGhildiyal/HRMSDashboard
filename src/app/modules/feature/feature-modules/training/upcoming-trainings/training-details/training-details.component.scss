@@ -1,0 +1,218 @@
+@import "../../../../../../../scss/mixins";
+@import "../../../../../../../scss/global.scss";
+
+.container {
+  min-height: 80%;
+  padding: 20px;
+  background-color: #f3f7fc;
+  .mainHeading{
+    display: flex;
+    justify-content: space-between;
+    .head{
+      nav {
+        padding: 10px;
+      }
+      h1 {
+        padding: 10px;
+        font-size: x-large;
+        font-weight: 700;
+        color: #606167;
+        letter-spacing: 1.15px;
+      }
+
+    }
+    .btn{
+      button{
+        background-color: $primary-blue;
+        color: $pure-white;
+      }
+    }
+  }
+  .cardUpper {
+    padding: 10px;
+    border: $borderColor;
+    background-color: $pure-white;
+    border-radius: 8px;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      .heading {
+        border: 0px 0px $borderColor 0px;
+        padding: 15px;
+        h4 {
+          margin: 0px;
+        }
+      }
+      .propButton {
+        button {
+          padding: 15px;
+          border: 1.5px solid rgba(150, 165, 184, 0.5);
+          background-color: #ffffff;
+          font-family: "Lato";
+          font-size: 14px;
+          color: #96a5b8;
+          font-weight: 500;
+          line-height: 1.4;
+          border-radius: 4px;
+        }
+      }
+    }
+    .row1 {
+      @include grid("grid-template-columns", "50% 50%", "");
+      margin-left: 20px;
+      padding-left: 10px;
+      padding-top: 10px;
+      .title {
+        display: flex;
+        p {
+          min-width: 80px;
+        }
+        span {
+          margin-left: 20%;
+        }
+      }
+      .duration {
+        display: flex;
+        width: 40%;
+        p {
+          min-width: 110px;
+        }
+        span {
+          margin-left: 20%;
+        }
+      }
+    }
+    .row2 {
+      @include grid("grid-template-columns", "50% 50%", "");
+      margin-left: 20px;
+      padding-left: 10px;
+      padding-top: 10px;
+      .start {
+        display: flex;
+        p {
+          min-width: 80px;
+        }
+        span {
+          margin-left: 18%;
+        }
+      }
+      .trainingMode {
+        display: flex;
+        width: 40%;
+        p {
+          min-width: 110px;
+        }
+        span {
+          margin-left: 20%;
+        }
+      }
+    }
+    .row3 {
+      @include grid("grid-template-columns", "50% 50%", "");
+      margin-left: 20px;
+      padding-left: 10px;
+      .attend {
+        display: flex;
+        p {
+          min-width: 80px;
+        }
+        span {
+          margin-left: 18%;
+        }
+      }
+      .batchMonth {
+        display: flex;
+        width: 40%;
+        p {
+          min-width: 110px;
+        }
+        span {
+          margin-left: 20%;
+        }
+      }
+    }
+    .description {
+      margin-left: 15px;
+      margin-top: 20px;
+      h3 {
+        font-family: "Lato";
+        font-size: 18px;
+        color: #231e1e;
+        font-weight: 500;
+        line-height: 1.32;
+        margin-bottom: 10px;
+      }
+    }
+    .descriptionTitle {
+      .title {
+        background-color: #f4f8ff;
+        padding: 24px;
+        border-radius: 4px;
+        margin-top: 15px;
+        span {
+        }
+      }
+    }
+    .topics {
+      h3 {
+        margin-top: 20px;
+        margin-left: 20px;
+      }
+      .desc {
+        background-color: #f4f8ff;
+        padding: 24px;
+        border-radius: 4px;
+        margin-top: 15px;
+        span {
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .container {
+    .mainHeading{
+      display: block;
+      .head{
+
+      }
+      .btn{
+        margin-bottom: 30px;
+      }
+
+    }
+    .cardUpper {
+      .header {
+        display: block;
+      }
+      .rows {
+        display: block;
+        .row1 {
+          display: block;
+          .title{
+            span{
+              margin-left: 13%;
+            }
+          }
+        }
+        .row2 {
+          display: block;
+          .start{
+            span{
+              margin-left: 11%;
+            }
+          }
+        }
+        .row3 {
+          display: block;
+          .attend{
+            span{
+              margin-left: 9%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

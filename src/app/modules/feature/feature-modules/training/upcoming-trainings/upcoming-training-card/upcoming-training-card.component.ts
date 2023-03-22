@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./upcoming-training-card.component.scss']
 })
 export class UpcomingTrainingCardComponent implements OnInit {
+  dialogRef: any;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

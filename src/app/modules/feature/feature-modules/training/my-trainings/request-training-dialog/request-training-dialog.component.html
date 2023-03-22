@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="header">
+    <div class="title">
+      <h3>Training Feedback Form</h3>
+    </div>
+    <div class="cross">
+      <button mat-dialog-close><mat-icon>close</mat-icon></button>
+    </div>
+  </div>
+  <div class="main">
+    <div class="drop-downs">
+      <div class="drop-down-1">
+        <p>Training name <mat-icon>help</mat-icon></p>
+        <mat-form-field appearance="fill">
+          <mat-label>Select Training</mat-label>
+          <mat-select>
+            <mat-option
+              *ngFor="let training of trainings"
+              [value]="training.value"
+            >
+              {{ training.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="drop-down-2">
+        <p>Team name <mat-icon>help</mat-icon></p>
+        <mat-form-field class="department" appearance="outline">
+          <mat-label>Select Team</mat-label>
+          <mat-select>
+            <mat-option
+              *ngFor="let department of departments"
+              [value]="department.department"
+              >{{ department.department }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="descriptions">
+      <div class="description-1">
+        <p>
+          Please mention the training/learning area’s you feel can be beneficial<br>
+          for your skill enhancement and job performance *
+        </p>
+        <textarea
+          name="description"
+          id="description"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </div>
+      <div class="description-2">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing <br> elit. Assumenda
+          vitae iusto corrupti
+        </p>
+        <textarea
+          name="description"
+          id="description"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </div>
+    </div>
+  </div>
+</div>

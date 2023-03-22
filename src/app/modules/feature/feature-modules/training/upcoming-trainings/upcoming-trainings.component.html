@@ -2,11 +2,61 @@
   <div class="header">
     <h1>Upcoming Trainings</h1>
   </div>
-  <!-- <div class="card1">
-    <div *ngFor="let data of divs">
-      <app-job-card></app-job-card>
+  <div class="cards">
+    <div class="card1">
+      <div class="fullCard">
+        <div class="image">
+          <img
+            src="https://dashboard.appinventiv.com/skin/hrsale_assets/img/ic-training.svg"
+            alt=""
+          />
+        </div>
+        <!-- <div class="bottom">
+          <div class="location">
+            <p>Noida</p>
+          </div>
+          <div class="date">
+            <p>03/02/2023</p>
+          </div>
+        </div> -->
+      </div>
+      <div class="description">
+        <div class="heading">
+          <h3>Micro Front End Angular</h3>
+        </div>
+      </div>
+      <hr />
+      <div class="attend">
+        <span>Who can attend</span>
+        <p>Angular</p>
+      </div>
+      <div class="openings">
+        <div class="noOfOpenings">
+          <p>Start Date</p>
+          <span>Feb-28-2022</span>
+        </div>
+        <div class="experience">
+          <p>End Date</p>
+          <span>Apr-02-2022 </span>
+        </div>
+        <div class="seats">
+          <p>Seats</p>
+          <span>39 </span>
+        </div>
+      </div>
+      <hr />
+      <div class="cardBottom">
+        <div class="viewDetails">
+          <a [routerLink]="['TRAINING_DETAIL' | absolutePath]" target="_blank">
+            <button mat-raised-button>View Details</button>
+          </a>
+        </div>
+        <div class="referCandidate">
+          <button (click)="openDialog()">Enroll Training</button>
+        </div>
+      </div>
     </div>
-  </div> -->
+  </div>
 </div>
 <div class="footer">
   <app-footer></app-footer>

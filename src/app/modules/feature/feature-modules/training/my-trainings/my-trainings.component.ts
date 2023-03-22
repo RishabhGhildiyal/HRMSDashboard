@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { RequestTrainingDialogComponent } from './request-training-dialog/request-training-dialog.component';
 
 @Component({
   selector: 'app-my-trainings',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyTrainingsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog:MatDialog) { }
 
   ngOnInit(): void {
   }
+  openDialog() {
+    let config: MatDialogConfig = {
+      minWidth: '40rem',
+    };
 
+    this.dialog.open(RequestTrainingDialogComponent, config);
+  }
 }

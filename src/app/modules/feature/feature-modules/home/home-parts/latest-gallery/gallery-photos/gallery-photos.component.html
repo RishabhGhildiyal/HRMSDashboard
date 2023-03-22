@@ -2,11 +2,11 @@
   <div class="cancel-icon" (click)="crossClick()">
     <i class="fa-solid fa-xmark"></i>
   </div>
-  <app-carousel [listToShow]="dataSource"  ></app-carousel>
+  <!-- <app-carousel [listToShow]="dataSource"  ></app-carousel> -->
   <ng-container *ngFor="let item of data">
-    <ng-template #listofDivs>
+    <!-- <ng-template #listofDivs> -->
     <img [src]="[item]" class="image" />
-    </ng-template>
+    <!-- </ng-template> -->
   </ng-container>
 </section>
 

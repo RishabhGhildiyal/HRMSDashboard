@@ -7,19 +7,24 @@ import { UpcomingTrainingCardComponent } from './upcoming-training-card/upcoming
 import { FooterModule } from '../../../feature-parts/footer/footer.module';
 import { JobCardModule } from 'src/app/components/job-card/job-card.module';
 import { MatDialogModule } from '@angular/material/dialog';
+import { AbsolutePipeModule } from 'src/app/pipes/absolutePipe/absolute-path.module';
+import { MatButtonModule } from '@angular/material/button';
+// import { TrainingDetailsComponent } from './training-details/training-details.component';
 
 
 @NgModule({
   declarations: [
     UpcomingTrainingsComponent,
-    UpcomingTrainingCardComponent
+    UpcomingTrainingCardComponent,
   ],
   imports: [
     CommonModule,
     UpcomingTrainingsRoutingModule,
     FooterModule,
     JobCardModule,
-    MatDialogModule
+    MatDialogModule,
+    AbsolutePipeModule,
+    MatButtonModule,
   ]
 })
 export class UpcomingTrainingsModule { }

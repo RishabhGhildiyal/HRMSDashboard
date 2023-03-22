@@ -237,15 +237,22 @@ export const ONGOING_TRAININGS : Iroute={
 }
 
 export const REQUESTED_TRAININGS : Iroute={
-  path:'training/requested-training',
+  path:'requested-training',
   get fullurl():string{
     return `/${DASHBOARD.fullurl}/${TRAINING.fullurl}/${this.path}`
   }
 }
 export const UPCOMING_TRAININGS : Iroute={
-  path:'training/upcoming-trainings',
+  path:'upcoming-trainings',
   get fullurl():string{
     return `/${DASHBOARD.fullurl}/${TRAINING.fullurl}/${this.path}`
+  }
+}
+
+export const TRAINING_DETAIL : Iroute={
+  path:'training-detail',
+  get fullurl():string{
+    return `/${UPCOMING_TRAININGS.fullurl}/${this.path}`
   }
 }
 

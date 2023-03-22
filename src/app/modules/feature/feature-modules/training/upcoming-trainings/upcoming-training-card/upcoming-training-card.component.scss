@@ -1,0 +1,64 @@
+@import "../../../../../../../scss/mixins";
+@import "../../../../../../../scss/global.scss";
+
+.container{
+  min-width: 100%;
+  .head{
+    display: flex;
+    justify-content: center;
+    h1{
+      font-size: xx-large;
+      // font-weight: bold;
+    }
+  }
+  .para{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    span{
+
+    }
+  }
+  .buttons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+   padding: .625em 2em;
+    .ok{
+      button{
+        height: 40px;
+        background-color: #3085d6;
+        color: $pure-white;
+        border: 0;
+        border-radius: .25em;
+        font-size: 1.0625em;
+      }
+    }
+    .cancel{
+      button{
+        height: 40px;
+        background-color: red;
+        color: $pure-white;
+      }
+    }
+  }
+}
+
+@media (max-width:480px){
+  .container{
+    .head{
+      display: block;
+      justify-content: center;
+      h1{
+        display: block;
+        justify-content: center;
+      }
+    }
+    .para{
+
+    }
+    .buttons{
+
+    }
+  }
+}
