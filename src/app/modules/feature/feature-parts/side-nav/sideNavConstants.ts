@@ -1,4 +1,4 @@
-import {ASSET_DECLARATION, ATTENDANCE_CALENDER, DIRECTORY, EXPLORE, FLOATING_LEAVE, HOLIDAY_CALENDER, HOME, INSURANCE_VERIFICATION_DETAILS, JOB_OPENINGS, MANUAL_PUNCH, MY_ASSETS_INVENTORY, MY_DSR, MY_LEAVE, MY_PERFORMANCE, MY_PROFILE, MY_TRAINING, MY_TRAININGS, ONGOING_TRAININGS, POLICY_DOCUMENTS, PROJECTS, PUNCH_LOG, REFERRAL_LIST, REQUESTED_TRAININGS, REQUEST_ASSET, TICKETS, UPCOMING_TRAININGS } from "../../../../constants/routes"
+import {ASSET_DECLARATION, ATTENDANCE_CALENDER, DIRECTORY, EXPLORE, FLOATING_LEAVE, HOLIDAY_CALENDER, HOME, INSURANCE_VERIFICATION_DETAILS, JOB_OPENINGS, MANUAL_PUNCH, MY_ASSETS_INVENTORY, MY_DSR, MY_LEAVE, MY_PERFORMANCE, MY_PROFILE, MY_TRAINING, MY_TRAININGS, ONGOING_TRAININGS, POLICY_DOCUMENTS, PROJECTS, PUNCH_LOG, RECRUITMENT, REFERRAL_LIST, REQUESTED_TRAININGS, REQUEST_ASSET, TICKETS, UPCOMING_TRAININGS } from "../../../../constants/routes"
 
 
 export const sideNavList = [
@@ -18,6 +18,7 @@ export const sideNavList = [
       subTitle: 'Job Openings', subLogo: 'horizontal_rule',routerLink:JOB_OPENINGS.fullurl},
      {subTitle:"Referral List", subLogo:'horizontal_rule',routerLink:REFERRAL_LIST.fullurl},
   ], isActive: true, },
+  { title: 'Recruitment', logo: 'school', options: [{ subTitle: 'My Interview',routerLink:RECRUITMENT.fullurl ,subLogo: 'horizontal_rule' }], isActive: true, },
   { title: 'Freshers Training', logo: 'school', options: [{ subTitle: 'My Trainings',routerLink:MY_TRAININGS.fullurl ,subLogo: 'horizontal_rule' }], isActive: true, },
   { title: 'Training', logo: 'school', options: [
     {subTitle:"Upcoming Trainings", subLogo:'horizontal_rule',routerLink:UPCOMING_TRAININGS.fullurl},
@@ -46,6 +47,7 @@ export const sideNavList = [
   { title: 'Expense', logo: 'monetization_on', isActive: false, },
   { title: 'Announcements', logo: 'campaign', isActive: false, },
   { title: 'Travels', logo: 'flight', isActive: false, },
+  { title: 'Logout', logo: 'logout', isActive: true, },
   { title: 'Logout', logo: 'logout', isActive: true, },
 ]
 

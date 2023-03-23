@@ -1,21 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { PAGE_OPTIONS, PAGE_SIZE_OPTIONS } from 'src/app/constants/common-constants';
 import {  POLICY_DOCUMENTS } from 'src/app/interfaces/interface';
-
-export interface PeriodicElement {
-  name: string;
-  type: string;
-  filesize: string;
-  lastModified:string;
-  action: string;
-  srNo: string;
-
-
-}
-const ELEMENT_DATA: PeriodicElement[] = [
-  {name: 'Name', type: 'pdf',filesize:'file size',lastModified:'lastModified', action:'action', srNo:'#'},
-];
-
-
+import { Table } from 'src/app/modules/common/common-table/table.types';
+import { DOCUMENTS_LIST_CONFIG, UserTableDataSource } from './policy-documents-model';
 @Component({
   selector: 'app-policy-documents',
   templateUrl: './policy-documents.component.html',
@@ -24,53 +11,45 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class PolicyDocumentsComponent implements OnInit {
 
   constructor() { }
-
+  // @ViewChild() abc!:HTMLElement;
+  docsData: Array<any> = [
+    {
+      name: ' Appinventiv_Policy_Manual',
+      type: '	pdf',
+      file_size: '341.71 KB',
+      last_modified: 'May-13-2022',
+    },
+  ];
+  listingConfig = DOCUMENTS_LIST_CONFIG ;
+  pageOptions = PAGE_OPTIONS;
+  tableSource: Table.Source<any> = new UserTableDataSource([]);
+  // tableSource is 2 things : columnNames and data
+  //column names are fetched fromt the model file and data is fetched though API or const data file
   ngOnInit(): void {
+    this.populateTable(this.pageOptions);
   }
-  tableColumns: Array<any> = [
-    {
-      columnDef: 's_no',
-      header: 'S No.',
-      cell: (element: Record<string, any>) => `${element['s_no']}`,
-    },
-    {
-      columnDef: 'name',
-      header:'Name',
-      cell: (element: Record<string, any>) => `${element['name']}`,
-    },
-    {
-      columnDef: 'type',
-      header: 'type',
-      cell: (element: Record<string, any>) => `${element['type']}`,
-    },
-    {
-      columnDef: 'file_size',
-      header: 'file_size',
-      cell: (element: Record<string, any>) => `${element['file_size']}`,
-    },
-    {
-      columnDef: 'last_Modified',
-      header: 'Last_Modified ',
-      cell: (element: Record<string, any>) => `${element['last_Modified']}`,
-    },
-    {
-      columnDef: 'action',
-      header: 'action',
-      cell: (element: Record<string, any>) => `${element['action']}`,
-    },
 
-  ];
+  populateTable(pageOptions:any){
+    this.listingConfig.total = this.docsData.length;
 
-  tableData: Array<POLICY_DOCUMENTS> = [
-    {
-      s_no: '1',
-      name: 'Appinventiv_Policy_Manual',
-      type: 'pdf',
-      file_size: '347.1 KB',
-      last_Modified: 'May-13-2022',
-      action: 'Download',
+    let beg = pageOptions.page * pageOptions.limit - pageOptions.limit;
+    let end = pageOptions.page * pageOptions.limit
 
-    },
-  ];
+    let displayRow = [];
+    for(let i=beg; i<end && i<this.listingConfig.total ; i++){
+       displayRow.push(this.docsData[i]);
+    }
+
+    this.tableSource = new UserTableDataSource(
+      displayRow.map((item: any, index:number) => ({ ...item, sn: beg + index + 1 }))
+    );
+    console.log(this.tableSource,"123TS");
+
+  }
+
+  downloadFile(row:any){
+    console.log(row,"123");
+
+  }
 
 }

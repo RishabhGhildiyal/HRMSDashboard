@@ -4,19 +4,14 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { PAGE_OPTIONS } from 'src/app/constants/common-constants';
+import { Table } from 'src/app/modules/common/common-table/table.types';
 import { FormService } from 'src/app/services/form.service';
 import { DialogComponentComponent } from './dialog-component/dialog-component.component';
+import { DOCUMENTS_LIST_CONFIG, UserTableDataSource } from './qualification.modal';
 
-export interface PeriodicElement {
-  action: string;
-  schoolUniversity: string;
-  timePeriod: string;
-  educationalLevel:string;
 
-}
-const ELEMENT_DATA: PeriodicElement[] = [
-  {action: 'Morning Shift', schoolUniversity: 'Amity University',timePeriod:'Jul-08-2019 - Jun-06-2022',educationalLevel:'MCA'},
-];
+
 
 @Component({
   selector: 'app-qualification',
@@ -44,9 +39,6 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class QualificationComponent implements OnInit {
 
-  displayedColumns: string[] = ['action', 'schoolUniversity','timePeriod','educationalLevel'];
-  dataSource = ELEMENT_DATA;
-
   infoForm!:FormGroup;
   language: string[] = [
     'English',
@@ -65,6 +57,8 @@ export class QualificationComponent implements OnInit {
 
   ngOnInit(): void {
     this.infoForm = this.createForm();
+    this.populateTable(this.pageOptions);
+
 
 
   }
@@ -95,6 +89,57 @@ export class QualificationComponent implements OnInit {
 
   openDialog(){
     this.dialog.open(DialogComponentComponent)
+  }
+
+
+  // @ViewChild() abc!:HTMLElement;
+  docsData: Array<any> = [
+    {
+      Amity_University: ' Amity University',
+      time_period: '	Jul-08-2019 - Jun-06-2022',
+      educational_level: 'MCA',
+      // last_modified: 'May-13-2022',
+    },
+  ];
+  listingConfig = DOCUMENTS_LIST_CONFIG ;
+  pageOptions = PAGE_OPTIONS;
+  tableSource: Table.Source<any> = new UserTableDataSource([]);
+  // tableSource is 2 things : columnNames and data
+  //column names are fetched fromt the model file and data is fetched though API or const data file
+
+  populateTable(pageOptions:any){
+    this.listingConfig.total = this.docsData.length;
+
+    let beg = pageOptions.page * pageOptions.limit - pageOptions.limit;
+    let end = pageOptions.page * pageOptions.limit
+
+    let displayRow = [];
+    for(let i=beg; i<end && i<this.listingConfig.total ; i++){
+       displayRow.push(this.docsData[i]);
+    }
+
+    this.tableSource = new UserTableDataSource(
+      displayRow.map((item: any, index:number) => ({ ...item, sn: beg + index + 1 }))
+    );
+    console.log(this.tableSource,"123TS");
+
+  }
+
+  edit(){
+
+      const dialogRef = this.dialog.open(DialogComponentComponent,{
+        // width:'30rem'
+      });
+
+      dialogRef.afterClosed().subscribe((result: any) => {
+        console.log(`Dialog result: ${result}`);
+
+      });
+
+  }
+
+  delete(row:any){
+    console.log(row,'2222');
   }
 
 }

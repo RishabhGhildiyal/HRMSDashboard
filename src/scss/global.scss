@@ -1,43 +1,42 @@
-$borderColor:1px solid rgb(215, 210, 210);
+$borderColor: 1px solid rgb(215, 210, 210);
 $primary-blue: #199cff;
 $primary-white: #fff;
-$darkbklue : #5100d4;
-$pure-white : white;
+$darkblue: #5100d4;
+$pure-white: white;
 $black: black;
 
-
 @mixin custom-scroller($axis, $brodness: 4px) {
-  @if ($axis=="x") {
-      overflow-x: auto;
-      overflow-y: hidden;
+  @if ($axis== "x") {
+    overflow-x: auto;
+    overflow-y: hidden;
   }
 
-  @if ($axis=="y") {
-      overflow-y: auto;
-      overflow-x: hidden;
+  @if ($axis== "y") {
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   &::-webkit-scrollbar {
-      width: $brodness;
-      height: $brodness;
+    width: $brodness;
+    height: $brodness;
   }
 
   &::-webkit-scrollbar-track {
-      width: $brodness;
-      height: $brodness;
-      border-radius: 20px 20px;
-      background: white;
+    width: $brodness;
+    height: $brodness;
+    border-radius: 20px 20px;
+    background: white;
   }
 
   &::-webkit-scrollbar-thumb {
-      border-radius: 20px 20px;
-      background-color: grey;
-      opacity: 0.5;
-      width: $brodness;
-      height: $brodness;
+    border-radius: 20px 20px;
+    background-color: grey;
+    opacity: 0.5;
+    width: $brodness;
+    height: $brodness;
 
-      &:hover {
-          opacity: 1;
-      }
+    &:hover {
+      opacity: 1;
+    }
   }
 }

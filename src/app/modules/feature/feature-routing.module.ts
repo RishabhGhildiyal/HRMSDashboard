@@ -13,6 +13,7 @@ import {
   MY_LINKS,
   MY_PROFILE,
   PROJECTS,
+  RECRUITMENT,
   REFER_A_FRIEND,
   REVIEWS,
   TICKET,
@@ -116,6 +117,10 @@ const routes: Routes = [
       {
         path:PROJECTS.path,
         loadChildren:() => import('./feature-modules/projects/projects.module').then((m)=>m.ProjectsModule)
+      },
+      {
+        path:RECRUITMENT.path,
+        loadChildren:() => import('./feature-modules/recruitment/my-interview/my-interview.module').then((m)=>m.MyInterviewModule)
       }
 
     ],

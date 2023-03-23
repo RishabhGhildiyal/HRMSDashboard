@@ -1,64 +1,63 @@
 @import "../../../../../../../scss/mixins";
 @import "../../../../../../../scss/global.scss";
 
-.header{
-  h2{
-    color: $darkbklue;
+.header {
+  h2 {
+    color: $darkblue;
   }
 }
-.fields{
+.fields {
   @include grid("grid-template-columns", "44% 53%", "");
   gap: 20px;
-  .school{
-    mat-form-field{
+  .school {
+    mat-form-field {
       width: 100%;
     }
   }
-    .educationLevel{
-      mat-form-field{
-        width: 100%;
-      }
+  .educationLevel {
+    mat-form-field {
+      width: 100%;
     }
+  }
   .timePeriod {
-    .input{
+    .input {
       @include grid("grid-template-columns", "50% 50%", "");
       gap: 10px;
       mat-form-field {
         width: 100%;
       }
-
     }
   }
-  .language{
-    mat-form-field{
+  .language {
+    mat-form-field {
       width: 100%;
     }
   }
-  .professionalCourse{
-    mat-form-field{
+  .professionalCourse {
+    mat-form-field {
       width: 100%;
     }
   }
-  .description{
-    textarea{
+  .description {
+    textarea {
       resize: none;
       width: 98%;
     }
   }
 }
-.buttons{
+.buttons {
   display: flex;
   justify-content: flex-end;
   margin-top: 5px;
   gap: 3px;
-  .close{
-    button{
+  .close {
+    button {
       background-color: gray;
       color: $pure-white;
     }
   }
-  .update{
-    button{
+  .update {
+    button {
       background-color: $primary-blue;
       color: $pure-white;
     }

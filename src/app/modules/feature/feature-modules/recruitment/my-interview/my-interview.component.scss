@@ -1,0 +1,60 @@
+@import "../../../../../../scss/mixins";
+@import "../../../../../../scss/global.scss";
+
+
+.container{
+  padding: 20px;
+  min-height: 80%;
+  .heading{
+    h1{
+      color: $primary-blue;
+      font-size: x-large;
+    }
+  }
+  .main{
+    .body{
+      background-color: $pure-white;
+      padding: 20px;
+      .dropdowns{
+        display: flex;
+
+        .drop-down1{
+          margin-right: 10px;
+          width: 23%;
+          mat-form-field{
+            width: 100%;
+            background-color: $pure-white;
+          }
+          p{
+            margin: 0px;
+            color: #96A5B8;
+          }
+        }
+        .drop-down2{
+          margin-left: 10px;
+          width: 23%;
+          p{
+            margin: 0px;
+            color: #96A5B8;
+          }
+          mat-form-field{
+            width: 100%;
+            background-color: $pure-white;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+::ng-deep.mat-form-field-type-mat-select:not(.mat-form-field-disabled) .mat-form-field-flex {
+  cursor: pointer;
+  background-color: white;
+  border: $borderColor;
+  //  width: 100%;
+}
+
+// ::ng-deep mat-form-field{
+//   width: 100%;
+// }

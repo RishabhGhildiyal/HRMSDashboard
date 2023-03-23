@@ -5,19 +5,18 @@
   .main {
     background-color: $pure-white;
     .heading {
-
       padding: 10px;
       border: 0px 0px $borderColor 0px;
       background-color: $pure-white;
-      h2{
-        color: $darkbklue;
+      h2 {
+        color: $darkblue;
       }
     }
     .info {
       background-color: $pure-white;
       padding: 20px;
       .fields {
-        @include grid("grid-template-columns", "50% 50%" , 3%);
+        @include grid("grid-template-columns", "50% 50%", 3%);
         .schoolUni {
           mat-form-field {
             width: 100%;
@@ -52,7 +51,7 @@
       }
       .description {
         width: 99%;
-        margin-bottom:5px ;
+        margin-bottom: 5px;
         textarea {
           height: 70px;
           width: 99%;
@@ -65,34 +64,33 @@
     }
   }
 
-  .allQualification{
+  .allQualification {
     padding: 30px 0px 0px 0px;
     margin-bottom: 10px;
-    .mainContent{
+    .mainContent {
       background-color: $pure-white;
-    margin-bottom: 10px;
-      .heading{
+      margin-bottom: 10px;
+      .heading {
         padding: 10px 0px 2px 10px;
         border-bottom: $borderColor;
-        h2{
+        h2 {
           margin: 0px;
-          color: $darkbklue;
+          color: $darkblue;
         }
       }
-      .subHeading{
-        @include flex("flex","space-between");
-        .showSelect{
+      .subHeading {
+        @include flex("", space-between);
+        .showSelect {
           padding: 10px;
           display: flex;
-          .show{
+          .show {
             margin-left: 10px;
-            p{
-
+            p {
               position: relative;
               top: 14px;
             }
           }
-          .input{
+          .input {
             margin-left: 10px;
             .example-additional-selection {
               opacity: 0.75;
@@ -101,57 +99,54 @@
               background-color: $pure-white;
             }
           }
-          .entry{
-            p{
+          .entry {
+            p {
               position: relative;
               top: 14px;
             }
-
           }
         }
-        .search{
+        .search {
           position: relative;
           top: 14px;
-          span{
+          span {
             margin-right: 5px;
           }
-          input{
+          input {
             height: 40px;
             margin-right: 20px;
             width: 14vw;
           }
         }
-
       }
-      .table{
+      .table {
         padding: 20px;
-        .action{
-          td{
-            button{
-
-
-            }
-          }
+        .edit {
+          background-color: #8897AA;
+          margin-right: 5px;
         }
-        table {
+        .delete {
+          background-color: red;
+        }
 
+        table {
           border: $borderColor;
           width: 100%;
           box-shadow: none;
-          th{
+          th {
             word-break: break-word;
             border: 1px solid #f1f1f2;
           }
-          td{
+          td {
             border: 1px solid #f1f1f2;
             padding-left: 10px;
-            .edit{
+            .edit {
               color: $pure-white;
               background-color: grey;
               margin-bottom: 7px;
               width: 10px;
             }
-            .delete{
+            .delete {
               color: $pure-white;
               background-color: red;
             }
@@ -160,7 +155,6 @@
       }
     }
   }
-
 }
 
 ::ng-deep .mat-form-field-appearance-fill .mat-form-field-infix {
@@ -176,64 +170,55 @@
   height: 40px;
 }
 
-
-@media (max-width:690px){
-  .container{
-    .main{
-      .info{
+@media (max-width: 690px) {
+  .container {
+    .main {
+      .info {
         display: block;
-        .fields{
-        display: block;
-
+        .fields {
+          display: block;
         }
       }
     }
-    .allQualification{
+    .allQualification {
       display: block;
-      .mainContent{
-        .subHeading{
+      .mainContent {
+        .subHeading {
           display: block;
-
         }
-        .table{
+        .table {
           display: block;
         }
       }
-
     }
   }
 }
-@media (max-width:444px){
-  .container{
-    .main{
-      .info{
+@media (max-width: 444px) {
+  .container {
+    .main {
+      .info {
         display: block;
-        .fields{
-        display: block;
-
+        .fields {
+          display: block;
         }
       }
     }
-    .allQualification{
+    .allQualification {
       display: block;
-      .mainContent{
+      .mainContent {
         overflow-x: auto;
         width: 100%;
         display: block;
-        .heading{
+        .heading {
           position: sticky;
         }
-        .subHeading{
-
+        .subHeading {
         }
-        .table{
-
-          table{
-
+        .table {
+          table {
           }
         }
       }
-
     }
   }
 }

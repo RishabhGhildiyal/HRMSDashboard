@@ -3,7 +3,30 @@
   <div class="main">
     <div class="table">
       <!-- <app-common-table ></app-common-table> -->
-      <app-common-table [tableColumns]="tableColumns" [tableData]="tableData" [isPageable]="false" [defaultPageSize]="3"></app-common-table>
+      <app-common-table [tableSource]="tableSource">
+
+        <ng-template appFor="sn" let-row="row">
+          {{row.sn }}
+        </ng-template>
+        <ng-template appFor="name" let-row="row">
+          {{row.name }}
+        </ng-template>
+        <ng-template appFor="type" let-row="row">
+          {{row.type }}
+        </ng-template>
+        <ng-template appFor="file_size" let-row="row">
+          {{row.file_size }}
+        </ng-template>
+        <ng-template appFor="last_modified" let-row="row">
+          {{row.last_modified }}
+        </ng-template>
+        <ng-template appFor="actions" let-row="row">
+
+          <button (click)="downloadFile(row)">Download</button>
+      </ng-template>
+
+      </app-common-table>
+
     </div>
   </div>
 </div>

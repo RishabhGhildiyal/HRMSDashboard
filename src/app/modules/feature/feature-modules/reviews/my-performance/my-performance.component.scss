@@ -9,7 +9,7 @@
   padding: 40px;
   background-color: #f3f7fd;
   h2 {
-    color: $darkbklue;
+    color: $darkblue;
   }
   .main {
     @include grid("grid-template-columns", "50% 50%", "");
@@ -288,104 +288,51 @@
   }
 }
 
-@media (max-width:1650px){
-  .container{
-    h2{
-
+@media (max-width: 1650px) {
+  .container {
+    h2 {
     }
-    .main{
-      .leftBody{
-        .header{
-          .displayPicture{
-
-          }
-          .name{
-            h3{
-
-            }
-            p{
-
-            }
+    .main {
+      .leftBody {
+        .header {
+          .displayPicture {
           }
         }
-        .downBody{
-          .awards{
-            h3{
-
-            }
-            p{
-
-            }
+        .downBody {
+          .awards {
           }
-          .honours{
-            .data{
-              h3{}
-              p{}
-            }
+          .honours {
           }
         }
       }
-      .rightBody{
-        .heading{
-          .number{
-            h2{
-
+      .rightBody {
+        .heading {
+          .number {
+            h2 {
             }
           }
-          .duration{
-            p{
-
+          .duration {
+            p {
             }
           }
         }
-        .skills{
+        .skills {
           word-break: break-word;
-          .box1{
-            span{
-
-            }
-            p{}
-          }
-          .box2{
-            span{
-
-            }
-            p{}
-          }
-          .box3{
-            span{
-
-            }
-            p{}
-          }
-          .box4{
-            span{
-
-            }
-            p{}
-          }
         }
       }
     }
-    .smallContainer{
-      .button{
-        button{
-
+    .smallContainer {
+      .button {
+        button {
         }
       }
-      .heading{
+      .heading {
         display: block;
-        h1{}
-        .search{
-          p{
-
-          }
-        }
       }
-      .calender{
+      .calender {
         display: block;
         // margin-top: 10px;
-        .container1{
+        .container1 {
           margin-top: 10px;
         }
       }
@@ -393,107 +340,39 @@
   }
 }
 
-
-@media (max-width:1400px){
-  .container{
-    h2{
-
+@media (max-width: 1400px) {
+  .container {
+    h2 {
     }
-    .main{
-      .leftBody{
-        .header{
-          .displayPicture{
-
-          }
-          .name{
-            h3{
-
-            }
-            p{
-
-            }
+    .main {
+      .leftBody {
+        .header {
+          .displayPicture {
           }
         }
-        .downBody{
-          .awards{
-            // width: 50%;
-            h3{
-
-            }
-            p{
-
-            }
-          }
-          .honours{
+        .downBody {
+          .honours {
             width: 30%;
-            .data{
-              h3{}
-              p{}
-            }
           }
         }
       }
-      .rightBody{
-        .heading{
-          .number{
-            h2{
-
-            }
-          }
-          .duration{
-            p{
-
-            }
-          }
-        }
-        .skills{
+      .rightBody {
+        .skills {
           word-break: break-word;
-          .box1{
-            span{
-
-            }
-            p{}
-          }
-          .box2{
-            span{
-
-            }
-            p{}
-          }
-          .box3{
-            span{
-
-            }
-            p{}
-          }
-          .box4{
-            span{
-
-            }
-            p{}
-          }
         }
       }
     }
-    .smallContainer{
-      .button{
-        button{
-
+    .smallContainer {
+      .button {
+        button {
         }
       }
-      .heading{
+      .heading {
         display: block;
-        h1{}
-        .search{
-          p{
-
-          }
-        }
       }
-      .calender{
+      .calender {
         display: block;
-        // margin-top: 10px;
-        .container1{
+        .container1 {
           margin-top: 10px;
         }
       }
@@ -501,106 +380,28 @@
   }
 }
 
-@media (max-width:1230px){
-  .container{
-    h2{
-
+@media (max-width: 1230px) {
+  .container {
+    h2 {
     }
-    .main{
-      .leftBody{
-        .header{
-          .displayPicture{
-
-          }
-          .name{
-            h3{
-
-            }
-            p{
-
-            }
-          }
-        }
-        .downBody{
-          .awards{
-            // width: 30%;
-            h3{
-
-            }
-            p{
-
-            }
-          }
-          .honours{
-            .data{
-              h3{}
-              p{}
-            }
-          }
-        }
+    .main {
+      .leftBody {
       }
-      .rightBody{
-        .heading{
-          .number{
-            h2{
-
-            }
-          }
-          .duration{
-            p{
-
-            }
-          }
-        }
-        .skills{
+      .rightBody {
+        .skills {
           word-break: break-word;
           gap: 20px;
-          .box1{
-            span{
-
-            }
-            p{}
-          }
-          .box2{
-            span{
-
-            }
-            p{}
-          }
-          .box3{
-            span{
-
-            }
-            p{}
-          }
-          .box4{
-            span{
-
-            }
-            p{}
-          }
         }
       }
     }
-    .smallContainer{
-      .button{
-        button{
-
-        }
-      }
-      .heading{
+    .smallContainer {
+      .heading {
         display: block;
-        h1{}
-        .search{
-          p{
-
-          }
-        }
       }
-      .calender{
+      .calender {
         display: block;
         // margin-top: 10px;
-        .container1{
+        .container1 {
           margin-top: 10px;
         }
       }
@@ -608,116 +409,156 @@
   }
 }
 
-@media (max-width:1060px){
-  .container{
-    h2{
-
+@media (max-width: 1060px) {
+  .container {
+    h2 {
     }
-    .main{
+    .main {
       display: block;
-      .leftBody{
-        .header{
-          .displayPicture{
-
-          }
-          .name{
-            h3{
-
-            }
-            p{
-
-            }
-          }
-        }
-        .downBody{
-          .awards{
+      .leftBody {
+        .downBody {
+          .awards {
             width: 30%;
-            h3{
-
-            }
-            p{
-
-            }
-          }
-          .honours{
-            .data{
-              h3{}
-              p{}
-            }
           }
         }
       }
-      .rightBody{
-        .heading{
-          .number{
-            h2{
-
-            }
-          }
-          .duration{
-            p{
-
-            }
-          }
-        }
-        .skills{
+      .rightBody {
+        .skills {
           word-break: break-word;
           gap: 20px;
           display: block;
-          .box1{
+          .box1 {
             padding: 0px;
-            span{
-
-            }
-            p{}
           }
-          .box2{
+          .box2 {
             padding: 0px;
             margin-top: 10px;
-            span{
-
-            }
-            p{}
           }
-          .box3{
+          .box3 {
             padding: 0px;
             margin-top: 10px;
-            span{
-
-            }
-            p{}
           }
-          .box4{
+          .box4 {
             padding: 0px;
             margin-top: 10px;
-
-            span{
-
-            }
-            p{}
           }
         }
       }
     }
-    .smallContainer{
-      .button{
-        button{
-
+    .smallContainer {
+      .heading {
+        display: block;
+      }
+      .calender {
+        display: block;
+        // margin-top: 10px;
+        .container1 {
+          margin-top: 10px;
         }
       }
-      .heading{
-        display: block;
-        h1{}
-        .search{
-          p{
+    }
+  }
+}
 
+
+@media (max-width: 544px) {
+  .container {
+    padding: 10px;
+    h2 {
+    }
+    .main {
+      display: block;
+      .leftBody {
+        padding: 0px;
+        .downBody {
+          display: block;
+          // width: 100%;
+          .awards {
+            width: 92%;
+            padding: 10px;
+            margin-bottom: 5px;
+          }
+          .honours {
+            width: 92%;
+            padding: 10px;
+            margin: 0px;
+            margin-bottom: 10px;
           }
         }
       }
-      .calender{
+      .rightBody {
+        .heading {
+          .number {
+            h2 {
+            }
+          }
+          .duration {
+            p {
+            }
+          }
+        }
+        .skills {
+          word-break: break-word;
+          gap: 20px;
+          display: block;
+          .box1 {
+            padding: 0px;
+            span {
+            }
+            p {
+            }
+          }
+          .box2 {
+            padding: 0px;
+            margin-top: 10px;
+            span {
+            }
+            p {
+            }
+          }
+          .box3 {
+            padding: 0px;
+            margin-top: 10px;
+            span {
+            }
+            p {
+            }
+          }
+          .box4 {
+            padding: 0px;
+            margin-top: 10px;
+
+            span {
+            }
+            p {
+            }
+          }
+        }
+      }
+    }
+    .smallContainer {
+      .button {
+        button {
+        }
+      }
+      .heading {
+        display: block;
+        h1 {
+        }
+        .search {
+          mat-form-field{
+          width: 100%;
+
+        }
+
+          p {
+          }
+        }
+      }
+      .calender {
         display: block;
         // margin-top: 10px;
-        .container1{
+        .container1 {
           margin-top: 10px;
         }
       }

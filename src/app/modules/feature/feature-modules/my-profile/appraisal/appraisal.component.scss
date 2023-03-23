@@ -5,39 +5,36 @@
   .main {
     background-color: $pure-white;
     .heading {
-
       padding: 10px;
       border: 0px 0px $borderColor 0px;
       background-color: $pure-white;
-      h2{
-        color: $darkbklue;
+      h2 {
+        color: $darkblue;
       }
     }
-    .info{
+    .info {
       padding-left: 20px;
       display: flex;
-      .field1{
-        p{
+      .field1 {
+        p {
           font-weight: 500;
           margin: 0px;
           padding: 0px;
         }
         margin-right: 20px;
       }
-      .field2{
-        p{
+      .field2 {
+        p {
           font-weight: 500;
           margin: 0px;
           padding: 0px;
         }
       }
-
     }
-
   }
 }
 
-::ng-deep .mat-select-arrow{
+::ng-deep .mat-select-arrow {
   width: 0;
   height: 5;
   border-left: 5px solid transparent;
@@ -47,24 +44,21 @@
   color: blue;
 }
 
-@media (max-width:480px){
-  .container{
-    .main{
-      .info{
+@media (max-width: 480px) {
+  .container {
+    .main {
+      .info {
         display: block;
-
       }
     }
   }
 }
-::ng-deep .mat-form-field{
+::ng-deep .mat-form-field {
   cursor: not-allowed;
 }
-::ng-deep .mat-form-field-infix{
+::ng-deep .mat-form-field-infix {
   cursor: not-allowed;
-  span{
+  span {
     cursor: not-allowed;
   }
 }
-
-

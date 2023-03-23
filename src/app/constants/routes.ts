@@ -322,7 +322,7 @@ export const PROJECTS : Iroute={
 export const RECRUITMENT : Iroute={
   path:'my-interview',
   get fullurl():string{
-    return `/${this.path}`
+    return `/${DASHBOARD.fullurl}/${this.path}`
   }
 }
 

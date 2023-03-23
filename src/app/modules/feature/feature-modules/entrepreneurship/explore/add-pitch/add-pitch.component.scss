@@ -1,3 +1,6 @@
+@import "../../../../../../../scss/mixins";
+@import "../../../../../../../scss/global.scss";
+
 .main-container {
   background-color: #f3f6fc;
   padding: 30px;
@@ -126,6 +129,23 @@
           padding: 14px 14px 14px 10px;
           width: 98%;
           border-radius: 6px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 352px) {
+  .main-container {
+    .main-heading {
+      display: block;
+    }
+    .container {
+      .details {
+        @include grid("grid-template-columns", "100%", "");
+        .dob {
+          .input-box {
+          }
         }
       }
     }

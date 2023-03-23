@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ContentChildren, Input, OnInit, QueryList } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { ForDirective } from '../for-directive/for.directive';
+import { Table } from './table.types';
 
 @Component({
   selector: 'app-common-table',
@@ -7,21 +9,43 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./common-table.component.scss']
 })
 export class CommonTableComponent implements OnInit {
-  @Input() tableColumns: Array<any> = [];
+  constructor() { }
+  @Input() tableSource!: Table.Source<any>;
 
-  @Input() tableData: Array<any> = [];
-  @Input() isPageable: boolean = false;
-  @Input() defaultPaginationSize: number[] = [5, 10, 15];
-  @Input() defaultPageSize = this.defaultPaginationSize[1];
+  @ContentChildren(ForDirective) templates!: QueryList<ForDirective>;
 
-  displayedColumns: Array<any> = [];
-  dataSource: MatTableDataSource<any> = new MatTableDataSource();
-  constructor() {}
+  get dataSource(): MatTableDataSource<any> {
+
+    return new MatTableDataSource(this.tableSource.data);
+  }
+
+  get displayedColumns(): string[] {
+    const columns = this.tableSource.columns.map(column => column.id);
+    // console.log(columns,"C");
+    return this.tableSource.options && this.tableSource.options.selection
+      ? ["selection", ...columns]
+      : columns;
+  }
+
+
 
   ngOnInit(): void {
-    this.displayedColumns = this.tableColumns.map((c) => c.columnDef);
-    this.dataSource = new MatTableDataSource(this.tableData);
-    console.log(this.dataSource.data, 'kkkk');
+    console.log(this.tableSource.data,"tableData")
+  }
+
+  ngAfterViewInit(): void {
+    // console.log(this.tableSource,'TS_CT');
+  }
+
+  templateOutlet(column: Table.Column<any>) {
+
+    if (this.templates) {
+      const template = this.templates.find(
+        query => query.name === column.templateBy
+      );
+      return template ? template.ref : null;
+    }
+    return null;
   }
 
 }

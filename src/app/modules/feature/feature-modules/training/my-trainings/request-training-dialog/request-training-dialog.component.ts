@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { MatTooltipDefaultOptions } from '@angular/material/tooltip';
 
+export const myCustomTooltipDefaults: MatTooltipDefaultOptions = {
+  showDelay: 1000,
+  hideDelay: 1000,
+  touchendHideDelay: 1000,
+};
 interface training {
   value: string;
   viewValue: string;

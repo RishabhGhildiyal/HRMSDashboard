@@ -1,1 +1,43 @@
-<p>my-interview works!</p>
+<div class="container">
+  <div class="heading">
+    <h1>List All Candidates</h1>
+  </div>
+  <div class="main">
+    <div class="body">
+      <div class="dropdowns">
+        <div class="drop-down1">
+          <p>Department</p>
+          <mat-form-field appearance="fill">
+            <mat-label>Select Department</mat-label>
+            <mat-select>
+              <mat-option
+                *ngFor="let department of departments"
+                [value]="department.department"
+              >
+                {{ department.department }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="drop-down2">
+          <p>Status </p>
+          <mat-form-field appearance="fill">
+            <mat-label>Select Status</mat-label>
+            <mat-select>
+              <mat-option
+                *ngFor="let status of statuses"
+                [value]="status.status"
+              >
+                {{ status.status }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
+</div>
+

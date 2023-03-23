@@ -11,7 +11,7 @@
       h2 {
         padding: 0px;
         margin: 0px;
-        color: $darkbklue;
+        color: $darkblue;
       }
     }
     .browse {
@@ -38,7 +38,7 @@
       }
     }
     .button {
-      button{
+      button {
         display: flex;
         padding: 5px;
         color: white;
@@ -57,26 +57,24 @@
   }
 }
 
-@media (max-width:700px){
-  .container{
-    .main{
-      p{
+@media (max-width: 700px) {
+  .container {
+    .main {
+      p {
         margin: 0px;
         padding: 0px;
       }
-      .heading{
-        h2{
-
+      .heading {
+        h2 {
         }
       }
-      .browse{
-        label{
-
+      .browse {
+        label {
         }
       }
-      .file{
+      .file {
         padding: 2px;
-        input{
+        input {
           padding: 2px;
         }
       }

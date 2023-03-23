@@ -9,7 +9,7 @@ import { RequestTrainingDialogComponent } from './request-training-dialog/reques
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import {MatSelectModule} from '@angular/material/select';
-
+import {MatTooltipModule} from '@angular/material/tooltip';
 @NgModule({
   declarations: [
     MyTrainingsComponent,
@@ -22,7 +22,8 @@ import {MatSelectModule} from '@angular/material/select';
     FooterModule,
     MatDialogModule,
     MatIconModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTooltipModule
   ]
 })
 export class MyTrainingsModule { }

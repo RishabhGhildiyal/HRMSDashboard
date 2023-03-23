@@ -158,37 +158,21 @@
         </div>
       </div>
       <div class="table">
-        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-          <ng-container matColumnDef="action">
-            <th mat-header-cell *matHeaderCellDef>Action</th>
-            <td mat-cell *matCellDef="let element">
-              <button (click)="openDialog()" class="edit" mat-button>Edit</button>
-              <button class="delete" mat-button>Delete</button>
-            </td>
-          </ng-container>
-
-          <ng-container matColumnDef="schoolUniversity">
-            <th mat-header-cell *matHeaderCellDef>School/University</th>
-            <td mat-cell *matCellDef="let element">
-              {{ element.schoolUniversity }}
-            </td>
-          </ng-container>
-
-          <ng-container matColumnDef="timePeriod">
-            <th mat-header-cell *matHeaderCellDef>Time Period</th>
-            <td mat-cell *matCellDef="let element">{{ element.timePeriod }}</td>
-          </ng-container>
-
-          <ng-container matColumnDef="educationalLevel">
-            <th mat-header-cell *matHeaderCellDef>Educational Level</th>
-            <td mat-cell *matCellDef="let element">
-              {{ element.educationalLevel }}
-            </td>
-          </ng-container>
-
-          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-        </table>
+        <app-common-table [tableSource]="tableSource">
+          <ng-template appFor="actions" let-row="row">
+            <button class="edit" mat-raised-button (click)="edit()">Edit</button>
+            <button class="delete" mat-raised-button (click)="delete(row)">Delete</button>
+          </ng-template>
+          <ng-template appFor="Amity_University" let-row="row">
+            {{row.Amity_University}}
+          </ng-template>
+          <ng-template appFor="time_period" let-row="row">
+            {{ row.time_period }}
+          </ng-template>
+          <ng-template appFor="educational_level" let-row="row">
+            {{ row.educational_level }}
+          </ng-template>
+        </app-common-table>
       </div>
     </div>
   </div>
