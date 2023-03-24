@@ -5,6 +5,8 @@
   .header {
     display: flex;
     justify-content: space-between;
+    background-color: #F3F3F3;
+    padding: 10px;
     .title {
       h3 {
         color: $primary-blue;
@@ -24,6 +26,7 @@
     }
   }
   .main{
+    padding: 20px;
     .drop-downs{
       .drop-down-1{
         p{
@@ -80,7 +83,37 @@
       }
       .radioButton2{
         .options{
-          
+
+        }
+      }
+    }
+    .buttons{
+      display: flex;
+      justify-content: flex-end;
+      .button1{
+        margin-right: 10px;
+        button{
+          border: 1.5px solid rgba(150, 165, 184, 0.5);
+          background-color: #ffffff;
+          font-family: "Lato";
+          font-size: 14px;
+          color: #96A5B8;
+          font-weight: 500;
+          // line-height: 1.4;
+          border-radius: 4px;
+          box-sizing: border-box;
+
+        }
+      }
+      .button2{
+        button{
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), #199CFF;
+          background-blend-mode: soft-light, normal;
+          border: 1px solid rgba(150, 165, 184, 0.2);
+          box-sizing: border-box;
+          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12), inset 0px 2px 0px rgba(255, 255, 255, 0.24);
+          border-radius: 4px;
+          color: #FFFFFF;
         }
       }
     }
@@ -91,4 +124,8 @@
   cursor: pointer;
   background-color: white;
   border: 1px solid black;
+}
+
+::ng-deep.mat-dialog-container{
+  padding: 0px;
 }

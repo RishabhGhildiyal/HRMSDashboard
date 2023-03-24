@@ -12,6 +12,7 @@ import { FooterModule } from 'src/app/modules/feature/feature-parts/footer/foote
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { commonTableModule } from 'src/app/modules/common/common-table/common-table.module';
+import { ForDirectiveModule } from 'src/app/modules/common/for-directive/for-directive.module';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { commonTableModule } from 'src/app/modules/common/common-table/common-ta
     FooterModule,
     MatTableModule,
     MatPaginatorModule,
-    commonTableModule
+    commonTableModule,
+    ForDirectiveModule
   ]
 })
 export class DetailsModule { }

@@ -46,6 +46,9 @@
       }
     }
   }
+  .table{
+   border: $borderColor;
+  }
 }
 
 ::ng-deep.mat-form-field-type-mat-select:not(.mat-form-field-disabled) .mat-form-field-flex {

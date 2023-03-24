@@ -3,6 +3,20 @@
     <h3>Attendance</h3>
   </div>
   <div class="table">
-    <!-- <app-common-table [tableColumns]="tableColumns" [tableData]="tableData" [isPageable]="false" [defaultPageSize]="3" ></app-common-table> -->
+    <app-common-table [tableSource]="tableSource">
+
+      <ng-template appFor="sn" let-row="row">
+        {{row.sn }}
+      </ng-template>
+      <ng-template appFor="topic" let-row="row">
+        {{row.topic }}
+      </ng-template>
+      <ng-template appFor="date" let-row="row">
+        {{row.date }}
+      </ng-template>
+      <ng-template appFor="attendance" let-row="row">
+        {{row.attendance }}
+      </ng-template>
+    </app-common-table>
   </div>
 </div>

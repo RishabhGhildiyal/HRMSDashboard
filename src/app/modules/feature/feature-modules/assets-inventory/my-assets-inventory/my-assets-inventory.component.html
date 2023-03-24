@@ -1,1 +1,43 @@
-<p>my-assets-inventory works!</p>
+<div class="container">
+  <div class="body">
+    <div class="button">
+      <button mat-raised-button>+ Add new Asset Request</button>
+    </div>
+  </div>
+  <div class="main">
+    <h1>List All Assets Declarations</h1>
+    <div class="table">
+      <!-- <app-common-table ></app-common-table> -->
+      <app-common-table [tableSource]="tableSource">
+        <ng-template appFor="sn" let-row="row">
+          {{row.sn }}
+        </ng-template>
+        <ng-template appFor="status" let-row="row">
+          {{ row.status }}
+        </ng-template>
+        <ng-template appFor="request_reason" let-row="row">
+          {{ row.request_reason }}
+        </ng-template>
+        <ng-template appFor="priority" let-row="row">
+          {{ row.priority }}
+        </ng-template>
+        <ng-template appFor="requested_at" let-row="row">
+          {{ row.requested_at }}
+        </ng-template>
+        <ng-template appFor="assets_category" let-row="row">
+          {{ row.assets_category }}
+        </ng-template>
+        <ng-template appFor="allocation_type" let-row="row">
+          {{ row.allocation_type }}
+        </ng-template>
+        <ng-template appFor="company" let-row="row">
+          {{ row.company }}
+        </ng-template>
+
+      </app-common-table>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
+</div>

@@ -24,8 +24,8 @@
         </mat-form-field>
       </div>
       <div class="drop-down-2">
-        <p>Team name </p>
-        <mat-form-field class="department" appearance="outline">
+        <p>Team name</p>
+        <mat-form-field class="department" appearance="fill">
           <mat-label>Select Team</mat-label>
           <mat-select>
             <mat-option
@@ -80,10 +80,18 @@
           <input type="radio" id="yes" name="fav_language" value="Yes" />
           <label for="yes">Intermediate</label><br />
           <input type="radio" id="no" name="fav_language" value="No" />
-          <label for="no">3-6  months</label><br />
+          <label for="no">3-6 months</label><br />
           <input type="radio" id="no" name="fav_language" value="No" />
           <label for="no">More than 6 months</label><br />
         </div>
+      </div>
+    </div>
+    <div class="buttons">
+      <div class="button1">
+        <button mat-dialog-close mat-raised-button>Cancel</button>
+      </div>
+      <div class="button2">
+        <button mat-raised-button>Submit</button>
       </div>
     </div>
   </div>

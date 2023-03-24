@@ -1,1 +1,40 @@
-<p>asset-declaration works!</p>
+<div class="container">
+  <div class="main">
+    <h1>List All Assets Declarations</h1>
+    <div class="table">
+      <!-- <app-common-table ></app-common-table> -->
+      <app-common-table [tableSource]="tableSource">
+        <!-- <ng-template appFor="sn" let-row="row">
+          {{row.sn }}
+        </ng-template> -->
+        <ng-template appFor="asset_name" let-row="row">
+          {{ row.asset_name }}
+        </ng-template>
+        <ng-template appFor="assets_category" let-row="row">
+          {{ row.assets_category }}
+        </ng-template>
+        <ng-template appFor="company_asset_code" let-row="row">
+          {{ row.company_asset_code }}
+        </ng-template>
+        <ng-template appFor="brand" let-row="row">
+          {{ row.brand }}
+        </ng-template>
+        <ng-template appFor="serial_no" let-row="row">
+          {{ row.serial_no }}
+        </ng-template>
+        <ng-template appFor="model" let-row="row">
+          {{ row.model }}
+        </ng-template>
+        <ng-template appFor="is_working" let-row="row">
+          {{ row.is_working }}
+        </ng-template>
+        <ng-template appFor="company" let-row="row">
+          {{ row.company }}
+        </ng-template>
+      </app-common-table>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
+</div>

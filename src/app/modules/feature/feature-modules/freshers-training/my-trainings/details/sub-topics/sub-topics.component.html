@@ -3,6 +3,32 @@
     <h3>Sub Topics</h3>
   </div>
   <div class="table">
-    <!-- <app-common-table [tableColumns]="tableColumns" [tableData]="tableData" [isPageable]="false" [defaultPageSize]="3" ></app-common-table> -->
+    <app-common-table [tableSource]="tableSource">
+
+      <ng-template appFor="sn" let-row="row">
+        {{row.sn }}
+      </ng-template>
+      <ng-template appFor="sub_topic" let-row="row">
+        {{row.sub_topic }}
+      </ng-template>
+      <ng-template appFor="topic" let-row="row">
+        {{row.topic }}
+      </ng-template>
+      <ng-template appFor="topic_trainer" let-row="row">
+        {{row.topic_trainer }}
+      </ng-template>
+      <ng-template appFor="trainer_email" let-row="row">
+        {{row.trainer_email }}
+      </ng-template>
+      <ng-template appFor="start_date" let-row="row">
+        {{row.start_date}}
+    </ng-template>
+    <ng-template appFor="end_date" let-row="row">
+      {{row.end_date}}
+    </ng-template>
+    <ng-template appFor="resource_url" let-row="row">
+      {{row.resource_url}}
+    </ng-template>
+    </app-common-table>
   </div>
 </div>

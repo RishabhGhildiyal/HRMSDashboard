@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { Router } from '@angular/router';
+import { UPCOMING_TRAININGS } from 'src/app/constants/routes';
 import { RequestTrainingDialogComponent } from './request-training-dialog/request-training-dialog.component';
 
 @Component({
@@ -9,7 +11,7 @@ import { RequestTrainingDialogComponent } from './request-training-dialog/reques
 })
 export class MyTrainingsComponent implements OnInit {
 
-  constructor(public dialog:MatDialog) { }
+  constructor(public dialog:MatDialog,private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -19,5 +21,8 @@ export class MyTrainingsComponent implements OnInit {
     };
 
     this.dialog.open(RequestTrainingDialogComponent, config);
+  }
+  redirect(){
+    this.router.navigate([UPCOMING_TRAININGS.fullurl])
   }
 }

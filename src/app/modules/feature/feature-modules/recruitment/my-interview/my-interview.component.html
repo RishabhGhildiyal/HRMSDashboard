@@ -20,7 +20,7 @@
           </mat-form-field>
         </div>
         <div class="drop-down2">
-          <p>Status </p>
+          <p>Status</p>
           <mat-form-field appearance="fill">
             <mat-label>Select Status</mat-label>
             <mat-select>
@@ -34,10 +34,49 @@
           </mat-form-field>
         </div>
       </div>
+      <div class="table">
+        <!-- <app-common-table ></app-common-table> -->
+        <app-common-table [tableSource]="tableSource">
+          <ng-template appFor="sn" let-row="row"> {{ row.sn }}8 </ng-template>
+          <ng-template appFor="name" let-row="row">
+            {{ row.name }}
+          </ng-template>
+          <ng-template appFor="type" let-row="row">
+            {{ row.type }}
+          </ng-template>
+          <ng-template appFor="file_size" let-row="row">
+            {{ row.file_size }}
+          </ng-template>
+          <ng-template appFor="last_modified" let-row="row">
+            {{ row.last_modified }}
+          </ng-template>
+          <ng-template appFor="actions" let-row="row"> </ng-template>
+          <ng-template appFor="department_name" let-row="row">
+            {{ row.department_name }}
+          </ng-template>
+          <ng-template appFor="email" let-row="row">
+            {{ row.email }}
+          </ng-template>
+          <ng-template appFor="mobile_no" let-row="row">
+            {{ row.mobile_no }}
+          </ng-template>
+          <ng-template appFor="round_type" let-row="row">
+            {{ row.round_type }}
+          </ng-template>
+          <ng-template appFor="interview_date" let-row="row">
+            {{ row.interview_date }}
+          </ng-template>
+          <ng-template appFor="interview_time" let-row="row">
+            {{ row.interview_time }}
+          </ng-template>
+          <ng-template appFor="final_status" let-row="row">
+            {{ row.final_status }}
+          </ng-template>
+        </app-common-table>
+      </div>
     </div>
   </div>
 </div>
 <div class="footer">
   <app-footer></app-footer>
 </div>
-

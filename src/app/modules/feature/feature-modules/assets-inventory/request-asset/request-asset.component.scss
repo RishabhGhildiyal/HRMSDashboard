@@ -1,0 +1,64 @@
+@import "../../../../../../scss/_mixins.scss";
+@import "../../../../../../scss/global.scss";
+
+.container {
+  padding: 40px;
+  min-height: 77%;
+  .body{
+    background-color: $pure-white;
+    padding: 20px;
+    margin-bottom: 20px;
+    .button{
+      display: flex;
+      justify-content: flex-end;
+      button{
+        background-color: #3246d3;
+        color: white;
+      }
+    }
+  }
+  h2 {
+    color: $darkblue;
+    margin-left: 20px;
+    font-weight: 700;
+  }
+  .main {
+    background-color: $pure-white;
+    .table {
+      padding: 20px;
+      .action {
+        td {
+          button {
+          }
+        }
+      }
+      table {
+        border: $borderColor;
+        width: 100%;
+        box-shadow: none;
+        overflow-x: scroll;
+        th {
+          word-break: break-word;
+          border: 1px solid #f1f1f2;
+          overflow-x: scroll;
+        }
+        td {
+          border: 1px solid #f1f1f2;
+          padding-left: 10px;
+          overflow-x: scroll;
+          // word-wrap: break-word;
+          .edit {
+            color: $pure-white;
+            background-color: grey;
+            margin-bottom: 7px;
+            width: 10px;
+          }
+          .delete {
+            color: $pure-white;
+            background-color: red;
+          }
+        }
+      }
+    }
+  }
+}
