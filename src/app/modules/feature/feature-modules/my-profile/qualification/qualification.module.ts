@@ -16,6 +16,7 @@ import { DialogComponentComponent } from './dialog-component/dialog-component.co
 import { MatDialogModule } from '@angular/material/dialog';
 import { commonTableModule } from "../../../../common/common-table/common-table.module";
 import { ForDirectiveModule } from 'src/app/modules/common/for-directive/for-directive.module';
+import { ListingModule } from 'src/app/modules/common/common-table/listing/listing.module';
 
 @NgModule({
     declarations: [
@@ -37,7 +38,8 @@ import { ForDirectiveModule } from 'src/app/modules/common/for-directive/for-dir
         ShowErrorModule,
         MatDialogModule,
         commonTableModule,
-        ForDirectiveModule
+        ForDirectiveModule,
+        ListingModule
     ]
 })
 export class QualificationModule { }

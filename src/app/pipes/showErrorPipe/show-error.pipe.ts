@@ -9,26 +9,26 @@ import { Regex } from 'src/app/constants/regex';
 export class ShowErrorPipe implements PipeTransform {
 
   transform(form: FormGroup,control: string, label: string): any {
-    console.log(form,control,label);
+    // console.log(form,control,label);
 
     if(form.get(control)?.touched && form.get(control)?.invalid){
      const errors = form.get(control)?.errors;
-     console.log(form,control,label);
+    //  console.log(form,control,label);
 
      if(errors?.hasOwnProperty("required")){
-     console.log(form,control,label);
+    //  console.log(form,control,label);
 
        return `${label} is Required` ;
 
      }
      else if(errors?.hasOwnProperty("minlength")){
-     console.log(form,control,label);
+    //  console.log(form,control,label);
 
        return `Minimum ${errors.minlength.requiredLength} characters required`;
      }
 
      else if(errors?.hasOwnProperty("maxlength")){
-     console.log(form,control,label);
+    //  console.log(form,control,label);
 
        return `Maximum ${errors.maxlength.requiredLength} characters required`;
      }
@@ -55,7 +55,7 @@ export class ShowErrorPipe implements PipeTransform {
    PATTERN_ERRORS(pattern: any, key: string) {
 
      let comment: any
-     console.log(pattern,"pattern");
+    //  console.log(pattern,"pattern");
      if (pattern == Regex.email) {
 
        comment = `${key} is invalid or not in correct format`;

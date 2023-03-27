@@ -27,10 +27,9 @@ export const sideNavList = [
      {subTitle:"Requested Trainings", subLogo:'horizontal_rule',routerLink:REQUESTED_TRAININGS.fullurl},
   ], isActive: true, },
   { title: 'Assests Inventory', logo: 'science', options: [
-    {
-      subTitle: 'Assets Declaration', subLogo: 'horizontal_rule',routerLink:ASSET_DECLARATION.fullurl},
-     {subTitle:"My Assets Inventory", subLogo:'horizontal_rule',routerLink:MY_ASSETS_INVENTORY.fullurl},
-     {subTitle:"Request Asset", subLogo:'horizontal_rule',routerLink:REQUEST_ASSET.fullurl},
+    {subTitle:"My Assets Inventory", subLogo:'horizontal_rule',routerLink:MY_ASSETS_INVENTORY.fullurl},
+    {subTitle:"Request Asset", subLogo:'horizontal_rule',routerLink:REQUEST_ASSET.fullurl},
+    {subTitle: 'Assets Declaration', subLogo: 'horizontal_rule',routerLink:ASSET_DECLARATION.fullurl},
   ], isActive: true, },
   { title: 'Attendance', logo: 'schedule', options: [{
     subTitle: 'Attendance Calender', subLogo: 'horizontal_rule',routerLink:ATTENDANCE_CALENDER.fullurl},

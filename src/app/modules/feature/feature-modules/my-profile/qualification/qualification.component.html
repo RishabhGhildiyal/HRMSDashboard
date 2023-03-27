@@ -158,6 +158,7 @@
         </div>
       </div>
       <div class="table">
+      <app-listing [config]="listingConfig" (changeListEvent)="onTableEventChange($event)">
         <app-common-table [tableSource]="tableSource">
           <ng-template appFor="actions" let-row="row">
             <button class="edit" mat-raised-button (click)="edit()">Edit</button>
@@ -173,6 +174,7 @@
             {{ row.educational_level }}
           </ng-template>
         </app-common-table>
+    </app-listing>
       </div>
     </div>
   </div>

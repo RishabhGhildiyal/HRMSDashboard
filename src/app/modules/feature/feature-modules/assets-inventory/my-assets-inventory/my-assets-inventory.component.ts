@@ -12,18 +12,18 @@ import { DOCUMENTS_LIST_CONFIG, UserTableDataSource } from './my-assets-inventor
 export class MyAssetsInventoryComponent implements OnInit {
 
 
-
   constructor() { }
   // @ViewChild() abc!:HTMLElement;
   docsData: Array<any> = [
     {
-      status: '',
-      request_reason: '	',
-      priority: '',
-      requested_at: '',
-      assets_category: '',
-      allocation_type: '',
-      company: '',
+      asset_name: 'LAPTOP',
+      assets_category: '	Laptop',
+      company_asset_code: 'L4320',
+      brand: 'HP',
+      serial_no: 'SCLR9878654',
+      model: 'ZBOOK',
+      is_working: 'Yes',
+      company: 'Appinventiv Technology',
 
     },
   ];

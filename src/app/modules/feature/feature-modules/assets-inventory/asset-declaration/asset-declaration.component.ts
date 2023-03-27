@@ -9,7 +9,7 @@ import { DOCUMENTS_LIST_CONFIG, UserTableDataSource } from './asset-declaration.
   styleUrls: ['./asset-declaration.component.scss']
 })
 export class AssetDeclarationComponent implements OnInit {
-
+  isShow=false;
 
   constructor() { }
   // @ViewChild() abc!:HTMLElement;
@@ -51,6 +51,9 @@ export class AssetDeclarationComponent implements OnInit {
     );
     console.log(this.tableSource,"123TS");
 
+  }
+  toggleAddNew(){
+    this.isShow = !this.isShow;
   }
 
 }

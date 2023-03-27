@@ -4,21 +4,8 @@
 .container {
   padding: 40px;
   min-height: 77%;
-  .body{
-    background-color: $pure-white;
-    padding: 20px;
-    margin-bottom: 20px;
-    .button{
-      display: flex;
-      justify-content: flex-end;
-      button{
-        background-color: #3246d3;
-        color: white;
-      }
-    }
-  }
   h1 {
-    color: #199CFF;
+    color: #199cff;
     margin-left: 20px;
   }
   .main {
@@ -31,30 +18,34 @@
           }
         }
       }
-      table {
-        border: $borderColor;
-        width: 100%;
-        box-shadow: none;
-        overflow-x: scroll;
-        th {
-          word-break: break-word;
-          border: 1px solid #f1f1f2;
-          overflow-x: scroll;
-        }
-        td {
-          border: 1px solid #f1f1f2;
-          padding-left: 10px;
-          overflow-x: scroll;
-          // word-wrap: break-word;
-          .edit {
-            color: $pure-white;
-            background-color: grey;
-            margin-bottom: 7px;
-            width: 10px;
-          }
-          .delete {
-            color: $pure-white;
-            background-color: red;
+      :host ::ng-deep .container {
+        .tabels {
+          table {
+            border: $borderColor;
+            width: 100%;
+            box-shadow: none;
+            overflow-x: auto;
+            th {
+              word-break: break-word;
+              border: 1px solid #f1f1f2;
+              overflow-x: auto;
+            }
+            td {
+              border: 1px solid #f1f1f2;
+              padding-left: 10px;
+              overflow-x: auto;
+              // word-wrap: break-word;
+              .edit {
+                color: $pure-white;
+                background-color: grey;
+                margin-bottom: 7px;
+                width: 10px;
+              }
+              .delete {
+                color: $pure-white;
+                background-color: red;
+              }
+            }
           }
         }
       }

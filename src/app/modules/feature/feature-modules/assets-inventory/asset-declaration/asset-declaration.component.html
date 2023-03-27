@@ -1,36 +1,116 @@
 <div class="container">
+  <div class="body">
+    <div class="button">
+      <button mat-raised-button (click)="toggleAddNew()">+ Add new Asset Request</button>
+    </div>
+    <div class="containers" *ngIf="isShow" >
+      <div class="main">
+        <div class="field">
+          <mat-label>Employee IdAI1568</mat-label>
+
+          <mat-form-field class="example-full-width" appearance="outline">
+            <input matInput >
+          </mat-form-field>
+        </div>
+
+        <div  class="field">
+          <mat-label>Unique Asset Code</mat-label>
+
+          <mat-form-field class="example-full-width" appearance="outline">
+            <input matInput >
+          </mat-form-field>
+        </div>
+          <div  class="field">
+            <mat-label>
+              Serial Number</mat-label>
+          <mat-form-field class="example-full-width" appearance="outline">
+            <input matInput >
+          </mat-form-field>
+        </div>
+        <div  class="field">
+          <mat-label>Model Number</mat-label>
+
+          <mat-form-field class="example-full-width" appearance="outline">
+            <input matInput >
+          </mat-form-field>
+        </div>
+<!--
+        <div>
+          <app-dropdown [dropdown]="OS"></app-dropdown>
+        </div> -->
+
+
+           <div  class="field">
+            <mat-label>OS version</mat-label>
+
+          <mat-form-field class="example-full-width" appearance="outline">
+            <input matInput >
+          </mat-form-field>
+        </div>
+        <div  class="field">
+          <mat-label>Brand</mat-label>
+
+          <mat-form-field class="example-full-width" appearance="outline">
+            <input matInput >
+
+          </mat-form-field>
+        </div>
+
+        <div  class="field">
+          <mat-label>
+            Colour</mat-label>
+
+          <mat-form-field class="example-full-width" appearance="outline">
+            <input matInput >
+
+          </mat-form-field>
+        </div>
+
+        <!-- <div>
+          <app-dropdown [dropdown]="condition"></app-dropdown>
+        </div> -->
+      </div>
+      <div class="area">
+        <mat-label>Asset Image(Allowed Format: jpg,jpeg,JPEG,JPG,png,PNG,GIF) Upload front and backside image*</mat-label>
+        <input type="file">
+      </div>
+      <div class="submit">
+
+        <button mat-button>Submit</button>
+      </div>
+     </div>
+
+
+  </div>
   <div class="main">
-    <h1>List All Assets Declarations</h1>
+    <h2>List All Declaration Assets</h2>
     <div class="table">
-      <!-- <app-common-table ></app-common-table> -->
       <app-common-table [tableSource]="tableSource">
-        <!-- <ng-template appFor="sn" let-row="row">
+        <ng-template appFor="sn" let-row="row">
           {{row.sn }}
-        </ng-template> -->
-        <ng-template appFor="asset_name" let-row="row">
-          {{ row.asset_name }}
+        </ng-template>
+        <ng-template appFor="status" let-row="row">
+          {{ row.status }}
+        </ng-template>
+        <ng-template appFor="request_reason" let-row="row">
+          {{ row.request_reason }}
+        </ng-template>
+        <ng-template appFor="priority" let-row="row">
+          {{ row.priority }}
+        </ng-template>
+        <ng-template appFor="requested_at" let-row="row">
+          {{ row.requested_at }}
         </ng-template>
         <ng-template appFor="assets_category" let-row="row">
           {{ row.assets_category }}
         </ng-template>
-        <ng-template appFor="company_asset_code" let-row="row">
-          {{ row.company_asset_code }}
-        </ng-template>
-        <ng-template appFor="brand" let-row="row">
-          {{ row.brand }}
-        </ng-template>
-        <ng-template appFor="serial_no" let-row="row">
-          {{ row.serial_no }}
-        </ng-template>
-        <ng-template appFor="model" let-row="row">
-          {{ row.model }}
-        </ng-template>
-        <ng-template appFor="is_working" let-row="row">
-          {{ row.is_working }}
+        <ng-template appFor="allocation_type" let-row="row">
+          {{ row.allocation_type }}
         </ng-template>
         <ng-template appFor="company" let-row="row">
           {{ row.company }}
         </ng-template>
+
       </app-common-table>
     </div>
   </div>

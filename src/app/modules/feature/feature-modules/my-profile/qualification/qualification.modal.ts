@@ -12,7 +12,7 @@ export const DOCUMENTS_LIST_CONFIG = {
       buttonName: "Download Report",
     },
   },
-  total: 0,
+  total: 10,
 };
 
 export class UserTableDataSource implements Table.Source<any> {

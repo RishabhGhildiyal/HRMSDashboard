@@ -18,28 +18,10 @@ export const DOCUMENTS_LIST_CONFIG = {
 export class UserTableDataSource implements Table.Source<any> {
   columns: Table.Column<any>[] = [
     {
-      title: 'Status',
-      id: 'status',
+      title: 'Asset Name',
+      id: 'asset_name',
       sorting: false,
-      templateBy: 'status',
-    },
-    {
-      title: 'Request Reason',
-      id: 'request_reason',
-      sorting: false,
-      templateBy: 'request_reason',
-    },
-    {
-      title: 'Priority',
-      id: 'priority',
-      sorting: false,
-      templateBy: 'priority',
-    },
-    {
-      title: 'Requested At',
-      id: 'requested_at',
-      sorting: false,
-      templateBy: 'requested_at',
+      templateBy: 'asset_name',
     },
     {
       title: 'Assets Category',
@@ -48,17 +30,41 @@ export class UserTableDataSource implements Table.Source<any> {
       templateBy: 'assets_category',
     },
     {
-      title: 'Allocation Type',
-      id: 'allocation_type',
+      title: 'Company Asset Code',
+      id: 'company_asset_code',
       sorting: false,
-      templateBy: 'allocation_type',
+      templateBy: 'company_asset_code',
+    },
+    {
+      title: 'brand',
+      id: 'brand',
+      sorting: false,
+      templateBy: 'company',
+    },
+    {
+      title: 'Serial No',
+      id: 'serial_no',
+      sorting: false,
+      templateBy: 'serial_no',
+    },
+    {
+      title: 'Model',
+      id: 'model',
+      sorting: false,
+      templateBy: 'model',
+    },
+    {
+      title: 'Is working',
+      id: 'is_working',
+      sorting: false,
+      templateBy: 'is_working',
     },
     {
       title: 'Company',
       id: 'company',
       sorting: false,
       templateBy: 'company',
-    },
+    }
   ];
   options: Table.Options = {
     selection: false,
