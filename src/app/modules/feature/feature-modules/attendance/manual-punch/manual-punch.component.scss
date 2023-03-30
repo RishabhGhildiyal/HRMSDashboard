@@ -1,0 +1,88 @@
+@import "../../../../../../scss/mixins";
+@import "../../../../../../scss/global.scss";
+
+.container {
+  padding: 20px;
+  min-height: 80%;
+  display: flex;
+  background-color: #f2f6fc;
+  .left-box {
+    width: 35%;
+    margin-right: 4%;
+    border-radius: 5%;
+    .header {
+      background-color: $pure-white;
+      h2 {
+        padding: 11px 25px 11px 15px;
+        color: #3246d3;
+        margin: 0px;
+      }
+    }
+    .main {
+      margin: 0px;
+      padding: 20px;
+      background-color: $pure-white;
+      .box1 {
+        width: 100%;
+        mat-form-field {
+          width: 100%;
+          // background-color: $pure-white;
+        }
+      }
+      .box2 {
+        margin-right: 10px;
+        width: 100%;
+        mat-form-field {
+          width: 100%;
+          // background-color: $pure-white;
+        }
+        p {
+          margin: 0px;
+          color: #96a5b8;
+        }
+      }
+      .box3 {
+        margin-right: 10px;
+        width: 100%;
+        mat-form-field {
+          width: 100%;
+          // background-color: $pure-white;
+        }
+      }
+    }
+  }
+  .right-box{
+    // padding: px;
+    // margin: 0px;
+    width: 60%;
+    .heading{
+      padding: 11px 25px 11px 15px;
+      background-color: $pure-white;
+      display: flex;
+      justify-content: space-between;
+      h2{
+        color: #3246d3;
+        margin: 0px;
+      }
+    }
+    .main-body{
+      :host ::ng-deep .container {
+        .tables {
+          table {
+            border: 1px solid rgba(24, 28, 33, 0.06);
+            width: 100%;
+            border-collapse: collapse;
+            padding: 20px;
+            // @include commonTableStyling(1px solid #f1f1f2, 1px solid #f1f1f2);
+            tbody {
+              background-color: white;
+              tr:nth-child(odd) {
+                background-color: #f3f3f3;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

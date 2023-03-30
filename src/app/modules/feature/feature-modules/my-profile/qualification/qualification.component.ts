@@ -73,6 +73,8 @@ export class QualificationComponent implements OnInit {
 
   info() {
     if (this.infoForm.valid) {
+      this.docsData.push(this.infoForm.value);
+      this.populateTable(this.pageOptions);
     } else {
       this.infoForm.markAllAsTouched();
       this.snack.open('Fill the required fields', '', {
@@ -93,77 +95,18 @@ export class QualificationComponent implements OnInit {
   // @ViewChild() abc!:HTMLElement;
   docsData: Array<any> = [
     {
-      Amity_University: ' Amity University',
-      time_period: '	Jul-08-2019 - Jun-06-2022',
-      educational_level: 'MCA',
+      schoolUni: ' Amity University',
+      time: '	Jul-08-2019 - Jun-06-2022',
+      professionalCourse: 'MCA',
       // last_modified: 'May-13-2022',
     },
     {
-      Amity_University: ' dit University',
-      time_period: '	Jul-08-2019 - Jun-06-2022',
-      educational_level: 'MCA',
+      schoolUni: ' dit University',
+      time: '	Jul-08-2019 - Jun-06-2022',
+      professionalCourse: 'MCA',
       // last_modified: 'May-13-2022',
     },
-    {
-      Amity_University: ' all uin University',
-      time_period: '	Jul-08-2019 - Jun-06-2022',
-      educational_level: 'MCA',
-      // last_modified: 'May-13-2022',
-    },
-    {
-      Amity_University: ' Amity University',
-      time_period: '	Jul-08-2019 - Jun-06-2022',
-      educational_level: 'MCA',
-      // last_modified: 'May-13-2022',
-    },
-    {
-      Amity_University: ' bla b;s University',
-      time_period: '	Jul-08-2019 - Jun-06-2022',
-      educational_level: 'MCA',
-      // last_modified: 'May-13-2022',
-    },
-    {
-      Amity_University: ' Amity University',
-      time_period: '	Jul-08-2019 - Jun-06-2022',
-      educational_level: 'MCA',
-      // last_modified: 'May-13-2022',
-    },
-    {
-      Amity_University: ' Amity University',
-      time_period: '	Jul-08-2019 - Jun-06-2022',
-      educational_level: 'MCA',
-      // last_modified: 'May-13-2022',
-    },
-    {
-      Amity_University: ' otla University',
-      time_period: '	Jul-08-2019 - Jun-06-2022',
-      educational_level: 'MCA',
-      // last_modified: 'May-13-2022',
-    },
-    {
-      Amity_University: ' Amity University',
-      time_period: '	Jul-08-2019 - Jun-06-2022',
-      educational_level: 'MCA',
-      // last_modified: 'May-13-2022',
-    },
-    {
-      Amity_University: ' swaonil University',
-      time_period: '	Jul-08-2019 - Jun-06-2022',
-      educational_level: 'MCA',
-      // last_modified: 'May-13-2022',
-    },
-    {
-      Amity_University: ' Amity University',
-      time_period: '	Jul-08-2019 - Jun-06-2022',
-      educational_level: 'MCA',
-      // last_modified: 'May-13-2022',
-    },
-    {
-      Amity_University: ' Amity University',
-      time_period: '	Jul-08-2019 - Jun-06-2022',
-      educational_level: 'MCA',
-      // last_modified: 'May-13-2022',
-    },
+
   ];
   listingConfig = DOCUMENTS_LIST_CONFIG;
   pageOptions = PAGE_OPTIONS;

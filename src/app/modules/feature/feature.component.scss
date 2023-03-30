@@ -2,13 +2,14 @@
 .main_container {
   @include custom-scroller("y");
   mat-sidenav {
-    position: fixed;
+    // position: fixed;
     top: 65px;
-    height: 100%;
+    // height: 100%;
   }
   mat-sidenav-container {
     height: 100vh;
-    background-color: #e3eef4;
+    // padding-top:70px ;
+    background-color: #f2f6fc;
 
     mat-sidenav-content {
       top: 86px;

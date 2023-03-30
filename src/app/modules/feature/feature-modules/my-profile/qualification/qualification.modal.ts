@@ -25,21 +25,21 @@ export class UserTableDataSource implements Table.Source<any> {
       },
       {
         title: "School / University",
-        id: "Amity_University",
+        id: "schoolUni",
         sorting: false,
-        templateBy: "Amity_University",
+        templateBy: "schoolUni",
       },
       {
         title: "Time Period",
-        id: "time_period",
+        id: "time",
         sorting: false,
-        templateBy: "time_period"
+        templateBy: "time"
       },
       {
-        title: "Educational Level",
-        id: "educational_level",
+        title: "professional Course",
+        id: "professionalCourse",
         sorting: false,
-        templateBy: "educational_level"
+        templateBy: "professionalCourse"
       },
 
 

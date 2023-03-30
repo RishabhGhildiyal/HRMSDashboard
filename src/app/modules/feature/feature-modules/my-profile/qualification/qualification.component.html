@@ -164,14 +164,14 @@
             <button class="edit" mat-raised-button (click)="edit()">Edit</button>
             <button class="delete" mat-raised-button (click)="delete(row)">Delete</button>
           </ng-template>
-          <ng-template appFor="Amity_University" let-row="row">
-            {{row.Amity_University}}
+          <ng-template appFor="schoolUni" let-row="row">
+            {{row.schoolUni}}
           </ng-template>
-          <ng-template appFor="time_period" let-row="row">
-            {{ row.time_period }}
+          <ng-template appFor="time" let-row="row">
+            {{ row.time }}
           </ng-template>
-          <ng-template appFor="educational_level" let-row="row">
-            {{ row.educational_level }}
+          <ng-template appFor="professionalCourse" let-row="row">
+            {{ row.professionalCourse }}
           </ng-template>
         </app-common-table>
     </app-listing>

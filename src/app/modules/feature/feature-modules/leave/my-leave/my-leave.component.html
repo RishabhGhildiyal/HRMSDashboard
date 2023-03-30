@@ -1,1 +1,137 @@
-<p>my-leave works!</p>
+<div class="container">
+  <div class="top-card">
+    <div class="col-1">
+      <div class="icon"><mat-icon>calendar_today</mat-icon></div>
+      <div class="leave">
+        <div class="plannedLeave">
+          <p>Planned Leave (CL) (1/6.00)</p>
+        </div>
+        <div class="plannedLeaveBalance">
+          <p>Planned Leave Balance (CL) (1/6.00)</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="icon"><mat-icon>calendar_today</mat-icon></div>
+      <div class="leave">
+        <div class="privilageLeave">
+          <p>Privileged Leave (CL) (1/6.00)</p>
+        </div>
+        <div class="privilageLeaveBalance">
+          <p>Privileged Leave Balance (CL) (1/6.00)</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="icon"><mat-icon>calendar_today</mat-icon></div>
+      <div class="leave">
+        <div class="emergencyLeave">
+          <p>Emergency Leave (CL) (1/6.00)</p>
+        </div>
+        <div class="emergencyLeaveBalance">
+          <p>Emergency Leave Balance (CL) (1/6.00)</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="icon"><mat-icon>calendar_today</mat-icon></div>
+      <div class="leave">
+        <div class="shortLeave">
+          <p>Short Leave (CL) (1/6.00)</p>
+        </div>
+        <div class="shortLeaveBalance">
+          <p>Short Leave Balance (CL) (1/6.00)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mid-card">
+    <div class="add-card">
+      <h2>Add Leave</h2>
+    </div>
+    <div class="button">
+      <button mat-raised-button (click)="toggleAddNew()">+Add New</button>
+    </div>
+  </div>
+  <div class="containers" *ngIf="isShow">
+    <div class="main">
+      <div class="field">
+        <div class="drop-down">
+          <p>Leave Type</p>
+          <mat-form-field appearance="fill">
+            <mat-label>Leave Type</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let leave of leaves" [value]="leave.leave">
+                {{ leave.leave }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-card">
+    <div class="full-card">
+      <!-- <div class="header"> -->
+      <!-- <div class="show">
+        <p>Show</p>
+      </div> -->
+      <!-- <div class="input">
+        <mat-form-field appearance="fill">
+          <mat-label>Show</mat-label>
+          <mat-select [formControl]="numbers">
+            <mat-option
+              *ngFor="let number of numberList"
+              [value]="number.valueOf"
+              >{{ number }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+      </div> -->
+      <!-- <div class="entry">
+        <p>entries</p>
+      </div> -->
+    </div>
+    <!-- </div> -->
+    <div class="search">
+      <span>Search:</span>
+
+      <input type="text" />
+    </div>
+  </div>
+  <div class="table">
+    <app-common-table [tableSource]="tableSource">
+      <!-- <ng-template appFor="sn" let-row="row">
+        {{row.sn }}
+      </ng-template> -->
+      <ng-template appFor="action" let-row="row">
+        {{ row.action }}
+      </ng-template>
+      <ng-template appFor="leave_type" let-row="row">
+        {{ row.leave_type }}
+      </ng-template>
+      <ng-template appFor="request_from" let-row="row">
+        {{ row.request_from }}
+      </ng-template>
+      <ng-template appFor="request_to" let-row="row">
+        {{ row.request_to }}
+      </ng-template>
+      <ng-template appFor="applied_on" let-row="row">
+        {{ row.applied_on }}
+      </ng-template>
+      <ng-template appFor="status" let-row="row">
+        {{ row.status }}
+      </ng-template>
+      <ng-template appFor="level_1" let-row="row">
+        {{ row.level_1 }}
+      </ng-template>
+      <ng-template appFor="level_2" let-row="row">
+        {{ row.level_2 }}
+      </ng-template>
+
+    </app-common-table>
+  </div>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
+</div>

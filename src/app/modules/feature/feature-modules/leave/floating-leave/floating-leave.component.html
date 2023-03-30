@@ -1,1 +1,28 @@
-<p>floating-leave works!</p>
+<div class="container">
+  <div class="head">
+    <h1>Floating Leave</h1>
+  </div>
+  <div class="body">
+    <div class="main">
+      <h2>Availed Floating Leave</h2>
+    </div>
+    <hr />
+    <div class="table">
+      <app-common-table [tableSource]="tableSource">
+        <ng-template appFor="sn" let-row="row">
+          {{ row.sn }}
+        </ng-template>
+        <ng-template appFor="event_name" let-row="row">
+          {{ row.event_name }}
+        </ng-template>
+        <ng-template appFor="date" let-row="row">
+          {{ row.date }}
+        </ng-template>
+      </app-common-table>
+    </div>
+
+  </div>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
+</div>

@@ -1,1 +1,71 @@
-<p>manual-punch works!</p>
+<div class="container">
+  <div class="left-box">
+    <div class="header">
+      <h2>Employee Detail</h2>
+    </div>
+    <div class="main">
+      <div class="box1">
+        <p>Punch Request</p>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input matInput />
+        </mat-form-field>
+      </div>
+      <div class="box2">
+        <p>Department</p>
+        <mat-form-field appearance="outline">
+          <mat-label>Company</mat-label>
+          <mat-select>
+            <mat-option
+              *ngFor="let company of companies"
+              [value]="company.company"
+            >
+              {{ company.company }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="box3">
+        <p>Employee</p>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input matInput />
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div class="right-box">
+    <div class="heading">
+      <div class="head">
+        <h2>Manual Punch List</h2>
+      </div>
+      <div class="button">
+        <button mat-raised-button>+Add new</button>
+      </div>
+    </div>
+    <div class="main-body">
+      <div class="table">
+        <app-common-table [tableSource]="tableSource">
+
+          <!-- <ng-template appFor="sn" let-row="row">
+            {{row.sn }}
+          </ng-template> -->
+          <ng-template appFor="edit" let-row="row">
+            {{row.edit }}
+          </ng-template>
+          <ng-template appFor="manual_punch_date" let-row="row">
+            {{row.manual_punch_date }}
+          </ng-template>
+          <ng-template appFor="in_time" let-row="row">
+            {{row.in_time }}
+          </ng-template>
+           <ng-template appFor="out_time" let-row="row">
+            {{row.out_time }}
+          </ng-template>
+
+        </app-common-table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
+</div>

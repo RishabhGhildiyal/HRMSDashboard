@@ -1,0 +1,83 @@
+@import "../../../../../../scss/mixins";
+@import "../../../../../../scss/global.scss";
+
+.container {
+  padding: 20px;
+  min-height: 80%;
+  display: flex;
+  background-color: #f2f6fc;
+  .left-box {
+    width: 35%;
+    margin-right: 4%;
+    border-radius: 5%;
+    .header {
+      background-color: $pure-white;
+      h2 {
+        padding: 11px 25px 11px 15px;
+        color: #3246d3;
+        margin: 0px;
+      }
+    }
+    .main {
+      margin: 0px;
+      padding: 20px;
+      background-color: $pure-white;
+      .box1 {
+        width: 100%;
+        mat-form-field {
+          width: 100%;
+          // background-color: $pure-white;
+        }
+      }
+      .box2 {
+        margin-right: 10px;
+        width: 100%;
+        mat-form-field {
+          width: 100%;
+          // background-color: $pure-white;
+        }
+        // p {
+        //   margin: 0px;
+        //   color: #96a5b8;
+        // }
+      }
+      .box3 {
+        margin-right: 10px;
+        width: 100%;
+        mat-form-field {
+          width: 100%;
+          // background-color: $pure-white;
+        }
+      }
+    }
+    .button{
+      button{
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), #199CFF;
+        background-blend-mode: soft-light, normal;
+        border: 1px solid rgba(150, 165, 184, 0.2);
+        box-sizing: border-box;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12), inset 0px 2px 0px rgba(255, 255, 255, 0.24);
+        border-radius: 4px;
+        color: #FFFFFF;
+      }
+    }
+  }
+  .right-box{
+    // padding: px;
+    // margin: 0px;
+    width: 60%;
+    .heading{
+      padding: 11px 25px 11px 15px;
+      background-color: $pure-white;
+      display: flex;
+      justify-content: space-between;
+      h2{
+        color: #3246d3;
+        margin: 0px;
+      }
+    }
+    .main-body{
+
+    }
+  }
+}

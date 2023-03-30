@@ -1,0 +1,31 @@
+@import "../../../../../../scss/mixins";
+@import "../../../../../../scss/global.scss";
+
+.container{
+  padding: 40px;
+  min-height: 77%;
+  .head{
+    h1{
+      font-family: "Lato";
+      font-size: 24px;
+      color: #199CFF;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 40px;
+    }
+  }
+.body{
+  padding: 20px;
+  background-color: $pure-white;
+  .main{
+
+  }
+  .table{
+    padding: 10px;
+    table{
+      border-bottom: none;
+    }
+  }
+}
+
+}

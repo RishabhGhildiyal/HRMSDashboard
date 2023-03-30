@@ -1,1 +1,73 @@
-<p>punch-log works!</p>
+<div class="container">
+  <div class="left-box">
+    <div class="header">
+      <h2>Punch Log</h2>
+    </div>
+    <div class="main">
+      <div class="box1">
+        <p>Date</p>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <input matInput />
+        </mat-form-field>
+      </div>
+      <div class="box2">
+        <p>Company</p>
+        <mat-form-field appearance="outline">
+          <mat-label>Company</mat-label>
+          <mat-select>
+            <mat-option
+              *ngFor="let company of companies"
+              [value]="company.company"
+            >
+              {{ company.company }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="button">
+        <button mat-raised-button>Get</button>
+      </div>
+    </div>
+  </div>
+  <div class="right-box">
+    <div class="heading">
+      <div class="head">
+        <h2>Punch Log</h2>
+      </div>
+    </div>
+    <div class="main-body">
+      <div class="table">
+        <app-common-table [tableSource]="tableSource">
+
+          <!-- <ng-template appFor="sn" let-row="row">
+            {{row.sn }}
+          </ng-template> -->
+          <ng-template appFor="name" let-row="row">
+            {{row.name }}
+          </ng-template>
+          <ng-template appFor="punch_time" let-row="row">
+            {{row.punch_time }}
+          </ng-template>
+          <ng-template appFor="direction" let-row="row">
+            {{row.direction }}
+          </ng-template>
+          <!-- <ng-template appFor="trainer_email" let-row="row">
+            {{row.trainer_email }}
+          </ng-template>
+          <ng-template appFor="start_date" let-row="row">
+            {{row.start_date}}
+        </ng-template>
+        <ng-template appFor="end_date" let-row="row">
+          {{row.end_date}}
+        </ng-template>
+        <ng-template appFor="resource_url" let-row="row">
+          {{row.resource_url}}
+        </ng-template> -->
+        </app-common-table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
+</div>
