@@ -1,0 +1,24 @@
+@import ".././../../../../../../../scss/mixins";
+@import "../../../../../../../../scss/global.scss";
+
+.content_container_left{
+  border-radius: 1%;
+  // border: $borderColor;
+
+  .cancel{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+  .pictures{
+
+  img{
+    width: 100%;
+    height: 60%;
+    top:40px
+
+  }
+
+  }
+
+}

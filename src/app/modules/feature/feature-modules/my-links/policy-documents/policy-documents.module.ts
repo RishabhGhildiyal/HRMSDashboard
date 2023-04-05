@@ -7,6 +7,7 @@ import {MatTableModule} from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { commonTableModule } from 'src/app/modules/common/common-table/common-table.module';
 import { ForDirectiveModule } from 'src/app/modules/common/for-directive/for-directive.module';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ForDirectiveModule } from 'src/app/modules/common/for-directive/for-dir
     MatTableModule,
     MatPaginatorModule,
     commonTableModule,
-    ForDirectiveModule
+    ForDirectiveModule,
+    MatButtonModule
   ]
 })
 export class PolicyDocumentsModule { }

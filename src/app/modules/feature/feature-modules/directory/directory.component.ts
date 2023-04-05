@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { FormService } from 'src/app/services/form.service';
-import {membersList} from './directory-const';
+import { membersList } from './directory-const';
 
 @Component({
   selector: 'app-directory',
@@ -9,56 +9,60 @@ import {membersList} from './directory-const';
   styleUrls: ['./directory.component.scss'],
 })
 export class DirectoryComponent implements OnInit {
-  keyupData:any;
-  showList:any;
-  filter:any;
-  reset:string='';
-  departmentSearch:any = 'All';
+  keyupData: any;
+  showList: any;
+  filter: any;
+  reset: string = '';
+  departmentSearch: any = 'All';
   listItem = membersList;
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     this.showList = this.listItem;
   }
 
   searchValue = new FormControl();
-  departments =[
-    {department:'All'},{department:'Angular'},{department:'Android'}, {department:'React'}, {department:'IOS'}, {department:'Flutter'}]
+  departments = [
+    { department: 'All' },
+    { department: 'Angular' },
+    { department: 'Android' },
+    { department: 'React' },
+    { department: 'IOS' },
+    { department: 'Flutter' },
+  ];
   // data=['Aahan Verma','Abhishek Kumar','Abhishek Shukla','Bhavya Goel','Bikramjeet Singh','Deepak Sindhu','Deepak Pokhriyal','Harsh Kukreti','Harshit Pathak']
 
+  filteredData: any[] = this.listItem;
 
-    filteredData: any[] = this.listItem;
-
-    filterDataHandler(filterData:any){
-      console.log("this is filter data...",filterData);
+  filterDataHandler(filterData: any) {
+    console.log('this is filter data...', filterData);
     this.filter = filterData;
-
   }
 
-  clickSearch(){
+  clickSearch() {
     this.showList = this.filter;
   }
 
-  clickReset(){
-    this.reset = '';
-    console.log("reset");
-
-
+  clickReset() {
+    this.departmentSearch = 'All';
+    this.searchValue.setValue('');
+    this.search();
   }
 
-
-  keyfunc(event:any){
+  keyfunc(event: any) {
     this.keyupData = event.target.value;
-    if(this.keyupData.length == 0){
-      this.listItem= this.listItem;
+    if (this.keyupData.length == 0) {
+      this.listItem = this.listItem;
     }
   }
   search() {
     console.log(this.filteredData, 'kkkllnfdknk');
     if (this.searchValue.value) {
-      this.filteredData = this.listItem.filter((item:any) => {
+      this.filteredData = this.listItem.filter((item: any) => {
         if (
-          item.name.toLowerCase().includes(this.searchValue.value.trim().toLowerCase())
+          item.name
+            .toLowerCase()
+            .includes(this.searchValue.value.trim().toLowerCase())
         ) {
           return true;
         }
@@ -68,11 +72,16 @@ export class DirectoryComponent implements OnInit {
       this.filteredData = this.listItem;
     }
 
-    if (this.departmentSearch !== 'All' && this.searchValue.value ) {
-
+    if (this.departmentSearch !== 'All' && this.searchValue.value) {
       console.log('andr');
-      this.filteredData = this.listItem.filter((item:any) => {
-        if (item.position.toLowerCase().includes(this.departmentSearch.toLowerCase()) && item.name.toLowerCase().includes(this.searchValue.value.trim().toLowerCase())
+      this.filteredData = this.listItem.filter((item: any) => {
+        if (
+          item.position
+            .toLowerCase()
+            .includes(this.departmentSearch.toLowerCase()) &&
+          item.name
+            .toLowerCase()
+            .includes(this.searchValue.value.trim().toLowerCase())
         ) {
           return true;
         }
@@ -87,7 +96,7 @@ export class DirectoryComponent implements OnInit {
     if (this.departmentSearch) {
       const search = this.departmentSearch.toLowerCase();
       console.log(search);
-      this.filteredData = this.listItem.filter((item:any) => {
+      this.filteredData = this.listItem.filter((item: any) => {
         const department = item.position.toLowerCase();
 
         if (department.includes(search)) {

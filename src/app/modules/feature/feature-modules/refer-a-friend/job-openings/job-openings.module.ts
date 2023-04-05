@@ -7,6 +7,7 @@ import { JobOpeningsComponent } from './job-openings.component';
 import { JobCardModule } from 'src/app/components/job-card/job-card.module';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FooterModule } from '../../../feature-parts/footer/footer.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,7 +19,9 @@ import { FooterModule } from '../../../feature-parts/footer/footer.module';
     JobOpeningsRoutingModule,
     JobCardModule,
     MatDialogModule,
-    FooterModule
+    FooterModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class JobOpeningsModule { }

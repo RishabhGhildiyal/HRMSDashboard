@@ -9,6 +9,7 @@
           {{row.sn }}
         </ng-template>
         <ng-template appFor="name" let-row="row">
+          <img class="image" src="https://dashboard.appinventiv.com/skin/hrsale_assets/img/repository/picture_as_pdf_black_24dp.svg" alt="">
           {{row.name }}
         </ng-template>
         <ng-template appFor="type" let-row="row">
@@ -22,7 +23,7 @@
         </ng-template>
         <ng-template appFor="actions" let-row="row">
 
-          <button (click)="downloadFile(row)">Download</button>
+          <button mat-button class="download" (click)="downloadFile(row)">Download <img src="https://dashboard.appinventiv.com/skin/hrsale_assets/img/ic-download.svg"></button>
       </ng-template>
 
       </app-common-table>

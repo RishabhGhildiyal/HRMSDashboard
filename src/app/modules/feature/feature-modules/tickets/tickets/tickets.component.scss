@@ -1,0 +1,78 @@
+@import "../../../../../../scss/global.scss";
+@import "../../../../../../scss/mixins";
+
+.container {
+  padding: 40px;
+  min-height: 77%;
+
+  .main {
+    .main-body {
+      background-color: $pure-white;
+      padding: 20px;
+      margin-bottom: 20px;
+      .card-top{
+        display: flex;
+        justify-content: space-between;
+
+        .newTicket {
+          h2 {
+            color: #3246d3;
+          }
+        }
+        .button {
+          button {
+            // border-color: #26b4ff;
+            // box-shadow: 1px #26b4ff inset;
+            height: 30px;
+            // color: #26b4ff;
+            background: transparent;
+            -webkit-box-shadow: 0 0 0 1px #26b4ff inset;
+            box-shadow: 0 0 0 1px #26b4ff inset;
+            color: #26b4ff;
+          }
+        }
+      }
+      .containers {
+        display: grid;
+        grid-template-columns: 48% 48%;
+        column-gap: 4%;
+        margin-top: 2%;
+        .left_container {
+          .buttons {
+            display: grid;
+            grid-template-columns: 15% 15%;
+            column-gap: 4%;
+            .cancel {
+              color: white;
+              background-color: red;
+            }
+
+            .save {
+              color: white;
+              background-color: green;
+            }
+          }
+          .date_main {
+            display: grid;
+            grid-template-columns: 48% 48%;
+            column-gap: 4%;
+          }
+          .data {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+    .body {
+      background-color: $pure-white;
+      padding: 10px;
+      margin-left: 4px;
+      .heading {
+        h1 {
+          color: #3246d3;
+        }
+      }
+    }
+  }
+}

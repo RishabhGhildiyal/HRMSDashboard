@@ -4,7 +4,7 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { PAGE_OPTIONS } from 'src/app/constants/common-constants';
+import { EDUCATION_LEVEL, LANGUAGE, PAGE_OPTIONS } from 'src/app/constants/common-constants';
 import { Table } from 'src/app/modules/common/common-table/table.types';
 import { FormService } from 'src/app/services/form.service';
 import { DialogComponentComponent } from './dialog-component/dialog-component.component';
@@ -39,17 +39,8 @@ import {
 export class QualificationComponent implements OnInit {
   infoForm!: FormGroup;
   language: string[] = ['English', 'Hindi'];
-  education: string[] = [
-    'High School Diploma/GED',
-    'Btech',
-    'Mtech',
-    'BE',
-    'Bsc',
-    'BCA',
-    'MCA',
-    'BBA',
-    'Msc',
-  ];
+  today = new Date();
+
   constructor(
     private fb: FormBuilder,
     private service: FormService,
@@ -68,6 +59,7 @@ export class QualificationComponent implements OnInit {
       time: this.service.getControl('time'),
       toInput: this.service.getControl('toInput'),
       professionalCourse: this.service.getControl('professionalCourse'),
+      language: this.service.getControl('language')
     });
   }
 
@@ -93,21 +85,21 @@ export class QualificationComponent implements OnInit {
   }
 
   // @ViewChild() abc!:HTMLElement;
-  docsData: Array<any> = [
-    {
-      schoolUni: ' Amity University',
-      time: '	Jul-08-2019 - Jun-06-2022',
-      professionalCourse: 'MCA',
-      // last_modified: 'May-13-2022',
-    },
-    {
-      schoolUni: ' dit University',
-      time: '	Jul-08-2019 - Jun-06-2022',
-      professionalCourse: 'MCA',
-      // last_modified: 'May-13-2022',
-    },
+  DOCS_DATA = [ {
+    schoolUni: ' Amity University',
+    time: '	Jul-08-2019 - Jun-06-2022',
+    professionalCourse: 'MCA',
+    // last_modified: 'May-13-2022',
+  },
+  {
+    schoolUni: ' dit University',
+    time: '	Jul-08-2019 - Jun-06-2022',
+    professionalCourse: 'BCA',
+    // last_modified: 'May-13-2022',
+  },]
 
-  ];
+  docsData: Array<any> = this.DOCS_DATA;
+
   listingConfig = DOCUMENTS_LIST_CONFIG;
   pageOptions = PAGE_OPTIONS;
   tableSource: Table.Source<any> = new UserTableDataSource([]);
@@ -115,6 +107,18 @@ export class QualificationComponent implements OnInit {
   //column names are fetched fromt the model file and data is fetched though API or const data file
 
   populateTable(pageOptions: any) {
+
+    if(pageOptions.hasOwnProperty('search')){
+      this.docsData = this.docsData.filter((item:any)=>{
+        if(
+          (item.schoolUni.toLowerCase()).includes(pageOptions.search.toLowerCase()) ||
+          (item.professionalCourse.toLowerCase()).includes(pageOptions.search.toLowerCase())
+        ){  //for custom search on individual fields
+          return item;
+        }
+      })
+    }
+
     this.listingConfig.total = this.docsData.length;
 
     let beg = pageOptions.page * pageOptions.limit - pageOptions.limit;
@@ -138,7 +142,7 @@ export class QualificationComponent implements OnInit {
 
   edit() {
     const dialogRef = this.dialog.open(DialogComponentComponent, {
-      // width:'30rem'
+      // width:'30rem
     });
 
     dialogRef.afterClosed().subscribe((result: any) => {
@@ -152,8 +156,23 @@ export class QualificationComponent implements OnInit {
 
   onTableEventChange(data: any) {
     this.pageOptions = data;
+    console.log(data,"9887");
+    this.docsData = this.DOCS_DATA; 
     this.populateTable(this.pageOptions);
   }
 
   fetchData() {}
+
+  schoolUniData = {
+    // label:'School/University',
+    placeholder:'school/university',
+    list: EDUCATION_LEVEL
+  }
+
+  languageData ={
+    // label: 'language',
+    placeholder:'language',
+    list: LANGUAGE
+  }
+
 }

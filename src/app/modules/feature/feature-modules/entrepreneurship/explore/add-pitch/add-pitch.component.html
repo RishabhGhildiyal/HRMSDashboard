@@ -4,7 +4,7 @@
       <h1>Add Pitch</h1>
     </div>
     <div class="buttons">
-      <button class="cancel">Cancel</button>
+      <button class="cancel" (click)="route()">Cancel</button>
       <button class="submit" (click)="valid()">Submit</button>
     </div>
   </div>
@@ -27,7 +27,7 @@
             <input matInput formControlName="empId" />
             <mat-error>{{
               infoForm | showError : "empId" : "Employee Id"
-            }}</mat-error>
+              }}</mat-error>
           </mat-form-field>
         </div>
       </div>
@@ -35,21 +35,12 @@
         <div class="input-box">
           <label>Date of birth</label>
           <mat-form-field appearance="outline">
-            <input
-              matInput
-              [matDatepicker]="picker1"
-              [max]="today"
-              readonly="true"
-              formControlName="dateOfBirth"
-            />
-            <mat-datepicker-toggle
-              matSuffix
-              [for]="picker1"
-            ></mat-datepicker-toggle>
+            <input matInput [matDatepicker]="picker1" [max]="today" readonly="true" formControlName="dateOfBirth" />
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
             <mat-datepicker #picker1></mat-datepicker>
             <mat-error>{{
               infoForm | showError : "dateOfBirth" : "Date of birth"
-            }}</mat-error>
+              }}</mat-error>
           </mat-form-field>
         </div>
       </div>
@@ -63,24 +54,20 @@
         <input matInput formControlName="empTitle" />
         <mat-error>{{
           infoForm | showError : "empTitle" : "Pitch Title"
-        }}</mat-error>
+          }}</mat-error>
       </mat-form-field>
     </div>
     <div class="input-box">
       <label>Industry</label>
       <mat-form-field appearance="outline">
-        <mat-select
-          matInput
-          placeholder="Select Industry "
-          formControlName="industry"
-        >
+        <mat-select matInput placeholder="Select Industry " formControlName="industry">
           <mat-option value="option1">Option 1</mat-option>
           <mat-option value="option2">Option 2</mat-option>
           <mat-option value="option3">Option 3</mat-option>
         </mat-select>
         <mat-error>{{
           infoForm | showError : "industry" : "Industry"
-        }}</mat-error>
+          }}</mat-error>
       </mat-form-field>
     </div>
     <div class="input-box">
@@ -93,7 +80,10 @@
         <mat-error>{{ infoForm | showError : "type" : "Type" }}</mat-error>
       </mat-form-field>
     </div>
-    <angular-editor [placeholder]="'Enter text here...'"></angular-editor>
+    <div>
+
+      <angular-editor [config] ="editorConfig"  [placeholder]="'Enter text here...'"></angular-editor>
+    </div>
 
     <div class="no-file-chosen">
       <label></label>Presentation - (Share your detailed presentaion on the

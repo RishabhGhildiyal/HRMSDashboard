@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogComponentComponent } from '../../my-profile/qualification/dialog-component/dialog-component.component';
+
 
 @Component({
   selector: 'app-job-openings',
@@ -13,7 +13,5 @@ export class JobOpeningsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  openDialog(){
-    this.dialog.open(DialogComponentComponent)
-  }
+
 }

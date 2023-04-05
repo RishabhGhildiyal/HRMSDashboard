@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ListingComponent } from './listing.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { PaginatorStyleDirective } from 'src/app/directives/paginator-style.directive';
+import { SearchFilterModule } from '../../search-filter/search-filter/search-filter.module';
 
 
 
@@ -13,7 +14,9 @@ import { PaginatorStyleDirective } from 'src/app/directives/paginator-style.dire
   ],
   imports: [
     CommonModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+
+    SearchFilterModule
   ],
   exports:[
     ListingComponent

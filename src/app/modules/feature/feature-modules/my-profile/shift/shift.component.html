@@ -4,12 +4,15 @@
       <h2>List All Shift</h2>
     </div>
     <div class="table">
-      <!-- <app-common-table
-        [tableColumns]="tableColumns"
-        [tableData]="tableData"
-        [isPageable]="false"
-        [defaultPageSize]="3"
-      ></app-common-table> -->
+      <app-common-table [tableSource]="tableSource">
+        <!-- <ng-template appFor="sn" let-row="row"> {{ row.sn }}8 </ng-template> -->
+        <ng-template appFor="date_of_joining" let-row="row">
+          {{ row.date_of_joining }}
+        </ng-template>
+        <ng-template appFor="office_shift" let-row="row">
+          {{ row.office_shift }}
+        </ng-template>
+      </app-common-table>
     </div>
   </div>
 </div>

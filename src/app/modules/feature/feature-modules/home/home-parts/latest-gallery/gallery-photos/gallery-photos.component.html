@@ -1,13 +1,18 @@
-<section>
-  <div class="cancel-icon" (click)="crossClick()">
-    <i class="fa-solid fa-xmark"></i>
-  </div>
-  <!-- <app-carousel [listToShow]="dataSource"  ></app-carousel> -->
-  <ng-container *ngFor="let item of data">
-    <!-- <ng-template #listofDivs> -->
-    <img [src]="[item]" class="image" />
-    <!-- </ng-template> -->
-  </ng-container>
-</section>
+<div class="content_container_left">
+  <div class="cancel">
 
-<!-- <p>defewfewf</p> -->
+    <mat-icon [mat-dialog-close]>cancel</mat-icon>
+  </div>
+  <app-carousel [carouselConfigFinal]="carouselConfigGallery" [listToShow]="dataSource"></app-carousel>
+  <ng-container *ngFor="let member of listOfNewFamilyMembers">
+    <ng-template #listofDivs>
+  <div class="pictures">
+    <img
+      src="https://dashboard.appinventiv.com/uploads/gallery/award_1649320793321.jpg">
+
+  </div>
+  </ng-template>
+  </ng-container>
+
+
+</div>

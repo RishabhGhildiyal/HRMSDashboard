@@ -1,47 +1,40 @@
-@import "../../../../../../scss/_mixins.scss";
+@import "../../../../../../scss/mixins";
 @import "../../../../../../scss/global.scss";
 
 .container {
-  padding: 40px;
-  h1 {
-    color: $darkblue;
+  padding: 20px;
+  min-height: 80%;
+  .heading {
+    h1 {
+      color: $primary-blue;
+      font-size: x-large;
+    }
   }
   .main {
-    .table {
+    .body {
+      background-color: $pure-white;
       padding: 20px;
-      .action {
-        td {
-          button {
-          }
-        }
-      }
-      table {
+      .table {
         border: $borderColor;
-        width: 100%;
-        box-shadow: none;
-        overflow-x: scroll;
-        th {
-          word-break: break-word;
-          border: 1px solid #f1f1f2;
-          overflow-x: scroll;
+        button {
+          background-color: #f8f8f8;
+          color: #3c8ae2;
         }
-        td {
-          border: 1px solid #f1f1f2;
-          padding-left: 10px;
-          overflow-x: scroll;
-          // word-wrap: break-word;
-          .edit {
-            color: $pure-white;
-            background-color: grey;
-            margin-bottom: 7px;
-            width: 10px;
-          }
-          .delete {
-            color: $pure-white;
-            background-color: red;
-          }
+        table {
         }
       }
     }
   }
 }
+
+::ng-deep.mat-form-field-type-mat-select:not(.mat-form-field-disabled)
+  .mat-form-field-flex {
+  cursor: pointer;
+  background-color: white;
+  border: $borderColor;
+  //  width: 100%;
+}
+
+// ::ng-deep mat-form-field{
+//   width: 100%;
+// }

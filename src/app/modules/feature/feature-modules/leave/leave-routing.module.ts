@@ -14,7 +14,8 @@ const routes: Routes = [
   {
     path:MY_LEAVE.path,
     loadChildren:() => import('./my-leave/my-leave.module').then((m)=>m.MyLeaveModule)
-  }
+  },
+
 ];
 
 @NgModule({

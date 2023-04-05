@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { PAGE_OPTIONS } from 'src/app/constants/common-constants';
 import { REFERRAL_LIST } from 'src/app/interfaces/interface';
+import { Table } from 'src/app/modules/common/common-table/table.types';
+import { DOCUMENTS_LIST_CONFIG, UserTableDataSource } from './referral-list.model';
 
 
 @Component({
@@ -10,65 +13,48 @@ import { REFERRAL_LIST } from 'src/app/interfaces/interface';
 export class ReferralListComponent implements OnInit {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
-  tableColumns: Array<any> = [
+  // @ViewChild() abc!:HTMLElement;
+  docsData: Array<any> = [
     {
-      columnDef: 's_no',
-      header: 'S No.',
-      cell: (element: Record<string, any>) => `${element['s_no']}`,
-    },
-    {
-      columnDef: 'CandidateName',
-      header:'Candidate Name',
-      cell: (element: Record<string, any>) => `${element['CandidateName']}`,
-    },
-    {
-      columnDef: 'experience',
-      header: 'Experience',
-      cell: (element: Record<string, any>) => `${element['experience']}`,
-    },
-    {
-      columnDef: 'department',
-      header: 'Department',
-      cell: (element: Record<string, any>) => `${element['department']}`,
-    },
-    {
-      columnDef: 'position',
-      header: 'Position ',
-      cell: (element: Record<string, any>) => `${element['position']}`,
-    },
-    {
-      columnDef: 'date_of_referral',
-      header: 'Date of Referral',
-      cell: (element: Record<string, any>) => `${element['date_of_referral']}`,
-    },
-    {
-      columnDef: 'candidate_status',
-      header: 'Candidate Status',
-      cell: (element: Record<string, any>) => `${element['candidate_status']}`,
-    },
-    {
-      columnDef: 'resume',
-      header: 'Resume',
-      cell: (element: Record<string, any>) => `${element['resume']}`,
-    },
-
-  ];
-
-
-  tableData: Array<REFERRAL_LIST> = [
-    {
-      s_no: '1',
-      CandidateName: 'Parth',
-      experience: '2.5 Years',
+      c_name: 'Parth Daga',
+      experience: '2.5 Years	',
       department: 'Business Analyst',
-      position: 'Business Analyst',
-      date_of_referral: 'Jan-10-2023',
-      candidate_status:'CV Rjected',
-      resume: 'download'
+      position: 'Sr. Business Analyst',
+      date_of_referral:'2022-01-10',
+      c_status:'CV Rejected',
+      resume_cv:'Download',
     },
   ];
+  listingConfig = DOCUMENTS_LIST_CONFIG ;
+  pageOptions = PAGE_OPTIONS;
+  tableSource: Table.Source<any> = new UserTableDataSource([]);
+  // tableSource is 2 things : columnNames and data
+  //column names are fetched fromt the model file and data is fetched though API or const data file
+  ngOnInit(): void {
+    this.populateTable(this.pageOptions);
+  }
+
+  populateTable(pageOptions:any){
+    this.listingConfig.total = this.docsData.length;
+
+    let beg = pageOptions.page * pageOptions.limit - pageOptions.limit;
+    let end = pageOptions.page * pageOptions.limit
+
+    let displayRow = [];
+    for(let i=beg; i<end && i<this.listingConfig.total ; i++){
+       displayRow.push(this.docsData[i]);
+    }
+
+    this.tableSource = new UserTableDataSource(
+      displayRow.map((item: any, index:number) => ({ ...item, sn: '' }))
+    );
+    console.log(this.tableSource,"123TS");
+
+  }
+
+  downloadFile(row:any){
+    console.log(row,"123");
+
+  }
 
 }

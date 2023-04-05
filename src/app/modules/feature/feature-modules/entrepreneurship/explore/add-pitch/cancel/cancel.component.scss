@@ -1,0 +1,18 @@
+@import "../../../../../../../../scss/mixins";
+@import "../../../../../../../../scss/global.scss";
+
+.container{
+  padding: 40px;
+  min-height: 77%;
+  .head{
+    h1{
+      color: $primary-blue;
+    }
+  }
+  .main{
+    background-color: $pure-white;
+    .table{
+      padding: 20px;
+    }
+  }
+}

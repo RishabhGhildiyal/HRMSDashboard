@@ -7,7 +7,7 @@ export const sideNavList = [
   { title: 'Directory', logo: 'description',isActive: true, routerLink:DIRECTORY.path },
   { title: 'Entrepreneurship Program', logo: 'person', options: [{ subTitle: 'Explore',routerLink:EXPLORE.fullurl ,subLogo: 'horizontal_rule' }], isActive: true, },
   { title: 'My Links', logo: 'grid_view', options:
-   [{ subTitle: 'Insurance Verification Details', subLogo: 'horizontal_rule',routerLink:INSURANCE_VERIFICATION_DETAILS.fullurl},
+   [{ subTitle: 'Insurance Verification Details', subLogo: 'horizontal_rule',routerLink:HOME.path},
    {subTitle:"Holiday Calender 2023", subLogo:'horizontal_rule',routerLink:HOLIDAY_CALENDER.fullurl},
    {subTitle:"Policy Documents", subLogo:'horizontal_rule',routerLink:POLICY_DOCUMENTS.fullurl}
   ], isActive: true },
@@ -47,7 +47,7 @@ export const sideNavList = [
   { title: 'Announcements', logo: 'campaign', isActive: false, },
   { title: 'Travels', logo: 'flight', isActive: false, },
   { title: 'Logout', logo: 'logout', isActive: true, },
-  { title: 'Logout', logo: 'logout', isActive: true, },
+  // { title: 'Logout', logo: 'logout', isActive: true, },
 ]
 
 

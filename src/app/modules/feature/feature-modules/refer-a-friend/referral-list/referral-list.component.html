@@ -1,9 +1,39 @@
 <div class="container">
-  <h1>Referral List</h1>
+  <div class="heading">
+    <h1>My Referral List</h1>
+  </div>
   <div class="main">
-    <div class="table">
-      <!-- <app-common-table ></app-common-table> -->
-      <!-- <app-common-table [tableColumns]="tableColumns" [tableData]="tableData" [isPageable]="false" [defaultPageSize]="3" ></app-common-table> -->
+    <div class="body">
+      <div class="table">
+        <!-- <app-common-table ></app-common-table> -->
+        <app-common-table [tableSource]="tableSource">
+          <ng-template appFor="sn" let-row="row"> {{ row.sn }}</ng-template>
+          <ng-template appFor="c_name" let-row="row">
+            {{ row.c_name }}
+          </ng-template>
+          <ng-template appFor="experience" let-row="row">
+            {{ row.experience }}
+          </ng-template>
+          <ng-template appFor="department" let-row="row">
+            {{ row.department }}
+          </ng-template>
+          <ng-template appFor="position" let-row="row">
+            {{ row.position }}
+          </ng-template>
+          <ng-template appFor="date_of_referral" let-row="row">
+            {{ row.date_of_referral }}
+          </ng-template>
+          <ng-template appFor="c_status" let-row="row">
+            {{ row.c_status }}
+          </ng-template>
+          <ng-template appFor="resume_cv" let-row="row">
+            <button mat-raised-button (click)="downloadFile(row)">Download</button>
+          </ng-template>
+        </app-common-table>
+      </div>
     </div>
   </div>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
 </div>

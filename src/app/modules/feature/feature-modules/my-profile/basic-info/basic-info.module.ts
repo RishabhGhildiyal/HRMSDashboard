@@ -13,6 +13,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { SnackbarService } from 'src/app/services/snackbar.service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { InputSearchModule } from 'src/app/modules/common/input-search/input-search.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     ShowErrorModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    InputSearchModule
   ],
 })
 export class BasicInfoModule { }

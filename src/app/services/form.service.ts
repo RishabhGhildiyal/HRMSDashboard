@@ -40,6 +40,12 @@ export class FormService {
     industry:[Validators.pattern],
     dateOfBirth:[Validators.pattern],
     type:[Validators.pattern],
+    language:[Validators.pattern],
+    gender:[Validators.pattern],
+    marital:[Validators.pattern],
+    hours:[Validators.pattern],
+    project:[Validators.pattern],
+    date:[Validators.pattern]
   };
 
   getControl(name: string, required = true) {

@@ -9,37 +9,24 @@
   .main {
     .table {
       padding: 20px;
-      .action {
+      .image{
+        // position: relative;
+        margin-top: 10px;
+      }
+      .actions {
         td {
-          button {
-          }
         }
       }
-      table {
-        border: $borderColor;
-        width: 100%;
-        box-shadow: none;
-        overflow-x: scroll;
-        th {
-          word-break: break-word;
-          border: 1px solid #f1f1f2;
-          overflow-x: scroll;
-        }
-        td {
-          border: 1px solid #f1f1f2;
-          padding-left: 10px;
-          overflow-x: scroll;
-          // word-wrap: break-word;
-          .edit {
-            color: $pure-white;
-            background-color: grey;
-            margin-bottom: 7px;
-            width: 10px;
-          }
-          .delete {
-            color: $pure-white;
-            background-color: red;
-          }
+
+      .download {
+        display: flex;
+        justify-content: center;
+        background-color: #f8f8f8;
+        color: $primary-blue;
+        width: 200px;
+        border-radius:5px;
+        img {
+          margin-left: 15px;
         }
       }
     }

@@ -120,6 +120,13 @@ export const ADD_PITCH: Iroute={
   }
 }
 
+export const CANCEL: Iroute={
+  path:'my-ideas',
+  get fullurl(): string{
+    return `${ADD_PITCH.fullurl}/${this.path}`
+  }
+}
+
 
 
 
@@ -261,21 +268,28 @@ export const TRAINING_DETAIL : Iroute={
 export const LEAVE : Iroute={
   path:'leave',
   get fullurl():string{
-    return `/${this.path}`
+    return `${DASHBOARD.fullurl}/${this.path}`
   }
 }
 
 export const FLOATING_LEAVE: Iroute={
-  path:'leave/floating-leave',
+  path:'floating-leave',
   get fullurl():string{
-    return `/${DASHBOARD.fullurl}/${LEAVE.fullurl}/${this.path}`
+    return `${LEAVE.fullurl}/${this.path}`
   }
 }
 
 export const MY_LEAVE : Iroute={
-  path:'leave/my-leave',
+  path:'my-leave',
   get fullurl():string{
-    return `/${DASHBOARD.fullurl}/${LEAVE.fullurl}/${this.path}`
+    return `${LEAVE.fullurl}/${this.path}`
+  }
+}
+
+export const VIEW_DETAILS : Iroute={
+  path:'view-details',
+  get fullurl():string{
+    return `${MY_LEAVE.fullurl}/${this.path}`
   }
 }
 

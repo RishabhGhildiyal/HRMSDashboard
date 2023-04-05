@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ReferAFriendRoutingModule } from './refer-a-friend-routing.module';
 import { ReferAFriendComponent } from './refer-a-friend.component';
 import { FooterModule } from '../../feature-parts/footer/footer.module';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { FooterModule } from '../../feature-parts/footer/footer.module';
   imports: [
     CommonModule,
     ReferAFriendRoutingModule,
-    FooterModule
+    FooterModule,
+    MatDialogModule
   ]
 })
 export class ReferAFriendModule { }

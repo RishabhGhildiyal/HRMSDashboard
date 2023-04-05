@@ -67,48 +67,98 @@
       }
     }
   }
-  .directory-body {
-    .card {
-      overflow: hidden;
-      padding: 20px;
-      border: 0px;
-      background-clip: content-box;
+  .card_lower {
+    @include grid(grid-template-columns, 30% 30% 30%, 3%);
+    .card_body {
+      padding: 30px 0 40px;
+      margin-bottom: 30px;
+      margin-left: 20px;
       background-color: #f7f5ec;
-      .directory-card-top {
-        overflow: hidden;
-        @include flex(center, center);
-        padding: 30px 0px 20px 0px;
-        position: relative;
-        min-height: 200px;
-        .img-wrapper {
-          position: absolute;
-          @include flex(center, space-between);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      .picture {
+        img {
+          width: 140px;
+          height: 140px;
           border-radius: 50%;
-          width: 130px;
-          height: 130px;
-          border: 0px;
-          padding: 0px;
-          background-color: white;
-          transition: border 1s, padding 1s;
-          img {
-            border-radius: 50%;
-            width: 100%;
-            height: 100%;
-            z-index: 20;
-            transition: width 1s, height 1s;
+          margin-bottom: 10px;
+        }
+      }
+
+      .team {
+        h3 {
+          margin-bottom: 4px;
+          font-size: 25px;
+          font-weight: 400;
+        }
+
+        p {
+          font-size: 15px;
+          color: #4e5052;
+        }
+        .personal_info {
+          text-align: left;
+          margin-left: 20px;
+
+          p {
+            color: #464646;
+            margin: 0;
+            overflow: hidden;
+            span {
+              font-weight: bolder;
+              margin-right: 10px;
+            }
+
+            mat-icon {
+              position: relative;
+              top: 3px;
+              right: 5px;
+            }
           }
         }
       }
-      .directory-card-mid {
-        overflow: hidden;
 
-        h3 {
-          text-align: center;
-          font-size: 25px;
+      &:hover {
+        .card-hover {
+          height: 200px;
+          transition: all 1s ease 0.1s;
+          background-color: #1369ce;
         }
-        h4 {
-          text-align: center;
+        .picture {
+          // box-shadow: #199CFF;
+          img {
+            // background-color: black;
+            border-radius: 50%;
+            box-shadow: 0 0 0 14px #1369ce;
+            transform: scale(0.7);
+            transition: all 1s ease 0.1s;
+          }
         }
+        .social {
+          bottom: 0px;
+          transition: all 1s ease 0.1s;
+          background-color: #1369ce;
+        }
+      }
+      .card-hover {
+        width: 80%;
+        height: 0px;
+        margin-left: 32px;
+        border-radius: 90%;
+        background-color: #1369ce;
+        top: -30%;
+        opacity: 0.9;
+        position: absolute;
+      }
+      .social {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background-color: #1369ce;
+        position: absolute;
+        bottom: -100px;
+        left: 0;
       }
     }
   }

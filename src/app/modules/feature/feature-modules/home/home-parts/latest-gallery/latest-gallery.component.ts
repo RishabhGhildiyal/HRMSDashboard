@@ -16,38 +16,6 @@ import { GalleryPhotosComponent } from './gallery-photos/gallery-photos.componen
   styleUrls: ['./latest-gallery.component.scss'],
 })
 export class LatestGalleryComponent implements OnInit {
-  slide: boolean[] = [];
-  image: any[] = [
-    {
-      url: '../../../../../../../assets/award_1660310382113.jpg',
-      subImages: [
-        '../../../../../../../assets/award_1672292016846.jpg',
-        '../../../../../../../assets/Best Place to work.png',
-      ],
-    },
-    {
-      url: '../../../../../../../assets/award_1665553979253.jpg',
-      subImages: [
-        '../../../../../../../assets/award_1669014343495.png',
-        '../../../../../../../assets/Christmas.png',
-      ],
-    },
-    {
-      url: '../../../../../../../assets/award_1669014343495.png',
-      subImages: [
-        '../../../../../../../assets/award_1672292016846.jpg',
-        '../../../../../../../assets/Republic Day.png',
-      ],
-    },
-    {
-      url: '../../../../../../../assets/award_1672292016846.jpg',
-      subImages: [
-        '../../../../../../../assets/award_1660310382113.jpg',
-        '../../../../../../../assets/award_1669014343495.png',
-      ],
-    },
-  ];
-
   listOfNewFamilyMembers = [1, 2];
   @ViewChildren('listofDivs', { read: TemplateRef }) listToShow!: QueryList<
     ElementRef<HTMLDivElement>
@@ -64,8 +32,8 @@ export class LatestGalleryComponent implements OnInit {
     }, 500);
   }
   carouselConfigGallery: NguCarouselConfig = {
-    grid: { xs: 1, sm: 1, md: 2, lg: 3, all: 0 },
-    // gridBreakpoints: { sm: 750, md: 992, lg: 1200, xl: 1200 },
+    grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },
+    // gridBreakpoints:{sm: 750, md: 992, lg: 1200, xl: 1200},
     load: 1,
     interval: { timing: 4000, initialDelay: 1000 },
     loop: true,
@@ -73,16 +41,17 @@ export class LatestGalleryComponent implements OnInit {
     velocity: 0.2,
     point: {
       visible: true,
-      hideOnSingleSlide: true,
-    },
-  };
-  openDialog(item: any) {
-    console.log(item);
-
-    const data = this.dialog.open(GalleryPhotosComponent, {
-      width: '350px',
-      data: item,
+      hideOnSingleSlide: true
+    }
+    };
+  openDialog() {
+    const dialogRef = this.dialog.open(GalleryPhotosComponent, {
+      width: '50%',
     });
-    // this.dialog.open(GalleryPhotosComponent);
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
+  slide: boolean[] = [];
 }

@@ -17,9 +17,11 @@
 
       // margin-bottom: 10px;
       .icon {
+        color: #02bc77;
         margin-right: 10px;
       }
       p {
+        color: #a3a4a6;
         font-size: small;
       }
     }
@@ -29,9 +31,11 @@
       padding: 1.5rem;
       margin-right: 10px;
       .icon {
+        color: #02bc77;
         margin-right: 10px;
       }
       p {
+        color: #a3a4a6;
         font-size: small;
       }
     }
@@ -41,9 +45,12 @@
       padding: 1.5rem;
       margin-right: 10px;
       .icon {
+        color: #02bc77;
         margin-right: 10px;
       }
       p {
+        font-weight: 400;
+        color: #a3a4a6;
         font-size: small;
       }
     }
@@ -53,9 +60,11 @@
       padding: 1.5rem;
       margin-right: 10px;
       .icon {
+        color: #02bc77;
         margin-right: 10px;
       }
       p {
+        color: #a3a4a6;
         font-size: small;
       }
     }
@@ -73,6 +82,38 @@
       button {
         border: #26b4ff;
         color: #26b4ff;
+      }
+    }
+  }
+  .containers {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    column-gap: 4%;
+    background-color: $pure-white;
+    padding: 20px;
+    .left_container {
+      .buttons {
+        display: grid;
+        grid-template-columns: 15% 15%;
+        column-gap: 4%;
+        .cancel {
+          color: white;
+          background-color: red;
+        }
+
+        .save {
+          color: white;
+          background-color: green;
+        }
+      }
+      .date_main {
+        display: grid;
+        grid-template-columns: 48% 48%;
+        column-gap: 4%;
+      }
+      .data {
+        display: flex;
+        flex-direction: column;
       }
     }
   }
@@ -121,6 +162,14 @@
         height: 40px;
         margin-right: 20px;
         width: 14vw;
+      }
+    }
+  }
+  .table {
+    table {
+      button {
+        width: 33%;
+        padding: 0px;
       }
     }
   }

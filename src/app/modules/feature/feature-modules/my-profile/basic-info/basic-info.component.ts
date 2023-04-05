@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { GENDER, MARITAL_STATUS } from 'src/app/constants/common-constants';
 import { ShowErrorPipe } from 'src/app/pipes/showErrorPipe/show-error.pipe';
 import { FormService } from 'src/app/services/form.service';
 import { SnackbarService } from 'src/app/services/snackbar.service';
@@ -51,6 +52,8 @@ export class BasicInfoComponent implements OnInit {
       contactNumber: this.service.getControl('contactNumber'),
       years: this.service.getControl('years'),
       months: this.service.getControl('months'),
+      gender:this.service.getControl('gender'),
+      marital:this.service.getControl('marital')
     });
   }
 
@@ -66,4 +69,16 @@ export class BasicInfoComponent implements OnInit {
       })
     }
   }
+
+  genderData ={
+    label: 'gender',
+    placeholder:'gender',
+    list: GENDER
+  }
+  maritalData ={
+    label: 'Marital Status',
+    placeholder:'Marital Status',
+    list: MARITAL_STATUS
+  }
+
 }

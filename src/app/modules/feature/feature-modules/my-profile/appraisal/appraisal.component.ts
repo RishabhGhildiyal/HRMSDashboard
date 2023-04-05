@@ -31,5 +31,6 @@ export class AppraisalComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
 
 }

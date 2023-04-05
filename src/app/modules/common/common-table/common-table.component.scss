@@ -1,3 +1,8 @@
-table{
-  width: 100%;
+.container{
+  .tables{
+    overflow-x: auto;
+    table{
+      width: 100%;
+    }
+  }
 }

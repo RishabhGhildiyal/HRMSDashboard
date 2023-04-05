@@ -5,6 +5,7 @@ import { ShiftRoutingModule } from './shift-routing.module';
 import { ShiftComponent } from './shift.component';
 import {MatTableModule} from '@angular/material/table';
 import { commonTableModule } from 'src/app/modules/common/common-table/common-table.module';
+import { ForDirectiveModule } from 'src/app/modules/common/for-directive/for-directive.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { commonTableModule } from 'src/app/modules/common/common-table/common-ta
     CommonModule,
     ShiftRoutingModule,
     MatTableModule,
-    commonTableModule
+    commonTableModule,
+    ForDirectiveModule
   ]
 })
 export class ShiftModule { }

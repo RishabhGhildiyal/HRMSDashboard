@@ -49,13 +49,26 @@ export class ChangePasswordComponent implements OnInit {
     });
   }
   info() {
-    if (this.infoForm.valid) {
-    } else {
-      this.infoForm.markAllAsTouched();
+    this.infoForm.markAllAsTouched();
+
+    if (this.infoForm.invalid) {
       this.snack.open("Fill the required fields",'',{
         duration:2000,
         verticalPosition:'top',
         panelClass:['red-snackbar','login-snackbar']
+      })
+    } else if(this.infoForm.controls.newPassword.value != this.infoForm.controls.confirmPassword.value) {
+      this.snack.open("Password does not match",'',{
+        duration:2000,
+        verticalPosition:'top',
+        panelClass:['red-snackbar','login-snackbar']
+      })
+    }
+    else{
+      this.snack.open("Password changed successfully",'',{
+        duration:2000,
+        verticalPosition:'top',
+        panelClass:['green-snackbar','login-snackbar']
       })
     }
   }

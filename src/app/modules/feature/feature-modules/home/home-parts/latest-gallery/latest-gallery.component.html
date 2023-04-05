@@ -1,79 +1,49 @@
-<div class="appinventivGallery">
-  <div class="fullContent">
-    <div class="celebration">
-      <div class="header">
-        <h2>Appinventiv Gallery</h2>
-      </div>
-      <app-carousel
-        [carouselConfigFinal]="carouselConfigGallery"
-        [buttonShow]="true"
-        [listToShow]="dataSource"
-        [showList]="true"
-      ></app-carousel>
-      <ng-container *ngFor="let member of image">
-        <div class="body">
-          <ng-template #listofDivs>
-            <div class="latestCard">
-              <div class="content">
-                <div class="image">
-                  <img [src]="member.url" alt="" style="height:400px; width:400px" />
-                </div>
-                <button (click)="openDialog(member.subImages)">View All</button>
-              </div>
+
+<div class="content_wrapper">
+  <h1> Appinventiv Gallery</h1>
+  <app-carousel [carouselConfigFinal]="carouselConfigGallery" [listToShow]="dataSource" [showList]="true"></app-carousel>
+  <ng-container *ngFor="let member of listOfNewFamilyMembers">
+    <ng-template #listofDivs>
+      <div class="main_container">
+        <div class="content_container_left">
+
+          <div class="pictures">
+            <img
+              src="https://dashboard.appinventiv.com/uploads/gallery/award_1649320793321.jpg">
+            <div class="title">
+              <h1>Appinventiv</h1>
+              <button mat-button (click)="openDialog()">view</button>
             </div>
-          </ng-template>
-          <!--
-          <ng-template #listofDivs>
-            <div class="award">
-              <div class="awardBody">
-                <div class="latestCardAward">
-                  <div class="content">
-                    <div class="image">
-                      <div class="image1">
-                        <img
-                          src="../../../../assets/Best Place to work.png"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ng-template>
-          <ng-template #listofDivs>
-            <div class="birthday">
-              <div class="birthdayBody">
-                <div class="birthdayCelebration">
-                  <div class="content">
-                    <div class="image">
-                      <img src="../../../../assets/Christmas.png" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ng-template> -->
+          </div>
+
         </div>
-      </ng-container>
-    </div>
-  </div>
-</div>
+        <div class="content_container_mid">
 
-<!-- <ng-container *ngFor="let item of image">
-  <ng-template #listOfDivs>
-    <div class="slide">
-      <div class="image">
-        <img [src]="'../../../../../../assets/' |   appendImagePath : item.image"  alt="">
-        <button (click)="openDialog()">View All</button>
+          <div class="pictures">
+            <img
+              src="https://dashboard.appinventiv.com/uploads/gallery/award_1672378171227.jpg">
+            <div class="title">
+              <h1>Best Place To work</h1>
+              <button mat-button (click)="openDialog()">view</button>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="content_container_right">
+
+          <div class="pictures">
+            <img
+              src="https://dashboard.appinventiv.com/uploads/gallery/award_1672292016846.jpg">
+            <div class="title">
+              <h1>Christmas</h1>
+              <button mat-button (click)="openDialog()">view</button>
+            </div>
+
+          </div>
+
+        </div>
       </div>
-    </div>
-  </ng-template>
-</ng-container>
-
-<ng-container >
-  <app-carousel  [carouselConfigFinal]="carouselConfigGallery"
-  [buttonShow]="true"
-  [listToShow]="dataSource"
-  [showList]="true"></app-carousel>
-</ng-container> -->
+    </ng-template>
+  </ng-container>
+</div>

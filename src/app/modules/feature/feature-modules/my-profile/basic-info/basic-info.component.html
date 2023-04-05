@@ -43,42 +43,40 @@
             <p>Date of Birth</p>
 
             <mat-form-field appearance="outline">
-              <input matInput [matDatepicker]="picker1"  [max]="today" placeholder="Date of Birth"/>
-              <mat-datepicker-toggle matSuffix [for]="picker1" ></mat-datepicker-toggle>
-              <mat-datepicker #picker1 ></mat-datepicker>
+              <input
+                readonly="true"
+                matInput
+                [matDatepicker]="picker1"
+                [max]="today"
+                placeholder="Date of Birth"
+              />
+              <mat-datepicker-toggle
+                matSuffix
+                [for]="picker1"
+              ></mat-datepicker-toggle>
+              <mat-datepicker #picker1></mat-datepicker>
               <mat-error>
                 {{ infoForm | showError : "dob" : "Dob" }}
               </mat-error>
             </mat-form-field>
-
           </div>
 
           <div class="gender">
             <p>Gender</p>
 
-            <mat-form-field class="gender" appearance="outline">
-              <mat-label>Gender</mat-label>
-              <mat-select>
-                <mat-option>None</mat-option>
-                <mat-option *ngFor="let gender of gender" [value]="gender">{{
-                  gender
-                }}</mat-option>
-              </mat-select>
-            </mat-form-field>
+            <app-input-search
+              [myControlName]="infoForm.controls.gender"
+              [data]="genderData"
+            ></app-input-search>
           </div>
 
           <div class="married">
             <p>Marital Status</p>
 
-            <mat-form-field class="maritalStatus" appearance="outline">
-              <mat-label>Single</mat-label>
-              <mat-select>
-                <mat-option>None</mat-option>
-                <mat-option *ngFor="let marital of marital" [value]="marital">{{
-                  marital
-                }}</mat-option>
-              </mat-select>
-            </mat-form-field>
+            <app-input-search
+              [myControlName]="infoForm.controls.marital"
+              [data]="maritalData"
+            ></app-input-search>
           </div>
           <div class="contactNumber">
             <p>Contact Number</p>
@@ -121,11 +119,13 @@
                   <p>Months</p>
                   <mat-form-field class="months" appearance="outline">
                     <input
+                      type="number"
                       matInput
                       formControlName="months"
                       placeholder="months"
                       required
                       (keydown.space)="$event.preventDefault()"
+                      [max]="11"
                     />
                     <mat-error>
                       {{ infoForm | showError : "months" : "Months" }}
@@ -164,6 +164,7 @@
                       placeholder="months"
                       required
                       (keydown.space)="$event.preventDefault()"
+                      [max]="11"
                     />
                     <mat-error>
                       {{ infoForm | showError : "months" : "Months" }}

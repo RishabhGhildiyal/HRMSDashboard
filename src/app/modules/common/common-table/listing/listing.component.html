@@ -10,7 +10,8 @@
   </app-interview-filter> -->
 
   <div class="table-data">
-      <!-- <app-search-filter (setSearch)="searchData($event)" ></app-search-filter> -->
+      <app-search-filter *ngIf="config.options.search" (setSearch)="searchData($event)" ></app-search-filter>
+
       <ng-content></ng-content>
       <!-- <app-no-data *ngIf="config.total === 0"></app-no-data> -->
       <mat-paginator *ngIf="config.total > 0 && config.options.pagination" [length]="config.total" [pageSize]="limit"

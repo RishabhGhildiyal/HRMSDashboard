@@ -34,15 +34,15 @@
   }
 }
 
-::ng-deep .mat-select-arrow {
-  width: 0;
-  height: 5;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid;
-  margin: 0 4px;
-  color: blue;
-}
+// ::ng-deep .mat-select-arrow {
+//   width: 0;
+//   height: 5;
+//   border-left: 5px solid transparent;
+//   border-right: 5px solid transparent;
+//   border-top: 5px solid;
+//   margin: 0 4px;
+//   color: blue;
+// }
 
 @media (max-width: 480px) {
   .container {

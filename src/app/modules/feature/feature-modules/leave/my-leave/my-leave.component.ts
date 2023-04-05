@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AngularEditorConfig } from '@kolkov/angular-editor';
 import { PAGE_OPTIONS } from 'src/app/constants/common-constants';
+import { VIEW_DETAILS } from 'src/app/constants/routes';
 import { Table } from 'src/app/modules/common/common-table/table.types';
 import { DOCUMENTS_LIST_CONFIG, UserTableDataSource } from './my-leave.modal';
 
@@ -24,7 +27,7 @@ export class MyLeaveComponent implements OnInit {
 
   numberList: number[] = [10, 20, 30, 40];
 
-  constructor() { }
+  constructor(private router:Router) { }
   // @ViewChild() abc!:HTMLElement;
   docsData: Array<any> = [
     {
@@ -39,6 +42,34 @@ export class MyLeaveComponent implements OnInit {
 
     },
   ];
+  config: AngularEditorConfig = {
+    editable: true,
+    spellcheck: true,
+    height: '15rem',
+    minHeight: '5rem',
+    placeholder: 'Enter text here...',
+    translate: 'no',
+    defaultParagraphSeparator: 'p',
+    defaultFontName: 'Arial',
+    toolbarHiddenButtons: [
+      ['bold']
+      ],
+    customClasses: [
+      {
+        name: "quote",
+        class: "quote",
+      },
+      {
+        name: 'redText',
+        class: 'redText'
+      },
+      {
+        name: "titleText",
+        class: "titleText",
+        tag: "h1",
+      },
+    ]
+  }
   listingConfig = DOCUMENTS_LIST_CONFIG ;
   pageOptions = PAGE_OPTIONS;
   tableSource: Table.Source<any> = new UserTableDataSource([]);
@@ -69,4 +100,7 @@ export class MyLeaveComponent implements OnInit {
     this.isShow = !this.isShow;
   }
 
+  route(){
+    this.router.navigate([VIEW_DETAILS.fullurl])
+  }
 }

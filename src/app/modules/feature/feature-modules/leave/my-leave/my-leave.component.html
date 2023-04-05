@@ -54,20 +54,49 @@
     </div>
   </div>
   <div class="containers" *ngIf="isShow">
-    <div class="main">
-      <div class="field">
-        <div class="drop-down">
-          <p>Leave Type</p>
-          <mat-form-field appearance="fill">
-            <mat-label>Leave Type</mat-label>
-            <mat-select>
-              <mat-option *ngFor="let leave of leaves" [value]="leave.leave">
-                {{ leave.leave }}
-              </mat-option>
-            </mat-select>
+    <div class="left_container">
+      <div>
+        <!-- <app-dropdown [dropdown]="dropdownData" ></app-dropdown>
+        <mat-checkbox class="example-margin">Half Day?</mat-checkbox> -->
+      </div>
+      <div class="date_main">
+        <div class="data">
+          <mat-label>Start Date</mat-label>
+
+          <mat-form-field class="name_input" appearance="outline">
+            <input matInput placeholder="Upload Document" required />
+          </mat-form-field>
+        </div>
+        <div class="data">
+          <mat-label>End Date</mat-label>
+
+          <mat-form-field class="name_input" appearance="outline">
+            <input matInput placeholder="Upload Document" required />
           </mat-form-field>
         </div>
       </div>
+      <div class="data">
+        <mat-label>Remarks</mat-label>
+
+        <mat-form-field class="name_input" appearance="outline">
+          <input matInput placeholder="Remarks" required />
+        </mat-form-field>
+      </div>
+      <div class="data">
+        <mat-label>Upload Document</mat-label>
+
+        <mat-form-field class="name_input" appearance="outline">
+          <input matInput placeholder="Upload Document" required />
+        </mat-form-field>
+      </div>
+      <div class="buttons">
+        <button mat-button class="cancel">Cancel</button>
+        <button mat-button class="save">Save</button>
+      </div>
+    </div>
+    <div class="right_container">
+      <h3>Leave Reason</h3>
+      <angular-editor [config]="config"></angular-editor>
     </div>
   </div>
   <div class="bottom-card">
@@ -105,7 +134,7 @@
         {{row.sn }}
       </ng-template> -->
       <ng-template appFor="action" let-row="row">
-        {{ row.action }}
+        <button (click)="route()"><mat-icon>arrow_right_alt</mat-icon></button>
       </ng-template>
       <ng-template appFor="leave_type" let-row="row">
         {{ row.leave_type }}
@@ -128,7 +157,6 @@
       <ng-template appFor="level_2" let-row="row">
         {{ row.level_2 }}
       </ng-template>
-
     </app-common-table>
   </div>
 </div>

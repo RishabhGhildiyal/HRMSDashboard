@@ -25,20 +25,10 @@
           <div class="educationLevel">
             <p>Education Level</p>
 
-            <mat-form-field class="educationLevel" appearance="outline">
-              <mat-label>Education Level</mat-label>
-              <mat-select>
-                <mat-option>None</mat-option>
-                <mat-option
-                  *ngFor="let education of education"
-                  [value]="education"
-                  >{{ education }}</mat-option
-                >
-                <!-- <mat-error>
-                  {{infoForm | showError :'schoolUni':'SchoolUni'}}
-              </mat-error> -->
-              </mat-select>
-            </mat-form-field>
+            <app-input-search
+              [myControlName]="infoForm.controls.schoolUni"
+              [data]="schoolUniData"
+            ></app-input-search>
           </div>
 
           <div class="timePeriod">
@@ -46,12 +36,17 @@
 
             <mat-form-field class="time_input" appearance="outline">
               <input
+                readonly="true"
                 matInput
-                formControlName="time"
+                [matDatepicker]="picker1"
+                [max]="today"
                 placeholder="Time Period"
-                required
-                (keydown.space)="$event.preventDefault()"
               />
+              <mat-datepicker-toggle
+                matSuffix
+                [for]="picker1"
+              ></mat-datepicker-toggle>
+              <mat-datepicker #picker1></mat-datepicker>
               <mat-error>
                 {{ infoForm | showError : "time" : "Time" }}
               </mat-error>
@@ -61,12 +56,17 @@
           <div class="to">
             <mat-form-field class="to_input" appearance="outline">
               <input
+                readonly="true"
                 matInput
-                formControlName="toInput"
-                placeholder="to"
-                required
-                (keydown.space)="$event.preventDefault()"
+                [matDatepicker]="picker2"
+                [max]="today"
+                placeholder="To"
               />
+              <mat-datepicker-toggle
+                matSuffix
+                [for]="picker2"
+              ></mat-datepicker-toggle>
+              <mat-datepicker #picker2></mat-datepicker>
               <mat-error>
                 {{ infoForm | showError : "toInput" : "ToInput" }}
               </mat-error>
@@ -75,18 +75,10 @@
 
           <div class="language">
             <p>Language</p>
-
-            <mat-form-field class="language" appearance="outline">
-              <mat-label>Language</mat-label>
-              <mat-select>
-                <mat-option>None</mat-option>
-                <mat-option
-                  *ngFor="let language of language"
-                  [value]="language"
-                  >{{ language }}</mat-option
-                >
-              </mat-select>
-            </mat-form-field>
+            <app-input-search
+              [myControlName]="infoForm.controls.language"
+              [data]="languageData"
+            ></app-input-search>
           </div>
 
           <div class="professionalCourse">
@@ -129,52 +121,31 @@
       <div class="heading">
         <h2>List All Qualification</h2>
       </div>
-      <!-- <hr /> -->
-      <div class="subHeading">
-        <div class="showSelect">
-          <div class="show">
-            <p>Show</p>
-          </div>
-          <div class="input">
-            <mat-form-field appearance="fill">
-              <mat-label>Show</mat-label>
-              <mat-select [formControl]="numbers">
-                <mat-option
-                  *ngFor="let number of numberList"
-                  [value]="number.valueOf"
-                  >{{ number }}</mat-option
-                >
-              </mat-select>
-            </mat-form-field>
-          </div>
-          <div class="entry">
-            <p>entries</p>
-          </div>
-        </div>
-        <div class="search">
-          <span>Search:</span>
-
-          <input type="text" />
-        </div>
-      </div>
       <div class="table">
-      <app-listing [config]="listingConfig" (changeListEvent)="onTableEventChange($event)">
-        <app-common-table [tableSource]="tableSource">
-          <ng-template appFor="actions" let-row="row">
-            <button class="edit" mat-raised-button (click)="edit()">Edit</button>
-            <button class="delete" mat-raised-button (click)="delete(row)">Delete</button>
-          </ng-template>
-          <ng-template appFor="schoolUni" let-row="row">
-            {{row.schoolUni}}
-          </ng-template>
-          <ng-template appFor="time" let-row="row">
-            {{ row.time }}
-          </ng-template>
-          <ng-template appFor="professionalCourse" let-row="row">
-            {{ row.professionalCourse }}
-          </ng-template>
-        </app-common-table>
-    </app-listing>
+        <app-listing
+          [config]="listingConfig"
+          (changeListEvent)="onTableEventChange($event)"
+        >
+          <app-common-table [tableSource]="tableSource">
+            <ng-template appFor="actions" let-row="row">
+              <button class="edit" mat-raised-button (click)="edit()">
+                Edit
+              </button>
+              <button class="delete" mat-raised-button (click)="delete(row)">
+                Delete
+              </button>
+            </ng-template>
+            <ng-template appFor="schoolUni" let-row="row">
+              {{ row.schoolUni }}
+            </ng-template>
+            <ng-template appFor="time" let-row="row">
+              {{ row.time }}
+            </ng-template>
+            <ng-template appFor="professionalCourse" let-row="row">
+              {{ row.professionalCourse }}
+            </ng-template>
+          </app-common-table>
+        </app-listing>
       </div>
     </div>
   </div>

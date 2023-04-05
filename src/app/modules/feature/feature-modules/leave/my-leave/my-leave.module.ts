@@ -11,6 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 import { ForDirectiveModule } from 'src/app/modules/common/for-directive/for-directive.module';
 import {MatSelectModule} from '@angular/material/select';
 import { commonTableModule } from "../../../../common/common-table/common-table.module";
+import { AngularEditorModule } from '@kolkov/angular-editor';
 
 @NgModule({
     declarations: [
@@ -29,7 +30,9 @@ import { commonTableModule } from "../../../../common/common-table/common-table.
         ForDirectiveModule,
         FooterModule,
         MatSelectModule,
-        commonTableModule
+        commonTableModule,
+        MatIconModule,
+        AngularEditorModule
     ]
 })
 export class MyLeaveModule { }

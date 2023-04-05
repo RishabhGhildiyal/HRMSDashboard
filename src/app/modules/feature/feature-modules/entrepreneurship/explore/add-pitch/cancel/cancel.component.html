@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="head">
+    <h1>My Ideas</h1>
+  </div>
+  <div class="main">
+    <div class="table">
+      <app-listing
+      [config]="listingConfig"
+      (changeListEvent)="onTableEventChange($event)"
+    >
+      <app-common-table [tableSource]="tableSource">
+        <ng-template appFor="sn" let-row="row"> {{ row.sn }}8 </ng-template>
+        <ng-template appFor="title" let-row="row">
+          {{ row.title }}
+        </ng-template>
+        <ng-template appFor="industry" let-row="row">
+          {{ row.industry }}
+        </ng-template>
+        <ng-template appFor="tech_nontech" let-row="row">
+          {{ row.tech_nontech }}
+        </ng-template>
+        <ng-template appFor="submitted_on" let-row="row">
+          {{ row.submitted_on }}
+        </ng-template>
+        <ng-template appFor="action" let-row="row">
+          {{ row.action }}
+        </ng-template>
+      </app-common-table>
+    </app-listing>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <app-footer></app-footer>
+</div>
