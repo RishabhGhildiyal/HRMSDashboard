@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="main">
+    <div class="main-body">
+
+      <div class="heading">
+        <div class="request">
+          <h1>Dinner Request</h1>
+        </div>
+        <div class="button">
+          <button mat-raised-button (click)="toggleAddNew()">
+            Request Dinner
+          </button>
+        </div>
+      </div>
+      <div class="lower-para">
+        <mat-icon>info</mat-icon>
+        <span>Note:</span>
+        <h3>You can request/cancel dinner for today before 6:00 PM</h3>
+      </div>
+    </div>
+    <div class="inside-body" *ngIf="isShow">
+      <form [formGroup]="lunchForm">
+        <div class="left_container">
+          <div class="left-data">
+            <div class="data">
+              <p>Date</p>
+              <mat-form-field class="name_input" appearance="outline">
+                <input
+                  matInput
+                  placeholder="Subject"
+                  formControlName="date"
+                  required
+                />
+                <mat-error>
+                  <!-- {{ticketsForm | showError :'subject':'Subject'}} -->
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="data-2">
+              <p>Project</p>
+
+              <app-input-search
+                [myControlName]="lunchForm.controls.date"
+                [data]="dropdownData"
+              >
+              </app-input-search>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="right-container">
+        <h3>Reason for Late stay</h3>
+        <angular-editor [config]="config"></angular-editor>
+      </div>
+      <div class="buttons">
+        <button mat-button class="save" (click)="onSave()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -49,3 +49,5 @@ export class CommonTableComponent implements OnInit {
   }
 
 }
+
+export { Table };

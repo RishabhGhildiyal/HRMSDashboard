@@ -141,3 +141,108 @@ export const DSR_DROPDOWN =[
   }
 ]
 
+export const LUNCH_DROPDOWN =[
+  {
+    viewValue:'Training Project',
+    value:101
+  },
+  {
+    viewValue:'Miscellaneous',
+    value:102
+  }
+]
+
+
+
+
+export const STATUS_DROPDOWN =[
+  {
+    viewValue:'Training Project',
+    value:101
+  },
+  {
+    viewValue:'Miscellaneous',
+    value:102
+  },
+  {
+    viewValue:'Training Project',
+    value:101
+  },
+  {
+    viewValue:'Miscellaneous',
+    value:102
+  }
+]
+
+
+export const PROJECT_DROPDOWN =[
+  {
+    viewValue:'Training Project',
+    value:101
+  },
+  {
+    viewValue:'Miscellaneous',
+    value:102
+  }
+]
+
+export const SUBMISSION_DROPDOWN =[
+  {
+    viewValue:'Training Project',
+    value:101
+  },
+  {
+    viewValue:'Miscellaneous',
+    value:102
+  }
+]
+export const PM_STATUS =[
+  {
+    viewValue:'Training Project',
+    value:101
+  },
+  {
+    viewValue:'Miscellaneous',
+    value:102
+  }
+]
+export const AM_STATUS =[
+  {
+    viewValue:'Training Project',
+    value:101
+  },
+  {
+    viewValue:'Miscellaneous',
+    value:102
+  }
+]
+export const RM_STATUS =[
+  {
+    viewValue:'Training Project',
+    value:101
+  },
+  {
+    viewValue:'Miscellaneous',
+    value:102
+  }
+]
+export const FINAL_STATUS =[
+  {
+    viewValue:'Training Project',
+    value:101
+  },
+  {
+    viewValue:'Miscellaneous',
+    value:102
+  }
+]
+export const HOURS =[
+  {
+    viewValue:'Training Project',
+    value:101
+  },
+  {
+    viewValue:'Miscellaneous',
+    value:102
+  }
+]

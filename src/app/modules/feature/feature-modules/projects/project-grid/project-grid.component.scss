@@ -1,0 +1,109 @@
+@import "../../../../../../scss/mixins";
+@import "../../../../../../scss/global.scss";
+
+.container {
+  padding: 20px;
+  width: 30rem;
+  background-color: $pure-white;
+  .head {
+    display: flex;
+    justify-content: space-between;
+  }
+  .people-icon {
+    display: flex;
+    mat-icon {
+      border: 1px solid black;
+      border-radius: 50%;
+      background-color: #a3a4a6 !important;
+      margin-right: 4px;
+      color: $pure-white;
+      margin-bottom: 16px;
+    }
+  }
+  .progress {
+    display: flex;
+    // justify-content: space-between;
+    // width: 15rem;
+    margin-top: 5px;
+    .time {
+      color: #6658dd;
+      background-color: rgba(102, 88, 221, 0.18);
+      border-color: rgba(102, 88, 221, 0.12);
+      padding: 4px;
+      margin-right: 10px;
+      border-radius: 3px;
+    }
+    .in-progress {
+      color: #d9534f;
+      background-color: rgba(217, 83, 79, 0.25);
+      font-family: "Segoe UI";
+      padding: 4px;
+      border-radius: 3px;
+
+    }
+  }
+  .milestone {
+    margin-top: 20px;
+    h4{
+    color: #a3a4a6;
+
+    }
+  }
+  .resources {
+    display: flex;
+    .icon {
+      margin-right: 4px;
+      display: inline-block;
+      // margin-right: 15px;
+      color: #a3a4a6;
+      font-family: "Segoe UI";
+      font-size: 16px;
+      position: relative;
+      bottom: 4px;
+    }
+    .number {
+      margin-right: 5px;
+      display: inline-block;
+      margin-right: 5px;
+      color: #a3a4a6;
+      font-family: "Segoe UI";
+      // font-size: 16px;
+    }
+    .line {
+      margin-left: 3px;
+      display: inline-block;
+      margin-right: 15px;
+      color: #a3a4a6;
+      font-family: "Segoe UI";
+      font-size: 16px;
+    }
+  }
+  .hours {
+    display: flex;
+    color: #a3a4a6;
+    font-family: "Segoe UI";
+    p{
+      margin-right: 5px;
+    }
+    span{
+      margin-left: 5px;
+    }
+  }
+  .images{
+    img{
+      border: 1px $borderColor;
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+      margin-top: 20px;
+    }
+  }
+  .completed{
+    h2{
+      margin-bottom: 5px;
+    }
+    p{
+      margin: 0px;
+    }
+  }
+}

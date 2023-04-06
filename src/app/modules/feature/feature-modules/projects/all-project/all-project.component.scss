@@ -1,0 +1,17 @@
+@import "../../../../../../scss/mixins";
+@import "../../../../../../scss/global.scss";
+
+.container{
+  padding: 20px;
+  background-color: $pure-white;
+  color: #3246d3;
+  .heading{
+
+  }
+  .main{
+    padding: 20px;
+    .table{
+
+    }
+  }
+}

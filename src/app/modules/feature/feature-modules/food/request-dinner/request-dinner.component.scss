@@ -1,0 +1,110 @@
+@import "../../../../../../scss/mixins";
+@import "../../../../../../scss/global.scss";
+
+.container {
+  padding: 40px;
+  min-height: 77%;
+  .main {
+    background-color: $pure-white;
+    // padding: 10px;
+    // border: 1px solid black;
+    .main-body {
+      border: 1px solid #DCE2E9;
+      padding: 25px;
+      // margin: 20px;
+      .heading {
+        display: flex;
+        justify-content: space-between;
+
+        .button {
+          button {
+            background-color: #199cff;
+            color: $pure-white;
+            border-radius: 5px;
+          }
+        }
+      }
+      .lower-para {
+        display: flex;
+        mat-icon {
+          position: relative;
+          top: 4px;
+          font-size: large;
+          // font-size: small;
+
+          // margin-right: 1px;
+        }
+        span {
+          position: relative;
+          top: 4px;
+          font-weight: bold;
+          font: 14px;
+          font-style: lato;
+          font-size: small;
+        }
+        h3 {
+          margin-left: 2px;
+          font-size: small;
+        }
+      }
+    }
+    .inside-body {
+      display: grid;
+      grid-template-columns: 48% 48%;
+      column-gap: 4%;
+      margin-top: 2%;
+      background-color: $pure-white;
+      padding: 10px;
+      .left_container {
+        .left-data {
+          padding: 20px;
+          display: flex;
+          // height: 30%;
+          // justify-content: space-between;
+          // flex-direction: column;
+          .data {
+            width: 50%;
+            p {
+              margin-bottom: 10px;
+            }
+            display: flex;
+            flex-direction: column;
+            mat-form-field {
+              width: 100%;
+            }
+          }
+
+          .data-2 {
+            width: 50%;
+            margin-left: 10px;
+            p {
+              margin-bottom: 13px;
+            }
+            mat-form-field {
+              width: 100%;
+            }
+          }
+        }
+        .date_main {
+          display: grid;
+          grid-template-columns: 48% 48%;
+          column-gap: 4%;
+        }
+      }
+      .right-container{
+        margin-bottom: 30px;
+        padding: 6px;
+      }
+      .buttons {
+        display: grid;
+        grid-template-columns: 15% 15%;
+        column-gap: 4%;
+        padding: 30px;
+        .save {
+          color: white;
+          background-color: #1da81b;
+        }
+      }
+    }
+  }
+}

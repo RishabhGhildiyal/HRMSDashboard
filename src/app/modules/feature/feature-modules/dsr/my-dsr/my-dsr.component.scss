@@ -14,7 +14,6 @@ section {
       justify-content: space-between;
       // padding: 1%;
       align-items: center;
-      border-bottom: 1px solid rgb(245, 238, 238);
       h1 {
         color: #3246d3;
       }
@@ -30,6 +29,7 @@ section {
       display: grid;
       grid-template-columns: 48% 48%;
       column-gap: 4%;
+      // border-bottom: 1px solid rgb(245, 238, 238);
       @media(max-width:750px){
         display: block;
             }

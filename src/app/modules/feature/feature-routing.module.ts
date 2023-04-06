@@ -7,6 +7,7 @@ import {
   DSR,
   ENTREPRENEURSHIP,
   EXPLORE,
+  FOOD,
   FRESHERS_TRAINING,
   HOME,
   LEAVE,
@@ -121,6 +122,10 @@ const routes: Routes = [
       {
         path:RECRUITMENT.path,
         loadChildren:() => import('./feature-modules/recruitment/my-interview/my-interview.module').then((m)=>m.MyInterviewModule)
+      },
+      {
+        path:FOOD.path,
+        loadChildren: () => import('./feature-modules/food/food.module').then((m)=>m.FoodModule)
       }
 
     ],

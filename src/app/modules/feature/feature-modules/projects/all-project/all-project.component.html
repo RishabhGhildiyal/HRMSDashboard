@@ -1,0 +1,38 @@
+
+<div class="container">
+  <div class="heading">
+    <h2>All Projects</h2>
+  </div>
+  <div class="main">
+    <div class="table">
+      <app-common-table [tableSource]="tableSource">
+
+        <ng-template appFor="project_name" let-row="row">
+         <a [routerLink]="['PROJECT_DETAIL' | absolutePath]" target="_blank" >Training Project React Js
+         </a>
+        </ng-template>
+        <ng-template appFor="leave_type" let-row="row">
+          {{ row.leave_type }}
+        </ng-template>
+        <ng-template appFor="request_from" let-row="row">
+          {{ row.request_from }}
+        </ng-template>
+        <ng-template appFor="request_to" let-row="row">
+          {{ row.request_to }}
+        </ng-template>
+        <ng-template appFor="applied_on" let-row="row">
+          {{ row.applied_on }}
+        </ng-template>
+        <ng-template appFor="status" let-row="row">
+          {{ row.status }}
+        </ng-template>
+        <ng-template appFor="level_1" let-row="row">
+          {{ row.level_1 }}
+        </ng-template>
+        <ng-template appFor="level_2" let-row="row">
+          {{ row.level_2 }}
+        </ng-template>
+      </app-common-table>
+    </div>
+  </div>
+</div>

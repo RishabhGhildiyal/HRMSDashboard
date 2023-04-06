@@ -325,11 +325,19 @@ export const POLICY_DOCUMENTS : Iroute={
 }
 
 
+// /**@description My Links parts routes */
 
 export const PROJECTS : Iroute={
   path:'projects',
   get fullurl():string{
-    return `/${this.path}`
+    return `/${DASHBOARD.fullurl}/${this.path}`
+  }
+}
+
+export const PROJECT_DETAIL : Iroute = {
+  path:'project-detail',
+  get fullurl(): string{
+    return `/${PROJECTS.fullurl}/${this.path}`
   }
 }
 
@@ -415,8 +423,26 @@ export const DETAILS: Iroute={
   }
 }
 
+export const FOOD: Iroute={
+  path:'food',
+  get fullurl(): string{
+    return `/${DASHBOARD.fullurl}/${this.path}`
+  }
+}
 
+export const LUNCH_COUPON: Iroute={
+  path:'lunch-coupon',
+  get fullurl(): string{
+    return `/${FOOD.fullurl}/${this.path}`
+  }
+}
 
+export const REQUEST_DINNER: Iroute={
+  path:'request-dinner',
+  get fullurl(): string{
+    return `/${FOOD.fullurl}/${this.path}`
+  }
+}
 
 
 
