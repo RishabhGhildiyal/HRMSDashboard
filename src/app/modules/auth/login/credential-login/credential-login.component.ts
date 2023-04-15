@@ -36,24 +36,21 @@ export class CredentialLoginComponent implements OnInit {
   login() {
     console.log('AJDWUJB');
     if (this.loginForm.valid) {
-      localStorage.setItem('login','12345');
+      localStorage.setItem('login', '12345');
       this.router.navigate([DASHBOARD.path]);
-      this._snackbar.open("Login Successful",'',{
-        duration:2000,
-        verticalPosition:'top',
-        panelClass:['green-snackbar','login-snackbar']
-      })
+      this._snackbar.open('Login Successful', '', {
+        duration: 2000,
+        verticalPosition: 'top',
+        panelClass: ['green-snackbar', 'login-snackbar'],
+      });
+    } else {
+      this._snackbar.open('Email and password is required', '', {
+        duration: 2000,
+        verticalPosition: 'top',
+        panelClass: ['red-snackbar', 'login-snackbar'],
+      });
     }
-   else {
-      this._snackbar.open("Email and password is required",'',{
-        duration:2000,
-        verticalPosition:'top',
-        panelClass:['green-snackbar','login-snackbar']
-      })
-    }
-
   }
-
 
   CredentialLogin() {
     this.loginWithCredential = false;

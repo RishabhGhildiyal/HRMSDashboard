@@ -17,7 +17,9 @@ export class MyTrainingsComponent implements OnInit {
   ngOnInit(): void {}
   openDialog() {
     let config: MatDialogConfig = {
-      minWidth: '40rem',
+      width: '40rem',
+      height:'95vh'
+      // panelClass:'app-full-bleed-dialog'
     };
 
     this.dialog.open(FeedbackDialogComponent, config);

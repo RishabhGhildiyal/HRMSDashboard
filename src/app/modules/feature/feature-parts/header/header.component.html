@@ -11,15 +11,34 @@
         </div>
       </div>
       <div class="right">
-        <div class="userName">
-          Rishabh Ghildiyal
+        <div class="menu">
+          <button mat-button [matMenuTriggerFor]="menu">Rishabh Ghildiyal<img
+              src="../../../../assets/profile_icon.jpg" class="profileImg"><mat-icon>arrow_drop_down</mat-icon></button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="toprofile()"><mat-icon>account_circle</mat-icon><span>My
+                Profile</span></button>
+            <button mat-menu-item (click)="toChangePassword()"><mat-icon>key</mat-icon><span>Change
+                Password</span></button>
+            <button mat-menu-item (click)="toLogin()"><mat-icon>login</mat-icon><span>SignOut</span></button>
+          </mat-menu>
         </div>
         <div class="help">
-          <button mat-button color="warn" [routerLink]="['my-profile']">Help</button>
+          <button mat-button color="warn" (click)="openDialog()">Help</button>
         </div>
-        <div class="bellIcon">
-          <mat-icon>notification_important</mat-icon>
+        <div class="bellIcon" >
+          <mat-icon (click)="openNotification()">notification_important</mat-icon>
         </div>
+        <mat-card class="notification-box " [@enterLeaveAnimation] *ngIf="show">
+          <mat-icon class="close" (click)="toggleDiv()">close</mat-icon>
+          <div class="notify-card">
+            <div class="notify-header">
+              <mat-card-subtitle>No new notification</mat-card-subtitle>
+            </div>
+            <div class="notify-body">
+              <p class="notify-content">- -</p>
+            </div>
+          </div>
+        </mat-card>
       </div>
     </mat-toolbar>
   </div>

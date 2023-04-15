@@ -55,31 +55,35 @@ mat-dialog-content {
   }
 
   // @include form-field(100%);
-  .input-box {
-    p {
-      font-family: "Lato";
-      font-size: 14px;
-      color: #96a5b8;
-      font-weight: 500;
-      line-height: 1.4;
-      margin-bottom: 4px;
-    }
-    ::ng-deep.mat-form-field-appearance-outline {
-      .mat-form-field-wrapper {
-        margin: -2px !important;
-      }
-    }
-  }
   .job_detail {
     display: grid;
     grid-template-columns: 48% 48%;
     column-gap: 4%;
+    .input-box {
+
+      mat-form-field{
+        width: 100%;
+      }
+      p {
+        font-family: "Lato";
+        font-size: 14px;
+        color: #96a5b8;
+        font-weight: 500;
+        line-height: 1.4;
+        margin-bottom: 4px;
+      }
+      ::ng-deep.mat-form-field-appearance-outline {
+        .mat-form-field-wrapper {
+          margin: -2px !important;
+        }
+      }
+    }
   }
 
   .candidate_detail {
     display: grid;
-    grid-template-columns: 50% 50%;
-    // column-gap: 2%;
+    grid-template-columns: 48% 48%;
+    column-gap: 2%;
     .file-choose {
       margin-left: 7px;
       p {
@@ -117,6 +121,12 @@ mat-dialog-content {
         resize: none;
       }
     }
+
+    .input-box{
+      .mat-form-field{
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -128,21 +138,34 @@ mat-dialog-actions {
 
   .submit {
     // @include button(-1px)
+    background-color: #199cff;
+    color: $pure-white;
   }
 
   .cancel {
     background-color: #fff;
     color: #96a5b8;
     border: 1.5px solid rgba(150, 165, 184, 0.5);
+    @media(max-width:375px){
+      margin-bottom: 10px;
+    }
   }
 }
 @media only screen and (max-width: 600px) {
   mat-dialog-content {
     .job_detail {
       grid-template-columns: 100%;
+      width: 100%;
+      mat-form-field{
+        width: 100%;
+      }
     }
     .candidate_detail {
       grid-template-columns: 100%;
+      width: 100%;
+      mat-form-field{
+        width: 100%;
+      }
     }
   }
 }

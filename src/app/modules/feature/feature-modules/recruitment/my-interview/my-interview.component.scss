@@ -78,6 +78,24 @@
   }
 }
 
-// ::ng-deep mat-form-field{
-//   width: 100%;
-// }
+@media only screen and (max-width:761px){
+  .container{
+    .main{
+      .body{
+        .dropdowns{
+          display: block;
+          .drop-down1{
+            width: 50%;
+          }
+          .drop-down2{
+            width: 50%;
+            margin-left: 1px;
+            mat-form-field{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

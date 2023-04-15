@@ -37,7 +37,7 @@
         }
         .gender {
 
-          
+
         }
         .married {
           mat-form-field {
@@ -102,6 +102,16 @@
         }
         .experience {
           display: block;
+          .totalExperience{
+            .input{
+              display: block;
+            }
+          }
+          .relevantExperience{
+            .input{
+              display: block;
+            }
+          }
         }
       }
     }

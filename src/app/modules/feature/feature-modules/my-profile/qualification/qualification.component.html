@@ -9,13 +9,8 @@
           <div class="schoolUni">
             <p>School/University</p>
             <mat-form-field class="schoolUni_input" appearance="outline">
-              <input
-                matInput
-                formControlName="schoolUni"
-                placeholder="School/University"
-                required
-                (keydown.space)="$event.preventDefault()"
-              />
+              <input matInput formControlName="schoolUni" placeholder="School/University" required
+                (keydown.space)="$event.preventDefault()" />
               <mat-error>
                 {{ infoForm | showError : "schoolUni" : "SchoolUni" }}
               </mat-error>
@@ -24,78 +19,55 @@
 
           <div class="educationLevel">
             <p>Education Level</p>
-
-            <app-input-search
-              [myControlName]="infoForm.controls.schoolUni"
-              [data]="schoolUniData"
-            ></app-input-search>
+            <app-input-search [myControlName]="infoForm.controls.schoolUni" [data]="schoolUniData"></app-input-search>
           </div>
+        </div>
+        <div>
+          <p>Time Period</p>
+          <div  class="timePeriod">
+            <div>
+              <mat-form-field style="width: 100%" class="time_input" appearance="outline">
+                <input readonly="true" matInput [matDatepicker]="picker1" [max]="today" placeholder="Time Period" />
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+                <mat-error>
+                  {{ infoForm | showError : "time" : "Time" }}
+                </mat-error>
+              </mat-form-field>
+            </div>
 
-          <div class="timePeriod">
-            <p>Time Period</p>
-
-            <mat-form-field class="time_input" appearance="outline">
-              <input
-                readonly="true"
-                matInput
-                [matDatepicker]="picker1"
-                [max]="today"
-                placeholder="Time Period"
-              />
-              <mat-datepicker-toggle
-                matSuffix
-                [for]="picker1"
-              ></mat-datepicker-toggle>
-              <mat-datepicker #picker1></mat-datepicker>
-              <mat-error>
-                {{ infoForm | showError : "time" : "Time" }}
-              </mat-error>
-            </mat-form-field>
+            <div>
+              <mat-form-field style="width: 100%" class="to_input" appearance="outline">
+                <input readonly="true" matInput [matDatepicker]="picker2" [max]="today" placeholder="To" />
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+                <mat-error>
+                  {{ infoForm | showError : "toInput" : "ToInput" }}
+                </mat-error>
+              </mat-form-field>
+            </div>
           </div>
+        </div>
 
-          <div class="to">
-            <mat-form-field class="to_input" appearance="outline">
-              <input
-                readonly="true"
-                matInput
-                [matDatepicker]="picker2"
-                [max]="today"
-                placeholder="To"
-              />
-              <mat-datepicker-toggle
-                matSuffix
-                [for]="picker2"
-              ></mat-datepicker-toggle>
-              <mat-datepicker #picker2></mat-datepicker>
-              <mat-error>
-                {{ infoForm | showError : "toInput" : "ToInput" }}
-              </mat-error>
-            </mat-form-field>
-          </div>
+        <!-- <div class="to">
+        </div> -->
 
+        <div class="lastColumn">
           <div class="language">
             <p>Language</p>
-            <app-input-search
-              [myControlName]="infoForm.controls.language"
-              [data]="languageData"
-            ></app-input-search>
+            <app-input-search [myControlName]="infoForm.controls.language" [data]="languageData"></app-input-search>
           </div>
 
           <div class="professionalCourse">
             <p>Professional Courses (if any)</p>
 
-            <mat-form-field class="professionalCourse" appearance="outline">
-              <input
-                matInput
-                formControlName="professionalCourse"
-                placeholder="Professional Course"
-                required
-                (keydown.space)="$event.preventDefault()"
-              />
+            <mat-form-field style="width: 100%" class="professionalCourse" appearance="outline">
+              <input matInput formControlName="professionalCourse" placeholder="Professional Course" required
+                (keydown.space)="$event.preventDefault()" />
               <mat-error>
                 {{
-                  infoForm
-                    | showError : "professionalCourse" : "ProfessionalCourse"
+                infoForm
+                | showError : "professionalCourse" : "ProfessionalCourse"
                 }}
               </mat-error>
             </mat-form-field>
@@ -103,12 +75,7 @@
         </div>
         <div class="description">
           <p>Description</p>
-          <textarea
-            name="description"
-            id="description"
-            cols="30"
-            rows="10"
-          ></textarea>
+          <textarea name="description" id="description" cols="30" rows="10"></textarea>
         </div>
         <div class="button">
           <button (click)="info()" mat-raised-button>Save</button>
@@ -122,13 +89,10 @@
         <h2>List All Qualification</h2>
       </div>
       <div class="table">
-        <app-listing
-          [config]="listingConfig"
-          (changeListEvent)="onTableEventChange($event)"
-        >
+        <app-listing [config]="listingConfig" (changeListEvent)="onTableEventChange($event)">
           <app-common-table [tableSource]="tableSource">
             <ng-template appFor="actions" let-row="row">
-              <button class="edit" mat-raised-button (click)="edit()">
+              <button class="edit" mat-raised-button (click)="edit(row)">
                 Edit
               </button>
               <button class="delete" mat-raised-button (click)="delete(row)">

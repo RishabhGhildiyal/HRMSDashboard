@@ -65,7 +65,9 @@ export class QualificationComponent implements OnInit {
 
   info() {
     if (this.infoForm.valid) {
+      this.infoForm.value['id'] = Math.floor(Math.random()  * 1000)
       this.docsData.push(this.infoForm.value);
+
       this.populateTable(this.pageOptions);
     } else {
       this.infoForm.markAllAsTouched();
@@ -87,14 +89,22 @@ export class QualificationComponent implements OnInit {
   // @ViewChild() abc!:HTMLElement;
   DOCS_DATA = [ {
     schoolUni: ' Amity University',
-    time: '	Jul-08-2019 - Jun-06-2022',
+    time: '	09-08-2019 - 09-06-2022',
     professionalCourse: 'MCA',
+    language:'ENglish',
+    fromInput:'09-08-2019',
+    toInput:'09-06-2022',
+    id:101
     // last_modified: 'May-13-2022',
   },
   {
     schoolUni: ' dit University',
     time: '	Jul-08-2019 - Jun-06-2022',
     professionalCourse: 'BCA',
+    language:'ENglish',
+    fromInput:'09-08-2019',
+    toInput:'09-06-2022',
+    id:102
     // last_modified: 'May-13-2022',
   },]
 
@@ -140,24 +150,51 @@ export class QualificationComponent implements OnInit {
     console.log(this.tableSource, '123TS');
   }
 
-  edit() {
+  edit(rowData:any) {
     const dialogRef = this.dialog.open(DialogComponentComponent, {
-      // width:'30rem
+
+        data:rowData
+
     });
 
-    dialogRef.afterClosed().subscribe((result: any) => {
-      console.log(`Dialog result: ${result}`);
+    dialogRef.afterClosed().subscribe((res: any) => {
+
+      for(let i=0; i<this.tableSource.data.length; i++){
+
+        console.log(this.tableSource.data[i].id,'-----',res.id)
+
+            if(this.tableSource.data[i].id == res.id){
+              this.tableSource.data[i] = res
+            }
+          }
+
     });
+
+    // const config:MatDialogConfig = {
+    //   data:rowData,
+    //   autoFocus:false,
+    //   maxHeight:'90vh'
+    // }
+    // let dialog = this._dialog.open(EditQualificationsDialogComponent,config).afterClosed().subscribe((res:any)=>{
+    //   for(let i=0; i<this.tableSource.data.length; i++){
+    //     if(this.tableSource.data[i].id == res.id){
+    //       this.tableSource.data[i] = res
+    //     }
+    //   }
+    //   dialog.unsubscribe()
+    // })
+
   }
 
   delete(row: any) {
+    this.tableSource.data = this.tableSource.data.filter((item:any)=> item.id != row.id)
     console.log(row, '2222');
   }
 
   onTableEventChange(data: any) {
     this.pageOptions = data;
     console.log(data,"9887");
-    this.docsData = this.DOCS_DATA; 
+    this.docsData = this.DOCS_DATA;
     this.populateTable(this.pageOptions);
   }
 

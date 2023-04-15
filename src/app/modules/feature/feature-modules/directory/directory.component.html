@@ -43,24 +43,25 @@
   </div>
   <hr />
   <div class="card_lower">
-        <div class="card_body" *ngFor="let item of filteredData">
-          <div class="card-hover">&nbsp;</div>
-          <div class="picture">
-           <img class="img-fluid" src="https://dashboard.appinventiv.com/uploads/profile/profile_1646628129.jpeg">
-          </div>
-          <div class="team">
-            <h3>{{ item.name }}</h3>
-            <p>{{ item.position }}</p>
-            <div class="personal_info">
-              <p><span>@</span>{{ item.email }}</p>
-              <p>
-                <mat-icon>cake</mat-icon>{{ item.DOB  }}
-              </p>
-            </div>
-          </div>
-          <div class="social">&nbsp;</div>
+    <div class="card_body" *ngFor="let item of filteredData">
+      <div class="card-hover">&nbsp;</div>
+      <div class="picture">
+        <img
+          class="img-fluid"
+          src="https://dashboard.appinventiv.com/uploads/profile/profile_1646628129.jpeg"
+        />
+      </div>
+      <div class="team">
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.position }}</p>
+        <div class="personal_info">
+          <p><span>@</span>{{ item.email }}</p>
+          <p><mat-icon>cake</mat-icon>{{ item.DOB }}</p>
         </div>
       </div>
+      <div class="social">&nbsp;</div>
+    </div>
+  </div>
 </div>
 <!-- <div class="footer">
   <app-footer></app-footer>

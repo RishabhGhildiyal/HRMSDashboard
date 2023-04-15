@@ -8,7 +8,7 @@ import {
   HOME,
   INSURANCE_VERIFICATION_DETAILS,
   JOB_OPENINGS,
-  LUNCH_COUPON,
+
   MANUAL_PUNCH,
   MY_ASSETS_INVENTORY,
   MY_DSR,
@@ -21,6 +21,7 @@ import {
   POLICY_DOCUMENTS,
   PROJECTS,
   PUNCH_LOG,
+  PURCHASE_LUNCH_COUPON,
   RECRUITMENT,
   REFERRAL_LIST,
   REQUESTED_TRAININGS,
@@ -51,7 +52,7 @@ export const sideNavList = [
       {
         subTitle: 'Lunch Coupon',
         subLogo: 'horizontal_rule',
-        routerLink: LUNCH_COUPON.fullurl,
+        routerLink: PURCHASE_LUNCH_COUPON.fullurl,
       },
       {
         subTitle: 'Request Dinner',

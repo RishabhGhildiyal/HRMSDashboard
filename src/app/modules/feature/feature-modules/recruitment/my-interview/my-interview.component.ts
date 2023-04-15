@@ -27,20 +27,7 @@ export class MyInterviewComponent implements OnInit {
   constructor() { }
   // @ViewChild() abc!:HTMLElement;
   docsData: Array<any> = [
-    {
-      name: '',
-      type: '	',
-      file_size: '',
-      last_modified: '',
-      department_name:'',
-      email:'',
-      mobile_no:'',
-      round_type:'',
-      interview_date:'',
-      interview_time:'',
-      final_status:'',
-      action:''
-    },
+   
   ];
   listingConfig = DOCUMENTS_LIST_CONFIG ;
   pageOptions = PAGE_OPTIONS;

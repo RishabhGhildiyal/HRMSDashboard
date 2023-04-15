@@ -1,0 +1,36 @@
+<div class="main">
+  <div class="cross">
+    <mat-icon [mat-dialog-close]></mat-icon>
+  </div>
+
+  <div class="head">
+    <span>
+      <strong>PROJECT NAME:</strong>
+      Trainee Project Angular
+    </span>
+    <br>
+    <span>
+      <strong>REVIEWED BY:</strong>
+      Rabban Ahmad(Tech Lead)
+    </span>
+  </div>
+  <div class="content">
+    <div class="honour">
+      <h3>HONOURS</h3>
+      <p>N/A</p>
+    </div>
+    <div class="content_container">
+      <div class="content_head">
+        <div>
+          <h1>3.6</h1>
+        </div>
+      </div>
+      <div class="content_body">
+        <div class="content" *ngFor="let data of cardData">
+          <p>{{ data.title }}</p>
+          <h2>{{ data.rating }}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

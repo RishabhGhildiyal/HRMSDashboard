@@ -40,20 +40,20 @@
       </div>
       <div class="skills">
         <div class="box1">
-          <span>Technical Skills</span>
-          <p>5</p>
+          <span>Team Work</span>
+          <b>5</b>
         </div>
         <div class="box2">
-          <span>Ownership of Delivery</span>
-          <p>5</p>
+          <span>Team Work</span>
+          <b>5</b>
         </div>
         <div class="box3">
           <span>Team Work</span>
-          <p>5</p>
+          <b>5</b>
         </div>
         <div class="box4">
-          <span>Process Adherence</span>
-          <p>5</p>
+          <span>Team Work</span>
+          <b>5</b>
         </div>
       </div>
     </div>
@@ -99,7 +99,7 @@
                 <div class="honours">
                   <span>HONOURS: {{ data.honours }}</span>
                 </div>
-                <div class="arrow">
+                <div class="arrow" (click)="openDialog()">
                   <mat-icon>keyboard_arrow_right</mat-icon>
                 </div>
               </div>
@@ -110,6 +110,4 @@
     </div>
   </div>
 </div>
-<div class="footer">
-  <app-footer></app-footer>
-</div>
+

@@ -17,7 +17,8 @@ export class MyTrainingsComponent implements OnInit {
   }
   openDialog() {
     let config: MatDialogConfig = {
-      minWidth: '40rem',
+      width: '40rem',
+      height:'95vh'
     };
 
     this.dialog.open(RequestTrainingDialogComponent, config);

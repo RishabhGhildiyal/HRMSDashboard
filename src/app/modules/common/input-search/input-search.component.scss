@@ -4,9 +4,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  ::ng-deep .mat-form-field-wrapper{
-    margin:0;
-  }
+  
   .label {
     font-weight: 500;
     .required{

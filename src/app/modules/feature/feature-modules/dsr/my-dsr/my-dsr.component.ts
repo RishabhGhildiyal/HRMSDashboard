@@ -87,9 +87,9 @@ export class MyDsrComponent implements OnInit {
   DOCS_DATA: Array<any> = [
     {
       sno: '1',
-      employee_name: 'Nandini Rohatgi',
+      employee_name: 'Rishabh',
       employee_id: 'AI1568',
-      email: 'nandini.roahtgi@appinventiv.com',
+      email: 'rishabh.ghildiyal@appinventiv.com',
       employment_type: 'Permanent',
       date: '30 feb 2023',
       total: '8',
@@ -99,7 +99,7 @@ export class MyDsrComponent implements OnInit {
       sno: '2',
       employee_name: 'Nandini Rohatgi',
       employee_id: 'AI1568',
-      email: 'nandini.roahtgi@appinventiv.com',
+      email: 'rishabh.ghildiyal@appinventiv.com',
       employment_type: 'Permanent',
       date: '31 feb 2023',
       total: '8',

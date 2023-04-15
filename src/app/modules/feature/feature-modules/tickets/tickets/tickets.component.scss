@@ -10,56 +10,61 @@
       background-color: $pure-white;
       padding: 20px;
       margin-bottom: 20px;
-      .card-top{
+      .card-top {
         display: flex;
         justify-content: space-between;
-
+        @media (max-width: 326px) {
+          display: block;
+        }
         .newTicket {
           h2 {
             color: #3246d3;
           }
         }
         .button {
-          button {
-            // border-color: #26b4ff;
-            // box-shadow: 1px #26b4ff inset;
-            height: 30px;
-            // color: #26b4ff;
-            background: transparent;
-            -webkit-box-shadow: 0 0 0 1px #26b4ff inset;
-            box-shadow: 0 0 0 1px #26b4ff inset;
-            color: #26b4ff;
+          @media(max-width:319px){
+            margin-bottom: 40px;
           }
         }
       }
-      .containers {
-        display: grid;
-        grid-template-columns: 48% 48%;
-        column-gap: 4%;
-        margin-top: 2%;
-        .left_container {
-          .buttons {
-            display: grid;
-            grid-template-columns: 15% 15%;
-            column-gap: 4%;
-            .cancel {
-              color: white;
-              background-color: red;
+      .container-main {
+        .containers {
+          display: grid;
+          grid-template-columns: 48% 48%;
+          column-gap: 4%;
+          margin-top: 2%;
+          @media (max-width: 600px) {
+            display: block;
+          }
+          .left_container {
+            .date_main {
+              display: grid;
+              grid-template-columns: 48% 48%;
+              column-gap: 4%;
             }
+            .data {
+              display: flex;
+              flex-direction: column;
+            }
+          }
+          .right_container {
+            @media (max-width: 600px) {
+              margin-bottom: 30px;
+            }
+          }
+        }
+        .buttons {
+          display: grid;
+          grid-template-columns: 15% 15%;
+          column-gap: 4%;
+          .cancel {
+            color: white;
+            background-color: red;
+          }
 
-            .save {
-              color: white;
-              background-color: green;
-            }
-          }
-          .date_main {
-            display: grid;
-            grid-template-columns: 48% 48%;
-            column-gap: 4%;
-          }
-          .data {
-            display: flex;
-            flex-direction: column;
+          .save {
+            color: white;
+            background-color: green;
           }
         }
       }
@@ -71,6 +76,29 @@
       .heading {
         h1 {
           color: #3246d3;
+        }
+      }
+    }
+  }
+}
+
+:host ::ng-deep .container {
+  .tables {
+    table {
+      border: 1px solid rgba(24, 28, 33, 0.06);
+      width: 100%;
+      border-collapse: collapse;
+      padding: 20px;
+      thead {
+        th {
+          padding: 20px;
+        }
+      }
+      tbody {
+        background-color: white;
+        tr {
+          background-color: #f3f3f3;
+          padding: 20px;
         }
       }
     }

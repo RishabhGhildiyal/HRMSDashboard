@@ -1,116 +1,113 @@
 @import "src/scss/_mixins.scss";
 @import "src/scss/global.scss";
-.content_wrapper{
-
+.content_wrapper {
   margin: 1.5%;
   border-radius: 1%;
   padding: 2%;
   background-color: $pure-white;
-  border:$borderColor;
-  h1{
+  border: $borderColor;
+  h1 {
     border-bottom: $borderColor;
   }
-  .main_container{
+  .main_container {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
     column-gap: 3%;
-    @media(max-width:1300px){
+    @media (max-width: 1300px) {
       display: block;
     }
-    .content_container_one{
+    .content_container_one {
       border-radius: 1%;
       border: $borderColor;
       padding: 2%;
-      h3{
+      h3 {
         font-weight: bold;
       }
-      .app{
-        color: #26B4FF;
+      .app {
+        color: #26b4ff;
       }
-      .more{
-        color: white;
-        background-color: #26B4FF;
-      }
-      .pictures{
-        // display: grid;
-        // grid-template-columns: 20% 20%;
-        // column-gap: 3%;
-        img{
+      .pictures {
+        img {
           width: 5%;
         }
+      }
 
+      .view_more {
+        button {
+          background-color: #26b4ff;
+          color: white;
+        }
       }
     }
-    .content_container_two{
+    .content_container_two {
       border-radius: 1%;
 
       border: $borderColor;
       padding: 2%;
-      h3{
+      h3 {
         font-weight: bold;
       }
-      .app{
-        color: #26B4FF;
+      .app {
+        color: #26b4ff;
       }
-      .pictures{
+      .pictures {
         display: grid;
         grid-template-columns: 40% 40%;
 
         column-gap: 10%;
-        img{
+        img {
           width: 100%;
         }
-
       }
-
     }
-    .content_container_three{
+    .content_container_three {
       border-radius: 1%;
 
       border: $borderColor;
       padding: 2%;
-      h3{
+      h3 {
         font-weight: bold;
       }
-      .app{
-        color: #26B4FF;
+      .app {
+        color: #26b4ff;
       }
-      .pictures{
+      .pictures {
         display: grid;
         grid-template-columns: 40% 40%;
 
         column-gap: 10%;
-        img{
+        img {
           width: 100%;
         }
-
       }
-
     }
 
-    .content_container_right{
+    .content_container_right {
       border-radius: 1%;
 
       border: $borderColor;
       padding: 2%;
-      h3{
+      h3 {
         font-weight: bold;
       }
-      .app{
-        color: #26B4FF;
+      .app {
+        color: #26b4ff;
       }
-      .pictures{
+      .pictures {
         display: grid;
         grid-template-columns: 40% 40%;
 
         column-gap: 10%;
-        img{
+        img {
           width: 100%;
         }
-
       }
-
     }
-
   }
+}
+
+.mat-raised-button:not([class*=mat-elevation-z]){
+  background-color: #26b4ff;
+  color: white;
+
 }

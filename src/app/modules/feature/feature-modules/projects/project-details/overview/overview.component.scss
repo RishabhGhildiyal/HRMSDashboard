@@ -11,9 +11,13 @@
   display: grid;
   grid-template-columns: 48% 48%;
   column-gap: 4%;
-
+  @media(max-width:610px){
+    display: block;
+  }
   .left {
+
     .left_panels {
+
       mat-expansion-panel {
         padding: 20px 0px;
         display: grid;

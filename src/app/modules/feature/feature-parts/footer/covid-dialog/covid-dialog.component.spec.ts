@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LunchCouponComponent } from './lunch-coupon.component';
+import { CovidDialogComponent } from './covid-dialog.component';
 
-describe('LunchCouponComponent', () => {
-  let component: LunchCouponComponent;
-  let fixture: ComponentFixture<LunchCouponComponent>;
+describe('CovidDialogComponent', () => {
+  let component: CovidDialogComponent;
+  let fixture: ComponentFixture<CovidDialogComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LunchCouponComponent ]
+      declarations: [ CovidDialogComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LunchCouponComponent);
+    fixture = TestBed.createComponent(CovidDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

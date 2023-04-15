@@ -14,18 +14,15 @@
     .card {
       border-right: 1px dotted black;
       padding: 18px;
-      max-height: 500px !important;
       .left {
         display: flex;
         justify-content: space-between;
         .jobHeading {
           padding: 5px;
           h3 {
-            word-break: break-word;
-            padding: 10px 0 0 0;
             font-size: 20px;
             font-weight: 700;
-            line-height: 1.5px;
+            margin:-5px 0 10px
           }
         }
         .viewAll {
@@ -37,7 +34,7 @@
         }
       }
 
-      
+
     }
     .mid {
       border: $borderColor;
@@ -71,7 +68,6 @@
             @include flex(center, center);
             flex-direction: column;
 
-            width: 10vw;
             h2 {
               font-size: 56px;
               color: #0091fe;
@@ -90,7 +86,7 @@
 
 @media (max-width: 1620px) {
   .main-div {
-    display: block;
+    // display: block;
     // margin-top: 20px;
     .main-left {
       margin-bottom: 10px;
@@ -111,7 +107,7 @@
     // margin-top: 20px;
     .main-left {
       margin-bottom: 10px;
-      display: block;
+      // display: block;
       .card {
         .left {
           .jobHeading {
@@ -130,6 +126,7 @@
   }
 }
 
+
 @media (max-width: 730px) {
   .main-div {
     display: block;
@@ -142,8 +139,7 @@
           .jobHeading {
             h3 {
               word-break: break-word;
-              font-size: 10px;
-              line-height: 0px;
+
             }
           }
         }
@@ -160,7 +156,7 @@
           .cards {
             display: block;
             li {
-              width: 80%;
+
             }
           }
         }
@@ -181,8 +177,7 @@
           .jobHeading {
             h3 {
               word-break: break-word;
-              font-size: 10px;
-              line-height: 0px;
+
             }
           }
         }
@@ -224,7 +219,6 @@
           .cards {
             display: block;
             li {
-              width: 80%;
             }
           }
         }
@@ -240,6 +234,22 @@
     }
   }
 }
+
+@media (max-width: 395px) {
+  .main-div {
+    .main-left {
+      .card{
+        .left{
+          display: block;
+          .viewAll{
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 @media (max-width: 360px) {
   .main-div {
@@ -257,8 +267,7 @@
           .jobHeading {
             h3 {
               word-break: break-word;
-              font-size: 10px;
-              line-height: 0px;
+
             }
           }
         }
@@ -307,8 +316,7 @@
           .jobHeading {
             h3 {
               word-break: break-word;
-              font-size: 10px;
-              line-height: 0px;
+
             }
           }
         }
@@ -326,33 +334,22 @@
                 height: 50%;
               }
             }
-            .location {
-              display: block;
-              position: absolute;
-              bottom: 33px;
-              left: 30px;
-              padding: 5px;
-            }
-            .date {
-              position: absolute;
-              left: 105px;
-              bottom: -2px;
-            }
+
           }
         }
       }
       .mid {
-        margin-top: 10px;
-        .referralBonus {
-          padding: 0px !important;
-          .cards {
-            display: block;
-            li {
-              // width: 80%;
-              padding: 0px;
-            }
-          }
-        }
+        // margin-top: 10px;
+        // .referralBonus {
+        //   padding: 0px !important;
+        //   .cards {
+        //     display: block;
+        //     li {
+        //       // width: 80%;
+        //       padding: 0px;
+        //     }
+        //   }
+        // }
       }
     }
     .rightSide {

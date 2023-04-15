@@ -45,7 +45,17 @@ export class FormService {
     marital:[Validators.pattern],
     hours:[Validators.pattern],
     project:[Validators.pattern],
-    date:[Validators.pattern]
+    date:[Validators.pattern],
+    assetCategory:[Validators.pattern],
+    quantity:[Validators.pattern],
+    priority:[Validators.pattern],
+    requiredByDate:[Validators.pattern],
+    allocationType:[Validators.pattern],
+    requestReason:[Validators.pattern],
+    title:[Validators.pattern],
+    address:[Validators.pattern],
+    description:[Validators.pattern],
+    mobile:[Validators.pattern]
   };
 
   getControl(name: string, required = true) {

@@ -11,45 +11,51 @@
           </button>
         </div>
       </div>
-      <div class="containers" *ngIf="isShow">
+      <div class="container-main" *ngIf="isShow">
+
         <form [formGroup]="ticketsForm">
-          <div class="left_container">
-            <div class="data">
-              <mat-label>Subject</mat-label>
-              <mat-form-field class="name_input" appearance="outline">
-                <input
-                  matInput
-                  placeholder="Subject"
-                  formControlName="subject"
-                  required
-                />
-                <mat-error>
-                  <!-- {{ticketsForm | showError :'subject':'Subject'}} -->
-                </mat-error>
-              </mat-form-field>
-            </div>
-            <div class="data">
-            <app-input-search [myControlName]="ticketsForm.controls.department" [data]="departmentData" > </app-input-search>
+          <div class="containers" >
+            <div class="left_container">
+              <div class="data">
+                <mat-label>Subject</mat-label>
+                <mat-form-field class="name_input" appearance="outline">
+                  <input
+                    matInput
+                    placeholder="Subject"
+                    formControlName="subject"
+                    required
+                  />
+                  <mat-error>
+                    {{ticketsForm | showError :'subject':'Subject'}}
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="data">
+                <app-input-search
+                  [myControlName]="ticketsForm.controls.department"
+                  [data]="departmentData"
+                >
+                </app-input-search>
+              </div>
 
+              <div class="data">
+                <!-- <app-input-search [myControlName]="infoForm.controls." [data]="genderData" ></app-input-search> -->
+              </div>
+              <div class="data">
+                <app-input-search
+                  [myControlName]="ticketsForm.controls.priority"
+                  [data]="priorityData"
+                ></app-input-search>
+              </div>
             </div>
-
-            <div class="data">
-              <!-- <app-input-search [myControlName]="infoForm.controls." [data]="genderData" ></app-input-search> -->
-
-            </div>
-            <div class="data">
-              <app-input-search [myControlName]="ticketsForm.controls.priority" [data]="priorityData" ></app-input-search>
-
-            </div>
-            <div class="buttons">
-              <button mat-button class="save" (click)="onSave()">Save</button>
+            <div class="right_container">
+              <h3>Ticket Description</h3>
+              <angular-editor [config]="config"></angular-editor>
             </div>
           </div>
         </form>
-
-        <div class="right_container">
-          <h3>Ticket Description</h3>
-          <angular-editor [config]="config"></angular-editor>
+        <div class="buttons">
+          <button mat-button class="save" (click)="onSave()">Save</button>
         </div>
       </div>
     </div>

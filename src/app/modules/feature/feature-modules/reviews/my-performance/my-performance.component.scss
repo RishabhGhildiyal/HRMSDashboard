@@ -114,78 +114,9 @@
       .skills {
         @include grid("grid-template-columns", "20% 20% 20% 20% ", "");
         gap: 25px;
-        .box1 {
-          background-color: #edffd2;
-          margin: 0 5px;
-          padding: 20px 5px;
-          border-radius: 10px;
-          width: 100%;
-          min-height: 100px;
-          border: $borderColor;
-
-          span {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: small;
-          }
-          p {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: large;
-            padding-top: 10px;
-            font-weight: bold;
-          }
-        }
-        .box2 {
-          background-color: #edffd2;
-          margin: 0 5px;
-          padding: 20px 5px;
-          border-radius: 10px;
-          width: 100%;
-          min-height: 100px;
-          border: $borderColor;
-
-          span {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: small;
-          }
-          p {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: large;
-            padding-top: 10px;
-            font-weight: bold;
-          }
-        }
-        .box3 {
-          background-color: #edffd2;
-          margin: 0 5px;
-          padding: 20px 5px;
-          border-radius: 10px;
-          width: 100%;
-          min-height: 100px;
-          border: $borderColor;
-
-          span {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: small;
-          }
-          p {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: large;
-            padding-top: 10px;
-            font-weight: bold;
-          }
-        }
+        .box1,
+        .box2,
+        .box3,
         .box4 {
           background-color: #edffd2;
           margin: 0 5px;
@@ -194,13 +125,15 @@
           width: 100%;
           min-height: 100px;
           border: $borderColor;
+
           span {
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: small;
+            min-height: 36px;
           }
-          p {
+          b {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -261,8 +194,6 @@
           color: #f7c417;
           font-size: 16px;
           font-weight: 500;
-          span {
-          }
         }
 
         .honourArrow {
@@ -271,16 +202,12 @@
           display: flex;
           justify-content: space-between;
           .honours {
-            // position: relative;
-            // top: 20px;
             margin-bottom: 0px;
             span {
               font-size: 16px;
               font-weight: 500;
               color: $primary-blue;
             }
-          }
-          .arrow {
           }
         }
       }
@@ -290,48 +217,19 @@
 
 @media (max-width: 1650px) {
   .container {
-    h2 {
-    }
     .main {
-      .leftBody {
-        .header {
-          .displayPicture {
-          }
-        }
-        .downBody {
-          .awards {
-          }
-          .honours {
-          }
-        }
-      }
       .rightBody {
-        .heading {
-          .number {
-            h2 {
-            }
-          }
-          .duration {
-            p {
-            }
-          }
-        }
         .skills {
           word-break: break-word;
         }
       }
     }
     .smallContainer {
-      .button {
-        button {
-        }
-      }
       .heading {
         display: block;
       }
       .calender {
-        display: block;
-        // margin-top: 10px;
+        // display: block;
         .container1 {
           margin-top: 10px;
         }
@@ -342,14 +240,8 @@
 
 @media (max-width: 1400px) {
   .container {
-    h2 {
-    }
     .main {
       .leftBody {
-        .header {
-          .displayPicture {
-          }
-        }
         .downBody {
           .honours {
             width: 30%;
@@ -363,15 +255,11 @@
       }
     }
     .smallContainer {
-      .button {
-        button {
-        }
-      }
       .heading {
         display: block;
       }
       .calender {
-        display: block;
+        // display: block;
         .container1 {
           margin-top: 10px;
         }
@@ -382,11 +270,7 @@
 
 @media (max-width: 1230px) {
   .container {
-    h2 {
-    }
     .main {
-      .leftBody {
-      }
       .rightBody {
         .skills {
           word-break: break-word;
@@ -399,8 +283,7 @@
         display: block;
       }
       .calender {
-        display: block;
-        // margin-top: 10px;
+        // display: block;
         .container1 {
           margin-top: 10px;
         }
@@ -409,10 +292,8 @@
   }
 }
 
-@media (max-width: 1060px) {
+@media (max-width: 1066px) {
   .container {
-    h2 {
-    }
     .main {
       display: block;
       .leftBody {
@@ -424,20 +305,14 @@
       }
       .rightBody {
         .skills {
-          word-break: break-word;
+          // word-break: break-word;
           gap: 20px;
           display: block;
           .box1 {
             padding: 0px;
           }
-          .box2 {
-            padding: 0px;
-            margin-top: 10px;
-          }
-          .box3 {
-            padding: 0px;
-            margin-top: 10px;
-          }
+          .box2,
+          .box3,
           .box4 {
             padding: 0px;
             margin-top: 10px;
@@ -451,7 +326,6 @@
       }
       .calender {
         display: block;
-        // margin-top: 10px;
         .container1 {
           margin-top: 10px;
         }
@@ -460,26 +334,22 @@
   }
 }
 
-
 @media (max-width: 544px) {
   .container {
     padding: 10px;
-    h2 {
-    }
     .main {
       display: block;
       .leftBody {
         padding: 0px;
         .downBody {
           display: block;
-          // width: 100%;
           .awards {
-            width: 92%;
+            width: 95%;
             padding: 10px;
             margin-bottom: 5px;
           }
           .honours {
-            width: 92%;
+            width: 95%;
             padding: 10px;
             margin: 0px;
             margin-bottom: 10px;
@@ -487,77 +357,39 @@
         }
       }
       .rightBody {
-        .heading {
-          .number {
-            h2 {
-            }
-          }
-          .duration {
-            p {
-            }
-          }
-        }
         .skills {
           word-break: break-word;
           gap: 20px;
           display: block;
           .box1 {
             padding: 0px;
-            span {
-            }
-            p {
-            }
           }
           .box2 {
             padding: 0px;
             margin-top: 10px;
-            span {
-            }
-            p {
-            }
           }
           .box3 {
             padding: 0px;
             margin-top: 10px;
-            span {
-            }
-            p {
-            }
           }
           .box4 {
             padding: 0px;
             margin-top: 10px;
-
-            span {
-            }
-            p {
-            }
           }
         }
       }
     }
     .smallContainer {
-      .button {
-        button {
-        }
-      }
       .heading {
         display: block;
-        h1 {
-        }
         .search {
-          mat-form-field{
-          width: 100%;
-
-        }
-
-          p {
+          mat-form-field {
+            width: 100%;
           }
         }
       }
       .calender {
         display: block;
-        // margin-top: 10px;
         .container1 {
           margin-top: 10px;
         }

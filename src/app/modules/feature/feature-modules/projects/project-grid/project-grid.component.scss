@@ -5,6 +5,15 @@
   padding: 20px;
   width: 30rem;
   background-color: $pure-white;
+  @media(max-width:550px){
+    width: 19rem;
+  }
+  @media(max-width:350px){
+    width: 16rem;
+  }
+  @media(max-width:300px){
+    width: 12rem;
+  }
   .head {
     display: flex;
     justify-content: space-between;

@@ -4,6 +4,8 @@ $primary-white: #fff;
 $darkblue: #5100d4;
 $pure-white: white;
 $black: black;
+$blue:#199cff;
+$white:white;
 
 @mixin custom-scroller($axis, $brodness: 4px) {
   @if ($axis== "x") {

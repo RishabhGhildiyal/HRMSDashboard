@@ -9,13 +9,8 @@
           <div class="firstName">
             <p>First Name</p>
             <mat-form-field class="firstName_input" appearance="outline">
-              <input
-                matInput
-                formControlName="firstName"
-                placeholder="First Name"
-                required
-                (keydown.space)="$event.preventDefault()"
-              />
+              <input matInput formControlName="firstName" placeholder="First Name" required
+                (keydown.space)="$event.preventDefault()" />
               <mat-error>
                 {{ infoForm | showError : "firstName" : "FirstName" }}
               </mat-error>
@@ -26,13 +21,8 @@
             <p>Last Name</p>
 
             <mat-form-field class="lastName_input" appearance="outline">
-              <input
-                matInput
-                formControlName="lastName"
-                placeholder="Last Name"
-                required
-                (keydown.space)="$event.preventDefault()"
-              />
+              <input matInput formControlName="lastName" placeholder="Last Name" required
+                (keydown.space)="$event.preventDefault()" />
               <mat-error>
                 {{ infoForm | showError : "lastName" : "LastName" }}
               </mat-error>
@@ -43,17 +33,8 @@
             <p>Date of Birth</p>
 
             <mat-form-field appearance="outline">
-              <input
-                readonly="true"
-                matInput
-                [matDatepicker]="picker1"
-                [max]="today"
-                placeholder="Date of Birth"
-              />
-              <mat-datepicker-toggle
-                matSuffix
-                [for]="picker1"
-              ></mat-datepicker-toggle>
+              <input readonly="true" matInput [matDatepicker]="picker1" [max]="today" placeholder="Date of Birth" />
+              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
               <mat-datepicker #picker1></mat-datepicker>
               <mat-error>
                 {{ infoForm | showError : "dob" : "Dob" }}
@@ -64,31 +45,20 @@
           <div class="gender">
             <p>Gender</p>
 
-            <app-input-search
-              [myControlName]="infoForm.controls.gender"
-              [data]="genderData"
-            ></app-input-search>
+            <app-input-search [myControlName]="infoForm.controls.gender" [data]="genderData"></app-input-search>
           </div>
 
           <div class="married">
             <p>Marital Status</p>
 
-            <app-input-search
-              [myControlName]="infoForm.controls.marital"
-              [data]="maritalData"
-            ></app-input-search>
+            <app-input-search [myControlName]="infoForm.controls.marital" [data]="maritalData"></app-input-search>
           </div>
           <div class="contactNumber">
             <p>Contact Number</p>
 
             <mat-form-field class="ContactNumber" appearance="outline">
-              <input
-                matInput
-                formControlName="contactNumber"
-                placeholder="Contact Number"
-                required
-                (keydown.space)="$event.preventDefault()"
-              />
+              <input matInput formControlName="contactNumber" placeholder="Contact Number" required
+                (keydown.space)="$event.preventDefault()" />
               <mat-error>
                 {{ infoForm | showError : "contactNumber" : "ContactNumber" }}
               </mat-error>
@@ -103,13 +73,8 @@
                 <div class="input-box">
                   <p>Years</p>
                   <mat-form-field appearance="outline">
-                    <input
-                      matInput
-                      formControlName="years"
-                      placeholder="years"
-                      required
-                      (keydown.space)="$event.preventDefault()"
-                    />
+                    <input matInput formControlName="years" placeholder="years" required
+                      (keydown.space)="$event.preventDefault()" />
                     <mat-error>
                       {{ infoForm | showError : "years" : "Years" }}
                     </mat-error>
@@ -118,15 +83,8 @@
                 <div class="input-box">
                   <p>Months</p>
                   <mat-form-field class="months" appearance="outline">
-                    <input
-                      type="number"
-                      matInput
-                      formControlName="months"
-                      placeholder="months"
-                      required
-                      (keydown.space)="$event.preventDefault()"
-                      [max]="11"
-                    />
+                    <input type="number" matInput formControlName="months" placeholder="months" required
+                      (keydown.space)="$event.preventDefault()" [max]="11" />
                     <mat-error>
                       {{ infoForm | showError : "months" : "Months" }}
                     </mat-error>
@@ -143,13 +101,8 @@
                 <div>
                   <p>Years</p>
                   <mat-form-field appearance="outline">
-                    <input
-                      matInput
-                      formControlName="years"
-                      placeholder="years"
-                      required
-                      (keydown.space)="$event.preventDefault()"
-                    />
+                    <input matInput formControlName="years" placeholder="years" required
+                      (keydown.space)="$event.preventDefault()" />
                     <mat-error>
                       {{ infoForm | showError : "years" : "Years" }}
                     </mat-error>
@@ -158,14 +111,8 @@
                 <div>
                   <p>Months</p>
                   <mat-form-field class="months" appearance="outline">
-                    <input
-                      matInput
-                      formControlName="months"
-                      placeholder="months"
-                      required
-                      (keydown.space)="$event.preventDefault()"
-                      [max]="11"
-                    />
+                    <input matInput formControlName="months" placeholder="months" required
+                      (keydown.space)="$event.preventDefault()" [max]="11" />
                     <mat-error>
                       {{ infoForm | showError : "months" : "Months" }}
                     </mat-error>

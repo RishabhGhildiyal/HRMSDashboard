@@ -53,3 +53,23 @@
     }
   }
 }
+:host ::ng-deep .container{
+  .tables{
+    table{
+      thead{
+        th{
+          padding: 20px;
+        }
+      }
+      tbody{
+        tr{
+          padding: 20px;
+          td{
+            padding: 15px;
+            // border-right: 1px solid black;
+          }
+        }
+      }
+    }
+  }
+}

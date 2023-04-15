@@ -16,47 +16,27 @@
       background-color: $pure-white;
       padding: 20px;
       .fields {
-        @include grid("grid-template-columns", "50% 50%", 3%);
-        .schoolUni {
-          mat-form-field {
-            width: 100%;
-          }
-        }
-        .educationLevel {
-          mat-form-field {
-            width: 90%;
-          }
-          app-input-search{
-            width: 94%;
-            display: block;
-          }
-        }
-        .timePeriod {
-          mat-form-field {
-            width: 100%;
-          }
-        }
-        .to {
-          mat-form-field {
-            margin-top: 31px;
-            width: 95%;
-          }
-        }
-        .language {
-          mat-form-field {
-            width: 100%;
-          }
-        }
-        .professionalCourse {
-          mat-form-field {
-            width: 95%;
-          }
+        @include grid("grid-template-columns", "49% 49%", 2%);
+        mat-form-field {
+          width: 100%;
         }
       }
+
+      .timePeriod {
+        display: grid;
+        grid-template-columns: 49% 49%;
+        column-gap: 2%;
+      }
+      .lastColumn {
+        display: grid;
+        grid-template-columns: 49% 49%;
+        column-gap: 2%;
+      }
+
       .description {
         width: 99%;
         margin-bottom: 5px;
-        margin-top: 35px;
+        margin-top: 10px;
         textarea {
           height: 70px;
           width: 99%;
@@ -127,34 +107,19 @@
       .table {
         padding: 20px;
         .edit {
-          background-color: #8897AA;
-          margin-right: 5px;
+          background-color: #8897aa;
+          color: $pure-white;
+          // margin-right: 5px;
+          @media (max-width: 700px) {
+            width: 100%;
+          }
         }
         .delete {
           background-color: red;
-        }
-
-        table {
-          border: $borderColor;
-          width: 100%;
-          box-shadow: none;
-          th {
-            word-break: break-word;
-            border: 1px solid #f1f1f2;
-          }
-          td {
-            border: 1px solid #f1f1f2;
-            padding-left: 10px;
-            .edit {
-              color: $pure-white;
-              background-color: grey;
-              margin-bottom: 7px;
-              width: 10px;
-            }
-            .delete {
-              color: $pure-white;
-              background-color: red;
-            }
+          color: $pure-white;
+          @media (max-width: 700px) {
+            width: 100%;
+            margin-top: 10px;
           }
         }
       }
@@ -174,12 +139,17 @@
   border: $borderColor;
   height: 40px;
 }
-:host ::ng-deep .container{
-  .tables{
-    table{
-      tbody{
-        tr{
-          td{
+:host ::ng-deep .container {
+  .tables {
+    table {
+      thead{
+        th{
+          padding: 10px;
+        }
+      }
+      tbody {
+        tr {
+          td {
             padding: 15px;
             // border-right: 1px solid black;
           }
@@ -189,7 +159,7 @@
   }
 }
 
-@media (max-width: 690px) {
+@media (max-width: 700px) {
   .container {
     .main {
       .info {
@@ -202,11 +172,18 @@
     .allQualification {
       display: block;
       .mainContent {
-        .subHeading {
+        .heading {
           display: block;
         }
         .table {
-          display: block;
+          table {
+            display: block;
+            td {
+              .edit {
+                width: 100%;
+              }
+            }
+          }
         }
       }
     }
@@ -218,6 +195,12 @@
       .info {
         display: block;
         .fields {
+          display: block;
+        }
+        .timePeriod {
+          display: block;
+        }
+        .lastColumn{
           display: block;
         }
       }
@@ -234,7 +217,6 @@
         .subHeading {
         }
         .table {
-
         }
       }
     }

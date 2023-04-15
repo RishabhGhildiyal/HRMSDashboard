@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LUNCH_COUPON, REQUEST_DINNER } from 'src/app/constants/routes';
+import {  PURCHASE_LUNCH_COUPON, REQUEST_DINNER } from 'src/app/constants/routes';
 import { FoodComponent } from './food.component';
 
 const routes: Routes = [
@@ -8,8 +8,8 @@ const routes: Routes = [
     path:'', component:FoodComponent
   },
   {
-    path: LUNCH_COUPON.path,
-    loadChildren: () => import('./lunch-coupon/lunch-coupon.module').then((m)=>m.LunchCouponModule)
+    path: PURCHASE_LUNCH_COUPON.path,
+    loadChildren: () => import('./purchase-lunch-coupon/purchase-lunch-coupon.module').then((m)=>m.PurchaseLunchCouponModule)
   },
   {
     path:REQUEST_DINNER.path,

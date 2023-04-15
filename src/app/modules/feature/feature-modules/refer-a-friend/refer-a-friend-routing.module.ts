@@ -14,7 +14,8 @@ const routes: Routes = [
   {
     path:REFERRAL_LIST.path,
     loadChildren:() => import('./referral-list/referral-list.module').then((m)=>m.ReferralListModule)
-  }
+  },
+
 ];
 
 @NgModule({

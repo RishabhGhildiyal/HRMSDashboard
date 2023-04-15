@@ -12,6 +12,7 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { InputSearchModule } from 'src/app/modules/common/input-search/input-search.module';
+import { ShowErrorModule } from "../../../../../pipes/showErrorPipe/show-error.module";
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { InputSearchModule } from 'src/app/modules/common/input-search/input-sea
         MatButtonModule,
         MatSelectModule,
         MatInputModule,
-        InputSearchModule
+        InputSearchModule,
+        ShowErrorModule
     ]
 })
 export class TicketsModule { }

@@ -108,3 +108,28 @@
     }
   }
 }
+
+@media (max-width:535px){
+  .container{
+    .main{
+      .inside-body{
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width:370px){
+  .container{
+    .main{
+      .main-body{
+        .heading{
+          display: block;
+          .button{
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}

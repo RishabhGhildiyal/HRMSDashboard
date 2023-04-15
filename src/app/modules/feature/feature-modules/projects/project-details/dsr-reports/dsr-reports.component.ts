@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AM_STATUS, FINAL_STATUS, HOURS, PM_STATUS, PROJECT_DROPDOWN, RM_STATUS, STATUS_DROPDOWN, SUBMISSION_DROPDOWN } from 'src/app/constants/common-constants';
 
 @Component({
   selector: 'app-dsr-reports',
@@ -10,51 +11,45 @@ export class DsrReportsComponent implements OnInit {
   statusData = {
     label: 'Department',
     placeholder: 'All',
-    options: ['Angular', 'Android', 'Node', 'ios', 'Blockchain'],
+    list: STATUS_DROPDOWN
   };
   projectResource = {
     label: 'Project Resource',
     placeholder: 'Project Resource',
-    options: ['Nandini Rohatgi', 'Ananya Srivastava'],
+    list:PROJECT_DROPDOWN
   };
 
   submissionStatus = {
     label: 'Submission Status',
     placeholder: 'All',
-    options: ['Submitted', 'Due'],
+    list: SUBMISSION_DROPDOWN
   };
 
   pmStatus = {
     label: 'PM Approval  Status',
     placeholder: 'All',
-    options: ['Pending', 'Approved', 'Rejected'],
+    list:PM_STATUS
   };
   amStatus = {
     label: 'AM Approval  Status',
     placeholder: 'All',
-    options: ['Pending', 'Approved', 'Rejected'],
+    list:AM_STATUS
 
   };
   rmStatus = {
     label: 'RM Approval  Status',
     placeholder: 'All',
-    options: ['Pending', 'Approved', 'Rejected'],
-
+    list:RM_STATUS
   };
   finalStatus = {
     label: 'Final Approval  Status',
     placeholder: 'All',
-    options: ['Pending', 'Approved', 'Rejected'],
-
+    list:FINAL_STATUS
   };
   hours = {
     label: 'Hours',
     placeholder: 'All',
-    options: [
-     'Less than 5 hours' ,
-     'Greater than 5 hours' ,
-     'Greater than 8 hours' ,
-    ],
+    list:HOURS
   };
   ngOnInit(): void {}
   listItems = [

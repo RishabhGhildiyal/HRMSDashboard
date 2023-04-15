@@ -31,13 +31,13 @@ export class InputSearchComponent implements OnInit {
 
         let res = this._filter(value || '');
         if (!res.length) {
-          res = ['no results Found'];
+          res = [{value:'',viewValue:'no results Found'}];
         }
         return res;
       })
     );
   }
-  
+
   private _filter(value: any): any[] {
 
     const filterValue = value.toLowerCase();

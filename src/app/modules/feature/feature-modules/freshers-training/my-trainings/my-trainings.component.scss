@@ -4,7 +4,7 @@
 .container {
   padding: 20px;
   min-height: 80%;
-  background-color: #F3F7FC;
+  background-color: #f3f7fc;
   .header {
     padding: 10px;
     border: 0px 0px $borderColor 0px;
@@ -18,7 +18,7 @@
       margin-bottom: 0;
     }
   }
-  .cards{
+  .cards {
     @include grid("grid-template-columns", "32% 32% 32%", "");
     gap: 30px;
     .card1 {
@@ -99,9 +99,9 @@
             font-size: large;
           }
         }
-        .complete{
-          span{
-            background-color: #02BC77;
+        .complete {
+          span {
+            background-color: #02bc77;
             color: #fff;
             padding: 2px;
           }
@@ -133,49 +133,25 @@
         }
       }
     }
-
   }
 }
 
-@media (max-width:1440px){
-  .container{
-    .header{
-
+@media (max-width: 1440px) {
+  .container {
+    .header {
     }
-    .cards{
-      .card1{
-        .fullCard{
-          .image{
-
-          }
-          .bottom{
-            .location{
-
-            }
-            .date{
-              p{
-
-              }
-            }
-          }
-        }
-        .description{
-          .heading{
-            h3{
-
-            }
-          }
-        }
-        .cardBottom{
+    .cards {
+      .card1 {
+        .cardBottom {
           display: block;
-          .viewDetails{
+          .viewDetails {
             margin-bottom: 10px;
-            button{
+            button {
               width: 100%;
             }
           }
-          .referCandidate{
-            button{
+          .referCandidate {
+            button {
               width: 100%;
             }
           }
@@ -185,48 +161,25 @@
   }
 }
 
-@media (max-width:740px){
-  .container{
-    .header{
-
-    }
-    .cards{
+@media (max-width: 740px) {
+  .container {
+    .cards {
       display: block;
-      .card1{
+      .card1 {
         margin-bottom: 10px;
-        .fullCard{
-          .image{
-
-          }
-          .bottom{
-            .location{
-
-            }
-            .date{
-              p{
-
-              }
-            }
-          }
-        }
-        .description{
+        .description {
           display: block;
-          .heading{
-            h3{
-
-            }
-          }
         }
-        .cardBottom{
+        .cardBottom {
           display: block;
-          .viewDetails{
+          .viewDetails {
             margin-bottom: 10px;
-            button{
+            button {
               width: 100%;
             }
           }
-          .referCandidate{
-            button{
+          .referCandidate {
+            button {
               width: 100%;
             }
           }

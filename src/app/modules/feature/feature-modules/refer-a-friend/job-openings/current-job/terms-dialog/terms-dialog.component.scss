@@ -1,0 +1,28 @@
+@import "../../../../../../../../scss/mixins";
+@import "../../../../../../../../scss/global.scss";
+
+section {
+  padding-top: 0px;
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #f3f3f3;
+    color: #199cff;
+
+    padding-top: 5px;
+    padding-left: 5px;
+
+    mat-icon {
+      color: black;
+      margin-right: 5px;
+    }
+  }
+}
+li{
+  margin: 2%;
+}
+::ng-deep.mat-dialog-container {
+  padding: 0px !important;
+}

@@ -10,10 +10,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { FooterModule } from '../../../feature-parts/footer/footer.module';
 import { MatOptionModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
+import { AwardsDialogComponent } from './awards-dialog/awards-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
-    MyPerformanceComponent
+    MyPerformanceComponent,
+    AwardsDialogComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +28,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     FooterModule,
     MatOptionModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
   ]
 })
 export class MyPerformanceModule { }

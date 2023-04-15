@@ -100,6 +100,7 @@
         .personal_info {
           text-align: left;
           margin-left: 20px;
+          margin-bottom: 17px;
 
           p {
             color: #464646;
@@ -194,6 +195,72 @@ hr {
     .directory-body{
       display: block;
       word-break: break-word;
+    }
+  }
+}
+
+@media (max-width:1243px){
+  .directory-wrapper{
+    .directory-header{
+      .directory-header-main-Row{
+        display: block;
+        .column-2{
+          .input-group{
+
+          }
+        }
+      }
+    }
+    .directory-body{
+      display: block;
+      word-break: break-word;
+    }
+    .card_lower{
+      display: block;
+      .card_body{
+        .team{
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:343px){
+  .directory-wrapper{
+    .directory-header{
+      .directory-header-main-Row{
+        display: block;
+        .column-2{
+          .input-group{
+
+          }
+        }
+        .buttons{
+          .input-group{
+            width: 98%;
+            button{
+              width: 100%;
+              margin-left: 0px;
+            }
+          }
+        }
+      }
+    }
+    .directory-body{
+      display: block;
+      word-break: break-word;
+    }
+    .card_lower{
+      display: block;
+      .card_body{
+        .team{
+          display: block;
+          p{
+            word-break: break-word;
+          }
+        }
+      }
     }
   }
 }

@@ -13,7 +13,7 @@
       <app-search-filter *ngIf="config.options.search" (setSearch)="searchData($event)" ></app-search-filter>
 
       <ng-content></ng-content>
-      <!-- <app-no-data *ngIf="config.total === 0"></app-no-data> -->
+      <h2 style="text-align: center; margin-top: 5px;" *ngIf="config.total === 0">No Data Found</h2>
       <mat-paginator *ngIf="config.total > 0 && config.options.pagination" [length]="config.total" [pageSize]="limit"
           [pageIndex]="page - 1" [pageSizeOptions]="TOTAL_PAGE_SIZE_OPTIONS"
           (page)="onPageHandler($event)"  showFirstLastButtons  appPaginatorStyle >
@@ -22,3 +22,4 @@
   </div>
 
 </div>
+

@@ -13,13 +13,16 @@ import { SideNavComponent } from './feature-parts/side-nav/side-nav.component';
 import { HeaderComponent } from './feature-parts/header/header.component';
 import { NavListItemComponent } from './feature-parts/nav-list-item/nav-list-item.component';
 import { FooterModule } from './feature-parts/footer/footer.module';
-
+import {MatMenuModule} from '@angular/material/menu';
+import { HelpDialogComponent } from './feature-parts/help-dialog/help-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     FeatureComponent,
     SideNavComponent,
     HeaderComponent,
     NavListItemComponent,
+    HelpDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -31,6 +34,8 @@ import { FooterModule } from './feature-parts/footer/footer.module';
     MatSidenavModule,
     MatListModule,
     FooterModule,
+    MatMenuModule,
+    MatDialogModule
   ],
 })
 export class FeatureModule {}

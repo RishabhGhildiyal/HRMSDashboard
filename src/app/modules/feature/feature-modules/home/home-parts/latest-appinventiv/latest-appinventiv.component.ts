@@ -6,7 +6,9 @@ import {
   TemplateRef,
   ViewChildren,
 } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { NguCarouselConfig } from '@ngu/carousel';
+import { SquadDialogComponent } from './squad-dialog/squad-dialog.component';
 
 @Component({
   selector: 'app-latest-appinventiv',
@@ -20,7 +22,7 @@ export class LatestAppinventivComponent implements OnInit {
     ElementRef<HTMLDivElement>
   >;
   dataSource: any = [];
-  constructor() {}
+  constructor(public dialog:MatDialog) {}
 
   ngOnInit(): void {}
   ngAfterViewInit(): void {
@@ -43,4 +45,14 @@ export class LatestAppinventivComponent implements OnInit {
       hideOnSingleSlide:true
     }
   };
+    config: MatDialogConfig = {
+      width:'30rem',
+      autoFocus: false,
+      height:'65%'
+  };
+
+  openDialog(){
+
+    this.dialog.open(SquadDialogComponent, this.config);
+  }
 }

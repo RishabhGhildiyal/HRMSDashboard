@@ -5,13 +5,15 @@
       <button (click)="toggleAddNew()">+Add</button>
     </div>
 
-    <div class="containers" *ngIf="isShow">
-      <div class="left_container">
-        <form [formGroup]="dsrForm">
+    <form [formGroup]="dsrForm">
+      <div class="containers" *ngIf="isShow">
+        <div class="left_container">
           <div>
             <!-- <app-dropdown [dropdown]="dropdownData" ></app-dropdown> -->
-            <app-input-search [myControlName]="dsrForm.controls.date" [data]="dropdownData" ></app-input-search>
-
+            <app-input-search
+              [myControlName]="dsrForm.controls.date"
+              [data]="dropdownData"
+            ></app-input-search>
           </div>
           <div class="date_main">
             <div class="data">
@@ -46,16 +48,19 @@
             </div>
           </div>
 
-          <div class="buttons">
-            <button mat-button class="save" (click)="onAddDsr()">Add</button>
-          </div>
-        </form>
+
+        </div>
+        <div class="right_container">
+          <h3>Description</h3>
+          <angular-editor [config]="config"></angular-editor>
+        </div>
+
+        <div class="buttons">
+          <button mat-button class="save" (click)="onAddDsr()">Add</button>
+        </div>
+        
       </div>
-      <div class="right_container">
-        <h3>Description</h3>
-        <angular-editor [config]="config"></angular-editor>
-      </div>
-    </div>
+    </form>
   </div>
   <div class="mid_wrapper">
     <div class="data">

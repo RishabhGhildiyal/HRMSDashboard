@@ -6,10 +6,17 @@
   min-height: 80%;
   display: flex;
   background-color: #f2f6fc;
+  @media (max-width:444px){
+    display: block;
+  }
   .left-box {
     width: 35%;
     margin-right: 4%;
     border-radius: 5%;
+    @media (max-width:444px){
+      margin-bottom: 40px;
+      width: 100%;
+    }
     .header {
       background-color: $pure-white;
       h2 {
@@ -54,7 +61,12 @@
   .right-box{
     // padding: px;
     // margin: 0px;
+
     width: 60%;
+    @media (max-width:444px){
+      // margin-bottom: 40px;
+      width: 100%;
+    }
     .heading{
       padding: 11px 25px 11px 15px;
       background-color: $pure-white;
@@ -66,23 +78,34 @@
       }
     }
     .main-body{
-      :host ::ng-deep .container {
-        .tables {
-          table {
-            border: 1px solid rgba(24, 28, 33, 0.06);
-            width: 100%;
-            border-collapse: collapse;
-            padding: 20px;
-            // @include commonTableStyling(1px solid #f1f1f2, 1px solid #f1f1f2);
-            tbody {
-              background-color: white;
-              tr:nth-child(odd) {
-                background-color: #f3f3f3;
-              }
-            }
-          }
+    }
+  }
+}
+
+:host ::ng-deep .container {
+  .tables {
+    table {
+      border: 1px solid rgba(24, 28, 33, 0.06);
+      width: 100%;
+      border-collapse: collapse;
+      padding: 20px;
+      thead{
+        th{
+          padding: 20px;
+        }
+      }
+      tbody {
+        background-color: white;
+        tr:nth-child(odd) {
+          background-color: #f3f3f3;
+          padding: 20px;
         }
       }
     }
+  }
+}
+@media only screen and (max-width:444px){
+  .container{
+    display: block;
   }
 }

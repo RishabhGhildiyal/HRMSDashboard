@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { calender } from './myPerformanceConstants';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { AwardsDialogComponent } from './awards-dialog/awards-dialog.component';
+// import { AwardsDialogComponent } from './awards-dialog/awards-dialog.component';
 
 @Component({
   selector: 'app-my-performance',
@@ -11,7 +14,7 @@ export class MyPerformanceComponent implements OnInit {
   calenderYear: any = calender;
   yearSelect = '2023';
   yearToggle = true;
-  constructor() { }
+  constructor(public dialog : MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -27,5 +30,12 @@ if(e.value == '2023'){
 }
 }
 
+openDialog() {
+  let config: MatDialogConfig = {
+    width: '40rem',
+  };
+
+  this.dialog.open(AwardsDialogComponent, config);
+}
 
 }

@@ -157,92 +157,172 @@ export const LUNCH_DROPDOWN =[
 
 export const STATUS_DROPDOWN =[
   {
-    viewValue:'Training Project',
+    viewValue:'Angular',
     value:101
   },
   {
-    viewValue:'Miscellaneous',
+    viewValue:'Android',
     value:102
   },
   {
-    viewValue:'Training Project',
-    value:101
+    viewValue:'Node Js',
+    value:103
   },
   {
-    viewValue:'Miscellaneous',
-    value:102
+    viewValue:'IOS',
+    value:104
+  },
+  {
+    viewValue:'Blockchain',
+    value:105
   }
 ]
 
 
 export const PROJECT_DROPDOWN =[
   {
-    viewValue:'Training Project',
+    viewValue:'Rishabh ',
     value:101
   },
   {
-    viewValue:'Miscellaneous',
+    viewValue:'Rishi',
     value:102
   }
 ]
 
 export const SUBMISSION_DROPDOWN =[
   {
-    viewValue:'Training Project',
+    viewValue:'Submitted',
     value:101
   },
   {
-    viewValue:'Miscellaneous',
+    viewValue:'Due',
     value:102
   }
 ]
 export const PM_STATUS =[
   {
-    viewValue:'Training Project',
+    viewValue:'Pending',
     value:101
   },
   {
-    viewValue:'Miscellaneous',
+    viewValue:'Approved',
+    value:102
+  },
+  {
+    viewValue:'Rejected',
     value:102
   }
 ]
 export const AM_STATUS =[
   {
-    viewValue:'Training Project',
+    viewValue:'Pending',
     value:101
   },
   {
-    viewValue:'Miscellaneous',
+    viewValue:'Approved',
+    value:102
+  },
+  {
+    viewValue:'Rejected',
     value:102
   }
 ]
 export const RM_STATUS =[
   {
-    viewValue:'Training Project',
+    viewValue:'Pending',
     value:101
   },
   {
-    viewValue:'Miscellaneous',
+    viewValue:'Approved',
+    value:102
+  },
+  {
+    viewValue:'Rejected',
     value:102
   }
 ]
 export const FINAL_STATUS =[
   {
-    viewValue:'Training Project',
+    viewValue:'Pending',
     value:101
   },
   {
-    viewValue:'Miscellaneous',
+    viewValue:'Approved',
+    value:102
+  },
+  {
+    viewValue:'Rejected',
     value:102
   }
 ]
 export const HOURS =[
   {
-    viewValue:'Training Project',
+    viewValue:'Less than 5 hours',
     value:101
   },
   {
-    viewValue:'Miscellaneous',
+    viewValue:'Greater than 5 hours',
+    value:102
+  },
+  {
+    viewValue:'Greater than 8 hours',
+    value:102
+  }
+]
+
+export const ASSETS_DROPDOWN =[
+  {
+    viewValue:'Laptop',
+    value:101
+  },
+  {
+    viewValue:'Desktop',
+    value:102
+  },
+  {
+    viewValue:'Mobile',
+    value:102
+  }
+]
+
+export const QUANTITY_DROPDOWN =[
+  {
+    viewValue:'1',
+    value:101
+  },
+  {
+    viewValue:'2',
+    value:102
+  },
+  {
+    viewValue:'3',
+    value:102
+  }
+]
+
+export const PRIORITY_DROPDOWN =[
+  {
+    viewValue:'Low',
+    value:101
+  },
+  {
+    viewValue:'Medium',
+    value:102
+  },
+  {
+    viewValue:'High',
+    value:102
+  }
+]
+
+export const ALLOCATION_DROPDOWN =[
+  {
+    viewValue:'Permanent',
+    value:101
+  },
+  {
+    viewValue:'Temporary',
     value:102
   }
 ]

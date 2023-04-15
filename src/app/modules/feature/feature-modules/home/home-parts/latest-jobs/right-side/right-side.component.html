@@ -1,15 +1,33 @@
 <div class="right">
   <h3>New Family Members</h3>
 
-  <app-carousel [carouselConfigFinal]="carouselConfigJobs" [buttonShow]="true" [listToShow]="dataSource"></app-carousel>
+  <app-carousel
+    [carouselConfigFinal]="carouselConfigJobs"
+    [buttonShow]="true"
+    [listToShow]="dataSource"
+  ></app-carousel>
   <ng-container *ngFor="let member of listOfNewFamilyMembers" class="content">
-      <ng-template #listofDivs>
-        <div class="item">
-          <figure>
-              <img src="../../../../../../../assets/DeepinScreenshot_select-area_20230202121545.png" >
-          </figure>
-      </div>
-      </ng-template>
+    <ng-template #listofDivs>
+      <!-- <div class="image"></div> -->
+      <mat-card class="user-card flex flex-column jc-center ai-center">
+        <img
+          class="new-employee-image"
+          src="{{ '../../../../../../../../assets/profile_1674213230.jpeg' }}"
+          alt="Employee Image"
+        />
+        <mat-card-title class="name">{{ 'L Prasad' }}</mat-card-title>
+        <mat-card-subtitle class="designation">
+          {{ 'L position' }}
+        </mat-card-subtitle>
+      </mat-card>
+    </ng-template>
   </ng-container>
-
 </div>
+<div class=""></div>
+
+
+
+
+
+
+

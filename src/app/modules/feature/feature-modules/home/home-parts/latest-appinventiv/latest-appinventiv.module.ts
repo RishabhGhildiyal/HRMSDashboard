@@ -8,21 +8,26 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { LatestAppinventivComponent } from './latest-appinventiv.component';
 import { CarouselModule } from 'src/app/carousel/carousel/carousel.module';
+import { SquadDialogComponent } from './squad-dialog/squad-dialog.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 const MATERIAL  = [MatCardModule]
 
 @NgModule({
   declarations: [
-   LatestAppinventivComponent
+   LatestAppinventivComponent,
+   SquadDialogComponent
 
   ],
   imports: [
     CommonModule,
     MatCardModule,
     CarouselModule,
+    MatIconModule,
+    MatDialogModule,
     MatButtonModule
-
   ],
   exports: [
     LatestAppinventivComponent

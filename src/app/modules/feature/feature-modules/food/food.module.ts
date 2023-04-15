@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { FoodRoutingModule } from './food-routing.module';
 import { FoodComponent } from './food.component';
+import { CouponHistoryComponent } from './coupon-history/coupon-history.component';
 
 
 @NgModule({
   declarations: [
-    FoodComponent
+    FoodComponent,
+    CouponHistoryComponent
   ],
   imports: [
     CommonModule,

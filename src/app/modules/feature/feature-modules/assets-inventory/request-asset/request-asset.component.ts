@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PAGE_OPTIONS } from 'src/app/constants/common-constants';
+import { ALLOCATION_DROPDOWN, ASSETS_DROPDOWN, PAGE_OPTIONS, PRIORITY_DROPDOWN, QUANTITY_DROPDOWN } from 'src/app/constants/common-constants';
 import { Table } from 'src/app/modules/common/common-table/table.types';
 import { DOCUMENTS_LIST_CONFIG, UserTableDataSource } from './request-asset.modal';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-request-asset',
@@ -9,12 +10,21 @@ import { DOCUMENTS_LIST_CONFIG, UserTableDataSource } from './request-asset.moda
   styleUrls: ['./request-asset.component.scss']
 })
 export class RequestAssetComponent implements OnInit {
+  assetForm!: FormGroup
+  toggleAddNew(){
+    this.isShow = !this.isShow;
+  }
 
+  isShow = false
 
-  constructor() { }
+  constructor(private fb:FormBuilder) {
+
+  }
   // @ViewChild() abc!:HTMLElement;
+
   docsData: Array<any> = [
     {
+      name:'',
       status: '',
       request_reason: '	',
       priority: '',
@@ -32,6 +42,14 @@ export class RequestAssetComponent implements OnInit {
   //column names are fetched fromt the model file and data is fetched though API or const data file
   ngOnInit(): void {
     this.populateTable(this.pageOptions);
+    this.assetForm = this.fb.group({
+      assetCategory: ['', [Validators.required]],
+      quantity: ['',[Validators.required]],
+      priority:['',[Validators.required]],
+      requiredByDate:['',Validators.required],
+      allocationType:['',Validators.required],
+      requestReason:['',Validators.required]
+    })
   }
 
   populateTable(pageOptions:any){
@@ -52,5 +70,32 @@ export class RequestAssetComponent implements OnInit {
 
   }
 
+  assetsDropdownData = {
+    label: 'Project',
+    placeholder: 'Assets Quantity',
+    list: ASSETS_DROPDOWN,
+  };
 
+  quantityDropdownData = {
+    label: 'Project',
+    placeholder: 'Project',
+    list: QUANTITY_DROPDOWN,
+  };
+
+  priorityDropdownData ={
+    label: 'Project',
+    placeholder: 'Priority',
+    list: PRIORITY_DROPDOWN,
+  }
+  allocationDropdownData ={
+    label: 'Project',
+    placeholder: 'Allocation Type',
+    list: ALLOCATION_DROPDOWN,
+  }
+
+  toggleButton(){
+    this.isShow = !this.isShow;
+  }
 }
+
+

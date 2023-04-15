@@ -67,17 +67,6 @@
         padding: 4px 0px;
         z-index: 1;
       }
-
-      // ::after {
-      //     content: '';
-      //     width: 90%;
-      //     height: 1px;
-      //     border-top: 1px dashed #96A5B8;
-      //     position: absolute;
-      //     left: 0;
-      //     -webkit-transform: translateY(-50%);
-      //     transform: translateY(-50%);
-      // }
     }
 
     .input-box {
@@ -117,6 +106,7 @@
       }
     }
     .no-file-chosen {
+      margin-top: 20px;
       p {
         font-family: "Lato";
         font-size: 14px;
@@ -126,10 +116,11 @@
         margin-bottom: 4px;
       }
       .file {
+        margin-top: 10px;
         input {
           border: 1px solid #dee1e6;
           padding: 14px 14px 14px 10px;
-          width: 98%;
+          width: 84%;
           border-radius: 6px;
         }
       }

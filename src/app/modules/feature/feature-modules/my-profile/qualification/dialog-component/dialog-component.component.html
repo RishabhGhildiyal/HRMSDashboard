@@ -2,100 +2,105 @@
   <h2 mat-dialog-title>Edit Qualification</h2>
   <mat-icon mat-dialog-close></mat-icon>
 </div>
+<div class="info">
+  <form [formGroup]="infoForm" class="form-tag">
+    <div class="fields">
+      <div class="school">
+        <label for="">School/University</label><br />
+        <mat-form-field class="firstName_input" appearance="outline">
+          <input matInput formControlName="schoolUni" placeholder="First Name" required />
+        </mat-form-field>
+      </div>
+      <div class="educationLevel">
+        <!-- <p>Education Level</p> -->
+        <label for="">Education Level</label><br />
 
-<div class="fields">
-  <div class="school">
-    <label for="">School/University</label><br />
-    <mat-form-field class="firstName_input" appearance="outline">
-      <input matInput placeholder="First Name" required />
-    </mat-form-field>
-  </div>
-  <div class="educationLevel">
-    <!-- <p>Education Level</p> -->
-    <label for="">Education Level</label><br />
-
-    <mat-form-field class="educationLevel" appearance="outline">
-      <mat-label>Education Level</mat-label>
-      <mat-select>
-        <mat-option>None</mat-option>
-        <mat-option *ngFor="let education of education" [value]="education">{{
-          education
-        }}</mat-option>
-        <!-- <mat-error>
+        <mat-form-field class="educationLevel" appearance="outline">
+          <mat-label>Education Level</mat-label>
+          <mat-select>
+            <mat-option>None</mat-option>
+            <mat-option
+              *ngFor="let education of education"
+              [value]="education"
+              >{{ education }}</mat-option
+            >
+            <!-- <mat-error>
           {{infoForm | showError :'schoolUni':'SchoolUni'}}
       </mat-error> -->
-      </mat-select>
-    </mat-form-field>
-  </div>
-  <div class="timePeriod">
-    <div>
-      <label for="">Time Period</label><br />
-      <div class="input">
-        <div class="input-box">
-          <mat-form-field appearance="outline">
-            <input
-              matInput
-              formControlName="years"
-              placeholder="years"
-              required
-              (keydown.space)="$event.preventDefault()"
-            />
-            <!-- <mat-error>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="timePeriod">
+        <div>
+          <label for="">Time Period</label><br />
+          <div class="input">
+            <div class="input-box">
+              <mat-form-field appearance="outline">
+                <input
+                  matInput
+                  formControlName="toInput"
+                  placeholder="years"
+                  required
+                  (keydown.space)="$event.preventDefault()"
+                />
+                <!-- <mat-error>
               {{ infoForm | showError : "years" : "Years" }}
             </mat-error> -->
-          </mat-form-field>
-        </div>
-        <div class="input-box">
-          <mat-form-field class="months" appearance="outline">
-            <input
-              matInput
-              formControlName="months"
-              placeholder="months"
-              required
-              (keydown.space)="$event.preventDefault()"
-            />
-            <!-- <mat-error>
+              </mat-form-field>
+            </div>
+            <div class="input-box">
+              <mat-form-field class="months" appearance="outline">
+                <input
+                  matInput
+                  formControlName="fromInput"
+                  placeholder="months"
+                  required
+                  (keydown.space)="$event.preventDefault()"
+                />
+                <!-- <mat-error>
               {{ infoForm | showError : "months" : "Months" }}
             </mat-error> -->
-          </mat-form-field>
+              </mat-form-field>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="language">
-    <label for="">Language</label><br />
+      <div class="language">
+        <label for="">Language</label><br />
 
-    <mat-form-field class="language" appearance="outline">
-      <mat-label>Language</mat-label>
-      <mat-select>
-        <mat-option>None</mat-option>
-        <mat-option *ngFor="let language of language" [value]="language">{{
-          language
-        }}</mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
-  <div class="professionalCourse">
-    <label>Professional Courses (if any)</label><br />
-    <mat-form-field class="Professional_courses" appearance="outline">
-      <input matInput placeholder="Professional_courses" required />
-    </mat-form-field>
-  </div>
-  <div class="description">
-    <label for="">Description</label><br />
-    <textarea
-      name="description"
-      id="description"
-      cols="20"
-      rows="10"
-    ></textarea>
-  </div>
+        <mat-form-field class="language" appearance="outline">
+          <mat-label>Language</mat-label>
+          <mat-select>
+            <mat-option>None</mat-option>
+            <mat-option *ngFor="let language of language" [value]="language">{{
+              language
+            }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="professionalCourse">
+        <label>Professional Courses (if any)</label><br />
+        <mat-form-field class="Professional_courses" appearance="outline">
+          <input matInput placeholder="Professional_courses" required />
+        </mat-form-field>
+      </div>
+      <div class="description">
+        <label for="">Description</label><br />
+        <textarea
+          name="description"
+          id="description"
+          cols="20"
+          rows="10"
+        ></textarea>
+      </div>
+    </div>
+  </form>
 </div>
 <div class="buttons">
   <div class="close">
-    <button (click)="closeDialog()" mat-raised-button>Close</button>
+    <button mat-dialog-close mat-raised-button>Close</button>
   </div>
   <div class="update">
-    <button mat-raised-button>Update</button>
+    <button mat-raised-button (click)="closeDialog()">Update</button>
   </div>
 </div>

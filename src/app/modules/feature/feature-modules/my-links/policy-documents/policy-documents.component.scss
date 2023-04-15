@@ -3,13 +3,14 @@
 
 .container {
   padding: 40px;
+  min-height: 76%;
   h1 {
     color: $darkblue;
   }
   .main {
     .table {
       padding: 20px;
-      .image{
+      .image {
         // position: relative;
         margin-top: 10px;
       }
@@ -24,9 +25,29 @@
         background-color: #f8f8f8;
         color: $primary-blue;
         width: 200px;
-        border-radius:5px;
+        border-radius: 5px;
         img {
           margin-left: 15px;
+        }
+      }
+    }
+  }
+}
+
+:host ::ng-deep .container {
+  .tables {
+    table {
+      thead{
+        th{
+          padding: 20px;
+        }
+      }
+      tbody {
+        tr {
+          td {
+            padding: 15px;
+            // border-right: 1px solid black;
+          }
         }
       }
     }

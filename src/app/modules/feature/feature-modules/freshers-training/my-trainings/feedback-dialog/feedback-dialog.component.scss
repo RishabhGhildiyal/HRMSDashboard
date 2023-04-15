@@ -62,12 +62,19 @@
             position: relative;
             mat-radio-group {
               mat-radio-button {
-                margin-left: 16px;
+                margin-left: 12px;
               }
             }
           }
           .veryMuch {
             color: green;
+            @media (max-width: 555px) {
+              display: flex;
+              justify-content: flex-end;
+            }
+          }
+          @media (max-width: 555px) {
+            flex-direction: column;
           }
         }
       }
@@ -78,6 +85,8 @@
           justify-content: space-between;
           .notGood {
             color: red;
+            display: flex;
+            justify-content: flex-start;
           }
           .radioList {
             display: flex;
@@ -92,6 +101,13 @@
           }
           .excellent {
             color: green;
+            @media (max-width: 555px) {
+              display: flex;
+              justify-content: flex-end;
+            }
+          }
+          @media (max-width: 555px) {
+            flex-direction: column;
           }
         }
       }
@@ -116,41 +132,71 @@
           }
           .excellent {
             color: green;
+            @media (max-width: 555px) {
+              display: flex;
+              justify-content: flex-end;
+            }
+          }
+          @media (max-width: 555px) {
+            flex-direction: column;
           }
         }
       }
       .description {
+        margin-bottom: 60px;
         textarea {
           resize: none;
           width: 98%;
         }
       }
-      .buttons {
-        display: flex;
-        justify-content: flex-end;
-        .cancel {
-          button {
-            border: 1.5px solid rgba(150, 165, 184, 0.5);
-            background-color: #ffffff;
-            font-family: "Lato";
-            font-size: 14px;
-            color: #96A5B8;
-            font-weight: 500;
-            // line-height: 1.4;
-            border-radius: 4px;
-            box-sizing: border-box;
-          }
-        }
-        .save {
-          margin-left: 5px;
-          button {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), #199CFF;
-            background-blend-mode: soft-light, normal;
-            border: 1px solid rgba(150, 165, 184, 0.2);
-            box-sizing: border-box;
-            box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12), inset 0px 2px 0px rgba(255, 255, 255, 0.24);
-            border-radius: 4px;
-            color: #FFFFFF;
+    }
+  }
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    .cancel {
+      button {
+        background-color: #ffffff;
+        color: #96a5b8;
+        border: 1px solid rgba(150, 165, 184, 0.2);
+        box-sizing: border-box;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12),
+          inset 0px 2px 0px rgba(255, 255, 255, 0.24);
+        border-radius: 4px;
+      }
+    }
+    .save {
+      margin-left: 5px;
+      button {
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.3) 0%,
+            rgba(0, 0, 0, 0.3) 100%
+          ),
+          #199cff;
+        background-blend-mode: soft-light, normal;
+        border: 1px solid rgba(150, 165, 184, 0.2);
+        box-sizing: border-box;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12),
+          inset 0px 2px 0px rgba(255, 255, 255, 0.24);
+        border-radius: 4px;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+@media only screen and(max-width:555px) {
+  .container {
+    .main {
+      .ratings {
+        .rating1 {
+          .radioRating {
+            .radioList {
+              ::ng-deep mat-radio-group {
+                display: block;
+              }
+            }
           }
         }
       }

@@ -38,3 +38,22 @@
 // ::ng-deep mat-form-field{
 //   width: 100%;
 // }
+:host ::ng-deep .container {
+  .tables {
+    table {
+      thead{
+        th{
+          padding: 10px;
+        }
+      }
+      tbody {
+        tr {
+          td {
+            padding: 15px;
+            // border-right: 1px solid black;
+          }
+        }
+      }
+    }
+  }
+}

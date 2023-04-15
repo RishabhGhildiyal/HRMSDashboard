@@ -17,7 +17,7 @@
       // @include flex(center, center);
       min-height: 180px;
       border-radius: 10px;
-      background-color: #F3F7FC;
+      background-color: #f3f7fc;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -35,13 +35,12 @@
       // height: 20vh;
       img {
         border-radius: 50%;
-
-        width: 5vw;
-        height: 7vh;
+        width: 100px;
+        height: 100px;
       }
     }
     .location {
-      p{
+      p {
         position: absolute;
         bottom: 5px;
         left: 15px;
@@ -50,13 +49,12 @@
         padding: 8px 12px 8px 30px;
         font-family: "Lato";
         font-size: 12px;
-        color: #231E1E;
+        color: #231e1e;
         font-weight: 400;
         line-height: 1.2;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-
       }
     }
     .date {
@@ -106,47 +104,38 @@
 
 @media (max-width: 1500px) {
   .card1 {
-    .fullCard {
-      .bottom{
-        .image {
-          img {
-          }
-        }
-        .location {
-          p {
-          }
-        }
-        .date {
-        }
-      }
-    }
-    .description {
-      .heading {
-        h3 {
-        }
-        .content {
-          p {
-          }
-        }
-      }
-    }
-    .openings {
-      .noOfOpenings {
-        p {
-        }
-        span {
-        }
-      }
-      .experience {
-        p {
-        }
-        span {
-        }
-      }
-    }
-
     .cardBottom {
       display: block;
+      .viewDetails {
+        // margin-top: 10px;
+        button {
+          width: 100%;
+        }
+      }
+      .referCandidate {
+        margin-top: 10px;
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 732px) {
+  .card1 {
+    display: block;
+    .fullCard {
+      display: block;
+
+      .bottom {
+        position: relative;
+        display: block;
+      }
+    }
+    .cardBottom {
+      display: block;
+      // margin-bottom: 10px;
       .viewDetails {
         margin-top: 10px;
         button {
@@ -163,64 +152,23 @@
   }
 }
 
-
-@media (max-width: 730px) {
+@media only screen and (max-width: 363px) {
   .card1 {
     .fullCard {
-      .bottom{
-        position: relative;
-        display: block;
-        .image {
-          img {
-          }
-        }
+      .bottom {
         .location {
-          // margin-bottom: 10px;
+          margin: auto;
+          width: 85%;
           p {
-          }
-          .date {
-            // margin-top: 20px;
+            position: initial;
+            text-align: center;
           }
         }
-      }
-    }
-    .description {
-      .heading {
-        h3 {
-        }
-        .content {
+        .date {
           p {
+            position: initial;
+            text-align: center;
           }
-        }
-      }
-    }
-    .openings {
-      .noOfOpenings {
-        p {
-        }
-        span {
-        }
-      }
-      .experience {
-        p {
-        }
-        span {
-        }
-      }
-    }
-
-    .cardBottom {
-      display: block;
-      .viewDetails {
-        margin-top: 10px;
-        button {
-          width: 100%;
-        }
-      }
-      .referCandidate {
-        margin-top: 10px;
-        button {
-          width: 100%;
         }
       }
     }

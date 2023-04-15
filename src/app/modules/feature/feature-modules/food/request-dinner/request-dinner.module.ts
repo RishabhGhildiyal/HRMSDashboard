@@ -11,6 +11,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { InputSearchModule } from 'src/app/modules/common/input-search/input-search.module';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { CouponLegendModule } from '../coupon-legend/coupon-legend.module';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -28,7 +31,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     ReactiveFormsModule,
     AngularEditorModule,
     InputSearchModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    CouponLegendModule,
+    MatCheckboxModule,
+    MatMenuModule
   ]
 })
 export class RequestDinnerModule { }

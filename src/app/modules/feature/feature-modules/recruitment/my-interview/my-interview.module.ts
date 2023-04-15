@@ -9,6 +9,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { FooterModule } from '../../../feature-parts/footer/footer.module';
 import { commonTableModule } from "../../../../common/common-table/common-table.module";
 import { ForDirectiveModule } from 'src/app/modules/common/for-directive/for-directive.module';
+import { ListingModule } from 'src/app/modules/common/common-table/listing/listing.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ForDirectiveModule } from 'src/app/modules/common/for-directive/for-dir
         MatSelectModule,
         FooterModule,
         commonTableModule,
-        ForDirectiveModule
+        ForDirectiveModule,
+        ListingModule
     ]
 })
 export class MyInterviewModule { }

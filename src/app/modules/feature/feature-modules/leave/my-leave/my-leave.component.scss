@@ -9,6 +9,9 @@
     @include grid("grid-template-columns", "30% 30% 30%", "");
     gap: 1%;
     row-gap: 10%;
+    @media(max-width:670px){
+      display: block;
+    }
     .col-1 {
       display: flex;
       background-color: $pure-white;
@@ -24,6 +27,9 @@
         color: #a3a4a6;
         font-size: small;
       }
+      @media(max-width:670px){
+       margin-bottom: 30px;
+      }
     }
     .col-2 {
       display: flex;
@@ -38,6 +44,9 @@
         color: #a3a4a6;
         font-size: small;
       }
+      @media(max-width:670px){
+        margin-bottom: 30px;
+       }
     }
     .col-3 {
       display: flex;
@@ -53,6 +62,9 @@
         color: #a3a4a6;
         font-size: small;
       }
+      @media(max-width:670px){
+        margin-bottom: 30px;
+       }
     }
     .col-4 {
       display: flex;
@@ -67,6 +79,9 @@
         color: #a3a4a6;
         font-size: small;
       }
+      @media(max-width:670px){
+        margin-bottom: 30px;
+       }
     }
   }
   .mid-card {
@@ -91,21 +106,11 @@
     column-gap: 4%;
     background-color: $pure-white;
     padding: 20px;
+    @media(max-width:654px){
+      display: block;
+    }
     .left_container {
-      .buttons {
-        display: grid;
-        grid-template-columns: 15% 15%;
-        column-gap: 4%;
-        .cancel {
-          color: white;
-          background-color: red;
-        }
 
-        .save {
-          color: white;
-          background-color: green;
-        }
-      }
       .date_main {
         display: grid;
         grid-template-columns: 48% 48%;
@@ -114,6 +119,27 @@
       .data {
         display: flex;
         flex-direction: column;
+      }
+    }
+    .right_container{
+      @media(max-width:654px){
+      margin-bottom: 30px;
+
+      }
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: 15% 15%;
+      column-gap: 4%;
+      width: 30rem;
+      .cancel {
+        color: white;
+        background-color: red;
+      }
+
+      .save {
+        color: white;
+        background-color: green;
       }
     }
   }
@@ -170,6 +196,28 @@
       button {
         width: 33%;
         padding: 0px;
+      }
+    }
+  }
+}
+:host ::ng-deep .container {
+  .tables {
+    table {
+      border: 1px solid rgba(24, 28, 33, 0.06);
+      width: 100%;
+      border-collapse: collapse;
+      padding: 20px;
+      thead{
+        th{
+          padding: 20px;
+        }
+      }
+      tbody {
+        background-color: white;
+        tr {
+          background-color: #f3f3f3;
+          padding: 20px;
+        }
       }
     }
   }

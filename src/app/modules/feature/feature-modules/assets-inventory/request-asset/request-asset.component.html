@@ -1,15 +1,87 @@
 <div class="container">
   <div class="body">
     <div class="button">
-      <button mat-raised-button>+ Add new Asset Request</button>
+      <button mat-raised-button (click)="toggleButton()">
+        + Add new Asset Request
+      </button>
+    </div>
+    <div class="containers" *ngIf="isShow">
+      <form [formGroup]="assetForm">
+        <div class="main">
+          <div>
+            <!-- <app-dropdown [dropdown]="statusData"></app-dropdown> -->
+            <mat-label>Assets Category</mat-label>
+
+            <app-input-search
+              [myControlName]="assetForm.controls.assetCategory"
+              [data]="assetsDropdownData"
+            ></app-input-search>
+          </div>
+
+          <div>
+            <!-- <app-dropdown [dropdown]="Quantity"></app-dropdown> -->
+          <mat-label>Quantity</mat-label>
+
+            <app-input-search
+              [myControlName]="assetForm.controls.quantity"
+              [data]="quantityDropdownData"
+            ></app-input-search>
+          </div>
+          <div>
+          <mat-label>Priority</mat-label>
+
+            <!-- <app-dropdown [dropdown]="priority"></app-dropdown> -->
+            <app-input-search
+              [myControlName]="assetForm.controls.priority"
+              [data]="priorityDropdownData"
+            ></app-input-search>
+          </div>
+          <div class="date">
+            <mat-label>Required by date</mat-label>
+            <mat-form-field appearance="outline">
+              <input
+                matInput
+                [matDatepicker]="picker"
+                (click)="picker.open()"
+                readonly="true"
+                placeholder="MM/DD/YY"
+              />
+              <mat-datepicker-toggle
+                matSuffix
+                [for]="picker"
+              ></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+
+          <div>
+          <mat-label>Allocation Type</mat-label>
+
+            <!-- <app-dropdown [dropdown]="Allocation"></app-dropdown> -->
+            <app-input-search
+              [myControlName]="assetForm.controls.allocationType"
+              [data]="allocationDropdownData"
+            ></app-input-search>
+          </div>
+        </div>
+        <div class="area">
+          <mat-label>Request Reason</mat-label>
+          <mat-form-field class="example-full-width" appearance="outline">
+            <textarea matInput></textarea>
+          </mat-form-field>
+        </div>
+        <div class="submit">
+          <button mat-button>Submit</button>
+        </div>
+      </form>
     </div>
   </div>
   <div class="main">
-    <h2>List All Declaration Assets</h2>
+    <h2>List All Assets Request</h2>
     <div class="table">
       <app-common-table [tableSource]="tableSource">
         <ng-template appFor="sn" let-row="row">
-          {{row.sn }}
+          {{ row.sn }}
         </ng-template>
         <ng-template appFor="status" let-row="row">
           {{ row.status }}
@@ -32,7 +104,6 @@
         <ng-template appFor="company" let-row="row">
           {{ row.company }}
         </ng-template>
-
       </app-common-table>
     </div>
   </div>

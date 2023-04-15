@@ -1,68 +1,65 @@
 <div class="container">
   <div class="body">
     <div class="button">
-      <button mat-raised-button (click)="toggleAddNew()">+ Add new Asset Request</button>
+      <button mat-raised-button (click)="toggleAddNew()">
+        + Add new Asset Declaration
+      </button>
     </div>
-    <div class="containers" *ngIf="isShow" >
+    <div class="containers" *ngIf="isShow">
       <div class="main">
         <div class="field">
-          <mat-label>Employee IdAI1568</mat-label>
+          <mat-label>Employee Id 1555</mat-label>
 
           <mat-form-field class="example-full-width" appearance="outline">
-            <input matInput >
+            <input matInput />
           </mat-form-field>
         </div>
 
-        <div  class="field">
+        <div class="field">
           <mat-label>Unique Asset Code</mat-label>
 
           <mat-form-field class="example-full-width" appearance="outline">
-            <input matInput >
+            <input matInput />
           </mat-form-field>
         </div>
-          <div  class="field">
-            <mat-label>
-              Serial Number</mat-label>
+        <div class="field">
+          <mat-label> Serial Number</mat-label>
           <mat-form-field class="example-full-width" appearance="outline">
-            <input matInput >
+            <input matInput />
           </mat-form-field>
         </div>
-        <div  class="field">
+        <div class="field">
           <mat-label>Model Number</mat-label>
 
           <mat-form-field class="example-full-width" appearance="outline">
-            <input matInput >
+            <input matInput />
           </mat-form-field>
         </div>
-<!--
+        <!--
         <div>
           <app-dropdown [dropdown]="OS"></app-dropdown>
         </div> -->
 
-
-           <div  class="field">
-            <mat-label>OS version</mat-label>
+        <div class="field">
+          <mat-label>OS version</mat-label>
 
           <mat-form-field class="example-full-width" appearance="outline">
-            <input matInput >
+            <input matInput />
           </mat-form-field>
         </div>
-        <div  class="field">
+        <div class="field">
           <mat-label>Brand</mat-label>
 
           <mat-form-field class="example-full-width" appearance="outline">
-            <input matInput >
-
+            <input matInput />
           </mat-form-field>
         </div>
 
-        <div  class="field">
-          <mat-label>
-            Colour</mat-label>
+        <div class="field">
+          <mat-label> Colour</mat-label>
 
           <mat-form-field class="example-full-width" appearance="outline">
-            <input matInput >
-
+            <input matInput />
           </mat-form-field>
         </div>
 
@@ -71,23 +68,23 @@
         </div> -->
       </div>
       <div class="area">
-        <mat-label>Asset Image(Allowed Format: jpg,jpeg,JPEG,JPG,png,PNG,GIF) Upload front and backside image*</mat-label>
-        <input type="file">
+        <mat-label
+          >Asset Image(Allowed Format: jpg,jpeg,JPEG,JPG,png,PNG,GIF)
+          <b>Upload front and backside image*</b></mat-label
+        >
+        <input type="file" />
       </div>
       <div class="submit">
-
         <button mat-button>Submit</button>
       </div>
-     </div>
-
-
+    </div>
   </div>
   <div class="main">
     <h2>List All Declaration Assets</h2>
     <div class="table">
       <app-common-table [tableSource]="tableSource">
         <ng-template appFor="sn" let-row="row">
-          {{row.sn }}
+          {{ row.sn }}
         </ng-template>
         <ng-template appFor="status" let-row="row">
           {{ row.status }}
@@ -110,7 +107,6 @@
         <ng-template appFor="company" let-row="row">
           {{ row.company }}
         </ng-template>
-
       </app-common-table>
     </div>
   </div>

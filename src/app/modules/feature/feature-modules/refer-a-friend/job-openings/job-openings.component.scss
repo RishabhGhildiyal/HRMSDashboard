@@ -21,3 +21,14 @@
     gap: 20px;
   }
 }
+
+@media (max-width:770px){
+  .container{
+    .card1{
+      display: block;
+      .c{
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

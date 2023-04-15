@@ -1,5 +1,12 @@
 
-
+.flex-end{
+  display: flex;
+  justify-content: flex-end;
+}
+.flex-start{
+  display: flex;
+  justify-content: flex-start;
+}
 
 @mixin flex($item, $align) {
   display: flex;
@@ -37,25 +44,36 @@
 }
 
 
+@mixin form-field($width) {
+  .input-box {
+    margin: 0px 10px 0px 10px;
+    mat-form-field {
+      width: $width;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 600;
+      font-family: "Segoe UI";
+      color: #2f3031;
+      margin-bottom: 5px;
+      margin: 0;
+    }
+    ::ng-deep.mat-form-field-appearance-outline {
+      background-color: $pure-white;
 
+      .mat-form-field-infix {
+        padding: 20px 0px 17px 0px;
+        border-top: 0em solid transparent;
+      }
+    }
+    ::ng-deep .mat-form-field-appearance-fill {
+      background-color: $pure-white;
+      .mat-form-field-flex {
+        background-color: $pure-white;
+        padding: 0em 0em 0 0.75em;
+      }
+    }
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-// @mixin position($position,$top,$bottom,$left,$right) {
-//   position: $position;
-//   top : $top;
-//   bottom: $bottom;
-//   left : $left;
-//   right : $right;
-// }
 

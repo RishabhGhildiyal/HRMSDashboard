@@ -4,51 +4,52 @@
 .container {
   padding: 40px;
   min-height: 77%;
-  .body{
+  .body {
     background-color: $pure-white;
     padding: 20px;
     margin-bottom: 20px;
-    .button{
+    .button {
       display: flex;
       justify-content: flex-end;
-      button{
+      button {
         background-color: #3246d3;
         color: white;
       }
     }
-    .containers{
+    .containers {
       background-color: white;
       padding: 2%;
       margin-bottom: 2%;
-      .main{
+      .main {
         display: grid;
         grid-template-columns: 23% 23% 23% 23%;
         column-gap: 2%;
-      .field{
+        .field {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      .area {
         display: flex;
         flex-direction: column;
-      }
-      }
-      .area{
-        display: flex;
-        flex-direction: column;
-        input{
+        input {
           margin: 1%;
           padding: 1%;
           border: 1px solid rgb(209, 209, 209);
           width: 50%;
         }
-
+        b {
+          color: #ff0000;
+        }
       }
-      .submit{
+      .submit {
         display: flex;
         justify-content: center;
-      button{
-        background-color: #199cff;
-        color: white;
+        button {
+          background-color: #199cff;
+          color: white;
+        }
       }
-    }
-
     }
   }
   h2 {
@@ -58,41 +59,53 @@
   }
   .main {
     background-color: $pure-white;
-    .table {
-      padding: 20px;
-      .action {
-        td {
-          button {
-          }
-        }
-      }
-      table {
-        border: $borderColor;
-        width: 100%;
-        box-shadow: none;
-        overflow-x: scroll;
+  }
+}
+
+:host ::ng-deep .container {
+  .tables {
+    table {
+      thead {
         th {
-          word-break: break-word;
-          border: 1px solid #f1f1f2;
-          overflow-x: scroll;
+          padding: 10px;
         }
-        td {
-          border: 1px solid #f1f1f2;
-          padding-left: 10px;
-          overflow-x: scroll;
-          // word-wrap: break-word;
-          .edit {
-            color: $pure-white;
-            background-color: grey;
-            margin-bottom: 7px;
-            width: 10px;
-          }
-          .delete {
-            color: $pure-white;
-            background-color: red;
+      }
+      tbody {
+        tr {
+          td {
+            padding: 15px;
+            // border-right: 1px solid black;
           }
         }
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 657px) {
+  .container {
+    .body {
+      .button{
+        margin-bottom: 20px;
+      }
+      .containers {
+        .main {
+          display: block;
+        }
+        .area{
+          mat-label{
+            word-break:break-word;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 297px) {
+  .container {
+    .body {
+      padding: 10px;
     }
   }
 }

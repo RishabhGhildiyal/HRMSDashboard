@@ -14,7 +14,7 @@ export const AUTH : Iroute = {
 export const LOGIN : Iroute = {
   path:'login',
   get fullurl(): string {
-    return `/${this.path}`;
+    return `${AUTH.fullurl}/${this.path}`;
   },
 }
 
@@ -58,7 +58,7 @@ export const MY_PROFILE : Iroute = {
 export const BASICINFO: Iroute={
   path:'basic-info',
   get fullurl(){
-    return `/${this.path}`
+    return `${DASHBOARD.fullurl}/${MY_PROFILE.fullurl}/${this.path}`
   }
 }
 
@@ -93,7 +93,7 @@ export const APPRAISAL: Iroute={
 export const CHANGEPASSWORD: Iroute={
   path:'change-password',
   get fullurl(){
-    return `/${this.path}`
+    return `${DASHBOARD.fullurl}/${MY_PROFILE.fullurl}/${this.path}`
   }
 }
 
@@ -370,6 +370,13 @@ export const REFERRAL_LIST : Iroute={
   }
 }
 
+export const CURRENT_JOB : Iroute={
+  path:'job-details',
+  get fullurl():string{
+    return `/${JOB_OPENINGS.fullurl}/${this.path}`
+  }
+}
+
 
 
 export const REVIEWS : Iroute={
@@ -430,7 +437,7 @@ export const FOOD: Iroute={
   }
 }
 
-export const LUNCH_COUPON: Iroute={
+export const PURCHASE_LUNCH_COUPON: Iroute={
   path:'lunch-coupon',
   get fullurl(): string{
     return `/${FOOD.fullurl}/${this.path}`
@@ -444,282 +451,6 @@ export const REQUEST_DINNER: Iroute={
   }
 }
 
-
-
-
-
-/*
-
-/**
- *  @description account routes
- */
-
-// interface Iroutes{
-//   path:string
-//   fullUrl:string
-// }
-// export const ACCOUNT:Iroutes  = {
-//   path: 'account',
-//   get fullUrl(){
-//     return `/${this.path}`;
-//   },
-// };
-// export const LOGIN:Iroutes= {
-//   path: 'login',
-//   get fullUrl(){
-//     return `${ACCOUNT.fullUrl}/${this.path}`;
-//   },
-
-
-
-// };
-// export const FORGETPASSWORD: Iroutes = {
-//   path: 'reset',
-//   get fullUrl(){
-//     return `${ACCOUNT.fullUrl}/${this.path}`;
-//   },
-
-// };
-
-// /**
-//  * @description Layout routes
-// */
-// export const LAYOUT: Iroutes = {
-//   path: 'layout',
-//   get fullUrl(){
-//     return `/${this.path}`;
-//   },
-// };
-
-// export const HOME: Iroutes = {
-//   path: 'home',
-//   get fullUrl(){
-//     return `${LAYOUT.fullUrl}/${this.path}`;
-//   },
-
-// };
-
-// export const DIRECTORY: Iroutes = {
-//   path: 'directory',
-//   get fullUrl(){
-//     return `${LAYOUT.fullUrl}/${this.path}`;
-//   },
-
-// };
-// export const EXPLORE: Iroutes = {
-//   path: 'explore',
-//   get fullUrl(){
-//     return `${LAYOUT.fullUrl}/${this.path}`;
-//   },
-// };
-// export const MYPERFORMANCE: Iroutes = {
-//   path: 'my-performance',
-//   get fullUrl(){
-//     return `${LAYOUT.fullUrl}/${this.path}`;
-//   },
-
-// };
-
-// /**@description My Links parts routes */
-
-
-
-
-// export const INSURANCE: Iroutes = {
-//   path: 'insurance',
-//   get fullUrl(){
-//     return `${LAYOUT.fullUrl}/${this.path}`;
-//   },
-
-// };
-// export const CALENDER: Iroutes = {
-//   path: 'calender',
-//   get fullUrl(){
-//     return `${LAYOUT.fullUrl}/${this.path}`;
-//   },
-
-// };
-// export const POLICYDOC: Iroutes = {
-//   path: 'policy-doc',
-//   get fullUrl(){
-//     return `${LAYOUT.fullUrl}/${this.path}`;
-//   },
-
-// };
-
-
-// /**@description Myprofile  routes */
-
-// export const MYPROFILE: Iroutes = {
-//   path: 'my-profile',
-//   get fullUrl(){
-//     return `${LAYOUT.fullUrl}/${this.path}`;
-//   },
-
-// };
-
-// /**@description My profile parts routes */
-
-// export const BASICINFO: Iroutes = {
-//   path: 'basic-info',
-//   get fullUrl(){
-//     return `${MYPROFILE.fullUrl}/${this.path}`;
-//   },
-
-// };
-
-// export const PROFILEPICTURE: Iroutes = {
-//   path: 'profile-picture',
-//   get fullUrl(){
-//     return `${MYPROFILE.fullUrl}/${this.path}`;
-//   },
-
-// };
-
-// export const SHIFT: Iroutes = {
-//   path: 'shift',
-//   get fullUrl(){
-//     return `/${MYPROFILE.fullUrl}/${this.path}`;
-//   },
-
-// };
-
-// export const QUALIFICATION: Iroutes = {
-//   path: 'qualification',
-//   get fullUrl(){
-//     return `/${MYPROFILE.fullUrl}/${this.path}`;
-//   },
-
-// };
-// export const CHANGEPASSWORD: Iroutes = {
-//   path: 'change-password',
-//   get fullUrl(){
-//     return `/${MYPROFILE.fullUrl}/${this.path}`;
-//   },
-
-// };
-
-// export const APPRAISAL: Iroutes = {
-//   path: 'appraisal',
-//   get fullUrl(){
-//     return `/${MYPROFILE.fullUrl}/${this.path}`;
-//   },
-
-// };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-interface Iroute{
-  path:string
-  fullUrl:string
-}
-
-export const ACCOUNT:Iroute ={
-  path:'account',
-  get fullUrl(){
-    return `/${this.path}`;
-  }
-}
-
-export const LAYOUT:Iroute ={
-  path:'layout',
-  get fullUrl(){
-    return `/${this.path}`
-  }
-}
-
-export const LOGIN:Iroute ={
-  path:'login',
-  get fullUrl(){
-    return `/${this.path}`
-  }
-}
-
-export const FORGETPASSWORD: Iroute ={
-path:'forget-password',
-get fullUrl(){
-  return `/${this.path}`
-}
-}
-
-  export const HOME: Iroute ={
-    path:'home',
-    get fullUrl(){
-      return `/${this.path}`
-    }
-  }
-
-  /**
-   * @description My profile module routes and Sub module routes
-   */
-
-
-
-  /** export const MYPROFILE: Iroute ={
-    path: 'my-profile',
-    get fullUrl(){
-      return `/${this.path}`
-    }
-  }
-
-  export const BASICINFO: Iroute={
-    path:'basic-info',
-    get fullUrl(){
-      return `/${this.path}`
-    }
-  }
-
-  export const PROFILEPIC: Iroute={
-    path:'profile-pic',
-    get fullUrl(){
-      return `/${this.path}`
-    }
-  }
-
-  export const QUALIFICATION: Iroute={
-    path:'qualification',
-    get fullUrl(){
-      return `/${this.path}`
-    }
-  }
-
-  export const SHIFT: Iroute={
-    path:'shift',
-    get fullUrl(){
-      return `/${this.path}`
-    }
-  }
-
-  export const CHANGEPASSWORD: Iroute={
-    path:'change-password',
-    get fullUrl(){
-      return `/${this.path}`
-    }
-  }
-  export const APPRAISAL: Iroute={
-    path:'appraisal',
-    get fullUrl(){
-      return `/${this.path}`
-    }
-  }
-*/
 
 
 

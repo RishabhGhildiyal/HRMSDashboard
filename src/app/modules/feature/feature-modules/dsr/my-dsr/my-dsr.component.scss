@@ -34,20 +34,7 @@ section {
         display: block;
             }
       .left_container {
-        .buttons {
-          display: grid;
-          grid-template-columns: 15% 15%;
-          column-gap: 4%;
-          .cancel {
-            color: white;
-            background-color: red;
-          }
 
-          .save {
-            color: white;
-            background-color: green;
-          }
-        }
         .date_main {
           display: grid;
           grid-template-columns: 30% 30% 30%;
@@ -56,7 +43,7 @@ section {
             display: block;
                 }
           .check {
-            margin-top: 20%;
+            margin-top: 5%;
           }
           .timePicker {
             height: 50px;
@@ -70,7 +57,30 @@ section {
           flex-direction: column;
         }
       }
+      .right_container{
+        @media(max-width:730px){
+          margin-top: 30px;
+        }
+      }
     }
+    .buttons {
+      display: grid;
+      grid-template-columns: 15% 15%;
+      column-gap: 4%;
+      @media(max-width:730px){
+        margin-top: 30px;
+      }
+      .cancel {
+        color: white;
+        background-color: red;
+      }
+
+      .save {
+        color: white;
+        background-color: green;
+      }
+    }
+
   }
 
   .mid_wrapper {
@@ -100,6 +110,26 @@ section {
     margin-top: 2%;
     h1 {
       color: #3246d3;
+    }
+  }
+}
+
+:host ::ng-deep .container {
+  .tables {
+    table {
+      thead {
+        th {
+          padding: 10px;
+        }
+      }
+      tbody {
+        tr {
+          td {
+            padding: 15px;
+            // border-right: 1px solid black;
+          }
+        }
+      }
     }
   }
 }

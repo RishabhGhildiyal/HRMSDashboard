@@ -31,6 +31,7 @@
           font-size: 30px;
           font-weight: 500 !important;
           margin-bottom: 10px;
+          // text-align: center;
         }
       }
     }
@@ -117,16 +118,16 @@
   .container {
     .main {
       .card {
-        display: block;
+        // display: block;
         .image {
           display: flex;
           justify-content: center;
           align-items: center;
           padding: 0px;
           img{
-            padding: 30px 30px 20px 30px;
-            height: 60px;
-            width: 60px;
+            padding: 30px 30px 7px 30px;
+            height: 150px;
+            // width: 60px;
             // margin-right: 70px;
           }
         }
@@ -145,6 +146,32 @@
       .main_content{
         display: block;
         margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    .main {
+      .card {
+        display: block;
+        .image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0px;
+          img{
+            padding: 30px 30px 7px 30px;
+            height: 100px;
+            // width: 60px;
+            // margin-right: 70px;
+          }
+        }
+        .content {
+          word-wrap: break-word;
+          padding: 10px;
+        }
       }
     }
   }

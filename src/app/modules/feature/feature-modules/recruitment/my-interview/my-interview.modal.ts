@@ -36,7 +36,7 @@ export class UserTableDataSource implements Table.Source<any> {
     },
 
     {
-      title: 'email',
+      title: 'Email',
       id: 'email',
       sorting: false,
       templateBy: 'email',
