@@ -40,11 +40,11 @@
             </div>
             <div class="data">
               <mat-label>Estimated Hours</mat-label>
-              <input [ngxTimepicker]="picker1" class="timePicker" />
+              <input [ngxTimepicker]="picker1" [format]="24" formControlName="hours" class="timePicker" />
               <ngx-material-timepicker #picker1></ngx-material-timepicker>
             </div>
             <div class="check">
-              <mat-checkbox class="example-margin">No Work done</mat-checkbox>
+              <mat-checkbox (change)="noWork($event)" class="example-margin">No Work done</mat-checkbox>
             </div>
           </div>
 
@@ -52,13 +52,13 @@
         </div>
         <div class="right_container">
           <h3>Description</h3>
-          <angular-editor [config]="config"></angular-editor>
+          <angular-editor [config]="config" formControlName="description"></angular-editor>
         </div>
 
         <div class="buttons">
           <button mat-button class="save" (click)="onAddDsr()">Add</button>
         </div>
-        
+
       </div>
     </form>
   </div>

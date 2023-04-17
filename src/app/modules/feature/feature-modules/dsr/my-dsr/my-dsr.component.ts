@@ -24,6 +24,7 @@ export class MyDsrComponent implements OnInit {
       date: ['', [Validators.required]],
       hours: ['', [Validators.required]],
       project: ['', [Validators.required]],
+      description: ['']
     });
   }
   openDetails() {
@@ -146,5 +147,19 @@ export class MyDsrComponent implements OnInit {
     this.docsData = this.DOCS_DATA;
 
     this.populateTable(this.PageOption);
+  }
+  noWork(event:any){
+    // console.log(event,'otla');
+
+    if(event.checked == true){
+      let str = "No work has been done today"
+      this.dsrForm.get('hours')?.setValue('0:00');
+      this.dsrForm.get('description')?.setValue(str)
+    }else if(event.checked == false){
+      this.dsrForm.get('hours')?.setValue('');
+      this.dsrForm.get('description')?.setValue('')
+
+    }
+
   }
 }

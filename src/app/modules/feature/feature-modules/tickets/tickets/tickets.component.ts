@@ -4,11 +4,13 @@ import { AngularEditorConfig } from '@kolkov/angular-editor';
 import { DEPARTMENT, PAGE_OPTIONS, PRIORITY } from 'src/app/constants/common-constants';
 import { Table } from 'src/app/modules/common/common-table/table.types';
 import { DOCUMENTS_LIST_CONFIG, UserTableDataSource } from './tickets.model';
+import { DropDownAnimation } from 'src/app/animations/animations';
 
 @Component({
   selector: 'app-tickets',
   templateUrl: './tickets.component.html',
-  styleUrls: ['./tickets.component.scss']
+  styleUrls: ['./tickets.component.scss'],
+  animations:[DropDownAnimation]
 })
 export class TicketsComponent implements OnInit {
   isShow = false;

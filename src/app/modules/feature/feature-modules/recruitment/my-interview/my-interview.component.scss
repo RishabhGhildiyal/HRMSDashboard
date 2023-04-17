@@ -5,6 +5,13 @@
 .container{
   padding: 20px;
   min-height: 80%;
+
+  ::ng-deep.mat-form-field-type-mat-select:not(.mat-form-field-disabled) .mat-form-field-flex {
+    cursor: pointer;
+    background-color: white;
+    border: $borderColor;
+  //  width: 100%;
+  }
   .heading{
     h1{
       color: $primary-blue;
@@ -51,12 +58,6 @@
   }
 }
 
-::ng-deep.mat-form-field-type-mat-select:not(.mat-form-field-disabled) .mat-form-field-flex {
-  cursor: pointer;
-  background-color: white;
-  border: $borderColor;
-  //  width: 100%;
-}
 :host ::ng-deep .container{
   .tables{
     table{

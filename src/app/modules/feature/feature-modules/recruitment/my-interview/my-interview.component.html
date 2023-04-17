@@ -36,7 +36,7 @@
       </div>
       <div class="table">
         <!-- <app-common-table ></app-common-table> -->
-        <app-listing [config]="listingConfig">
+        <app-listing [config]="listingConfig" (changeListEvent)="onTableEventChange($event)">
           <app-common-table [tableSource]="tableSource">
             <ng-template appFor="sn" let-row="row"> {{ row.sn }} </ng-template>
             <ng-template appFor="department_name" let-row="row">

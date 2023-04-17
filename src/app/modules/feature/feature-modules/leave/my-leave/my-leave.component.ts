@@ -96,9 +96,9 @@ export class MyLeaveComponent implements OnInit {
     console.log(this.tableSource,"123TS");
 
   }
-  toggleAddNew(){
-    this.isShow = !this.isShow;
-  }
+  // toggleAddNew(){
+  //   this.isShow = !this.isShow;
+  // }
 
   route(){
     this.router.navigate([VIEW_DETAILS.fullurl])

@@ -11,9 +11,9 @@
           </button>
         </div>
       </div>
-      <div class="container-main" *ngIf="isShow">
+      <div class="container-main menu" *ngIf="isShow" [@dropDownMenu]>
 
-        <form [formGroup]="ticketsForm">
+        <form [formGroup]="ticketsForm" class="menu-item">
           <div class="containers" >
             <div class="left_container">
               <div class="data">
@@ -54,7 +54,7 @@
             </div>
           </div>
         </form>
-        <div class="buttons">
+        <div class="buttons menu-item">
           <button mat-button class="save" (click)="onSave()">Save</button>
         </div>
       </div>

@@ -14,6 +14,7 @@ export class SearchFilterComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.search,'k10')
   }
 
   searchResult() {

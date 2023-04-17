@@ -10,7 +10,7 @@
   </app-interview-filter> -->
 
   <div class="table-data">
-      <app-search-filter *ngIf="config.options.search" (setSearch)="searchData($event)" ></app-search-filter>
+      <app-search-filter *ngIf="config.options.search" (setSearch)="searchData($event)" [placeholder]="config.options.searchPlaceholder"  ></app-search-filter>
 
       <ng-content></ng-content>
       <h2 style="text-align: center; margin-top: 5px;" *ngIf="config.total === 0">No Data Found</h2>

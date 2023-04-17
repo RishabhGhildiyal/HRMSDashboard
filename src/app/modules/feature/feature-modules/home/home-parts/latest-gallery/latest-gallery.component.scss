@@ -6,6 +6,11 @@
   padding: 2%;
   background-color: $pure-white;
   border: $borderColor;
+  @media(max-width:1230px){
+    margin: 2.5%;
+    width: 59em;
+
+  }
   h1 {
     border-bottom: $borderColor;
   }

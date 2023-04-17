@@ -50,7 +50,7 @@
       <h2>Add Leave</h2>
     </div>
     <div class="button">
-      <button mat-raised-button (click)="toggleAddNew()">+Add New</button>
+      <button mat-raised-button (click)="isShow = !isShow">+Add New</button>
     </div>
   </div>
   <div class="containers" *ngIf="isShow">
@@ -96,7 +96,7 @@
     </div>
 
     <div class="buttons">
-      <button mat-button class="cancel">Cancel</button>
+      <button mat-button class="cancel" (click)="isShow = !isShow">Cancel</button>
       <button mat-button class="save">Save</button>
     </div>
   </div>
@@ -105,7 +105,7 @@
       <span>Search:</span>
       <input type="text" />
     </div> -->
-  </div> 
+  </div>
   <div class="table">
     <app-common-table [tableSource]="tableSource">
       <!-- <ng-template appFor="sn" let-row="row">

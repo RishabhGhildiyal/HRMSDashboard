@@ -23,7 +23,7 @@ export class UserTableDataSource implements Table.Source<any> {
       resolve: (row: any) => row['sn'],
     },
     {
-      title: 'Department',
+    title: 'Department',
       id: 'department_name',
       sorting: false,
       templateBy: 'department_name',

@@ -1,0 +1,36 @@
+.table-data{
+  mat-paginator{
+    ::ng-deep{
+
+      .mat-paginator-range-actions{
+        mat-button{
+        height: 30px;
+        width: 30px;
+        box-shadow: none;
+        background: blue;
+        color: white;
+        border-radius: inherit;
+        margin-left: 5px;
+        min-width:30px !important;
+      }
+    }
+    .mat-paginator-page-size-label{
+
+      display: none;
+    }
+    .mat-paginator-range-label::after {
+      content:'Entries '
+  }
+  .mat-paginator-range-label::before {
+        content:'Show '
+  }
+
+  .mat-paginator-page-size::after{
+    content:'Entries'
+  }
+  .mat-paginator-page-size::before{
+    content:'Showing'
+}
+    }
+  }
+}

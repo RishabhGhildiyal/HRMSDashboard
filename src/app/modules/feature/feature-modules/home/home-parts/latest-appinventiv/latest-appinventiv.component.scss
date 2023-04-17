@@ -3,9 +3,39 @@
 .content_wrapper {
   margin: 1.5%;
   border-radius: 1%;
-  padding: 2%;
-  background-color: $pure-white;
-  border: $borderColor;
+  padding: 1%;
+  background-color: white;
+  border: 1px solid #d7d2d2;
+  @media(max-width:1230px){
+    margin: 2.5%;
+    width: 60em;
+
+  }
+  @media(max-width:1200px){
+    margin: 2.5%;
+    width: 59em;
+
+  }
+  @media(max-width:1196px){
+    margin: 2.5%;
+    width: 57em;
+
+  }
+  @media(max-width:1146px){
+    // margin: 2.5%;
+    max-width: 54em;
+
+  }
+  @media(max-width:1146px){
+    // margin: 2.5%;
+    max-width: 54em;
+
+  }
+  @media(max-width:375px){
+    margin: 6.5%;
+    width: 20em;
+
+  }
   h1 {
     border-bottom: $borderColor;
   }

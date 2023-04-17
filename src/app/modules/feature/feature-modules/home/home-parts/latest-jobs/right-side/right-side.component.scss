@@ -7,6 +7,30 @@
   background-color: white;
   border-radius: 2%;
   // min-width: 409px;
+  // @media(max-width:1552px){
+  //   height: 539px;
+  // }
+  // @media(max-width:1519px){
+  //   height: 559px;
+  // }
+  // @media(max-width:1485px){
+  //   height: 609px;
+  // }
+  // @media(max-width:1319px){
+  //   height: 629px;
+  // }
+  // @media(max-width:1231px){
+  //   height: 647px;
+  // }
+  // @media(max-width:375px){
+  //   height: 647px;
+  //   max-width: 18em;
+  // }
+  // @media(max-width:356px){
+  //   // h3{
+  //   //   display: block;
+  //   // }
+  // }
   h3 {
     font-size: large;
     font-weight: bold;
@@ -28,6 +52,15 @@
     margin: 0 3em;
     background: url("../../../../../../../../assets/image_2023_04_15T14_29_55_661Z.png") no-repeat center / cover;
     text-align: center;
+    @media(max-width:1230px){
+      width: 23em;
+    }
+    @media(max-width:845px){
+      width: 20em;
+    }
+    @media(max-width:744px){
+      width: 16em;
+    }
     .name {
       font-size: 18px;
       color: #000000;
