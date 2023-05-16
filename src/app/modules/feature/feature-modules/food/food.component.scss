@@ -1,0 +1,131 @@
+// @import "../../../../scss/common";
+@import "../../../../../scss/mixins";
+@import "../../../../../scss/global.scss";
+
+.container {
+  .buy-coupons {
+    display: grid;
+    grid-template-columns: 55% 43%;
+    column-gap: 2%;
+    width: 95%;
+    margin: auto;
+    margin-top: 2rem;
+    @media (max-width: 592px) {
+      display: block;
+    }
+    .left {
+      background-color: white;
+      border: 1px solid #dce2e9;
+      display: grid;
+      border-radius: 5px;
+      padding: 6px 1rem;
+      .amount {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+          color: blue;
+          font-size: 15px;
+        }
+      }
+      h3 {
+        color: blue;
+        font-size: 2rem;
+      }
+      .details {
+        p {
+          margin-bottom: 0px;
+        }
+        button {
+          height: 2rem;
+          width: 7rem;
+          cursor: pointer;
+          border: 1px solid gray;
+          background-color: white;
+          color: blue;
+          border-radius: 5px;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      @media (max-width: 593px) {
+        margin-bottom: 20px;
+      }
+    }
+    .right {
+      display: grid;
+      justify-content: center;
+      background-color: white;
+      border: 1px solid #dce2e9;
+      border-radius: 5px;
+      padding: 6px 1rem;
+
+      .purchase {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        background-color: $primary-blue;
+        color: $pure-white;
+        font-size: 15px;
+        // @include blue-button(2.5rem,18rem);
+        display: flex;
+        justify-content: center;
+        width: 70%;
+        border-radius: 5px;
+        @media (max-width: 593px) {
+          margin-bottom: 5px;
+        }
+      }
+      @media (max-width: 593px) {
+        padding: 14px;
+      }
+    }
+  }
+
+  .main {
+    border-radius: 1rem;
+    background-color: white;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 2rem;
+    margin-top: 10px;
+    padding: 2%;
+    overflow: auto;
+    .table-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      overflow-x: scroll;
+      .legend {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 16px;
+        span {
+          font-size: 1.1rem;
+          padding-right: 5px;
+        }
+        .coupon-purchased {
+          color: #a4ffcc;
+          background-color: #a4ffcc;
+        }
+
+        .coupon-available {
+          background-color: #bdc8fa;
+          color: #bdc8fa;
+        }
+        .locked {
+          color: #bfbfbf;
+          background-color: #bfbfbf;
+        }
+        .holiday {
+          color: #ff989e;
+          background-color: #ff989e;
+        }
+      }
+    }
+  }
+}

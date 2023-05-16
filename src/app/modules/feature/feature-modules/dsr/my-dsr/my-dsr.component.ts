@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
-import { DSR_DROPDOWN } from 'src/app/constants/common-constants';
+import { DSR_DROPDOWN, HOURS, PM_STATUS, PROJECT_DSR, SUBMISSION_DROPDOWN } from 'src/app/constants/common-constants';
 import { Table } from 'src/app/modules/common/common-table/table.types';
 import { MyDsrTableDataSource, MYDSR_LIST_CONFIG } from './my-dsr.model';
 
@@ -13,9 +13,15 @@ import { MyDsrTableDataSource, MYDSR_LIST_CONFIG } from './my-dsr.model';
 })
 export class MyDsrComponent implements OnInit {
   tableSource: Table.Source<any> = new MyDsrTableDataSource([]);
+  today = new Date();
 
   isShow = false;
   dsrForm: FormGroup;
+  project= new FormControl();
+  submissionStatus = new FormControl();
+  approvalStatus = new FormControl();
+  hours = new FormControl();
+
   constructor(private _fb: FormBuilder, private route: Router) {
     this.dsrForm = this.createForm();
   }
@@ -24,7 +30,9 @@ export class MyDsrComponent implements OnInit {
       date: ['', [Validators.required]],
       hours: ['', [Validators.required]],
       project: ['', [Validators.required]],
-      description: ['']
+      description: [''],
+      time:['',Validators.required],
+
     });
   }
   openDetails() {
@@ -46,6 +54,29 @@ export class MyDsrComponent implements OnInit {
     placeholder: 'Project',
     list: DSR_DROPDOWN,
   };
+  submission_dropdown = {
+    label: 'Submission Status',
+    placeholder: 'Submission Status',
+    list:SUBMISSION_DROPDOWN
+  };
+
+  project_dSR = {
+    label: 'Submission Status',
+    placeholder: 'Submission Status',
+    list:PROJECT_DSR
+  };
+
+  approval_dropdown = {
+    label: 'Approval Status',
+    placeholder: 'Approval Status',
+    list:PM_STATUS
+  };
+
+  hours_dropdown ={
+    label: 'Hours',
+    placeholder: 'Hours',
+    list:HOURS
+  }
 
   toggleAddNew() {
     this.isShow = !this.isShow;

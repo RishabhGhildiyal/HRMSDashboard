@@ -9,6 +9,9 @@
         <label for="">School/University</label><br />
         <mat-form-field class="firstName_input" appearance="outline">
           <input matInput formControlName="schoolUni" placeholder="First Name" required />
+          <mat-error>
+            {{infoForm | showError :'schoolUni':'SchoolUni'}}
+          </mat-error>
         </mat-form-field>
       </div>
       <div class="educationLevel">
@@ -17,6 +20,7 @@
 
         <mat-form-field class="educationLevel" appearance="outline">
           <mat-label>Education Level</mat-label>
+
           <mat-select>
             <mat-option>None</mat-option>
             <mat-option

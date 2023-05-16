@@ -73,8 +73,8 @@
                 <div class="input-box">
                   <p>Years</p>
                   <mat-form-field appearance="outline">
-                    <input matInput formControlName="years" placeholder="years" required
-                      (keydown.space)="$event.preventDefault()" />
+                    <input  type="number" matInput formControlName="years" placeholder="years" required
+                      (keydown.space)="$event.preventDefault()"  [max]="11" />
                     <mat-error>
                       {{ infoForm | showError : "years" : "Years" }}
                     </mat-error>
@@ -101,7 +101,7 @@
                 <div>
                   <p>Years</p>
                   <mat-form-field appearance="outline">
-                    <input matInput formControlName="years" placeholder="years" required
+                    <input  type="number" matInput formControlName="years" placeholder="years" required
                       (keydown.space)="$event.preventDefault()" />
                     <mat-error>
                       {{ infoForm | showError : "years" : "Years" }}
@@ -111,7 +111,7 @@
                 <div>
                   <p>Months</p>
                   <mat-form-field class="months" appearance="outline">
-                    <input matInput formControlName="months" placeholder="months" required
+                    <input  type="number" matInput formControlName="months" placeholder="months" required
                       (keydown.space)="$event.preventDefault()" [max]="11" />
                     <mat-error>
                       {{ infoForm | showError : "months" : "Months" }}

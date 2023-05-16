@@ -24,6 +24,7 @@ export class FormService {
     months:[Validators.pattern],
     professionalCourse:[Validators.pattern],
     toInput:[Validators.pattern],
+    education:[Validators.pattern],
     time:[Validators.pattern],
     schoolUni:[Validators.pattern],
     oldPassword:[Validators.pattern],
@@ -55,7 +56,14 @@ export class FormService {
     title:[Validators.pattern],
     address:[Validators.pattern],
     description:[Validators.pattern],
-    mobile:[Validators.pattern]
+    mobile:[Validators.pattern],
+    leave_type:[Validators.pattern],
+    startDate:[Validators.pattern],
+    endDate:[Validators.pattern],
+    remarks:[Validators.pattern],
+    upload:[Validators.pattern],
+    department:[Validators.pattern],
+    status:[Validators.pattern]
   };
 
   getControl(name: string, required = true) {

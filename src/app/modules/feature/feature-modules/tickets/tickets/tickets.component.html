@@ -31,6 +31,8 @@
                 </mat-form-field>
               </div>
               <div class="data">
+                <mat-label>Department</mat-label>
+
                 <app-input-search
                   [myControlName]="ticketsForm.controls.department"
                   [data]="departmentData"
@@ -39,9 +41,17 @@
               </div>
 
               <div class="data">
+                <mat-label>Ticket Category</mat-label>
+
                 <!-- <app-input-search [myControlName]="infoForm.controls." [data]="genderData" ></app-input-search> -->
+                <app-input-search
+                  [myControlName]="ticketsForm.controls.ticketsCategory"
+                  [data]="ticket_category"
+                ></app-input-search>
               </div>
               <div class="data">
+                <mat-label>Priority</mat-label>
+
                 <app-input-search
                   [myControlName]="ticketsForm.controls.priority"
                   [data]="priorityData"

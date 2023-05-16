@@ -1,3 +1,7 @@
+@import "../../../../../scss/mixins";
+@import "../../../../../scss/global.scss";
+
+
 section {
   .sidenav_text {
     color: var(--side-nav-text-color);
@@ -6,8 +10,27 @@ section {
     font-weight: 500;
     margin: 0;
   }
+  .is_active {
+    color: $primary-blue;
+    .sidenav_text {
+      min-width: 160px;
+    }
+
+    .item_text::before {
+      position: absolute;
+      content: "";
+      width: 3px;
+      height: 100%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+    }
+  }
 
 
+  &:hover {
+    color: $primary-blue;
+  }
 
   .is_active {
     color:  var(--side-nav-active-color)!important;
@@ -35,6 +58,12 @@ section {
 
     .item_icon {
       vertical-align: super;
+    }
+    .circle {
+      width: 20px;
+      // img{
+      //   margin-top: 15px;
+      // }
     }
   }
 

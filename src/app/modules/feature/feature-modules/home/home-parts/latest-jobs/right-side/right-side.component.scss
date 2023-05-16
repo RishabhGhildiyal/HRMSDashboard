@@ -7,30 +7,29 @@
   background-color: white;
   border-radius: 2%;
   // min-width: 409px;
-  // @media(max-width:1552px){
-  //   height: 539px;
-  // }
-  // @media(max-width:1519px){
-  //   height: 559px;
-  // }
-  // @media(max-width:1485px){
-  //   height: 609px;
-  // }
-  // @media(max-width:1319px){
-  //   height: 629px;
-  // }
-  // @media(max-width:1231px){
-  //   height: 647px;
-  // }
-  // @media(max-width:375px){
-  //   height: 647px;
-  //   max-width: 18em;
-  // }
-  // @media(max-width:356px){
-  //   // h3{
-  //   //   display: block;
-  //   // }
-  // }
+  @media(max-width:1552px){
+    height: 539px;
+  }
+  @media(max-width:1519px){
+    height: 559px;
+  }
+  @media(max-width:1485px){
+    height: 609px;
+  }
+  @media(max-width:1319px){
+    height: 629px;
+  }
+  @media(max-width:1231px){
+    height: 647px;
+  }
+  @media(max-width:375px){
+    height: 647px;
+    max-width: 18em;
+  }
+  @media(max-width:355px){
+    height: 647px;
+    max-width: 18em;
+  }
   h3 {
     font-size: large;
     font-weight: bold;

@@ -15,5 +15,20 @@
       top: 86px;
       min-height: 100%;
     }
+    mat-sidenav {
+      top: 65px;
+      &:hover {
+        ::ng-deep {
+          .mat-drawer-inner-container {
+            @include custom-scroller("y");
+          }
+        }
+      }
+      ::ng-deep {
+        .mat-drawer-inner-container {
+          @include custom-scroller("y", 5px, white);
+        }
+      }
+    }
   }
 }

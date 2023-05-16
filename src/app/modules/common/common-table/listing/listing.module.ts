@@ -16,7 +16,8 @@ import { SearchFilterModule } from '../../search-filter/search-filter/search-fil
     CommonModule,
     MatPaginatorModule,
 
-    SearchFilterModule
+    SearchFilterModule,
+    
   ],
   exports:[
     ListingComponent

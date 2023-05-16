@@ -1,0 +1,58 @@
+<section>
+  <div class="main_container">
+    <div class="row1">
+      <h1>Dinner Request</h1>
+      <button mat-button (click)="toggleAddNew()">Request Dinner</button>
+    </div>
+    <p>Note: You can request/cancel dinner for today before 6:00 PM</p>
+  </div>
+  <div class="containers" *ngIf="isShow">
+    <div class="left_container">
+      <form [formGroup]="dsrForm">
+        <div class="main">
+          <div class="date_main">
+            <div class="data">
+              <mat-label> Date</mat-label>
+
+              <mat-form-field appearance="outline">
+                <input
+                  matInput
+                  [matDatepicker]="picker"
+                  (click)="picker.open()"
+                  readonly="true"
+                  formControlName="date"
+                  placeholder="MM/DD/YY"
+                />
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="picker"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-error>
+                  {{ dsrForm | showError : "date" : "Date" }}
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div>
+            <p>Project</p>
+            <app-input-search
+              [myControlName]="dsrForm.controls.project"
+              [data]="dropDownData"
+              (eventEmitter)="dropdownSelect($event, 'dropdown')"
+            ></app-input-search>
+            <!-- <app-dropdown [dropdown]="dropdownData" [myFormControl]="dsrForm.controls.project" ></app-dropdown> -->
+          </div>
+        </div>
+
+      </form>
+    </div>
+    <div class="right_container">
+      <h3>Description</h3>
+      <angular-editor [config]="config"></angular-editor>
+    </div>
+    <div class="buttons">
+      <button mat-button class="save" (click)="onAddDsr()">Submit</button>
+    </div>
+  </div>
+</section>

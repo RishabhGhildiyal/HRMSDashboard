@@ -107,4 +107,6 @@ export class DirectoryComponent implements OnInit {
     }
     // this.search();
   }
+
+
 }

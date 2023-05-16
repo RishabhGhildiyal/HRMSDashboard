@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { UpcomingTrainingCardComponent } from '../upcoming-training-card/upcoming-training-card.component';
 
 @Component({
   selector: 'app-training-details',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrainingDetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog:MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  openDialog(){
+    let config: MatDialogConfig = {
+      width: '40rem',
+      panelClass:'app-full-bleed',
+      autoFocus:false
+    };
+    this.dialog.open(UpcomingTrainingCardComponent,config)
   }
 
 }

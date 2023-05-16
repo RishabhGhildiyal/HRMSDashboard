@@ -4,39 +4,30 @@
   </div>
   <div class="main">
     <div class="body">
-      <div class="dropdowns">
-        <div class="drop-down1">
-          <p>Department</p>
-          <mat-form-field appearance="fill">
-            <mat-label>Select Department</mat-label>
-            <mat-select>
-              <mat-option
-                *ngFor="let department of departments"
-                [value]="department.department"
-              >
-                {{ department.department }}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
+      <form [formGroup]="interviewForm">
+        <div class="dropdowns">
+          <div class="drop-down1">
+            <p>Department</p>
+            <app-input-search
+            [myControlName]="interviewForm.controls.department"
+            [data]="department_data" (eventEmitter)="dropdownSelect($event,'department')"
+          ></app-input-search>
+          </div>
+          <div class="drop-down2">
+            <p>Status</p>
+            <app-input-search
+            [myControlName]="interviewForm.controls.status"
+            [data]="status_data" (eventEmitter)="dropdownSelect($event,'status')"
+          ></app-input-search>
+          </div>
         </div>
-        <div class="drop-down2">
-          <p>Status</p>
-          <mat-form-field appearance="fill">
-            <mat-label>Select Status</mat-label>
-            <mat-select>
-              <mat-option
-                *ngFor="let status of statuses"
-                [value]="status.status"
-              >
-                {{ status.status }}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-        </div>
-      </div>
+      </form>
       <div class="table">
         <!-- <app-common-table ></app-common-table> -->
-        <app-listing [config]="listingConfig" (changeListEvent)="onTableEventChange($event)">
+        <app-listing
+          [config]="listingConfig"
+          (changeListEvent)="onTableEventChange($event)"
+        >
           <app-common-table [tableSource]="tableSource">
             <ng-template appFor="sn" let-row="row"> {{ row.sn }} </ng-template>
             <ng-template appFor="department_name" let-row="row">
@@ -51,7 +42,9 @@
             <ng-template appFor="mobile_no" let-row="row">
               {{ row.mobile_no }}
             </ng-template>
-            <ng-template appFor="round_type" let-row="row"> {{row.round_type}} </ng-template>
+            <ng-template appFor="round_type" let-row="row">
+              {{ row.round_type }}
+            </ng-template>
             <ng-template appFor="interview_date" let-row="row">
               {{ row.interview_date }}
             </ng-template>

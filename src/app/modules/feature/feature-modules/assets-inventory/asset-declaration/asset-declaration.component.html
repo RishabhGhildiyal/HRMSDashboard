@@ -6,67 +6,83 @@
       </button>
     </div>
     <div class="containers" *ngIf="isShow">
-      <div class="main">
-        <div class="field">
-          <mat-label>Employee Id 1555</mat-label>
+      <form [formGroup]="assetsForm">
+        <div class="main">
+          <div class="field">
+            <mat-label>Employee Id 1555</mat-label>
 
-          <mat-form-field class="example-full-width" appearance="outline">
-            <input matInput />
-          </mat-form-field>
-        </div>
+            <mat-form-field class="example-full-width" appearance="outline">
+              <input matInput formControlName="employee_id">
+            </mat-form-field>
+          </div>
 
-        <div class="field">
-          <mat-label>Unique Asset Code</mat-label>
+          <div class="field">
+            <mat-label>Unique Asset Code</mat-label>
 
-          <mat-form-field class="example-full-width" appearance="outline">
-            <input matInput />
-          </mat-form-field>
-        </div>
-        <div class="field">
-          <mat-label> Serial Number</mat-label>
-          <mat-form-field class="example-full-width" appearance="outline">
-            <input matInput />
-          </mat-form-field>
-        </div>
-        <div class="field">
-          <mat-label>Model Number</mat-label>
+            <mat-form-field class="example-full-width" appearance="outline">
+              <input matInput  formControlName="unique_asset_code">
+            </mat-form-field>
+          </div>
+          <div class="field">
+            <mat-label> Serial Number</mat-label>
+            <mat-form-field class="example-full-width" appearance="outline">
+              <input matInput formControlName="serial_number" />
+            </mat-form-field>
+          </div>
+          <div class="field">
+            <mat-label>Model Number</mat-label>
 
-          <mat-form-field class="example-full-width" appearance="outline">
-            <input matInput />
-          </mat-form-field>
-        </div>
-        <!--
-        <div>
-          <app-dropdown [dropdown]="OS"></app-dropdown>
-        </div> -->
+            <mat-form-field class="example-full-width" appearance="outline">
+              <input matInput formControlName="model_number"/>
+            </mat-form-field>
+          </div>
+          <!--
+          <div>
+            <app-dropdown [dropdown]="OS"></app-dropdown>
+          </div> -->
 
-        <div class="field">
-          <mat-label>OS version</mat-label>
+          <div class="field">
+            <mat-label>OS </mat-label>
 
-          <mat-form-field class="example-full-width" appearance="outline">
-            <input matInput />
-          </mat-form-field>
-        </div>
-        <div class="field">
-          <mat-label>Brand</mat-label>
+            <app-input-search [myControlName]="assetsForm.controls.os" [data]="os">
+            </app-input-search>
+          </div>
+          <div class="field">
+            <mat-label>OS Version</mat-label>
 
-          <mat-form-field class="example-full-width" appearance="outline">
-            <input matInput />
-          </mat-form-field>
-        </div>
+            <mat-form-field class="example-full-width" appearance="outline">
+              <input matInput formControlName="os_version"/>
+            </mat-form-field>
+          </div>
 
-        <div class="field">
-          <mat-label> Colour</mat-label>
+          <div class="field">
+            <mat-label>Brand</mat-label>
 
-          <mat-form-field class="example-full-width" appearance="outline">
-            <input matInput />
-          </mat-form-field>
-        </div>
+            <mat-form-field class="example-full-width" appearance="outline">
+              <input matInput formControlName="brand"/>
+            </mat-form-field>
+          </div>
 
-        <!-- <div>
+          <div class="field">
+            <mat-label> Colour</mat-label>
+
+            <mat-form-field class="example-full-width" appearance="outline">
+              <input matInput formControlName="colour"/>
+            </mat-form-field>
+          </div>
+
+          <div class="field">
+            <mat-label>Device is in working condition? </mat-label>
+
+            <app-input-search [myControlName]="assetsForm.controls.is_working" [data]="device_working">
+            </app-input-search>
+          </div>
+
+          <!-- <div>
           <app-dropdown [dropdown]="condition"></app-dropdown>
         </div> -->
-      </div>
+        </div>
+
       <div class="area">
         <mat-label
           >Asset Image(Allowed Format: jpg,jpeg,JPEG,JPG,png,PNG,GIF)
@@ -75,39 +91,61 @@
         <input type="file" />
       </div>
       <div class="submit">
-        <button mat-button>Submit</button>
+        <button mat-button (click)="onSubmit()">Submit</button>
       </div>
+      </form>
     </div>
   </div>
   <div class="main">
     <h2>List All Declaration Assets</h2>
+
+    <!-- <app-input-search ></app-input-search> -->
+
+
     <div class="table">
+      <app-listing
+          [config]="listingConfig"
+          (changeListEvent)="onTableEventChange($event)"
+        >
       <app-common-table [tableSource]="tableSource">
         <ng-template appFor="sn" let-row="row">
           {{ row.sn }}
         </ng-template>
-        <ng-template appFor="status" let-row="row">
-          {{ row.status }}
+        <ng-template appFor="employee_id" let-row="row">
+          {{ row.employee_id }}
         </ng-template>
-        <ng-template appFor="request_reason" let-row="row">
-          {{ row.request_reason }}
+        <ng-template appFor="unique_asset_code" let-row="row">
+          {{ row.unique_asset_code }}
         </ng-template>
-        <ng-template appFor="priority" let-row="row">
-          {{ row.priority }}
+        <ng-template appFor="serial_number" let-row="row">
+          {{ row.serial_number }}
         </ng-template>
-        <ng-template appFor="requested_at" let-row="row">
-          {{ row.requested_at }}
+        <ng-template appFor="model_number" let-row="row">
+          {{ row.model_number }}
         </ng-template>
-        <ng-template appFor="assets_category" let-row="row">
-          {{ row.assets_category }}
+        <ng-template appFor="os" let-row="row">
+          {{ row.os }}
         </ng-template>
-        <ng-template appFor="allocation_type" let-row="row">
-          {{ row.allocation_type }}
+        <ng-template appFor="os_version" let-row="row">
+          {{ row.os_version }}
         </ng-template>
-        <ng-template appFor="company" let-row="row">
-          {{ row.company }}
+        <ng-template appFor="brand" let-row="row">
+          {{ row.brand }}
+        </ng-template>
+        <ng-template appFor="colour" let-row="row">
+          {{ row.colour }}
+        </ng-template>
+        <ng-template appFor="images" let-row="row">
+          {{ row.images }}
+        </ng-template>
+        <ng-template appFor="is_working" let-row="row">
+          {{ row.is_working }}
+        </ng-template>
+        <ng-template appFor="added" let-row="row">
+          {{ row.added }}
         </ng-template>
       </app-common-table>
+      </app-listing>
     </div>
   </div>
 </div>

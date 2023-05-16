@@ -45,6 +45,8 @@
                 (click)="picker.open()"
                 readonly="true"
                 placeholder="MM/DD/YY"
+                [max]="today"
+
               />
               <mat-datepicker-toggle
                 matSuffix

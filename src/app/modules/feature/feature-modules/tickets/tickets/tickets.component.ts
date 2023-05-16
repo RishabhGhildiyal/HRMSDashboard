@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
-import { DEPARTMENT, PAGE_OPTIONS, PRIORITY } from 'src/app/constants/common-constants';
+import { DEPARTMENT, PAGE_OPTIONS, PRIORITY, TICKET_CATEGORY } from 'src/app/constants/common-constants';
 import { Table } from 'src/app/modules/common/common-table/table.types';
 import { DOCUMENTS_LIST_CONFIG, UserTableDataSource } from './tickets.model';
 import { DropDownAnimation } from 'src/app/animations/animations';
@@ -23,7 +23,8 @@ export class TicketsComponent implements OnInit {
     return this._fb.group({
       subject:['',[Validators.required]],
       department:['',[Validators.required]],
-      priority:['',[Validators.required]]
+      priority:['',[Validators.required]],
+      ticketsCategory:['',[Validators.required]]
     });
   }
   docsData: Array<any> = [
@@ -115,4 +116,9 @@ export class TicketsComponent implements OnInit {
     list: PRIORITY
   }
 
+  ticket_category ={
+    label: 'Ticket Category',
+    placeholder:'Ticket Category',
+    list: TICKET_CATEGORY
+  }
 }

@@ -3,17 +3,26 @@ import { CommonModule } from '@angular/common';
 
 import { FoodRoutingModule } from './food-routing.module';
 import { FoodComponent } from './food.component';
-import { CouponHistoryComponent } from './coupon-history/coupon-history.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
+import { LunchCalendarModule } from './lunch-calendar/lunch-calendar.module';
+import { CouponLegendModule } from './coupon-legend/coupon-legend.module';
+import { CouponsHistoryComponent } from './coupons-history/coupons-history.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
   declarations: [
     FoodComponent,
-    CouponHistoryComponent
+    CouponsHistoryComponent
   ],
   imports: [
     CommonModule,
-    FoodRoutingModule
+    FoodRoutingModule,
+    LunchCalendarModule,
+    CouponLegendModule,
+    MatDialogModule  ,
+    MatButtonModule
   ]
 })
 export class FoodModule { }

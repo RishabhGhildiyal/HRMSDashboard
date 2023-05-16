@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { CouponLegendRoutingModule } from './coupon-legend-routing.module';
 import { CouponLegendComponent } from './coupon-legend.component';
+
 
 
 @NgModule({
@@ -10,8 +9,7 @@ import { CouponLegendComponent } from './coupon-legend.component';
     CouponLegendComponent
   ],
   imports: [
-    CommonModule,
-    CouponLegendRoutingModule
+    CommonModule
   ],
   exports:[
     CouponLegendComponent

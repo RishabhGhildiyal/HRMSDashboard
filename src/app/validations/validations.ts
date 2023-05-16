@@ -7,4 +7,4 @@ export const PATTERN_EMAIL = Validators.pattern(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<
 export const PATTERN_NAME= Validators.pattern(/^[^-`@~\s][a-zA-Z\s-]+$/)
 export const PATTERN_PASS= Validators.pattern(/^[^\s]+$/)
 export const PATTERN_SPACE= Validators.pattern(/^(\s+\S+\s*)*(?!\s).*$/)
-export const NAME_PATTERN= Validators.pattern(/^[A-Za-z0-9]*$/ )
+export const NAME_PATTERN= Validators.pattern(/^[^-`@~\s][a-zA-Z\s-]+$/ )

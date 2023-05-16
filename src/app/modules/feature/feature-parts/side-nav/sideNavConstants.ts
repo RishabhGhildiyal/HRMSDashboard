@@ -44,6 +44,7 @@ export const sideNavList = [
     logo: 'description',
     isActive: true,
     routerLink: DIRECTORY.path,
+    circle:true
   },
   {
     title: 'Food',
@@ -52,7 +53,7 @@ export const sideNavList = [
       {
         subTitle: 'Lunch Coupon',
         subLogo: 'horizontal_rule',
-        routerLink: PURCHASE_LUNCH_COUPON.fullurl,
+        routerLink: 'food',
       },
       {
         subTitle: 'Request Dinner',
@@ -61,6 +62,8 @@ export const sideNavList = [
       },
     ],
     isActive: true,
+    circle:true
+
   },
 
   {
@@ -96,6 +99,8 @@ export const sideNavList = [
       },
     ],
     isActive: true,
+    circle:true
+
   },
   { title: 'Finance', logo: 'payments', options: [], isActive: true },
   {

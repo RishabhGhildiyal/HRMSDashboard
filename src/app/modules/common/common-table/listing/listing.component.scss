@@ -1,17 +1,24 @@
 .table-data{
+  position: relative;
   mat-paginator{
     ::ng-deep{
+
 
       .mat-paginator-range-actions{
         mat-button{
         height: 30px;
         width: 30px;
         box-shadow: none;
-        background: blue;
-        color: white;
+        // background: blue;
+        // color: white;
         border-radius: inherit;
         margin-left: 5px;
         min-width:30px !important;
+      }
+      .mat-mini-fab{
+        height: 30px;
+        background-color: skyblue;
+        color:white;
       }
     }
     .mat-paginator-page-size-label{
@@ -23,6 +30,24 @@
   }
   .mat-paginator-range-label::before {
         content:'Show '
+  }
+  .mat-paginator-page-size{
+    position: absolute;
+    top:0;
+    left:0;
+  }
+  .mat-paginator-range-actions{
+    width: 80vw;
+    @media(max-width:448px){
+      display: block;
+      position: relative;
+      left: 20px;
+      
+    }
+  }
+
+  .mat-paginator-range-label{
+    flex:1;
   }
 
   .mat-paginator-page-size::after{

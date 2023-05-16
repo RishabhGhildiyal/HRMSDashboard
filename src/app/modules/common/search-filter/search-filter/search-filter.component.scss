@@ -6,3 +6,18 @@
       max-width: 500px;
   }
 }
+
+@media only screen and  (max-width:456px){
+  .search-listing{
+    display: block;
+    .input-forms{
+      position: relative;
+      top: 40px;
+      margin-bottom: 20px;
+      mat-form-field{
+        margin-top: 20px;
+        width: 76%;
+      }
+    }
+  }
+}

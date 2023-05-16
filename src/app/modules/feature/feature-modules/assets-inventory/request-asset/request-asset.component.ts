@@ -10,7 +10,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./request-asset.component.scss']
 })
 export class RequestAssetComponent implements OnInit {
-  assetForm!: FormGroup
+  assetForm!: FormGroup;
+
+  today = new Date();
+
   toggleAddNew(){
     this.isShow = !this.isShow;
   }

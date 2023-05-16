@@ -10,6 +10,8 @@ import { FooterModule } from '../../../feature-parts/footer/footer.module';
 import { commonTableModule } from "../../../../common/common-table/common-table.module";
 import { ForDirectiveModule } from 'src/app/modules/common/for-directive/for-directive.module';
 import { ListingModule } from 'src/app/modules/common/common-table/listing/listing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InputSearchModule } from "../../../../common/input-search/input-search.module";
 
 
 @NgModule({
@@ -25,7 +27,10 @@ import { ListingModule } from 'src/app/modules/common/common-table/listing/listi
         FooterModule,
         commonTableModule,
         ForDirectiveModule,
-        ListingModule
+        ListingModule,
+        ReactiveFormsModule,
+        InputSearchModule,
+        FormsModule
     ]
 })
 export class MyInterviewModule { }

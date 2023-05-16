@@ -9,7 +9,7 @@
     @include grid("grid-template-columns", "30% 30% 30%", "");
     gap: 1%;
     row-gap: 10%;
-    @media(max-width:670px){
+    @media (max-width: 670px) {
       display: block;
     }
     .col-1 {
@@ -27,8 +27,8 @@
         color: #a3a4a6;
         font-size: small;
       }
-      @media(max-width:670px){
-       margin-bottom: 30px;
+      @media (max-width: 670px) {
+        margin-bottom: 30px;
       }
     }
     .col-2 {
@@ -44,9 +44,9 @@
         color: #a3a4a6;
         font-size: small;
       }
-      @media(max-width:670px){
+      @media (max-width: 670px) {
         margin-bottom: 30px;
-       }
+      }
     }
     .col-3 {
       display: flex;
@@ -62,9 +62,9 @@
         color: #a3a4a6;
         font-size: small;
       }
-      @media(max-width:670px){
+      @media (max-width: 670px) {
         margin-bottom: 30px;
-       }
+      }
     }
     .col-4 {
       display: flex;
@@ -79,9 +79,9 @@
         color: #a3a4a6;
         font-size: small;
       }
-      @media(max-width:670px){
+      @media (max-width: 670px) {
         margin-bottom: 30px;
-       }
+      }
     }
   }
   .mid-card {
@@ -106,11 +106,10 @@
     column-gap: 4%;
     background-color: $pure-white;
     padding: 20px;
-    @media(max-width:654px){
+    @media (max-width: 654px) {
       display: block;
     }
     .left_container {
-
       .date_main {
         display: grid;
         grid-template-columns: 48% 48%;
@@ -120,11 +119,52 @@
         display: flex;
         flex-direction: column;
       }
+      .shortLeave {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        @include form-field(100%);
+        margin-bottom: 10px;
+      }
+      .half_day_toggle {
+        @include flex("", space-between);
+        margin-bottom: 15px;
+        .example-section {
+          margin-left: 10px;
+          ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+            background-color: blue !important;
+          }
+        }
+        ::ng-deep.mat-radio-button.mat-accent.mat-radio-checked
+          .mat-radio-outer-circle {
+          border-color: grey;
+        }
+        ::ng-deep.mat-radio-button.mat-accent .mat-radio-inner-circle {
+          background-color: blue;
+        }
+      }
+      .file-choose {
+        margin-left: 2px;
+        margin-bottom: 15px;
+        p {
+          font-size: 14px;
+          font-weight: 600;
+          font-family: "Segoe UI";
+          color: #2f3031;
+          margin-bottom: 5px;
+          margin: 0;
+        }
+        input {
+          border: 1px solid #d8d8d8;
+          border-radius: 2px !important;
+          padding: 13px 6px !important;
+          background: #fff;
+          width: 98%;
+        }
+      }
     }
-    .right_container{
-      @media(max-width:654px){
-      margin-bottom: 30px;
-
+    .right_container {
+      @media (max-width: 654px) {
+        margin-bottom: 30px;
       }
     }
     .buttons {
@@ -207,8 +247,8 @@
       width: 100%;
       border-collapse: collapse;
       padding: 20px;
-      thead{
-        th{
+      thead {
+        th {
           padding: 20px;
         }
       }

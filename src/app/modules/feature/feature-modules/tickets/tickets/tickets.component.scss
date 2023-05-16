@@ -22,6 +22,11 @@
           }
         }
         .button {
+          button{
+            color: $primary-blue;
+            background-color:$pure-white ;
+            border: 1px solid $primary-blue;
+          }
           @media(max-width:319px){
             margin-bottom: 40px;
           }

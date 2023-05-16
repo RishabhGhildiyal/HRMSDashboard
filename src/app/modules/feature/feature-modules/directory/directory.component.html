@@ -43,6 +43,7 @@
   </div>
   <hr />
   <div class="card_lower">
+
     <div class="card_body" *ngFor="let item of filteredData">
       <div class="card-hover">&nbsp;</div>
       <div class="picture">
@@ -61,6 +62,9 @@
       </div>
       <div class="social">&nbsp;</div>
     </div>
+  </div>
+  <div class="nodata" *ngIf="filteredData.length == 0">
+   <h1>Sorry!</h1> <span>{{searchValue.value}}</span> <h1>does not exist</h1>
   </div>
 </div>
 <!-- <div class="footer">

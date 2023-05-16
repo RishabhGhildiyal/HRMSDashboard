@@ -1,0 +1,83 @@
+@import "../../../../../../scss/mixins";
+@import "../../../../../../scss/global.scss";
+
+section
+{
+  padding: 30px;
+  min-height: 78%;
+  .main_container{
+    background-color: white;
+    padding: 1%;
+    border: $borderColor;
+    .row1{
+      display: flex;
+      justify-content: space-between;
+    }
+    button{
+      color: white;
+      background-color: #199CFF;
+
+    }
+
+  }
+  .containers {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    column-gap: 4%;
+    background-color: white;
+    padding: 2%;
+    mat-error{
+      font-size: 12px;
+    }
+    @media(max-width:750px){
+      display: block;
+          }
+    .left_container {
+
+      .main{
+        display: grid;
+        grid-template-columns: 48% 48%;
+        column-gap: 4%;
+        .date_main {
+          display: grid;
+          // grid-template-columns: 30% 30% 30%;
+          column-gap: 4%;
+          @media(max-width:1122px){
+            display: block;
+                }
+          .check {
+            margin-top: 20%;
+          }
+          .timePicker {
+            height: 50px;
+            border: 1px solid #d7d5d5;
+            margin-top: 4px;
+            border-radius: 3px;
+          }
+        }
+        p{
+          margin:0px;
+        }
+      }
+
+      .data {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  .buttons {
+    display: grid;
+    grid-template-columns: 15% 15%;
+    column-gap: 4%;
+    .cancel {
+      color: white;
+      background-color: red;
+    }
+
+    .save {
+      color: white;
+      background-color: green;
+    }
+  }
+}

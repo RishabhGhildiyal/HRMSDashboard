@@ -9,7 +9,7 @@
   ::ng-deep.mat-form-field-type-mat-select:not(.mat-form-field-disabled) .mat-form-field-flex {
     cursor: pointer;
     background-color: white;
-    border: $borderColor;
+
   //  width: 100%;
   }
   .heading{
@@ -53,17 +53,17 @@
       }
     }
   }
-  .table{
-   border: $borderColor;
-  }
+
 }
 
 :host ::ng-deep .container{
   .tables{
+    // border: 1px solid $borderColor;
     table{
       thead{
         th{
           padding: 20px;
+          border: 1px solid $borderColor;
         }
       }
       tbody{

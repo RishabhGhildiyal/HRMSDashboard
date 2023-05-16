@@ -8,8 +8,10 @@ import { ForDirectiveModule } from 'src/app/modules/common/for-directive/for-dir
 import { FooterModule } from '../../../feature-parts/footer/footer.module';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { InputSearchModule } from "../../../../common/input-search/input-search.module";
+import { ListingModule } from "../../../../common/common-table/listing/listing.module";
 
 
 @NgModule({
@@ -25,7 +27,10 @@ import { MatInputModule } from '@angular/material/input';
         MatButtonModule,
         MatFormFieldModule,
         FormsModule,
-        MatInputModule
+        MatInputModule,
+        ReactiveFormsModule,
+        InputSearchModule,
+        ListingModule
     ]
 })
 export class AssetDeclarationModule { }

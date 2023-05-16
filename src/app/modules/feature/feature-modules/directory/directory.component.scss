@@ -30,7 +30,6 @@
 
         mat-form-field {
           width: 100%;
-
         }
       }
 
@@ -163,6 +162,27 @@
       }
     }
   }
+  .nodata {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+    }
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: red;
+      font-size: x-large;
+      position: relative;
+      bottom: 7px;
+      margin-right: 10px;
+    }
+  }
 }
 
 hr {
@@ -180,45 +200,43 @@ hr {
   cursor: pointer;
 }
 
-@media (max-width:900px){
-  .directory-wrapper{
-    .directory-header{
-      .directory-header-main-Row{
+@media (max-width: 900px) {
+  .directory-wrapper {
+    .directory-header {
+      .directory-header-main-Row {
         display: block;
-        .column-2{
-          .input-group{
-
+        .column-2 {
+          .input-group {
           }
         }
       }
     }
-    .directory-body{
+    .directory-body {
       display: block;
       word-break: break-word;
     }
   }
 }
 
-@media (max-width:1243px){
-  .directory-wrapper{
-    .directory-header{
-      .directory-header-main-Row{
+@media (max-width: 1243px) {
+  .directory-wrapper {
+    .directory-header {
+      .directory-header-main-Row {
         display: block;
-        .column-2{
-          .input-group{
-
+        .column-2 {
+          .input-group {
           }
         }
       }
     }
-    .directory-body{
+    .directory-body {
       display: block;
       word-break: break-word;
     }
-    .card_lower{
+    .card_lower {
       display: block;
-      .card_body{
-        .team{
+      .card_body {
+        .team {
           display: block;
         }
       }
@@ -226,20 +244,19 @@ hr {
   }
 }
 
-@media (max-width:343px){
-  .directory-wrapper{
-    .directory-header{
-      .directory-header-main-Row{
+@media (max-width: 343px) {
+  .directory-wrapper {
+    .directory-header {
+      .directory-header-main-Row {
         display: block;
-        .column-2{
-          .input-group{
-
+        .column-2 {
+          .input-group {
           }
         }
-        .buttons{
-          .input-group{
+        .buttons {
+          .input-group {
             width: 98%;
-            button{
+            button {
               width: 100%;
               margin-left: 0px;
             }
@@ -247,16 +264,16 @@ hr {
         }
       }
     }
-    .directory-body{
+    .directory-body {
       display: block;
       word-break: break-word;
     }
-    .card_lower{
+    .card_lower {
       display: block;
-      .card_body{
-        .team{
+      .card_body {
+        .team {
           display: block;
-          p{
+          p {
             word-break: break-word;
           }
         }

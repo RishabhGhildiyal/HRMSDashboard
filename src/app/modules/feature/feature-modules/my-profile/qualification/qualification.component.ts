@@ -4,7 +4,11 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { EDUCATION_LEVEL, LANGUAGE, PAGE_OPTIONS } from 'src/app/constants/common-constants';
+import {
+  EDUCATION_LEVEL,
+  LANGUAGE,
+  PAGE_OPTIONS,
+} from 'src/app/constants/common-constants';
 import { Table } from 'src/app/modules/common/common-table/table.types';
 import { FormService } from 'src/app/services/form.service';
 import { DialogComponentComponent } from './dialog-component/dialog-component.component';
@@ -56,17 +60,19 @@ export class QualificationComponent implements OnInit {
   createForm() {
     return this.fb.group({
       schoolUni: this.service.getControl('schoolUni'),
+      education: this.service.getControl('education'),
       time: this.service.getControl('time'),
       toInput: this.service.getControl('toInput'),
       professionalCourse: this.service.getControl('professionalCourse'),
-      language: this.service.getControl('language')
+      language: this.service.getControl('language'),
     });
   }
 
   info() {
     if (this.infoForm.valid) {
-      this.infoForm.value['id'] = Math.floor(Math.random()  * 1000)
+      this.infoForm.value['id'] = Math.floor(Math.random() * 1000);
       this.docsData.push(this.infoForm.value);
+      console.log(this.infoForm.value, 'iop');
 
       this.populateTable(this.pageOptions);
     } else {
@@ -87,26 +93,28 @@ export class QualificationComponent implements OnInit {
   }
 
   // @ViewChild() abc!:HTMLElement;
-  DOCS_DATA = [ {
-    schoolUni: ' Amity University',
-    time: '	09-08-2019 - 09-06-2022',
-    professionalCourse: 'MCA',
-    language:'ENglish',
-    fromInput:'09-08-2019',
-    toInput:'09-06-2022',
-    id:101
-    // last_modified: 'May-13-2022',
-  },
-  {
-    schoolUni: ' dit University',
-    time: '	Jul-08-2019 - Jun-06-2022',
-    professionalCourse: 'BCA',
-    language:'ENglish',
-    fromInput:'09-08-2019',
-    toInput:'09-06-2022',
-    id:102
-    // last_modified: 'May-13-2022',
-  },]
+  DOCS_DATA = [
+    {
+      schoolUni: 'Amity University',
+      time: '	09-08-2019 - 09-06-2022',
+      professionalCourse: 'MCA',
+      language: 'ENglish',
+      fromInput: '09-08-2019',
+      toInput: '09-06-2022',
+      id: 101,
+      // last_modified: 'May-13-2022',
+    },
+    {
+      schoolUni: 'dit University',
+      time: '	Jul-08-2019 - Jun-06-2022',
+      professionalCourse: 'BCA',
+      language: 'English',
+      fromInput: '09-08-2019',
+      toInput: '09-06-2022',
+      id: 102,
+      // last_modified: 'May-13-2022',
+    },
+  ];
 
   docsData: Array<any> = this.DOCS_DATA;
 
@@ -117,16 +125,20 @@ export class QualificationComponent implements OnInit {
   //column names are fetched fromt the model file and data is fetched though API or const data file
 
   populateTable(pageOptions: any) {
-
-    if(pageOptions.hasOwnProperty('search')){
-      this.docsData = this.docsData.filter((item:any)=>{
-        if(
-          (item.schoolUni.toLowerCase()).includes(pageOptions.search.toLowerCase()) ||
-          (item.professionalCourse.toLowerCase()).includes(pageOptions.search.toLowerCase())
-        ){  //for custom search on individual fields
+    if (pageOptions.hasOwnProperty('search')) {
+      this.docsData = this.docsData.filter((item: any) => {
+        if (
+          item.schoolUni
+            .toLowerCase()
+            .includes(pageOptions.search.toLowerCase()) ||
+          item.professionalCourse
+            .toLowerCase()
+            .includes(pageOptions.search.toLowerCase())
+        ) {
+          //for custom search on individual fields
           return item;
         }
-      })
+      });
     }
 
     this.listingConfig.total = this.docsData.length;
@@ -150,50 +162,32 @@ export class QualificationComponent implements OnInit {
     console.log(this.tableSource, '123TS');
   }
 
-  edit(rowData:any) {
+  edit(rowData: any) {
     const dialogRef = this.dialog.open(DialogComponentComponent, {
-
-        data:rowData
-
+      data: rowData,
     });
 
     dialogRef.afterClosed().subscribe((res: any) => {
+      for (let i = 0; i < this.tableSource.data.length; i++) {
+        console.log(this.tableSource.data[i].id, '-----', res.id);
 
-      for(let i=0; i<this.tableSource.data.length; i++){
-
-        console.log(this.tableSource.data[i].id,'-----',res.id)
-
-            if(this.tableSource.data[i].id == res.id){
-              this.tableSource.data[i] = res
-            }
-          }
-
+        if (this.tableSource.data[i].id == res.id) {
+          this.tableSource.data[i] = res;
+        }
+      }
     });
-
-    // const config:MatDialogConfig = {
-    //   data:rowData,
-    //   autoFocus:false,
-    //   maxHeight:'90vh'
-    // }
-    // let dialog = this._dialog.open(EditQualificationsDialogComponent,config).afterClosed().subscribe((res:any)=>{
-    //   for(let i=0; i<this.tableSource.data.length; i++){
-    //     if(this.tableSource.data[i].id == res.id){
-    //       this.tableSource.data[i] = res
-    //     }
-    //   }
-    //   dialog.unsubscribe()
-    // })
-
   }
 
   delete(row: any) {
-    this.tableSource.data = this.tableSource.data.filter((item:any)=> item.id != row.id)
+    this.tableSource.data = this.tableSource.data.filter(
+      (item: any) => item.id != row.id
+    );
     console.log(row, '2222');
   }
 
   onTableEventChange(data: any) {
     this.pageOptions = data;
-    console.log(data,"9887");
+    console.log(data, '9887');
     this.docsData = this.DOCS_DATA;
     this.populateTable(this.pageOptions);
   }
@@ -202,14 +196,15 @@ export class QualificationComponent implements OnInit {
 
   schoolUniData = {
     // label:'School/University',
-    placeholder:'school/university',
-    list: EDUCATION_LEVEL
-  }
+    placeholder: 'school/university',
+    list: EDUCATION_LEVEL,
+  };
 
-  languageData ={
+  languageData = {
     // label: 'language',
-    placeholder:'language',
-    list: LANGUAGE
-  }
-
+    placeholder: 'language',
+    list: LANGUAGE,
+  };
 }
+
+

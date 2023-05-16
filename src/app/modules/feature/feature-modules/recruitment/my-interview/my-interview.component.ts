@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { INTERVIEW_DATA, PAGE_OPTIONS } from 'src/app/constants/common-constants';
+import { DEPARTMENT, INTERVIEW_DATA, PAGE_OPTIONS, STATUS_DATA, STATUS_DROPDOWN } from 'src/app/constants/common-constants';
 import { Table } from 'src/app/modules/common/common-table/table.types';
 import { DOCUMENTS_LIST_CONFIG, UserTableDataSource } from './my-interview.modal';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormService } from 'src/app/services/form.service';
 
 @Component({
   selector: 'app-my-interview',
@@ -9,23 +11,18 @@ import { DOCUMENTS_LIST_CONFIG, UserTableDataSource } from './my-interview.modal
   styleUrls: ['./my-interview.component.scss'],
 })
 export class MyInterviewComponent implements OnInit {
-  departments: any = [
-    { department: 'All' },
-    { department: 'Angular' },
-    { department: 'Android' },
-    { department: 'React' },
-    { department: 'IOS' },
-    { department: 'Flutter' },
-  ];
-  statuses: any = [
-    { status: 'Select Status' },
-    { status: 'Selected' },
-    { status: 'Rejected' },
-    { status: 'Missed' },
-    { status: 'In Progess' },
-  ];
-  constructor() { }
+
+  interviewForm!:FormGroup;
+
+  constructor(private fb:FormBuilder, private service:FormService) { }
   // @ViewChild() abc!:HTMLElement;
+
+  createForm() {
+    return this.fb.group({
+      department: this.service.getControl('department'),
+      status: this.service.getControl('education'),
+    });
+  }
   interviewData: Array<any> = INTERVIEW_DATA;
 
   listingConfig = DOCUMENTS_LIST_CONFIG ;
@@ -34,13 +31,38 @@ export class MyInterviewComponent implements OnInit {
   // tableSource is 2 things : columnNames and data
   //column names are fetched fromt the model file and data is fetched though API or const data file
   ngOnInit(): void {
+    this.interviewForm = this.createForm();
     this.populateTable(this.pageOptions);
   }
 
   populateTable(pageOptions:any){
 
+    if(pageOptions.hasOwnProperty('status')){
+      console.log(pageOptions,'OTT',this.interviewData)
+      this.interviewData = this.interviewData.filter((item:any)=> {
+        console.log(item.status,'---',pageOptions.final_status);
+        if(item.final_status == pageOptions.status){
+
+          return item;
+        }
+      })
+    }
+
+    if(pageOptions.hasOwnProperty('department')){
+      console.log(pageOptions,'OTT',this.interviewData)
+      this.interviewData = this.interviewData.filter((item:any)=> {
+        console.log(item.department_name,'---',pageOptions.department);
+        if(item.department_name == pageOptions.department){
+
+          return item;
+        }
+      })
+    }
+
+
     if(pageOptions.hasOwnProperty('search')){
       this.interviewData = this.interviewData.filter((item:any)=>{
+
         if(
           (item.name.toLowerCase()).includes(pageOptions.search.toLowerCase()) ||
           (item.email.toLowerCase()).includes(pageOptions.search.toLowerCase())
@@ -70,12 +92,32 @@ export class MyInterviewComponent implements OnInit {
   onTableEventChange(data:any){
     this.pageOptions = data;
     this.interviewData = INTERVIEW_DATA;
-    console.log(this.pageOptions,"PIP")
+    console.log(this.pageOptions,"")
     this.populateTable(this.pageOptions);
   }
 
-  // downloadFile(row:any){
-  //   console.log(row,"123");
+  department_data = {
 
-  // }
+    placeholder: 'Department',
+    list: STATUS_DROPDOWN,
+  };
+
+  status_data = {
+
+    placeholder: 'Status',
+    list: STATUS_DATA,
+  };
+
+  
+
+  dropdownSelect(data:any,label:string){
+      console.log(data,'vxi')
+      let t:any = {}
+      t[label] = data
+      this.pageOptions = {...this.pageOptions, ...t};
+      this.interviewData = INTERVIEW_DATA;
+      this.populateTable(this.pageOptions)
+  }
+
+
 }

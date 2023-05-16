@@ -49,8 +49,9 @@ export class InputSearchComponent implements OnInit {
     });
   }
 
-  onSelection(){
-    this.eventEmitter.emit(this.myControlName.value);
+  onSelection(data:any){
+
+    this.eventEmitter.emit(data.value);
   }
 
 

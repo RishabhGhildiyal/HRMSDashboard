@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
-import { PAGE_OPTIONS } from 'src/app/constants/common-constants';
+import { LEAVE_CATEGORY, PAGE_OPTIONS } from 'src/app/constants/common-constants';
 import { VIEW_DETAILS } from 'src/app/constants/routes';
 import { Table } from 'src/app/modules/common/common-table/table.types';
 import { DOCUMENTS_LIST_CONFIG, UserTableDataSource } from './my-leave.modal';
@@ -14,7 +14,12 @@ import { DOCUMENTS_LIST_CONFIG, UserTableDataSource } from './my-leave.modal';
 })
 export class MyLeaveComponent implements OnInit {
   isShow=false;
-
+  showShortLeave = false;
+  checked =false;
+  leave = new FormControl();
+  today = new Date();
+  date = new FormControl();
+  leaveForm!: FormGroup;
   leaves: any = [
     { department: 'All' },
     { department: 'Angular' },
@@ -27,8 +32,22 @@ export class MyLeaveComponent implements OnInit {
 
   numberList: number[] = [10, 20, 30, 40];
 
-  constructor(private router:Router) { }
+  constructor(private _fb:FormBuilder,private router:Router) {
+    this.leaveForm = this.createForm();
+  }
   // @ViewChild() abc!:HTMLElement;
+
+  createForm() {
+    return this._fb.group({
+      leave_type: ['', [Validators.required]],
+      startDate: ['', [Validators.required]],
+      endDate: ['', [Validators.required]],
+      remarks: [''],
+      upload:['',[Validators.required]],
+      
+    });
+  }
+
   docsData: Array<any> = [
     {
       action: '',
@@ -100,7 +119,33 @@ export class MyLeaveComponent implements OnInit {
   //   this.isShow = !this.isShow;
   // }
 
+  leave_type ={
+    label: 'Leave',
+    placeholder:'Leave Type',
+    list: LEAVE_CATEGORY
+  }
+
   route(){
     this.router.navigate([VIEW_DETAILS.fullurl])
+  }
+
+  halfLeave(e:any){
+    console.log(e, 'll');
+
+    if (e.checked == true) {
+      this.checked = true;
+    } else {
+      this.checked = false;
+    }
+  }
+  save(){
+    if (this.leaveForm.valid) {
+      this.tableSource.data.push(this.leaveForm.value);
+      this.docsData.push(this.leaveForm.value);
+      // this.populateTable(this.PageOption);
+      // console.log(this.tableSource.data);
+    } else {
+      this.leaveForm.markAllAsTouched();
+    }
   }
 }

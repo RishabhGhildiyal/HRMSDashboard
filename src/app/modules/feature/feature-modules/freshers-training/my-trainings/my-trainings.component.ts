@@ -18,7 +18,7 @@ export class MyTrainingsComponent implements OnInit {
   openDialog() {
     let config: MatDialogConfig = {
       width: '40rem',
-      height:'95vh'
+      height:'92vh'
       // panelClass:'app-full-bleed-dialog'
     };
 

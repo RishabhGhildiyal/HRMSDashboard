@@ -20,14 +20,8 @@
     padding: 17px 0 10px 23px;
 
   }
-  .main-div {
-    // margin-left: 20px;
-    padding: 20px;
-    @include grid("grid-template-columns", "auto 30%", "");
-    background-color: #f3f7fd;
 
-  }
-
+  
 }
 
 @media all and (max-width: 1620px) {

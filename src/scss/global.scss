@@ -7,7 +7,7 @@ $black: black;
 $blue:#199cff;
 $white:white;
 
-@mixin custom-scroller($axis, $brodness: 4px) {
+@mixin custom-scroller($axis, $brodness: 8px, $bgcolor: grey) {
   @if ($axis== "x") {
     overflow-x: auto;
     overflow-y: hidden;
@@ -32,7 +32,7 @@ $white:white;
 
   &::-webkit-scrollbar-thumb {
     border-radius: 20px 20px;
-    background-color: grey;
+    background-color: $bgcolor;
     opacity: 0.5;
     width: $brodness;
     height: $brodness;

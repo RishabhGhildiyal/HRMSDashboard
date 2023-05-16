@@ -13,6 +13,14 @@ import {MatSelectModule} from '@angular/material/select';
 import { commonTableModule } from "../../../../common/common-table/common-table.module";
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { InputSearchModule } from 'src/app/modules/common/input-search/input-search.module';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ShowErrorModule } from "../../../../../pipes/showErrorPipe/show-error.module";
+
 
 @NgModule({
     declarations: [
@@ -34,7 +42,14 @@ import { InputSearchModule } from 'src/app/modules/common/input-search/input-sea
         commonTableModule,
         MatIconModule,
         AngularEditorModule,
-        InputSearchModule
+        InputSearchModule,
+        NgxMaterialTimepickerModule,
+        MatCheckboxModule,
+        MatRadioModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatFormFieldModule,
+        ShowErrorModule
     ]
 })
 export class MyLeaveModule { }

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CouponHistoryComponent } from './coupon-history.component';
+import { LunchCalendarComponent } from './lunch-calendar.component';
 
-describe('CouponHistoryComponent', () => {
-  let component: CouponHistoryComponent;
-  let fixture: ComponentFixture<CouponHistoryComponent>;
+describe('LunchCalendarComponent', () => {
+  let component: LunchCalendarComponent;
+  let fixture: ComponentFixture<LunchCalendarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CouponHistoryComponent ]
+      declarations: [ LunchCalendarComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CouponHistoryComponent);
+    fixture = TestBed.createComponent(LunchCalendarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -23,6 +23,12 @@ export class LatestGalleryComponent implements OnInit {
   dataSource: any = [];
   constructor(public dialog: MatDialog) {}
 
+  images = [
+    {image : 'https://dashboard.appinventiv.com/uploads/gallery/award_1649320793321.jpg'},
+    {image: 'https://dashboard.appinventiv.com/uploads/gallery/award_1672378171227.jpg'},
+    {image:'https://dashboard.appinventiv.com/uploads/gallery/award_1672292016846.jpg'}
+  ]
+
   ngOnInit(): void {}
   ngAfterViewInit(): void {
     setTimeout(() => {

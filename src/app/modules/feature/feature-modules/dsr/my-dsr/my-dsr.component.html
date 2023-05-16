@@ -9,6 +9,8 @@
       <div class="containers" *ngIf="isShow">
         <div class="left_container">
           <div>
+            <mat-label>Project</mat-label>
+
             <!-- <app-dropdown [dropdown]="dropdownData" ></app-dropdown> -->
             <app-input-search
               [myControlName]="dsrForm.controls.date"
@@ -25,8 +27,9 @@
                   [matDatepicker]="picker"
                   (click)="picker.open()"
                   readonly="true"
+                  [max]="today"
                   formControlName="date"
-                  placeholder="MM/DD/YY"
+                  placeholder="Date"
                 />
                 <mat-datepicker-toggle
                   matSuffix
@@ -40,25 +43,33 @@
             </div>
             <div class="data">
               <mat-label>Estimated Hours</mat-label>
-              <input [ngxTimepicker]="picker1" [format]="24" formControlName="hours" class="timePicker" />
+              <input
+                [ngxTimepicker]="picker1"
+                [format]="24"
+                formControlName="hours"
+                class="timePicker"
+                placeholder="Estimated Hour"
+              />
               <ngx-material-timepicker #picker1></ngx-material-timepicker>
             </div>
             <div class="check">
-              <mat-checkbox (change)="noWork($event)" class="example-margin">No Work done</mat-checkbox>
+              <mat-checkbox (change)="noWork($event)" class="example-margin"
+                >No Work done</mat-checkbox
+              >
             </div>
           </div>
-
-
         </div>
         <div class="right_container">
           <h3>Description</h3>
-          <angular-editor [config]="config" formControlName="description"></angular-editor>
+          <angular-editor
+            [config]="config"
+            formControlName="description"
+          ></angular-editor>
         </div>
 
         <div class="buttons">
           <button mat-button class="save" (click)="onAddDsr()">Add</button>
         </div>
-
       </div>
     </form>
   </div>
@@ -73,6 +84,8 @@
           (click)="picker2.open()"
           readonly="true"
           placeholder="MM/DD/YY"
+          [max]="today"
+
         />
         <mat-datepicker-toggle
           matSuffix
@@ -92,6 +105,8 @@
           (click)="picker3.open()"
           readonly="true"
           placeholder="MM/DD/YY"
+          [max]="today"
+
         />
         <mat-datepicker-toggle
           matSuffix
@@ -104,33 +119,36 @@
     <div class="data">
       <mat-label> Submission Status</mat-label>
 
-      <mat-form-field class="name_input" appearance="outline">
-        <input matInput placeholder="Date" required />
-      </mat-form-field>
+      <app-input-search
+              [myControlName]="submissionStatus"
+              [data]="submission_dropdown"
+            ></app-input-search>
     </div>
 
     <div class="data">
       <mat-label> Project</mat-label>
 
-      <mat-form-field class="name_input" appearance="outline">
-        <input matInput placeholder="Date" required />
-      </mat-form-field>
+      <app-input-search
+      [myControlName]="project"
+      [data]="project_dSR"
+    ></app-input-search>
     </div>
 
     <div class="data">
       <mat-label> Final Approval Status</mat-label>
-
-      <mat-form-field class="name_input" appearance="outline">
-        <input matInput placeholder="Date" required />
-      </mat-form-field>
+      <app-input-search
+      [myControlName]="approvalStatus"
+      [data]="approval_dropdown"
+    ></app-input-search>
     </div>
 
     <div class="data">
       <mat-label> Hours</mat-label>
 
-      <mat-form-field class="name_input" appearance="outline">
-        <input matInput placeholder="Date" required />
-      </mat-form-field>
+      <app-input-search
+              [myControlName]="hours"
+              [data]="hours_dropdown"
+            ></app-input-search>
     </div>
 
     <div>
