@@ -9,15 +9,15 @@
       (changeListEvent)="onTableEventChange($event)"
     >
       <app-common-table [tableSource]="tableSource">
-        <ng-template appFor="sn" let-row="row"> {{ row.sn }}8 </ng-template>
+        <ng-template appFor="sn" let-row="row"> {{ row.sn }} </ng-template>
         <ng-template appFor="title" let-row="row">
           {{ row.title }}
         </ng-template>
         <ng-template appFor="industry" let-row="row">
           {{ row.industry }}
         </ng-template>
-        <ng-template appFor="tech_nontech" let-row="row">
-          {{ row.tech_nontech }}
+        <ng-template appFor="technical" let-row="row">
+          {{ row.technical }}
         </ng-template>
         <ng-template appFor="submitted_on" let-row="row">
           {{ row.submitted_on }}

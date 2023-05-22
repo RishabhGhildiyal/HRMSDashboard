@@ -1,3 +1,7 @@
+@import '../../../../../scss/mixins';
+@import '../../../../../scss/global.scss';
+
+
 .container {
   .header {
     display: flex;
@@ -8,8 +12,7 @@
     z-index: 999;
     background-color: white;
 
-
-    .example-toolbar{
+    .example-toolbar {
       display: flex;
       justify-content: space-between;
       background-color: #ffff;
@@ -17,14 +20,14 @@
       .left {
         display: flex;
         justify-content: space-between;
-        .logo{
+        .logo {
           display: flex;
-          img{
+          img {
             height: 40px;
           }
         }
-        button{
-          margin-top:7px;
+        button {
+          margin-top: 7px;
         }
       }
       .right {
@@ -32,15 +35,31 @@
         grid-template-columns: 55% 23% 10%;
         gap: 18px;
         padding: 10px;
-        .logo {
-        }
         .userName {
+          cursor: pointer;
+          img {
+            width: 31px;
+            height: 31px;
+            border-radius: 50%;
+          }
+          span {
+            // @include position(relative, "", 8px, "", 10px);
+            position: relative;
+            bottom: 8px;
+            right: 10px;
+            color: #485665;
+            font-size: 18px;
+          }
         }
+
         .help {
           margin: 0;
           padding: 0;
           background-color: red;
-          button{
+          height: 34px;
+          width: 65px;
+          // margin-top: 7px;
+          button {
             color: white;
             padding: 0px;
             font-weight: bold;
@@ -48,7 +67,7 @@
         }
         .bellIcon {
           position: relative;
-    top: 6px;
+          top: 6px;
         }
       }
     }
@@ -57,7 +76,7 @@
 
 .notification-box {
   padding: 24px;
-  margin-top:4rem;
+  margin-top: 4rem;
   min-height: calc(100vh - 8em);
   width: 15em;
   position: fixed;
@@ -85,25 +104,23 @@
   }
 }
 
-@media (max-width:800px){
-  .container{
-    .header{
-      .example-toolbar{
+@media (max-width: 800px) {
+  .container {
+    .header {
+      .example-toolbar {
         display: flex;
         justify-content: space-between;
-        .left{
+        .left {
           width: 100%;
-          .logo{
+          .logo {
           }
-          .button{
-
+          .button {
           }
         }
-       .right{
-        display: none;
-       }
+        .right {
+          display: none;
+        }
       }
     }
   }
-
 }

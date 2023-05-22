@@ -8,21 +8,21 @@
         <ng-template appFor="sn" let-row="row">
           {{row.sn }}
         </ng-template>
-        <ng-template appFor="name" let-row="row">
-          {{row.name }}
+        <ng-template appFor="training_name" let-row="row">
+          {{row.training_name }}
         </ng-template>
-        <ng-template appFor="type" let-row="row">
-          {{row.type }}
+        <ng-template appFor="timeline" let-row="row">
+          {{row.timeline }}
         </ng-template>
-        <ng-template appFor="file_size" let-row="row">
-          {{row.file_size }}
+        <ng-template appFor="requested_date" let-row="row">
+          {{row.requested_date }}
         </ng-template>
-        <ng-template appFor="last_modified" let-row="row">
-          {{row.last_modified }}
+        <ng-template appFor="status" let-row="row">
+          {{row.status }}
         </ng-template>
-        <ng-template appFor="actions" let-row="row">
+        <ng-template appFor="action" let-row="row">
 
-          <button (click)="downloadFile(row)">Download</button>
+          {{row.action}}
       </ng-template>
 
       </app-common-table>
@@ -33,3 +33,23 @@
 <!-- <div class="footer">
   <app-footer></app-footer>
 </div> -->
+
+
+<!-- action
+:
+"pending"
+requested_date
+:
+"17/05/2023"
+sn
+:
+1
+status
+:
+"on going"
+timeline
+:
+""
+training_name
+:
+"" -->

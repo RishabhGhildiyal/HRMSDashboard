@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 // import { CarouselComponent } from './carousel/carousel/carousel.component';
 import { NguCarouselModule } from '@ngu/carousel';
 import { CommonTableComponent } from './modules/common/common-table/common-table.component';
+import { StoreModule } from '@ngrx/store';
 // import { PaginatorStyleDirective } from './directives/paginator-style.directive';
 // import { AbsolutePathPipe } from './pipes/absolute-path.pipe';
 // import { JobCardComponent } from './components/job-card/job-card.component';
@@ -33,7 +34,9 @@ import { CommonTableComponent } from './modules/common/common-table/common-table
     BrowserAnimationsModule,
     MatCardModule,
     HttpClientModule,
-    NguCarouselModule
+    NguCarouselModule,
+    StoreModule.forRoot({})
+
   ],
   providers: [],
   bootstrap: [AppComponent]

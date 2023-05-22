@@ -555,3 +555,10 @@ export const ASSETS_DECLARATION = [
   },
 ];
 
+export const TRAININGS = [
+  {
+    viewValue: 'Micro Frontend Angular',
+    value: 101,
+  },
+
+];

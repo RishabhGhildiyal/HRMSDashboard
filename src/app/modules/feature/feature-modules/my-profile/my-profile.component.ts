@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ListItems } from './my-profile-constant-lists';
+import { getProfilePictureSelector } from 'src/app/store/selector';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-my-profile',
@@ -8,9 +10,15 @@ import { ListItems } from './my-profile-constant-lists';
 })
 export class MyProfileComponent implements OnInit {
   myProfileList=ListItems;
-  constructor() { }
+  imgURL:any;
+  constructor(private store: Store) { }
 
   ngOnInit(): void {
+    this.store.select(getProfilePictureSelector).subscribe((res:any)=>{
+      console.log(res,'we');
+
+      this.imgURL = res.profile;
+    })
   }
 
 }

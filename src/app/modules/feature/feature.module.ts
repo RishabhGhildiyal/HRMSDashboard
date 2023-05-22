@@ -16,6 +16,10 @@ import { FooterModule } from './feature-parts/footer/footer.module';
 import {MatMenuModule} from '@angular/material/menu';
 import { HelpDialogComponent } from './feature-parts/help-dialog/help-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { myPitchReducer, myTrainingReducer } from 'src/app/store/reducer';
+import { StoreModule } from '@ngrx/store';
+import { MY_TRAINING } from 'src/app/constants/routes';
+import { my_pitch, my_training } from 'src/app/store/selector';
 @NgModule({
   declarations: [
     FeatureComponent,
@@ -35,7 +39,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatListModule,
     FooterModule,
     MatMenuModule,
-    MatDialogModule
+    MatDialogModule,
+    StoreModule.forFeature(my_pitch,myPitchReducer),
+    StoreModule.forFeature(my_training,myTrainingReducer),
   ],
 })
 export class FeatureModule {}

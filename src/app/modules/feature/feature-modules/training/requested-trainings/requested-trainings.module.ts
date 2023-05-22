@@ -5,6 +5,7 @@ import { RequestedTrainingsRoutingModule } from './requested-trainings-routing.m
 import { RequestedTrainingsComponent } from './requested-trainings.component';
 import { commonTableModule } from "../../../../common/common-table/common-table.module";
 import { FooterModule } from '../../../feature-parts/footer/footer.module';
+import { ForDirectiveModule } from 'src/app/modules/common/for-directive/for-directive.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FooterModule } from '../../../feature-parts/footer/footer.module';
         CommonModule,
         RequestedTrainingsRoutingModule,
         commonTableModule,
-        FooterModule
+        FooterModule,
+        ForDirectiveModule
     ]
 })
 export class RequestedTrainingsModule { }

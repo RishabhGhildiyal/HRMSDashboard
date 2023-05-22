@@ -10,6 +10,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InputSearchModule } from 'src/app/modules/common/input-search/input-search.module';
 @NgModule({
   declarations: [
     MyTrainingsComponent,
@@ -23,7 +25,11 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatDialogModule,
     MatIconModule,
     MatSelectModule,
-    MatTooltipModule
+    MatTooltipModule,
+    ReactiveFormsModule,
+    FormsModule,
+    InputSearchModule,
+    
   ]
 })
 export class MyTrainingsModule { }

@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatTooltipDefaultOptions } from '@angular/material/tooltip';
+import { Store } from '@ngrx/store';
+import { STATUS_DROPDOWN, TRAININGS } from 'src/app/constants/common-constants';
+import { myTrainingAction } from 'src/app/store/action';
 
 export const myCustomTooltipDefaults: MatTooltipDefaultOptions = {
   showDelay: 1000,
@@ -13,34 +17,40 @@ interface training {
 @Component({
   selector: 'app-request-training-dialog',
   templateUrl: './request-training-dialog.component.html',
-  styleUrls: ['./request-training-dialog.component.scss']
+  styleUrls: ['./request-training-dialog.component.scss'],
 })
 export class RequestTrainingDialogComponent implements OnInit {
+  requestForm!: FormGroup;
 
-  trainings: training[] = [
-    {value: 'Microfrontend Angular', viewValue: 'Microfrontend Angular'},
-  ];
-  departments =[
-    {department:'All'},{department:'Angular'},{department:'Android'}, {department:'React'}, {department:'IOS'}, {department:'Flutter'}]
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private _fb: FormBuilder, private store: Store) {
+    this.requestForm = this.createForm();
   }
-  // departmentSelect(e: any) {
-  //   console.log(e.value, 'kkkk');
-  //   this.departmentSearch = e.value;
-  //   if (this.departmentSearch) {
-  //     const search = this.departmentSearch.toLowerCase();
-  //     console.log(search);
-  //     this.filteredData = this.membersList.filter((item) => {
-  //       const department = item.position.toLowerCase();
 
-  //       if (department.includes(search)) {
-  //         return true;
-  //       }
-  //       return false;
-  //     });
-  //   }
-  //   // this.search();
-  // }
+  createForm() {
+    return this._fb.group({
+      team: ['', [Validators.required]],
+      training: ['', [Validators.required]],
+      objective: [''],
+    });
+  }
+  ngOnInit(): void {}
+
+  onSubmit() {
+    this.requestForm.value['objective'] = "objective is good"
+    this.store.dispatch(myTrainingAction(this.requestForm.value));
+  }
+
+  departments ={
+    label: 'Select Department',
+    placeholder:'Select Department',
+    list: STATUS_DROPDOWN
+  }
+
+  trainings ={
+    label: 'Select Team',
+    placeholder:'Select Team',
+    list: TRAININGS
+  }
 }
+
+

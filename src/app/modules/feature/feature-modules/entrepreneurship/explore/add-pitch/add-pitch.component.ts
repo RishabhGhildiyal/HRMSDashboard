@@ -3,8 +3,10 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
+import { Store } from '@ngrx/store';
 import { CANCEL } from 'src/app/constants/routes';
 import { FormService } from 'src/app/services/form.service';
+import { myPitchAction } from 'src/app/store/action';
 
 @Component({
   selector: 'app-add-pitch',
@@ -15,7 +17,7 @@ export class AddPitchComponent implements OnInit {
   infoForm!: FormGroup;
   today = new Date();
   url: any;
-  constructor(private fb: FormBuilder, private service: FormService, private router:Router) {
+  constructor(private fb: FormBuilder, private service: FormService, private router:Router, private store: Store) {
     this.infoForm = this.createForm();
   }
 
@@ -27,11 +29,12 @@ export class AddPitchComponent implements OnInit {
       empTitle: this.service.getControl('empTitle'),
       dateOfBirth: this.service.getControl('dateOfBirth'),
       industry: this.service.getControl('industry'),
-      type: this.service.getControl('type'),
+      type1: this.service.getControl('type1'),
     });
   }
   valid() {
     this.infoForm.markAllAsTouched();
+    this.store.dispatch(myPitchAction(this.infoForm.value));
     // this.snack.open("fill all the field first");
   }
   selectFile(event: any) {

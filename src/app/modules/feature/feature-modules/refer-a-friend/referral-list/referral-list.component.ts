@@ -14,7 +14,7 @@ export class ReferralListComponent implements OnInit {
 
   constructor() { }
   // @ViewChild() abc!:HTMLElement;
-  docsData: Array<any> = [
+  docsData: Array<any>  = [
     {
       c_name: 'Parth Daga',
       experience: '2.5 Years	',
@@ -46,7 +46,7 @@ export class ReferralListComponent implements OnInit {
     }
 
     this.tableSource = new UserTableDataSource(
-      displayRow.map((item: any, index:number) => ({ ...item, sn: '' }))
+      displayRow.map((item: any, index:number) => ({ ...item, sn: index+1  }))
     );
     console.log(this.tableSource,"123TS");
 

@@ -30,9 +30,9 @@ export class UserTableDataSource implements Table.Source<any> {
       },
       {
         title: "Timeline to conduct	",
-        id: "timeline_to_conduct	",
+        id: "timeline	",
         sorting: false,
-        templateBy: "timeline_to_conduct"
+        templateBy: "timeline"
       },
       {
         title: "Requested date",
@@ -48,9 +48,9 @@ export class UserTableDataSource implements Table.Source<any> {
       },
       {
         title:'Actions',
-        id:'actions',
+        id:'action',
         sorting:false,
-        templateBy:'actions'
+        templateBy:'action'
       }
     ];
     options: Table.Options = {

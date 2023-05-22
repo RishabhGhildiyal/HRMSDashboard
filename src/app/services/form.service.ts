@@ -40,7 +40,7 @@ export class FormService {
     empTitle:[Validators.pattern],
     industry:[Validators.pattern],
     dateOfBirth:[Validators.pattern],
-    type:[Validators.pattern],
+    type1:[Validators.pattern],
     language:[Validators.pattern],
     gender:[Validators.pattern],
     marital:[Validators.pattern],
@@ -63,7 +63,8 @@ export class FormService {
     remarks:[Validators.pattern],
     upload:[Validators.pattern],
     department:[Validators.pattern],
-    status:[Validators.pattern]
+    status:[Validators.pattern],
+ 
   };
 
   getControl(name: string, required = true) {

@@ -1,34 +1,49 @@
-<div class="container ">
+<div class="container">
   <div class="header">
     <mat-toolbar class="example-toolbar">
       <div class="left">
         <div class="logo">
-          <img [src]= "isExpanded ? '/assets/applogo.png' : '/assets/DeepinScreenshot_select-area_20230201160316.png'">
+          <img
+            [src]="
+              isExpanded
+                ? '/assets/applogo.png'
+                : '/assets/DeepinScreenshot_select-area_20230201160316.png'
+            "
+          />
         </div>
         <div class="button">
-          <button mat-icon-button (click)="clickMenu()"><mat-icon>menu</mat-icon></button>
-
+          <button mat-icon-button (click)="clickMenu()">
+            <mat-icon>menu</mat-icon>
+          </button>
         </div>
       </div>
       <div class="right">
-        <div class="menu">
-          <button mat-button [matMenuTriggerFor]="menu">Rishabh Ghildiyal<img
-              src="../../../../assets/profile_icon.jpg" class="profileImg"><mat-icon>arrow_drop_down</mat-icon></button>
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item (click)="toprofile()"><mat-icon>account_circle</mat-icon><span>My
-                Profile</span></button>
-            <button mat-menu-item (click)="toChangePassword()"><mat-icon>key</mat-icon><span>Change
-                Password</span></button>
-            <button mat-menu-item (click)="toLogin()"><mat-icon>login</mat-icon><span>SignOut</span></button>
-          </mat-menu>
+        <div class="userName" [matMenuTriggerFor]="menu">
+          <span>Rishabh Ghildiyal</span>
+          <img [src]="imgURL" class="profileImg" />
+
+          <mat-icon>keyboard_arrow_down</mat-icon>
         </div>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="toprofile()">
+            <mat-icon>account_circle</mat-icon><span>My Profile</span>
+          </button>
+          <button mat-menu-item (click)="toChangePassword()">
+            <mat-icon>key</mat-icon><span>Change Password</span>
+          </button>
+          <button mat-menu-item (click)="toLogin()">
+            <mat-icon>login</mat-icon><span>SignOut</span>
+          </button>
+        </mat-menu>
         <div class="help">
           <button mat-button color="warn" (click)="openDialog()">Help</button>
         </div>
-        <div class="bellIcon" >
-          <mat-icon (click)="openNotification()">notification_important</mat-icon>
+        <div class="bellIcon">
+          <mat-icon (click)="openNotification()"
+            >notification_important</mat-icon
+          >
         </div>
-        <mat-card class="notification-box " [@enterLeaveAnimation] *ngIf="show">
+        <mat-card class="notification-box" [@enterLeaveAnimation] *ngIf="show">
           <mat-icon class="close" (click)="toggleDiv()">close</mat-icon>
           <div class="notify-card">
             <div class="notify-header">
@@ -45,5 +60,4 @@
   <!-- <div>
     <app-side-nav></app-side-nav>
   </div> -->
-
 </div>
