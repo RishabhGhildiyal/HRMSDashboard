@@ -1,0 +1,44 @@
+<section>
+
+  <div class="container">
+    <div class="heading">
+      <h2>Rishabh Ghildiyal</h2>
+    </div>
+    <!-- <hr class="firstLine"> -->
+  </div>
+  <div class="table">
+
+      <app-common-table [tableSource]="tableSource">
+        <ng-template appFor="sn" let-row="row">
+          {{ row.sn }}
+        </ng-template>
+        <ng-template appFor="project_name" let-row="row">
+          {{ row.project_name }}
+        </ng-template>
+        <ng-template appFor="dsr" let-row="row">
+          {{ row.dsr }}
+        </ng-template>
+        <ng-template appFor="status" let-row="row">
+          {{ row.status }}
+        </ng-template>
+        <ng-template appFor="pm_approval" let-row="row">
+          {{ row.pm_approval }}
+        </ng-template>
+        <ng-template appFor="am_approval" let-row="row">
+          {{ row.am_approval }}
+        </ng-template>
+        <ng-template appFor="rm_approval" let-row="row">
+          {{ row.rm_approval }}
+        </ng-template>
+        <ng-template appFor="final_Approval" let-row="row">
+          {{ row.final_Approval }}
+        </ng-template>
+        <ng-template appFor="logged_hrs" let-row="row">
+          {{ row.logged_hrs }}
+        </ng-template>
+        <ng-template appFor="action" let-row="row">
+          <button mat-raised-button (click)="openEdit()"><mat-icon>edit</mat-icon></button>
+        </ng-template>
+      </app-common-table>
+  </div>
+</section>

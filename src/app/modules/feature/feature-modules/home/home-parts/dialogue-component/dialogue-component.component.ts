@@ -17,6 +17,7 @@ export class DialogueComponentComponent implements OnInit {
   ngOnInit(): void {
     this.referCandidate = this.createForm();
 
+    // this.store.select()
   }
   createForm() {
     return this.fb.group({
@@ -31,6 +32,7 @@ export class DialogueComponentComponent implements OnInit {
   }
   onSubmit(){
     if (this.referCandidate.valid) {
+      // this.referCandidate.value[]
     } else {
       this.referCandidate.markAllAsTouched();
     }

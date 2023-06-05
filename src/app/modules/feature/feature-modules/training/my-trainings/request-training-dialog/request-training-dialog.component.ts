@@ -31,6 +31,8 @@ export class RequestTrainingDialogComponent implements OnInit {
       team: ['', [Validators.required]],
       training: ['', [Validators.required]],
       objective: [''],
+      interested:['',[Validators.required]],
+      timeline:['',[Validators.required]]
     });
   }
   ngOnInit(): void {}

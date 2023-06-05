@@ -12,6 +12,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputSearchModule } from 'src/app/modules/common/input-search/input-search.module';
+import {MatRadioModule} from '@angular/material/radio';
+
 @NgModule({
   declarations: [
     MyTrainingsComponent,
@@ -29,7 +31,7 @@ import { InputSearchModule } from 'src/app/modules/common/input-search/input-sea
     ReactiveFormsModule,
     FormsModule,
     InputSearchModule,
-    
+    MatRadioModule
   ]
 })
 export class MyTrainingsModule { }

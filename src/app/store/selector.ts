@@ -9,3 +9,6 @@ export const myPitchDataSelector = createFeatureSelector(my_pitch);
 
 export const my_training= "MY TRAINING";
 export const myTrainingDataSelector = createFeatureSelector(my_training)
+
+export const refer_candidate= "MY TRAINING";
+export const referaCandidateSelector = createFeatureSelector(refer_candidate)

@@ -57,23 +57,40 @@
       <div class="radioButtons">
         <div class="radioButton1">
           <p>Are you interested to give trainings?*</p>
-          <div class="yesNo">
-            <input type="radio" id="yes" name="fav_language" value="Yes" />
-            <label for="yes">Yes</label><br />
-            <input type="radio" id="no" name="fav_language" value="No" />
-            <label for="no">No</label><br />
-          </div>
+          <mat-radio-group
+            aria-label="Select an option"
+            formControlName="interested"
+          >
+            <mat-radio-button value="1">Yes</mat-radio-button>
+            <mat-radio-button value="2">No</mat-radio-button>
+          </mat-radio-group>
+          <mat-radio-group
+            aria-label="Select an option"
+            formControlName="interested"
+          >
+            <mat-radio-button value="2">No</mat-radio-button>
+          </mat-radio-group>
         </div>
         <div class="radioButton2">
           <p>What should be the timeline to conduct this training?*</p>
-          <div class="options">
-            <input type="radio" id="yes" name="fav_language" value="Yes" />
-            <label for="yes">Intermediate</label><br />
-            <input type="radio" id="no" name="fav_language" value="No" />
-            <label for="no">3-6 months</label><br />
-            <input type="radio" id="no" name="fav_language" value="No" />
-            <label for="no">More than 6 months</label><br />
-          </div>
+          <mat-radio-group
+            aria-label="Select an option"
+            formControlName="timeline"
+          >
+            <mat-radio-button value="1">Intermediate</mat-radio-button>
+          </mat-radio-group>
+          <mat-radio-group
+            aria-label="Select an option"
+            formControlName="timeline"
+          >
+            <mat-radio-button value="2">3-6 months</mat-radio-button>
+          </mat-radio-group>
+          <mat-radio-group
+            aria-label="Select an option"
+            formControlName="timeline"
+          >
+            <mat-radio-button value="3">More than 6 months</mat-radio-button>
+          </mat-radio-group>
         </div>
       </div>
       <div class="buttons">

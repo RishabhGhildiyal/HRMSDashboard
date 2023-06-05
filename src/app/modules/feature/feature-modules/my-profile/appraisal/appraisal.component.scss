@@ -32,6 +32,15 @@
       }
     }
   }
+  ::ng-deep .mat-form-field {
+    cursor: not-allowed;
+  }
+  ::ng-deep .mat-form-field-infix {
+    cursor: not-allowed;
+    span {
+      cursor: not-allowed;
+    }
+  }
 }
 
 // ::ng-deep .mat-select-arrow {
@@ -51,14 +60,5 @@
         display: block;
       }
     }
-  }
-}
-::ng-deep .mat-form-field {
-  cursor: not-allowed;
-}
-::ng-deep .mat-form-field-infix {
-  cursor: not-allowed;
-  span {
-    cursor: not-allowed;
   }
 }

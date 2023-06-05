@@ -1,10 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { Router } from '@angular/router';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
-import { DSR_DROPDOWN, HOURS, PM_STATUS, PROJECT_DSR, SUBMISSION_DROPDOWN } from 'src/app/constants/common-constants';
+import {
+  DSR_DROPDOWN,
+  HOURS,
+  PM_STATUS,
+  PROJECT_DSR,
+  SUBMISSION_DROPDOWN,
+} from 'src/app/constants/common-constants';
 import { Table } from 'src/app/modules/common/common-table/table.types';
 import { MyDsrTableDataSource, MYDSR_LIST_CONFIG } from './my-dsr.model';
+import { DSR_DETAILS } from 'src/app/constants/routes';
 
 @Component({
   selector: 'app-my-dsr',
@@ -17,7 +29,7 @@ export class MyDsrComponent implements OnInit {
 
   isShow = false;
   dsrForm: FormGroup;
-  project= new FormControl();
+  project = new FormControl();
   submissionStatus = new FormControl();
   approvalStatus = new FormControl();
   hours = new FormControl();
@@ -31,22 +43,26 @@ export class MyDsrComponent implements OnInit {
       hours: ['', [Validators.required]],
       project: ['', [Validators.required]],
       description: [''],
-      time:['',Validators.required],
-
+      // time: ['', Validators.required],
     });
   }
   openDetails() {
-    this.route.navigate(['layout/dsr-details']);
+    this.route.navigate([DSR_DETAILS.fullurl]);
   }
   onAddDsr() {
-    if (this.dsrForm.valid) {
-      this.tableSource.data.push(this.dsrForm.value);
-      this.docsData.push(this.dsrForm.value);
-      this.populateTable(this.PageOption);
-      // console.log(this.tableSource.data);
-    } else {
-      this.dsrForm.markAllAsTouched();
-    }
+    // if (this.dsrForm.valid) {
+    this.dsrForm.value['employee_name'] = 'Rishab';
+    this.dsrForm.value['employee_id'] = 'AI1555';
+    this.dsrForm.value['total'] = this.dsrForm.value.hours;
+    this.dsrForm.value['email'] = "rishab@gmail.com";
+    this.dsrForm.value['employment_type'] = "Permanent";
+    this.tableSource.data.push(this.dsrForm.value);
+    this.docsData.push(this.dsrForm.value);
+    this.populateTable(this.PageOption);
+    console.log(this.tableSource.data);
+    // } else {
+    // this.dsrForm.markAllAsTouched();
+    // }
   }
 
   dropdownData = {
@@ -57,26 +73,26 @@ export class MyDsrComponent implements OnInit {
   submission_dropdown = {
     label: 'Submission Status',
     placeholder: 'Submission Status',
-    list:SUBMISSION_DROPDOWN
+    list: SUBMISSION_DROPDOWN,
   };
 
   project_dSR = {
     label: 'Submission Status',
     placeholder: 'Submission Status',
-    list:PROJECT_DSR
+    list: PROJECT_DSR,
   };
 
   approval_dropdown = {
     label: 'Approval Status',
     placeholder: 'Approval Status',
-    list:PM_STATUS
+    list: PM_STATUS,
   };
 
-  hours_dropdown ={
+  hours_dropdown = {
     label: 'Hours',
     placeholder: 'Hours',
-    list:HOURS
-  }
+    list: HOURS,
+  };
 
   toggleAddNew() {
     this.isShow = !this.isShow;
@@ -120,7 +136,7 @@ export class MyDsrComponent implements OnInit {
     {
       sno: '1',
       employee_name: 'Rishabh',
-      employee_id: 'AI1568',
+      employee_id: 'AI1555',
       email: 'rishabh.ghildiyal@appinventiv.com',
       employment_type: 'Permanent',
       date: '30 feb 2023',
@@ -129,8 +145,8 @@ export class MyDsrComponent implements OnInit {
     },
     {
       sno: '2',
-      employee_name: 'Nandini Rohatgi',
-      employee_id: 'AI1568',
+      employee_name: 'Rishi G',
+      employee_id: 'AI1555',
       email: 'rishabh.ghildiyal@appinventiv.com',
       employment_type: 'Permanent',
       date: '31 feb 2023',
@@ -179,18 +195,16 @@ export class MyDsrComponent implements OnInit {
 
     this.populateTable(this.PageOption);
   }
-  noWork(event:any){
+  noWork(event: any) {
     // console.log(event,'otla');
 
-    if(event.checked == true){
-      let str = "No work has been done today"
+    if (event.checked == true) {
+      let str = 'No work has been done today';
       this.dsrForm.get('hours')?.setValue('0:00');
-      this.dsrForm.get('description')?.setValue(str)
-    }else if(event.checked == false){
+      this.dsrForm.get('description')?.setValue(str);
+    } else if (event.checked == false) {
       this.dsrForm.get('hours')?.setValue('');
-      this.dsrForm.get('description')?.setValue('')
-
+      this.dsrForm.get('description')?.setValue('');
     }
-
   }
 }

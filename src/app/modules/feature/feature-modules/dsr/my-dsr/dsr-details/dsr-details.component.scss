@@ -1,0 +1,21 @@
+@import "../../../../../../../scss/_mixins.scss";
+@import "../../../../../../../scss/global.scss";
+
+section{
+  padding: 2%;
+  min-height: 78%;
+  .container{
+    padding: 1%;
+    background-color: $primary-white;
+    .heading{
+      color: #3246D3;
+      h2{
+        margin: 0px;
+      }
+    }
+    // hr.firstLine{
+    //   background-color: $borderColor;
+    // }
+  }
+}
+

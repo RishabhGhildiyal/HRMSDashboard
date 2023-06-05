@@ -212,6 +212,14 @@ export const MY_DSR: Iroute={
   }
 }
 
+export const DSR_DETAILS: Iroute={
+  path:'dsr-details',
+  get fullurl():string{
+    return `/${MY_DSR.fullurl}/${this.path}`
+  }
+}
+
+
 export const SALARY_SLIP: Iroute={
   path:'finance/salary-slip',
   get fullurl():string{

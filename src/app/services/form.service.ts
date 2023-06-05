@@ -64,7 +64,7 @@ export class FormService {
     upload:[Validators.pattern],
     department:[Validators.pattern],
     status:[Validators.pattern],
- 
+    
   };
 
   getControl(name: string, required = true) {

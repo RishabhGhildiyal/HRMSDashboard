@@ -1,5 +1,5 @@
 import { Table } from "src/app/modules/common/common-table/table.types";
-export const MYDSR_LIST_CONFIG = {
+export const DSRDETAILS_LIST_CONFIG = {
   label: "Users Management",
   options: {
     search: true,
@@ -15,7 +15,7 @@ export const MYDSR_LIST_CONFIG = {
   total: 0,
 };
 
-export class MyDsrTableDataSource implements Table.Source<any> {
+export class dsrdetailsTableDataSource implements Table.Source<any> {
     columns: Table.Column<any>[] = [
       {
         title: "S.No.",
@@ -23,46 +23,58 @@ export class MyDsrTableDataSource implements Table.Source<any> {
         resolve: (row: any) => row["sn"],
       },
       {
-        title: "Emp Name",
-        id: "employee_name",
+        title: "Project Name",
+        id: "project_name",
         sorting: false,
-        templateBy: "employee_name",
+        templateBy: "project_name",
       },
       {
-        title: "Emp Id",
-        id: "employee_id",
+        title: "Dsr",
+        id: "dsr",
         sorting: false,
-        templateBy: "employee_id"
+        templateBy: "dsr"
       },
       {
-        title: "Email",
-        id: "email",
+        title: "Status",
+        id: "status",
         sorting: false,
-        templateBy: "email"
+        templateBy: "status"
       },
       {
-        title: "Employment Type",
-        id: "employment_type",
+        title: "PM Approval",
+        id: "pm_approval",
         sorting: false,
-        templateBy: "employment_type"
+        templateBy: "pm_approval"
       },
       {
-        title:'Date',
-        id:'date',
+        title:'AM Approval',
+        id:'am_approval',
         sorting:false,
-        templateBy:'date'
+        templateBy:'am_approval'
       },
       {
-        title:'Total(Logged Hr)',
-        id:'total',
+        title:'RM Approval',
+        id:'rm_approval',
         sorting:false,
-        templateBy:'total'
+        templateBy:'rm_approval'
       },
       {
         title:'Final Approval',
         id:'final_Approval',
         sorting:false,
         templateBy:'final_Approval'
+      },
+      {
+        title:'Logged Hrs',
+        id:'logged_hrs',
+        sorting:false,
+        templateBy:'logged_hrs'
+      },
+      {
+        title:'Action',
+        id:'action',
+        sorting:false,
+        templateBy:'action'
       }
     ];
     options: Table.Options = {

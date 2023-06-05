@@ -182,13 +182,13 @@
             {{ row.employment_type }}
           </ng-template>
           <ng-template appFor="date" let-row="row">
-            {{ row.date }}
+            {{ row.date | date }}
           </ng-template>
           <ng-template appFor="total" let-row="row">
             {{ row.total }}
           </ng-template>
           <ng-template appFor="final_Approval" let-row="row">
-            <button (click)="openDetails()">Pending</button>
+            <button mat-raised-button (click)="openDetails()">Pending</button>
           </ng-template>
         </app-common-table>
       </app-listing>

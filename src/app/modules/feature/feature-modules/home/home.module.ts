@@ -17,6 +17,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import { ShowErrorModule } from 'src/app/pipes/showErrorPipe/show-error.module';
+import {referaCandidateReducer } from 'src/app/store/reducer';
+import { refer_candidate } from 'src/app/store/selector';
+import { StoreModule } from '@ngrx/store';
 
 const MATERIAL  = [MatCardModule]
 
@@ -41,7 +44,8 @@ const MATERIAL  = [MatCardModule]
     ReactiveFormsModule,
     MatInputModule,
     MatIconModule,
-    ShowErrorModule
+    ShowErrorModule,
+    StoreModule.forFeature(refer_candidate, referaCandidateReducer)
   ]
 })
 export class HomeModule { }
